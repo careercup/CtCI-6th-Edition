@@ -5,12 +5,12 @@ public class Tester {
 	public static void main(String[] args) {
 		String[] words = {"abcde", "hello", "apple", "kite", "padle"};
 		for (String word : words) {
-			boolean a =  QuestionA.isUniqueChars(word);
-			boolean b =  QuestionB.isUniqueChars(word);
-			if (a == b) {
-				System.out.println(word + ": " + a);
+			boolean wordA =  QuestionA.isUniqueChars(word);
+			boolean wordB =  QuestionB.isUniqueChars(word);
+			if (wordA == wordB) {
+				System.out.println(word + ": " + wordA);
 			} else {
-				System.out.println(word + ": " + a + " vs " + b);
+				System.out.println(word + ": " + wordA + " vs " + wordB);
 			}
 		}
 	}
