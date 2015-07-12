@@ -4,7 +4,7 @@ public class Tester {
 	
 	public static void test(String a, String b, boolean expected) {
 		boolean resultA = QuestionA.oneEditAway(a, b);
-		boolean resultB = QuestionA.oneEditAway(a, b);		
+		boolean resultB = QuestionB.oneEditAway(a, b);		
 		
 		if (resultA == expected && resultB == expected) {
 			System.out.println(a + ", " + b + ": success");
@@ -16,7 +16,7 @@ public class Tester {
 	public static void main(String[] args) {
 		String[][] tests = {{"a", "b", "true"}, 
 				{"", "d", "true"},
-				{"d", "de", "false"},
+				{"d", "de", "true"},
 				{"pale", "pse", "false"},
 				{"acdsfdsfadsf", "acdsgdsfadsf", "true"},
 				{"acdsfdsfadsf", "acdsfdfadsf", "true"},
@@ -24,12 +24,13 @@ public class Tester {
 				{"acdsfdsfadsf", "cdsfdsfadsf", "true"},
 				{"adfdsfadsf", "acdfdsfdsf", "false"},
 				{"adfdsfadsf", "bdfdsfadsg", "false"},
-				{"adfdsfadsf", "affdsfads", "false"}};
+				{"adfdsfadsf", "affdsfads", "false"},
+				{"pale", "pkle", "true"}};
 		for (int i = 0; i < tests.length; i++) {
 			String[] test = tests[i];
 			String a = test[0];
 			String b = test[1];
-			boolean expected = test[2] == "true" ? true : false;
+			boolean expected = test[2].equals("true");
 			
 			test(a, b, expected);
 			test(b, a, expected);
