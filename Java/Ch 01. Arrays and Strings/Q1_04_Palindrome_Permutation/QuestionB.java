@@ -4,7 +4,7 @@ public class QuestionB {
 
 	public static boolean isPermutationOfPalindrome(String phrase) {
 		int countOdd = 0;
-		int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a')];
+		int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a')+1];
 		for (char c : phrase.toCharArray()) {
 			int x = Common.getCharNumber(c);
 			if (x != -1) {
@@ -23,6 +23,8 @@ public class QuestionB {
 	public static void main(String[] args) {
 		String pali = "Rats live on no evil star";
 		System.out.println(isPermutationOfPalindrome(pali));
+		String pali2 = "Zeus was deified, saw Suez";
+		System.out.println(isPermutationOfPalindrome(pali2));
 	}
 
 
