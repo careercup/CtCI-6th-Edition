@@ -25,7 +25,8 @@ public class Tester {
 				{"adfdsfadsf", "acdfdsfdsf", "false"},
 				{"adfdsfadsf", "bdfdsfadsg", "false"},
 				{"adfdsfadsf", "affdsfads", "false"},
-				{"pale", "pkle", "true"}};
+				{"pale", "pkle", "true"},
+				{"pkle", "pable", "false"}};
 		for (int i = 0; i < tests.length; i++) {
 			String[] test = tests[i];
 			String a = test[0];

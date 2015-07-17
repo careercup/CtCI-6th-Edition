@@ -18,7 +18,7 @@ public class Common {
 	}
 	
 	public static int[] buildCharFrequencyTable(String phrase) {
-		int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a')];
+		int[] table = new int[Character.getNumericValue('z') - Character.getNumericValue('a') + 1];
 		for (char c : phrase.toCharArray()) {
 			int x = getCharNumber(c);
 			if (x != -1) {
