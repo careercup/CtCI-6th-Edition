@@ -8,7 +8,7 @@ public class QuestionD {
 		LinkedListNode p1 = head;
 		LinkedListNode p2 = head;
 		
-		/* Move p2 k nodes into the list.*/
+		/* Move p1 k nodes into the list.*/
 		for (int i = 0; i < k; i++) {
 			if (p1 == null) return null; // Out of bounds
 			p1 = p1.next;
