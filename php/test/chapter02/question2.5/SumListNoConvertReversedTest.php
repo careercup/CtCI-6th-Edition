@@ -88,4 +88,33 @@ class SumListNoConvertReversedTest extends PHPUnit_Framework_TestCase {
         $node = $node->getNext();
         $this->assertNull($node);
     }
+
+    public function testSumWithMultipleCarryOperations() {
+        $a1 = new Node(1);
+
+        $b1 = new Node(9);
+        $b2 = new Node(9);
+        $b3 = new Node(9);
+        $b4 = new Node(9);
+        $b5 = new Node(9);
+        $b1->setNext($b2);
+        $b2->setNext($b3);
+        $b3->setNext($b4);
+        $b4->setNext($b5);
+
+        $node = SumListNoConvertReversed::sum($a1, $b1);
+        $this->assertEquals(1, $node->getData());
+        $node = $node->getNext();
+        $this->assertEquals(0, $node->getData());
+        $node = $node->getNext();
+        $this->assertEquals(0, $node->getData());
+        $node = $node->getNext();
+        $this->assertEquals(0, $node->getData());
+        $node = $node->getNext();
+        $this->assertEquals(0, $node->getData());
+        $node = $node->getNext();
+        $this->assertEquals(0, $node->getData());
+        $node = $node->getNext();
+        $this->assertNull($node);
+    }
 }
