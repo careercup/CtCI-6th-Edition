@@ -9,7 +9,7 @@ class LinkedListCycleDetector {
             if ($node2 !== null) {
                 // skip 1 because this iterator goes twice as fast
                 $node2 = $node2->getNext();
-                if ($node1 == $node2) {
+                if ($node1 === $node2) {
                     return $node1;
                 }
             }
