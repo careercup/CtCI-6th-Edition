@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . '/../../../src/chapter03/question3.3/StackOfPlates.php';
+require_once __DIR__ . '/../../../src/chapter03/question3.3/SetOfStacks.php';
 
-class StackOfPlatesTest extends PHPUnit_Framework_TestCase {
+class SetOfStacksTest extends PHPUnit_Framework_TestCase {
 
-    public function testStackOfPlates() {
-        $stack = new StackOfPlates(3);
+    public function testSetOfStacks() {
+        $stack = new SetOfStacks(3);
         $this->assertEquals(0, $stack->getStackCount());
         $this->assertNull($stack->peek());
         $this->assertNull($stack->pop());
@@ -44,7 +44,7 @@ class StackOfPlatesTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testPopAt() {
-        $stack = new StackOfPlates(3);
+        $stack = new SetOfStacks(3);
         $this->assertEquals(0, $stack->getStackCount());
 
         $stack->push("one");

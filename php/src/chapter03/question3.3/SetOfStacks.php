@@ -2,7 +2,7 @@
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'SizedStack.php';
 require_once __DIR__ . DIRECTORY_SEPARATOR . 'RandomAccessSizedStack.php';
 
-class StackOfPlates {
+class SetOfStacks {
     private $stacks;
     private $stackSize;
 
