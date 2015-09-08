@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../../lib/' . 'Node.php';
+require_once __DIR__ . '/../../lib/Node.php';
 
 class LinkedListPartitioner {
     public static function partition(Node $node, $x) {

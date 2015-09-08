@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../../lib/' . 'Node.php';
+require_once __DIR__ . '/../../lib/Node.php';
 
 class SumListReversed {
     public static function sum(Node $n1, Node $n2) {

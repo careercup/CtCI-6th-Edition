@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../../lib/' . 'DoublyLinkedListNode.php';
+require_once __DIR__ . '/../../lib/DoublyLinkedListNode.php';
 
 class SumListNoConvertReversed {
     public static function sum(Node $n1, Node $n2) {
