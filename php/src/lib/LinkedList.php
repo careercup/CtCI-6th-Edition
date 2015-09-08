@@ -74,6 +74,10 @@ class LinkedList implements Iterator {
         return $this->size;
     }
 
+    public function isEmpty() {
+        return $this->size == 0 ? true : false;
+    }
+
     // Methods of the Iterator interface - http://php.net/manual/en/class.iterator.php
 
     public function current() {

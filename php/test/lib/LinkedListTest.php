@@ -5,6 +5,7 @@ class LinkedListTest extends PHPUnit_Framework_TestCase {
     public function testLinkedList() {
         $list = new LinkedList();
         $this->assertEquals(0, $list->getSize());
+        $this->assertTrue($list->isEmpty());
 
         $this->assertNull($list->peekFirst());
         $this->assertNull($list->peekLast());
@@ -19,10 +20,13 @@ class LinkedListTest extends PHPUnit_Framework_TestCase {
 
         $list->add("one");
         $this->assertEquals(1, $list->getSize());
+        $this->assertFalse($list->isEmpty());
         $list->add("two");
         $this->assertEquals(2, $list->getSize());
+        $this->assertFalse($list->isEmpty());
         $list->add("three");
         $this->assertEquals(3, $list->getSize());
+        $this->assertFalse($list->isEmpty());
         $expected = [ "one", "two", "three" ];
         $i=0;
         foreach ($list as $key => $value) {
@@ -41,9 +45,11 @@ class LinkedListTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals("two", $list->peekFirst());
         $this->assertEquals("two", $list->removeFirst());
         $this->assertEquals(0, $list->getSize());
+        $this->assertTrue($list->isEmpty());
 
         $list->add("four");
         $this->assertEquals(1, $list->getSize());
+        $this->assertFalse($list->isEmpty());
 
         foreach ($list as $key => $value) {
             $this->assertEquals(0, $key);
@@ -53,5 +59,6 @@ class LinkedListTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals("four", $list->peekFirst());
         $this->assertEquals("four", $list->removeLast());
         $this->assertEquals(0, $list->getSize());
+        $this->assertTrue($list->isEmpty());
     }
 }
