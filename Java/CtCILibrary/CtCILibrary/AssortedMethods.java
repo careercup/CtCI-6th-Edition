@@ -215,8 +215,9 @@ public class AssortedMethods {
 				} else {
 					queue.remove();
 				}
-				if (i == array.length)
+				if (i == array.length) {
 					done = true;
+				}
 			}
 			return root;
 		} else {

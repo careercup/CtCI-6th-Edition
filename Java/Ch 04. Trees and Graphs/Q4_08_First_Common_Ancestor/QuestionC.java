@@ -12,12 +12,8 @@ public class QuestionC {
 	}
 	
 	public static TreeNode ancestorHelper(TreeNode root, TreeNode p, TreeNode q) {
-		if (root == null) {
-			return null;
-		} else if (root == p) {
-			return p;
-		} else if (root == q) {
-			return q;
+		if (root == null || root == p || root == q) {
+			return root;
 		}
 		
 		boolean pIsOnLeft = covers(root.left, p);
