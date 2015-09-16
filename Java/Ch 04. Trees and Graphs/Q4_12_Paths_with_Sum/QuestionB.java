@@ -36,7 +36,12 @@ public class QuestionB {
 	}
 	
 	public static void incrementHashTable(HashMap<Integer, Integer> hashTable, int key, int delta) {
-		hashTable.put(key, hashTable.getOrDefault(key, 0) + delta);
+		int newCount = hashTable.getOrDefault(key, 0) + delta;
+		if (newCount == 0) { // Remove when zero to reduce space usage
+			hashTable.remove(key);
+		} else {
+			hashTable.put(key, newCount);
+		}
 	}
 
 	public static void main(String [] args) {
