@@ -2,7 +2,7 @@ package Q4_08_First_Common_Ancestor;
 
 import CtCILibrary.TreeNode;
 
-public class QuestionDBad {
+public class QuestionEBad {
 	public static TreeNode commonAncestorBad(TreeNode root, TreeNode p, TreeNode q) {
 		if (root == null) {
 			return null;
