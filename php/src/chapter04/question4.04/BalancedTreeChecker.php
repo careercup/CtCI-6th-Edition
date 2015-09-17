@@ -6,14 +6,15 @@ class BalancedTreeChecker {
         return self::getMaxDepthOrNegativeOneIfUnbalanced($node) != -1;
     }
 
-    public static function getMaxDepthOrNegativeOneIfUnbalanced(BinaryTreeNode $node) {
-        $left = $node->getLeft();
-        $right = $node->getRight();
-        $leftDepth = $left !== null ? self::getMaxDepthOrNegativeOneIfUnbalanced($left) : 0;
+    public static function getMaxDepthOrNegativeOneIfUnbalanced(BinaryTreeNode $node=null) {
+        if ($node === null) {
+            return 0;
+        }
+        $leftDepth = self::getMaxDepthOrNegativeOneIfUnbalanced($node->getLeft());
         if ($leftDepth == -1) {
             return -1;
         }
-        $rightDepth = $right !== null ? self::getMaxDepthOrNegativeOneIfUnbalanced($right) : 0;
+        $rightDepth = self::getMaxDepthOrNegativeOneIfUnbalanced($node->getRight());
         if ($rightDepth == -1) {
             return -1;
         }
