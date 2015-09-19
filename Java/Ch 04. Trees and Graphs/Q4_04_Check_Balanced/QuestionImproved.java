@@ -5,32 +5,24 @@ public class QuestionImproved {
 		
 	public static int checkHeight(TreeNode root) {
 		if (root == null) {
-			return 0;
+			return -1;
 		}
 		int leftHeight = checkHeight(root.left);
-		if (leftHeight == -1) {
-			return -1;
-		}
+		if (leftHeight == Integer.MIN_VALUE) return Integer.MIN_VALUE; // Propagate error up
+		
 		int rightHeight = checkHeight(root.right);
-		if (rightHeight == -1) {
-			return -1;
-		}
+		if (rightHeight == Integer.MIN_VALUE) return Integer.MIN_VALUE; // Propagate error up
 		
 		int heightDiff = leftHeight - rightHeight;
 		if (Math.abs(heightDiff) > 1) {
-			return -1;
-		}
-		else {
+			return Integer.MIN_VALUE; // Found error -> pass it back
+		} else {
 			return Math.max(leftHeight, rightHeight) + 1;
 		}
 	}
 	
 	public static boolean isBalanced(TreeNode root) {
-		if (checkHeight(root) == -1) {
-			return false;
-		} else {
-			return true;
-		}
+		return checkHeight(root) != Integer.MIN_VALUE;
 	}
 	
 	public static void main(String[] args) {
