@@ -1,0 +1,13 @@
+{
+  "name": "CrackingJS",
+  "version": "0.0.1",
+  "description": "Data Structures and Algorithms in Javascript",
+  "dependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "require-directory": "*",
+    "sinon": "*"
+  },
+  "devDependencies": {
+  }
+}

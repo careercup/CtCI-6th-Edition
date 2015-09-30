@@ -1,0 +1,24 @@
+{
+  "rules": {
+    "quotes": [2, 'single'],
+    "semi": 2,
+    "curly": 2,
+    "camelcase": 0,
+    "no-unused-vars": 2,
+    "no-use-before-define": 2,
+    "no-underscore-dangle": 2,
+    "strict": 0,
+    "no-multi-spaces": 2,
+    "semi-spacing": 2,
+    "no-shadow": 2
+  },
+
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "chrome": false
+  }
+}

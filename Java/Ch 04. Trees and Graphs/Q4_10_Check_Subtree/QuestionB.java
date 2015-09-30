@@ -42,7 +42,7 @@ public class QuestionB {
 	public static void main(String[] args) {
 		// t2 is a subtree of t1
 		int[] array1 = {1, 2, 1, 3, 1, 1, 5};
-		int[] array2 = {1, 1, 1};
+		int[] array2 = {2, 3, 1};
 		
 		TreeNode t1 = AssortedMethods.createTreeFromArray(array1);
 		TreeNode t2 = AssortedMethods.createTreeFromArray(array2);

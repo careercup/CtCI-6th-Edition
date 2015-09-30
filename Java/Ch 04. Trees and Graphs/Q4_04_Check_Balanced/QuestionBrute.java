@@ -7,7 +7,7 @@ public class QuestionBrute {
 	
 	public static int getHeight(TreeNode root) {
 		if (root == null) {
-			return 0;
+			return -1;
 		}
 		return Math.max(getHeight(root.left), getHeight(root.right)) + 1;
 	}
