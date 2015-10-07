@@ -2,9 +2,9 @@
 
 ### Running Unit Tests
 
-First download [Leiningen](http://leiningen.org/) 
+First download and install [Leiningen](http://leiningen.org/) 
 
-Then run:
+Then run the following command from the Clojure directory to run all the tests:
 
     lein test
 
