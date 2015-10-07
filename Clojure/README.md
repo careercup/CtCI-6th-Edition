@@ -2,7 +2,7 @@
 
 ### Running Unit Tests
 
-First download "[Leiningen](http://leiningen.org/)" 
+First download [Leiningen](http://leiningen.org/) 
 
 Then run:
 
