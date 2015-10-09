@@ -12,23 +12,35 @@ class BinaryTreeNodeWithParent extends BinaryTreeNode {
         return $this->parent;
     }
 
-    public function setParent(BinaryTreeNodeWithParent $parent) {
+    public function setParent(BinaryTreeNodeWithParent $parent=null) {
         $this->parent = $parent;
     }
 
-    public function setLeft(BinaryTreeNode $left) {
-        if (!($left instanceof BinaryTreeNodeWithParent)) {
+    public function setLeft(BinaryTreeNode $left=null) {
+        if ($left !== null && !($left instanceof BinaryTreeNodeWithParent)) {
             throw new InvalidArgumentException('When building a binary tree with parent references, all nodes must be instances of BinaryTreeNodeWithParent');
+        }
+        $oldLeft = $this->getLeft();
+        if ($oldLeft !== null) {
+            $oldLeft->setParent(null);
         }
         parent::setLeft($left);
-        $left->setParent($this);
+        if ($left !== null) {
+            $left->setParent($this);
+        }
     }
 
-    public function setRight(BinaryTreeNode $right) {
-        if (!($right instanceof BinaryTreeNodeWithParent)) {
+    public function setRight(BinaryTreeNode $right=null) {
+        if ($right !== null && !($right instanceof BinaryTreeNodeWithParent)) {
             throw new InvalidArgumentException('When building a binary tree with parent references, all nodes must be instances of BinaryTreeNodeWithParent');
         }
+        $oldRight = $this->getRight();
+        if ($oldRight !== null) {
+            $oldRight->setParent(null);
+        }
         parent::setRight($right);
-        $right->setParent($this);
+        if ($right !== null) {
+            $right->setParent($this);
+        }
     }
 }
