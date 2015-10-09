@@ -1,4 +1,4 @@
-package Q3_06_Sort_Stack;
+package Q3_05_Sort_Stack;
 
 import java.util.Stack;
 

@@ -21,7 +21,7 @@ class BinaryTreeNode {
         return $this->left;
     }
 
-    public function setLeft(BinaryTreeNode $left) {
+    public function setLeft(BinaryTreeNode $left=null) {
         $this->left = $left;
     }
 
@@ -29,7 +29,7 @@ class BinaryTreeNode {
         return $this->right;
     }
 
-    public function setRight(BinaryTreeNode $right) {
+    public function setRight(BinaryTreeNode $right=null) {
         $this->right = $right;
     }
 
