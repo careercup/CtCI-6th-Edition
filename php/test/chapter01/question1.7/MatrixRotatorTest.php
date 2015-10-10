@@ -3,7 +3,7 @@ require_once __DIR__ . '/../../../src/chapter01/question1.7/MatrixRotator.php';
 
 class MatrixRotatorTest extends PHPUnit_Framework_TestCase {
 
-	public function testRotate1x1Matrix() {
+    public function testRotate1x1Matrix() {
         $matrix = [[1]];
         $expected = [[1]];
         MatrixRotator::rotate($matrix);
