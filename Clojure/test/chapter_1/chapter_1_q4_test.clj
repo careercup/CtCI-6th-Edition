@@ -8,5 +8,3 @@
   (is (palindrome-permutation? "aab"))
   (is (palindrome-permutation? "Tact Coa"))
   (is (not (palindrome-permutation? "Tactoa"))))
-
-(run-tests)
