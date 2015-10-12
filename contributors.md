@@ -6,3 +6,4 @@ Thanks goes out to the generous programmers below:
 * [Aristarkhov](https://github.com/Aristarkhov)
 * [asaph](https://github.com/asaph)
 * [dawsonbotsford](https://github.com/dawsonbotsford)
+* [henryhkim](https://github.com/henryhkim)
