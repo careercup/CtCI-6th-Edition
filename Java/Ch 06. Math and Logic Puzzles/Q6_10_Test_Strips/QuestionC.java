@@ -3,8 +3,6 @@ package Q6_10_Test_Strips;
 import java.util.ArrayList;
 import java.util.Random;
 
-import CtCILibrary.AssortedMethods;
-
 public class QuestionC {
 	public static ArrayList<Bottle> createBottles(int nBottles, int poisoned) {
 		ArrayList<Bottle> bottles = new ArrayList<Bottle>();
