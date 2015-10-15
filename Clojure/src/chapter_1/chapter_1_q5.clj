@@ -1,5 +1,4 @@
-(ns chapter-1.chapter-1-q5
-  (:require [clojure.string :as s]))
+(ns chapter-1.chapter-1-q5)
 
 (defn- one-char-diff-same-len? [s1 s2]
   {:pre [(= (count s1) (count s2))]}
