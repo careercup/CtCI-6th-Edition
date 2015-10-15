@@ -1,8 +1,6 @@
 package Q8_02_Robot_in_a_Grid;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.awt.*;
 
 import CtCILibrary.AssortedMethods;
 
