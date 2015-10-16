@@ -14,12 +14,17 @@ def unique(string):
         return False
 
 class Test(unittest.TestCase):
-    data = [('abcd', True), ('23ds2', False), ('s4fad', True), ('hb 627jh=j ()', False), ('', True)]
+    dataT = [('abcd', True), ('s4fad', True), ('', True)]
+    dataF = [('23ds2', False), ('hb 627jh=j ()', False)]
 
     def test_unique(self):
-        for test_string in self.data:
-            actual = unique(test_string)
+        for test_string in self.dataT:
+            actual = unique(test_string[0])
             self.assertTrue(actual)
+
+        for test_string in self.dataF:
+            actual = unique(test_string[0])
+            self.assertFalse(actual)
 
 if __name__ == "__main__":
     unittest.main()
