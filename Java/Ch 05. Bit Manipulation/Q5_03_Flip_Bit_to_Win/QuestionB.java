@@ -3,7 +3,12 @@ package Q5_03_Flip_Bit_to_Win;
 import java.util.ArrayList;
 
 public class QuestionB {
-	public static int SEQUENCE_LENGTH = 32;
+	
+	public static int longestSequence(int n) {
+		if (n == -1) return Integer.BYTES * 8;
+		ArrayList<Integer> sequences = getAlternatingSequences(n);
+		return findLongestSequence(sequences);
+	}	
 	
 	/* Return a list of the sizes of the sequences. The sequence starts 
 	 * off with the number of 0s (which might be 0) and then alternates
@@ -14,7 +19,7 @@ public class QuestionB {
 		int searchingFor = 0;
 		int counter = 0;
 		
-		for (int i = 0; i < SEQUENCE_LENGTH; i++) {
+		for (int i = 0; i < Integer.BYTES * 8; i++) {
 			if ((n & 1) != searchingFor) {
 				sequences.add(counter);
 				searchingFor = n & 1; // Flip 1 to 0 or 0 to 1
@@ -48,16 +53,10 @@ public class QuestionB {
 		}
 		
 		return maxSeq;
-	}
-	
-	public static int longestSequence(int n) {
-		if (n == -1) return SEQUENCE_LENGTH;
-		ArrayList<Integer> sequences = getAlternatingSequences(n);
-		return findLongestSequence(sequences);
 	}	
 	
 	public static void main(String[] args) {
-		int original_number = Integer.MAX_VALUE;
+		int original_number = 1775;
 		int new_number = longestSequence(original_number);
 			
 		System.out.println(Integer.toBinaryString(original_number));

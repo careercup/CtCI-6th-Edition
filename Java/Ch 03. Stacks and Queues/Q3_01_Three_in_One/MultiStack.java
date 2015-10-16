@@ -5,7 +5,7 @@ import java.util.EmptyStackException;
 import CtCILibrary.AssortedMethods;
 
 public class MultiStack {
-	/* StackData is a simple class that holds a set of data about 
+	/* StackInfo is a simple class that holds a set of data about 
 	 * each stack. It does not hold the actual items in the stack. 
 	 * We could have done this with just a bunch of individual 
 	 * variables, but that’s messy and doesn’t gain us much. */
@@ -26,8 +26,7 @@ public class MultiStack {
 			}
 			
 			/* If index wraps around, adjust it. */
-			int contiguousIndex = index < start ? 
-								  index + values.length : index;
+			int contiguousIndex = index < start ? index + values.length : index;
 			int end = start + capacity;
 			return start <= contiguousIndex && contiguousIndex < end;
 		}

@@ -4,7 +4,7 @@ import CtCILibrary.TreeNode;
 
 public class QuestionA {
 	public static TreeNode commonAncestor(TreeNode p, TreeNode q) {
-		if (p == q) return null;
+		if (p == q) return p;
 		
 		TreeNode ancestor = p;
 		while (ancestor != null) {
@@ -26,8 +26,8 @@ public class QuestionA {
 	public static void main(String[] args) {
 		int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		TreeNode root = TreeNode.createMinimalBST(array);
-		TreeNode n3 = root.find(1);
-		TreeNode n7 = root.find(7);
+		TreeNode n3 = root.find(8);
+		TreeNode n7 = root.find(8);
 		TreeNode ancestor = commonAncestor(n3, n7);
 		System.out.println(ancestor.data);
 	}

@@ -28,16 +28,18 @@ public class Tester {
 		for (TreeNode x : nodes) {
 			for (TreeNode y : nodes) {
 				TreeNode r1 = QuestionA.commonAncestor(x, y);
-				TreeNode r2 = QuestionB.commonAncestor(root,  x, y);
-				TreeNode r3 = QuestionC.commonAncestor(root,  x, y);
-				TreeNode r4 = QuestionD.commonAncestor(root,  x, y);
+				TreeNode r2 = QuestionB.commonAncestor(x, y);
+				TreeNode r3 = QuestionC.commonAncestor(root, x, y);
+				TreeNode r4 = QuestionD.commonAncestor(root, x, y);
+				TreeNode r5 = QuestionE.commonAncestor(root, x, y);
 				
 				String s1 = resultToString("A", x, y, r1);
 				String s2 = resultToString("B", x, y, r2);
 				String s3 = resultToString("C", x, y, r3);
-				String s4 = resultToString("C", x, y, r4);
+				String s4 = resultToString("D", x, y, r4);
+				String s5 = resultToString("D", x, y, r5);
 				
-				if (r1 == r2 && r2 == r3 && r3 == r4) {
+				if (r1 == r2 && r2 == r3 && r3 == r4 && r4 == r5) {
 					System.out.println("SUCCESS: " + s1);
 				} else {
 					System.out.println("ERROR");
@@ -45,6 +47,7 @@ public class Tester {
 					System.out.println(s2);
 					System.out.println(s3);
 					System.out.println(s4);
+					System.out.println(s5);
 				}
 			}
 		}

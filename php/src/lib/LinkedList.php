@@ -98,6 +98,8 @@ class LinkedList implements Iterator {
         $this->current = $this->current->getNext();
         if ($this->current !== null) {
             $this->key++;
+        } else {
+            $this->key = 0;
         }
     }
 
