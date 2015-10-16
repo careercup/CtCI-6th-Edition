@@ -2,6 +2,7 @@
 import unittest
 
 def unique(string):
+    # function to check if all characters in string are unique
     count = 0
     hash_table = {}
     for character in string:
@@ -14,16 +15,17 @@ def unique(string):
         return False
 
 class Test(unittest.TestCase):
-    dataT = [('abcd', True), ('s4fad', True), ('', True)]
-    dataF = [('23ds2', False), ('hb 627jh=j ()', False)]
+    dataT = [('abcd'), ('s4fad'), ('')]
+    dataF = [('23ds2'), ('hb 627jh=j ()')]
 
     def test_unique(self):
+        # true check
         for test_string in self.dataT:
-            actual = unique(test_string[0])
+            actual = unique(test_string)
             self.assertTrue(actual)
-
+        # false check
         for test_string in self.dataF:
-            actual = unique(test_string[0])
+            actual = unique(test_string)
             self.assertFalse(actual)
 
 if __name__ == "__main__":
