@@ -10,7 +10,7 @@ public class QuestionA {
 	public static byte[] bitfield = new byte [(int) (numberOfInts / 8)];
 	
 	public static void findOpenNumber() throws FileNotFoundException {
-		Scanner in = new Scanner(new FileReader("Chapter 10/Question10_3/input_file_q10_3.txt"));
+		Scanner in = new Scanner(new FileReader("Ch 10. Sorting and Searching/Q10_07_Missing_Int/input.txt"));
 		while (in.hasNextInt()) {
 			int n = in.nextInt ();
 			/* Finds the corresponding number in the bitfield by using
