@@ -16,23 +16,25 @@ class BuildOrderFactory {
         }
         // using the above data structure, add all the projects such that dependencies are satisfied
         $buildOrder = [];
+        $buildCheckList = [];
         $visitedProjects = [];
-        self::addProjectsInOrder($projects, $buildOrder, $visitedProjects, $dependencyLists);
+        self::addProjectsInOrder($projects, $buildOrder, $buildCheckList, $visitedProjects, $dependencyLists);
         return $buildOrder;
     }
 
-    private static function addProjectsInOrder(array &$projects, array &$buildOrder, array &$visitedProjects, array &$dependencyLists) {
+    private static function addProjectsInOrder(array &$projects, array &$buildOrder, array &$buildCheckList, array &$visitedProjects, array &$dependencyLists) {
         foreach ($projects as $project) {
-            if (in_array($project, $buildOrder, true)) {
+            if (isset($buildCheckList[$project])) {
                 continue;
             }
-            if (array_key_exists($project, $visitedProjects)) {
+            if (isset($visitedProjects[$project])) {
                 throw new InvalidArgumentException("Circular reference detected in dependencies list!");
             }
             $visitedProjects[$project] = 1;
             $dependencies = array_key_exists($project, $dependencyLists) ? $dependencyLists[$project] : [];
-            self::addProjectsInOrder($dependencies, $buildOrder, $visitedProjects, $dependencyLists);
+            self::addProjectsInOrder($dependencies, $buildOrder, $buildCheckList, $visitedProjects, $dependencyLists);
             $buildOrder[] = $project;
+            $buildCheckList[$project] = 1;
             unset($visitedProjects[$project]);
         }
     }
