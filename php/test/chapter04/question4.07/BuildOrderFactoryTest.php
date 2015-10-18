@@ -41,22 +41,4 @@ class BuildOrderFactoryTest extends PHPUnit_Framework_TestCase {
         ];
         BuildOrderFactory::getBuildOrder($projects, $dependencies);
     }
-
-    public function testContainsAll() {
-        $needles = [ "b", "d" ];
-        $haystack = [ "a", "b", "c", "d", "e", "f" ];
-        $this->assertTrue(BuildOrderFactory::containsAll($needles, $haystack));
-    }
-
-    public function testContainsAllWithEmptyNeedlesArray() {
-        $needles = [];
-        $haystack = [ "a", "b", "c", "d", "e", "f" ];
-        $this->assertTrue(BuildOrderFactory::containsAll($needles, $haystack));
-    }
-
-    public function testDoesntContainAll() {
-        $needles = [ "a", "b", "c", "x", "y", "z" ];
-        $haystack = [ "a", "b", "c", "d", "e", "f" ];
-        $this->assertFalse(BuildOrderFactory::containsAll($needles, $haystack));
-    }
 }

@@ -22,7 +22,7 @@ class BuildOrderFactory {
     }
 
     private static function addProjectsInOrder(array &$projects, array &$buildOrder, array &$visitedProjects, array &$dependencyLists) {
-        foreach ($projects as $key => $project) {
+        foreach ($projects as $project) {
             if (in_array($project, $buildOrder, true)) {
                 continue;
             }
@@ -31,20 +31,9 @@ class BuildOrderFactory {
             }
             $visitedProjects[$project] = 1;
             $dependencies = array_key_exists($project, $dependencyLists) ? $dependencyLists[$project] : [];
-            if (!self::containsAll($dependencies, $buildOrder)) {
-                self::addProjectsInOrder($dependencies, $buildOrder, $visitedProjects, $dependencyLists);
-            }
+            self::addProjectsInOrder($dependencies, $buildOrder, $visitedProjects, $dependencyLists);
             $buildOrder[] = $project;
             unset($visitedProjects[$project]);
         }
-    }
-
-    public static function containsAll(array &$needles, array &$haystack) {
-        foreach ($needles as $needle) {
-            if (!in_array($needle, $haystack, true)) {
-                return false;
-            }
-        }
-        return true;
     }
 }
