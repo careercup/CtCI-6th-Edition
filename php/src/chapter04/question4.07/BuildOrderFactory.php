@@ -22,7 +22,8 @@ class BuildOrderFactory {
         return $buildOrder;
     }
 
-    private static function addProjectsInOrder(array &$projects, array &$buildOrder, array &$buildCheckList, array &$visitedProjects, array &$dependencyLists) {
+    private static function addProjectsInOrder(array &$projects, array &$buildOrder,
+            array &$buildCheckList, array &$visitedProjects, array &$dependencyLists) {
         foreach ($projects as $project) {
             if (isset($buildCheckList[$project])) {
                 continue;
