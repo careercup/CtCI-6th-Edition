@@ -41,10 +41,9 @@ class Test(unittest.TestCase):
         ('Able was I ere I saw Elba', True),
         ('So patient a nurse to nurse a patient so', False),
         ('Random Words', False),
-        ('Not a Palindrome', False),
-        ('Able was not I ere I did note see Elba', False)]
+        ('Not a Palindrome', False)]
 
-    def test_urlify(self):
+    def test_pal_perm(self):
         for [test_string, expected] in self.data:
             actual = pal_perm(test_string)
             self.assertEqual(actual, expected)
