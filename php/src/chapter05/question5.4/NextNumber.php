@@ -11,14 +11,14 @@ class NextNumber {
             if ($twoDigits === 0b10) {
                 if ($nextLowestNumber === null) {
                     $clearMask = self::getTwoDigitClearMask($i);
-                    $swapMask = (1 << $i);
-                    $nextLowestNumber = (($n & $clearMask) | $swapMask);
+                    $swappedTwoDigits = (1 << $i);
+                    $nextLowestNumber = (($n & $clearMask) | $swappedTwoDigits);
                 }
             } elseif ($twoDigits === 0b01) {
                 if ($nextHighestNumber === null) {
                     $clearMask = self::getTwoDigitClearMask($i);
-                    $swapMask = (1 << ($i + 1));
-                    $nextHighestNumber = (($n & $clearMask) | $swapMask);
+                    $swappedTwoDigits = (1 << ($i + 1));
+                    $nextHighestNumber = (($n & $clearMask) | $swappedTwoDigits);
                 }
             }
             $mask = ($mask << 1);
