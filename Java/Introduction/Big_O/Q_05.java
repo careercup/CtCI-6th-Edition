@@ -15,7 +15,7 @@ public class Q_05 {
 	    } else if (guess * guess < n) { // too low
 	        return sqrt_helper(n, guess + 1, max); // try higher
 	    } else { // too high
-	        return sqrt_helper(n, 1, guess - 1); // try lower
+	        return sqrt_helper(n, min, guess - 1); // try lower
 	    }
 	}
 	        
