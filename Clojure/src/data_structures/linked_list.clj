@@ -93,6 +93,9 @@
       (recur (:next @n)
              (conj v (:data @n))))))
 
+(defn list-to-vec [^SinglyLinkedList l]
+  (to-vec (:head l)))
+
 (defn lists-eq? [^SinglyLinkedList l1 ^SinglyLinkedList l2]
   (and (= (length l1) (length l2))
        (= (to-vec (:head l1)) (to-vec (:head l2)))))
