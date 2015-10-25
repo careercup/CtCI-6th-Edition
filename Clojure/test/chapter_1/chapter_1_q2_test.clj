@@ -1,4 +1,4 @@
-(ns chapter-1.chapter_1_q2_test
+(ns chapter-1.chapter-1-q2_test
   (:require [clojure.test :refer :all]
             [chapter-1.chapter-1-q2 :refer :all]))
 
