@@ -47,7 +47,4 @@
 
     (let [cycle-begin-node (get-cycle-begin-node (cycle-list (create-linked-list 1 2 3 4 5) 5 5))]
       (is (= 5 (:data @cycle-begin-node))
-          (str "Expected: 5" ", Actual: " (:data @cycle-begin-node)))))
-    )
-
-(run-tests)
+          (str "Expected: 5" ", Actual: " (:data @cycle-begin-node))))))
