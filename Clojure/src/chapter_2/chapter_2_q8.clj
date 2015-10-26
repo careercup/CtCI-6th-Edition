@@ -12,7 +12,7 @@
       (recur (:next @n)
              (inc skips)))))
 
-(defn get-collision-node [^Atom start-node runner-start-node runner-steps]
+(defn get-collision-node [^Atom start-node ^Atom runner-start-node runner-steps]
   (loop [^Atom n start-node
          ^Atom runner (skip-ahead runner-start-node 1)]
     (if (= n runner)
