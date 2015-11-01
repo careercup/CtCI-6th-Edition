@@ -2,7 +2,7 @@
   (:require [clojure.test :refer :all]
             [data-structures.stack :refer :all]))
 
-(deftest stacks-empty-test
+(deftest stacks-test
   (testing "1-2 nodes"
     (is (not (stack-empty? (create-stack 5))))
 
