@@ -66,5 +66,3 @@
     (stack-push three-stacks 2 20)
     (is (thrown? IllegalStateException (stack-push three-stacks 2 21)))
     (stack-push three-stacks 3 30)))
-
-(run-tests)

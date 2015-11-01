@@ -8,7 +8,9 @@
 
     (let [stack (create-stack 5)]
       (is (not (stack-empty? stack)))
+      (is (= 1 (stack-size stack)))
       (stack-push stack 6)
+      (is (= 2 (stack-size stack)))
 
       (is (= 6 (stack-peek stack)))
       (is (= 6 (stack-pop stack)))
@@ -25,6 +27,8 @@
         (stack-push stack 3)
         (stack-push stack 4)
         (stack-push stack 5)
+
+        (is (= 5 (stack-size stack)))
 
         (is (= 5 (stack-peek stack)))
         (is (= 5 (stack-pop stack)))
