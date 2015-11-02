@@ -1,10 +1,5 @@
 import { expect } from 'chai';
-import { hasUniqueCharactersSet, hasUniqueCharactersSort } from './ch1-q1';
-
-let funcs = {
-  hasUniqueCharactersSet,
-  hasUniqueCharactersSort
-};
+import * as funcs from './ch1-q1';
 
 for (let key in funcs) {
   let func = funcs[key];
@@ -16,9 +11,11 @@ for (let key in funcs) {
       '1234567890',
       'AaBbCcDdeFg1234567890(*&^%$#@!)'
     ].forEach(s => {
-      it(`returns true for unique string: ${s}`, function() {
+
+      it(`returns true for unique string: '${s}'`, function() {
         expect(func(s)).to.be.true;
       });
+
     });
 
     [
@@ -28,9 +25,11 @@ for (let key in funcs) {
       '1234567890asdklf1',
       '!@#$%^&*()(*#($&#(*$&#*($&#()))))'
     ].forEach(s => {
-      it(`returns false for string with dupes: ${s}`, function() {
+
+      it(`returns false for string with dupes: '${s}'`, function() {
         expect(func(s)).to.be.false;
       });
+
     });
 
   });

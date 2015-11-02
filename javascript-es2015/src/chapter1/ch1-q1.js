@@ -1,3 +1,4 @@
+import { sortString } from './ch1-helpers';
 
 /**
  * Keep track of seen characters with a Set data structure, fail when
@@ -33,11 +34,7 @@ export function hasUniqueCharactersSet(str) {
  * @return {Boolean} true if unique characters, otherwise false
  */
 export function hasUniqueCharactersSort(str) {
-  // This takes additional space but JS doesn't give us a way to directly
-  // manipulate the character array
-  let chars = str.split('');
-  chars.sort();
-  str = chars.join('');
+  str = sortString(str);
 
   for (var i = 1; i < str.length; ++i) {
     if (str[i] === str[i - 1]) {
