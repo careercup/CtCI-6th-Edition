@@ -10,10 +10,10 @@ for (let key in funcs) {
       'jklpoiuqwerzxcvmnsadf',
       '1234567890',
       'AaBbCcDdeFg1234567890(*&^%$#@!)'
-    ].forEach(s => {
+    ].forEach(str => {
 
-      it(`returns true for unique string: '${s}'`, function() {
-        expect(func(s)).to.be.true;
+      it(`returns true for unique string: '${str}'`, function() {
+        expect(func(str.split(''))).to.be.true;
       });
 
     });
@@ -24,10 +24,10 @@ for (let key in funcs) {
       'abcdefghijklmnopqrstuvwxyza',
       '1234567890asdklf1',
       '!@#$%^&*()(*#($&#(*$&#*($&#()))))'
-    ].forEach(s => {
+    ].forEach(str => {
 
-      it(`returns false for string with dupes: '${s}'`, function() {
-        expect(func(s)).to.be.false;
+      it(`returns false for string with dupes: '${str}'`, function() {
+        expect(func(str.split(''))).to.be.false;
       });
 
     });

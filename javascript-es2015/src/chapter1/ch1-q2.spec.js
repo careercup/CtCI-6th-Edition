@@ -10,10 +10,10 @@ for (let key in funcs) {
       ['1a1', 'a11'],
       ['1234567812345678', '8877665544332211'],
       ['icarraci', 'carcarii']
-    ].forEach(s => {
+    ].forEach(args => {
 
-      it(`returns true for strings that are permutations: '${s[0]}' & '${s[1]}'`, function() {
-        expect(func.apply(undefined, s)).to.be.true;
+      it(`returns true for strings that are permutations: '${args[0]}' & '${args[1]}'`, function() {
+        expect(func(args[0].split(''), args[1].split(''))).to.be.true;
       });
 
     });
@@ -23,10 +23,10 @@ for (let key in funcs) {
       ['1a1', '11'],
       ['1122334455667788', '9911223344556677'],
       ['45678', '1239']
-    ].forEach(s => {
+    ].forEach(args => {
 
-      it(`returns false for strings that are not permutations: '${s[0]}' & '${s[1]}'`, function() {
-        expect(func.apply(undefined, s)).to.be.false;
+      it(`returns false for strings that are not permutations: '${args[0]}' & '${args[1]}'`, function() {
+        expect(func(args[0].split(''), args[1].split(''))).to.be.false;
       });
 
     });

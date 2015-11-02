@@ -1,5 +1,3 @@
-import { sortString } from './ch1-helpers';
-
 /**
  * Keep track of seen characters with a Set data structure, fail when
  * a repeated character is found.
@@ -7,8 +5,8 @@ import { sortString } from './ch1-helpers';
  * Time: O(N)
  * Additional space: O(N)
  *
- * @param  {String} str String to check
- * @return {Boolean} true if unique characters, otherwise false
+ * @param  {string[]} str String to check, passed in as a character array
+ * @return {boolean} True if unique characters, otherwise false
  */
 export function hasUniqueCharactersSet(str) {
   let chars = new Set();
@@ -30,11 +28,12 @@ export function hasUniqueCharactersSet(str) {
  * Time: O(N lg N)
  * Additional space: O(1)
  *
- * @param  {String} str String to check
- * @return {Boolean} true if unique characters, otherwise false
+ * @param  {string[]} str String to check, passed in as a character array
+ * @return {boolean} True if unique characters, otherwise false
  */
 export function hasUniqueCharactersSort(str) {
-  str = sortString(str);
+  // sort string using quicksort
+  str.sort();
 
   for (var i = 1; i < str.length; ++i) {
     if (str[i] === str[i - 1]) {
