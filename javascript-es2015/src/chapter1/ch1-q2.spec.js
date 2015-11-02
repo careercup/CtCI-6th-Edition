@@ -3,6 +3,7 @@ import * as funcs from './ch1-q2';
 
 for (let key in funcs) {
   let func = funcs[key];
+
   describe('ch1-q2: ' + key, function() {
 
     [
