@@ -9,7 +9,7 @@
  *
  * @param  {string[]} str2 First string, passed in as a character array
  * @param  {string[]} str1 Second string, passed in as a character array
- * @return {boolean} True if first and second strings are permutations otherwise false
+ * @return {boolean}       True if first and second strings are permutations otherwise false
  */
 export function isPermutationMap(str1, str2) {
   if (str1.length === 0 || str1.length !== str2.length) {
@@ -48,7 +48,7 @@ export function isPermutationMap(str1, str2) {
  *
  * @param  {string[]} str2 First string, passed in as a character array
  * @param  {string[]} str1 Second string, passed in as a character array
- * @return {boolean} True if first and second strings are permutations otherwise false
+ * @return {boolean}       True if first and second strings are permutations otherwise false
  */
 export function isPermutationSorted(str1, str2) {
   if (str1.length === 0 || str1.length !== str2.length) {

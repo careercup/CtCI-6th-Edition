@@ -7,8 +7,8 @@
  * Time: O(N)
  * Additional space: O(N)
  *
- * @param  {string[]} String to check as a character array
- * @return {boolean} True if input string is a permutation of a palindrome (ignoring spaces), otherwise false
+ * @param  {string[]} str String to check as a character array
+ * @return {boolean}      True if input string is a permutation of a palindrome (ignoring spaces), otherwise false
  */
 export function isPalindromePermutationsSet(str) {
   if (!str) {

@@ -6,7 +6,7 @@
  * Additional space: O(N)
  *
  * @param  {string[]} str String to check, passed in as a character array
- * @return {boolean} True if unique characters, otherwise false
+ * @return {boolean}      True if unique characters, otherwise false
  */
 export function hasUniqueCharactersSet(str) {
   let chars = new Set();
@@ -29,7 +29,7 @@ export function hasUniqueCharactersSet(str) {
  * Additional space: O(1)
  *
  * @param  {string[]} str String to check, passed in as a character array
- * @return {boolean} True if unique characters, otherwise false
+ * @return {boolean}      True if unique characters, otherwise false
  */
 export function hasUniqueCharactersSort(str) {
   // sort string using quicksort

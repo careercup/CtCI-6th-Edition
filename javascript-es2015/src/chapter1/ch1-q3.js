@@ -7,7 +7,7 @@
  * Additional space: O(1)
  *
  * @param  {string[]} url URL string as a character arra which will be updated in place
- * @return {string[]} Updated URL character array
+ * @return {string[]}     Updated URL character array
  */
 export function encodeSpaces(url) {
   if (!url || url.length === 0) {
