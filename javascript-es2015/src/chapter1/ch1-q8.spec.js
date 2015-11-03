@@ -58,18 +58,20 @@ for (let key in funcs) {
           [ 1,  2,  3,  4],
           [ 5,  6,  7,  8],
           [ 9,  0, 11, 12],
-          [13, 14, 15,  0]
+          [13, 14, 15,  0],
+          [17, 18, 19, 20]
         ],
         expected: [
           [ 1,  0,  3,  0],
           [ 5,  0,  7,  0],
           [ 0,  0,  0,  0],
-          [ 0,  0,  0,  0]
+          [ 0,  0,  0,  0],
+          [17,  0, 19,  0]
         ]
       }
     ].forEach(context => {
 
-      it(`zeros a ${context.matrix.length}x${context.matrix.length} matrix correctly`, function() {
+      it(`zeros a ${context.matrix.length}x${context.matrix[0].length} matrix correctly`, function() {
         expect(func(context.matrix)).to.eql(context.expected);
       });
 
