@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Keep track of characters counts with a Map data structure, fail when
  * str2 has a character different to str2 or if any characters are left over

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Go through characters in string and set flag to indicate if there is an
  * odd number of that character. If there is more than one character with an

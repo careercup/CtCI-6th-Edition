@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Scan through both strings's at the same time, when a difference is
  * encountered:

@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Takes an input string and counts contiguous sequences of the same character
  * and replaces them with XC (X = count, C = character).

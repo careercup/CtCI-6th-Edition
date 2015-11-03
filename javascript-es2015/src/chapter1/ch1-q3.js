@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Count the number of spaces in the string to calculate the new length of the
  * string and move characters back where required replacing spaces with %20.

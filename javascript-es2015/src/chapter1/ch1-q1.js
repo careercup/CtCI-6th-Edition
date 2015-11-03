@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Keep track of seen characters with a Set data structure, fail when
  * a repeated character is found.
