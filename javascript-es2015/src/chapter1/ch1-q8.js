@@ -14,7 +14,7 @@
  * @param  {array} matrix Matrix to be zeroed in-place
  * @return {array}        Matrix that has been zeroed, same object as input
  */
-export default function zeroMatrix(matrix) {
+export function zeroMatrix(matrix) {
   if (!matrix) {
     throw new Error('invalid matrix');
   }

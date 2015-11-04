@@ -19,7 +19,7 @@ function isSubstring(str, substr) {
  * @param  {string}  str2   String to check if it is a rotated version of str1
  * @return {boolean}        True if str1 and str2 are rotated versions of eachother, otherwise false
  */
-export default function isRotatedSubstring(str1, str2) {
+export function isRotatedSubstring(str1, str2) {
   if (!str1 || !str2) {
     throw new Error('invalid input');
   }
