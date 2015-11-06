@@ -30,3 +30,12 @@ export function arrayToLinkedList(arr) {
 
   return list;
 }
+
+export function getLength(list) {
+  let length = 0;
+  while (list) {
+    list = list.next;
+    ++length;
+  }
+  return length;
+}
