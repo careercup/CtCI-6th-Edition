@@ -44,7 +44,7 @@ public class BinarySearch {
 			return low;
 		}
 		
-		int mid = (low + high) / 2;
+		int mid = low + (high - low) / 2;
 		if (a[mid] < x) {
 			return binarySearchRecursiveClosest(a, x, mid + 1, high);
 		} else if (a[mid] > x) {
