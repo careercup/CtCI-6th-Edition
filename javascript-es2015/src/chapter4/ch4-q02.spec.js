@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import * as helpers from './helpers';
+import { isBalanced } from './helpers';
 import * as funcs from './ch4-q02';
 
 for (let key in funcs) {
@@ -21,12 +21,12 @@ for (let key in funcs) {
 
     it('returns a balanced tree with 10 nodes', function() {
       let tree = func([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
-      expect(helpers.isBalanced(tree)).to.be.true;
+      expect(isBalanced(tree)).to.be.true;
     });
 
     it('returns a balanced tree with 13 nodes', function() {
       let tree = func([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
-      expect(helpers.isBalanced(tree)).to.be.true;
+      expect(isBalanced(tree)).to.be.true;
     });
 
     it('returns a balanced tree with 255 nodes', function() {
@@ -35,7 +35,7 @@ for (let key in funcs) {
         values.push(i);
       }
       let tree = func(values);
-      expect(helpers.isBalanced(tree)).to.be.true;
+      expect(isBalanced(tree)).to.be.true;
     });
 
   });

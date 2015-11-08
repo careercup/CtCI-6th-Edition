@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import * as helpers from './helpers';
+import { Tree } from './helpers';
 import * as funcs from './ch4-q03';
 
 function toArrayOfArrays(lists) {
@@ -12,7 +12,7 @@ for (let key in funcs) {
   describe('ch4-q03: ' + key, function() {
 
     beforeEach(function() {
-      this.tree = new helpers.Tree();
+      this.tree = new Tree();
     });
 
     it('returns empty list for empty tree', function() {
