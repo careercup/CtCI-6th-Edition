@@ -43,7 +43,7 @@ function sameTree(node1, node2) {
     return false;
   }
   else if (node1.val === node2.val) {
-    return sameTree(node1.left, node2.left) || sameTree(node1.right, node2.right);
+    return sameTree(node1.left, node2.left) && sameTree(node1.right, node2.right);
   }
   else {
     return false;
