@@ -12,7 +12,7 @@
  *     child of its parent, then the parent is the successor.
  *
  * N = |tree|
- * Time: O(lg N)
+ * Time: O(lg N) - assumes balanced tree, worst cast O(N)
  * Additional space: O(1)
  */
 export function findSuccessor(node) {
