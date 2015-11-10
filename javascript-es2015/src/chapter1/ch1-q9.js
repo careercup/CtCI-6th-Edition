@@ -1,11 +1,5 @@
 'use strict';
 
-// Implementation of isSubstring function which is defined in question
-// can only be called once
-function isSubstring(str, substr) {
-  return str.includes(substr);
-}
-
 /**
  * Duplicate the rotated string, if the substring being searched is a different
  * rotation of the string then it will be a substring of the new string. Both
@@ -27,4 +21,10 @@ export function isRotatedSubstring(str1, str2) {
     return false;
   }
   return isSubstring(str1 + str1, str2);
+}
+
+// Implementation of isSubstring function which is defined in question
+// can only be called once
+function isSubstring(str, substr) {
+  return str.includes(substr);
 }

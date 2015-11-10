@@ -43,18 +43,6 @@ export function isPalindromeStack(list) {
   return stack.length === 0;
 }
 
-function reverse(node, end) {
-  let prev = end,
-    next;
-  while (node) {
-    next = node.next;
-    node.next = prev;
-    prev = node;
-    node = next;
-  }
-  return prev;
-}
-
 /**
  * First find out the length of the list, then walk to the middle of the list.
  * Once the middle is reached if the list had an odd length then skip the middle
@@ -104,4 +92,16 @@ export function isPalindromeReverse(list) {
   }
 
   return isPalindrome;
+}
+
+function reverse(node, end) {
+  let prev = end,
+    next;
+  while (node) {
+    next = node.next;
+    node.next = prev;
+    prev = node;
+    node = next;
+  }
+  return prev;
 }

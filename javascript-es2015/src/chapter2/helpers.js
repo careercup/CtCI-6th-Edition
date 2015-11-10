@@ -1,3 +1,4 @@
+'use strict';
 
 export function linkedListToArray(list) {
   let arr = [],

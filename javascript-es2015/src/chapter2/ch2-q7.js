@@ -2,14 +2,6 @@
 
 import { getLength } from './helpers';
 
-function skip(list, num) {
-  while (num > 0) {
-    list = list.next;
-    --num;
-  }
-  return list;
-}
-
 /**
  * Find out the length of the two lists first. If they intersect at some point
  * then the length of their tails will be the same and any difference in length
@@ -40,4 +32,12 @@ export function doIntersect(list1, list2) {
   }
 
   return undefined;
+}
+
+function skip(list, num) {
+  while (num > 0) {
+    list = list.next;
+    --num;
+  }
+  return list;
 }

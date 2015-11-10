@@ -1,13 +1,5 @@
 'use strict';
 
-function peek(stack) {
-  return stack[stack.length - 1];
-}
-
-function isEmpty(stack) {
-  return stack.length === 0;
-}
-
 /**
  * Sort the stack by taking one item off the input stack at a time, find the
  * right place within the processed items in the temp stack to insert it into.
@@ -41,4 +33,12 @@ export function sortStack(stack) {
   }
 
   return stack;
+}
+
+function peek(stack) {
+  return stack[stack.length - 1];
+}
+
+function isEmpty(stack) {
+  return stack.length === 0;
 }
