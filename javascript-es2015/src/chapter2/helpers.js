@@ -40,3 +40,28 @@ export function getLength(list) {
   }
   return length;
 }
+
+export function createLinkedList() {
+  return {
+    head: null,
+    tail: null
+  };
+}
+
+export function pushSingle(list, value) {
+  let node = createNode(value);
+  if (list.head) {
+    list.tail.next = node;
+    list.tail = node;
+  }
+  else {
+    list.head = node;
+    list.tail = node;
+  }
+}
+
+export function push(list) {
+  for (let i = 1; i < arguments.length; ++i) {
+    pushSingle(list, arguments[i]);
+  }
+}

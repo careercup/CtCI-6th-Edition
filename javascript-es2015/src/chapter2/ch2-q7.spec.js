@@ -3,23 +3,11 @@ import * as helpers from './helpers';
 import * as funcs from './ch2-q7';
 
 function generateList(length) {
-  let head, tail;
-
+  let list = helpers.createLinkedList();
   for (let i = length; i > 0; --i) {
-    let node = helpers.createNode(100 + Math.random() * 999999);
-    if (!head) {
-      head = tail = node;
-    }
-    else {
-      tail.next = node;
-      tail = node;
-    }
+    helpers.pushSingle(list, 100 + Math.random() * 999999);
   }
-
-  return {
-    head: head,
-    tail: tail
-  };
+  return list;
 }
 
 for (let key in funcs) {
