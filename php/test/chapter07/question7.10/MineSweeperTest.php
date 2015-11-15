@@ -55,7 +55,7 @@ class MineSweeperTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals($expectedOutput, $output);
     }
 
-    public function test4x6Game() {
+    public function test5x6Game() {
         $bombs = [ new Point(2,2), new Point(2,3), new Point(4,5) ];
         $settings = new Settings([ 'length' => 5, 'width' => 6, 'bombs' => count($bombs) ]);
         $board = new Board($settings);
