@@ -9,7 +9,7 @@ class TripleStep {
             $waysToClimbSteps[$i] = 0;
         }
         for ($i=0; $i<=$n; $i++) {
-            $waysToClimbToThisPoint =  $waysToClimbSteps[$i];
+            $waysToClimbToThisPoint = $waysToClimbSteps[$i];
             foreach ($stepSizes as $stepSize) {
                 if ($i + $stepSize > $n) {
                     break;
