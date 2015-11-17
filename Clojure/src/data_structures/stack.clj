@@ -40,5 +40,7 @@
   (stack-size [this]
     @size))
 
-(defn create-stack [x]
-  (->SimpleStack (atom (->Node x nil)) (atom 1)))
+(defn create-stack
+  ([] (->SimpleStack (atom nil) (atom 0)))
+  ([x]
+   (->SimpleStack (atom (->Node x nil)) (atom 1))))
