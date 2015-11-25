@@ -5,23 +5,23 @@
 ;; sorting
 
 (deftest unique-chars-sorting-test
-  (is (unique-chars-sorting nil))
-  (is (unique-chars-sorting ""))
-  (is (unique-chars-sorting "a"))
-  (is (not (unique-chars-sorting "aa")))
-  (is (unique-chars-sorting "ab"))
-  (is (unique-chars-sorting "abcdef"))
-  (is (not (unique-chars-sorting "aba")))
-  (is (not (unique-chars-sorting "bcaa"))))
+  (is (unique-coll-sort nil))
+  (is (unique-coll-sort ""))
+  (is (unique-coll-sort "a"))
+  (is (not (unique-coll-sort "aa")))
+  (is (unique-coll-sort "ab"))
+  (is (unique-coll-sort "abcdef"))
+  (is (not (unique-coll-sort "aba")))
+  (is (not (unique-coll-sort "bcaa"))))
 
 ;; map lookup
 
 (deftest unique-chars-map-lookup-test
-  (is (unique-chars-map-lookup nil))
-  (is (unique-chars-map-lookup ""))
-  (is (unique-chars-map-lookup "a"))
-  (is (not (unique-chars-map-lookup "aa")))
-  (is (unique-chars-map-lookup "ab"))
-  (is (unique-chars-map-lookup "abcdef"))
-  (is (not (unique-chars-map-lookup "aba")))
-  (is (not (unique-chars-map-lookup "bcaa"))))
+  (is (unique-coll-set nil))
+  (is (unique-coll-set ""))
+  (is (unique-coll-set "a"))
+  (is (not (unique-coll-set "aa")))
+  (is (unique-coll-set "ab"))
+  (is (unique-coll-set "abcdef"))
+  (is (not (unique-coll-set "aba")))
+  (is (not (unique-coll-set "bcaa"))))
