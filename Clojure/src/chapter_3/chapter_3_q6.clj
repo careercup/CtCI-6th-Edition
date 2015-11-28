@@ -1,5 +1,4 @@
 (ns chapter-3.chapter-3-q6
-  (:require [data-structures.stack :refer :all])
   (import java.util.LinkedList
           (java.util Date)))
 

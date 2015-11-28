@@ -1,6 +1,6 @@
-(ns data-structures.stack-test
+(ns data-structures.mutable-stack-test
   (:require [clojure.test :refer :all]
-            [data-structures.stack :refer :all]))
+            [data-structures.mutable-stack :refer :all]))
 
 (deftest stacks-test
   (testing "1-2 nodes"
@@ -45,3 +45,5 @@
         (stack-push stack 7)
         (is (= 7 (stack-pop stack)))
         (is (stack-empty? stack))))))
+
+(run-tests)

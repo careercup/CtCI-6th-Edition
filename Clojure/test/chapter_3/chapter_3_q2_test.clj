@@ -79,3 +79,5 @@
       (is (= 3 (get-min stack)))
       (is (= 6 (min-stack-pop stack)))
       (is (= 3 (get-min stack))))))
+
+(run-tests)

@@ -1,69 +1,33 @@
 (ns chapter-3.chapter-3-q5-test
   (:require [clojure.test :refer :all]
             [data-structures.stack :refer :all]
+            [data-structures.persistent-stack :refer :all]
             [chapter-3.chapter-3-q5 :refer :all]))
-
 
 (deftest sort-stack-test
 
   (testing "Already sorted"
-    (let [stack (create-stack 4)]
-      (stack-push stack 3)
-      (stack-push stack 2)
-      (stack-push stack 1)
-
+    (let [stack (create-stack '(1 2 3 4))]
       (let [sorted (sort-stack stack)]
-        (is (= 1 (stack-pop sorted)))
-        (is (= 2 (stack-pop sorted)))
-        (is (= 3 (stack-pop sorted)))
-        (is (= 4 (stack-pop sorted))))))
+        (is (= 1 (stack-peek sorted)))
+        (is (= (create-stack (list 2 3 4)) (stack-pop sorted))))))
 
   (testing "Basic sort"
-    (let [stack (create-stack 3)]
-      (stack-push stack 1)
-      (stack-push stack 4)
-      (stack-push stack 2)
-
+    (let [stack (create-stack '(3 1 4 2))]
       (let [sorted (sort-stack stack)]
-        (is (= 1 (stack-pop sorted)))
-        (is (= 2 (stack-pop sorted)))
-        (is (= 3 (stack-pop sorted)))
-        (is (= 4 (stack-pop sorted))))))
+        (is (= 1 (stack-peek sorted)))
+        (is (= (create-stack (list 2 3 4)) (stack-pop sorted))))))
 
   (testing "Reverse order"
-    (let [stack (create-stack 1)]
-      (stack-push stack 2)
-      (stack-push stack 3)
-      (stack-push stack 4)
-      (stack-push stack 5)
-      (stack-push stack 6)
-      (stack-push stack 7)
-      (stack-push stack 8)
-
+    (let [stack (create-stack '(8 7 6 5 4 3 2 1))]
       (let [sorted (sort-stack stack)]
-        (is (= 1 (stack-pop sorted)))
-        (is (= 2 (stack-pop sorted)))
-        (is (= 3 (stack-pop sorted)))
-        (is (= 4 (stack-pop sorted)))
-        (is (= 5 (stack-pop sorted)))
-        (is (= 6 (stack-pop sorted)))
-        (is (= 7 (stack-pop sorted)))
-        (is (= 8 (stack-pop sorted))))))
+        (is (= 1 (stack-peek sorted)))
+        (is (= (create-stack (list 2 3 4 5 6 7 8)) (stack-pop sorted))))))
 
   (testing "Basic sort"
-    (let [stack (create-stack 6)]
-      (stack-push stack 34)
-      (stack-push stack 15)
-      (stack-push stack 26)
-      (stack-push stack 25)
-      (stack-push stack 2)
-      (stack-push stack 81)
-
+    (let [stack (create-stack '(81 2 25 26 15 34 6))]
       (let [sorted (sort-stack stack)]
-        (is (= 2 (stack-pop sorted)))
-        (is (= 6 (stack-pop sorted)))
-        (is (= 15 (stack-pop sorted)))
-        (is (= 25 (stack-pop sorted)))
-        (is (= 26 (stack-pop sorted)))
-        (is (= 34 (stack-pop sorted)))
-        (is (= 81 (stack-pop sorted)))))))
+        (is (= 2 (stack-peek sorted)))
+        (is (= (create-stack (list 6 15 25 26 34 81)) (stack-pop sorted)))))))
+
+(run-tests)

@@ -1,6 +1,5 @@
 (ns chapter-3.chapter-3-q6-test
   (:require [clojure.test :refer :all]
-            [data-structures.stack :refer :all]
             [chapter-3.chapter-3-q6 :refer :all]))
 
 
@@ -98,3 +97,5 @@
             (= "fido" (:name a5)))
         (is (= nil a6)
             (= nil a7))))))
+
+(run-tests)
