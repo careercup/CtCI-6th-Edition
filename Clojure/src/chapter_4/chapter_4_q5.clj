@@ -10,6 +10,6 @@
     true))
 
 ;; Worse time-complexity O(n log n)
-(defn valid-bst-alt? [tree]
+(defn alt-valid-bst? [tree]
   (let [in-order-traversal (in-order-walk tree)]
     (= (sort in-order-traversal) in-order-traversal)))
