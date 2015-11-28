@@ -3,7 +3,7 @@
 (defrecord BinaryTreeNode [data left right])
 
 (defn create-tree [tree-spec]
-  "Creates a tree based on tree-spec and returns root node given by root-key"
+  "Creates a tree based on tree-spec and returns root node"
   (if (empty? tree-spec)
     nil
     (let [[data left right] tree-spec]
