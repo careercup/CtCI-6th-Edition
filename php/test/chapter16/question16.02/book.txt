@@ -1,0 +1,9 @@
+A Book
+------
+By: An Author
+
+This book is useful for unit testing
+and not much else. It's unlikely that
+you'll find any other use for it.
+
+The End
