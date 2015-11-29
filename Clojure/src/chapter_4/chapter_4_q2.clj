@@ -6,8 +6,10 @@
         half-size (int (/ vec-size 2))
         middle (get sorted-vec half-size)]
     (cond (= vec-size 1) (map->BinaryTreeNode {:data (first sorted-vec)})
-          (= vec-size 2) (map->BinaryTreeNode {:data (first sorted-vec)
+          (= vec-size 2) (map->BinaryTreeNode {:data  (first sorted-vec)
                                                :right (map->BinaryTreeNode {:data (second sorted-vec)})})
           :else (map->BinaryTreeNode {:data  middle
-                                      :left  (minimal-tree (subvec sorted-vec 0 half-size))
-                                      :right (minimal-tree (subvec sorted-vec (inc half-size) vec-size))}))))
+                                      :left  (minimal-tree
+                                               (subvec sorted-vec 0 half-size))
+                                      :right (minimal-tree
+                                               (subvec sorted-vec (inc half-size) vec-size))}))))

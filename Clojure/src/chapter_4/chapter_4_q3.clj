@@ -9,5 +9,4 @@
     nil))
 
 (defn list-of-depths [tree]
-  (let [depth-map (list-of-depths-helper tree 0)]
-    depth-map))
+  (list-of-depths-helper tree 0))

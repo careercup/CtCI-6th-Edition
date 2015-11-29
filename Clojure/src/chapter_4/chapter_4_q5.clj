@@ -4,8 +4,8 @@
 ;; O(n)
 (defn valid-bst? [tree]
   (if (some? tree)
-    (cond (and (some? (:left tree)) (< (:data tree) (:data (:left tree)))) false
-          (and (some? (:right tree)) (> (:data tree) (:data (:right tree)))) false
+    (cond (and (some? (:left tree)) (< (:data tree) (-> tree :left :data))) false
+          (and (some? (:right tree)) (> (:data tree) (-> tree :right :data))) false
           :else (and (valid-bst? (:left tree)) (valid-bst? (:right tree))))
     true))
 

@@ -9,30 +9,41 @@
       (is (tree-balanced? tree))))
 
   (testing "two nodes"
-    (let [tree-1 (create-tree [1 [2]])
-          tree-2 (create-tree [1 [] [2]])]
+    (let [tree-1 (create-tree [1
+                               [2]])
+          tree-2 (create-tree [1
+                               []
+                               [2]])]
       (is (tree-balanced? tree-1))
       (is (tree-balanced? tree-2))))
 
   (testing "balanced > 2 nodes"
-    (let [tree-1 (create-tree [1 [2] [3]])
+    (let [tree-1 (create-tree [1
+                               [2]
+                               [3]])
           tree-2 (create-tree [1
-                               [2] [3
-                                    [4]]])]
+                               [2]
+                               [3
+                                [4]]])]
       (is (tree-balanced? tree-1))
       (is (tree-balanced? tree-2))))
 
   (testing "not balanced"
-    (let [tree-1 (create-tree [1 [2
-                                  [3]]])
+    (let [tree-1 (create-tree [1
+                               [2
+                                [3]]])
           tree-2 (create-tree [1
                                [2
                                 [5
-                                 [1]]] [3]])
+                                 [1]]]
+                               [3]])
           tree-3 (create-tree [1
                                [2
                                 [5
-                                 [1] [15]] [45]] [3]])]
+                                 [1]
+                                 [15]]
+                                [45]]
+                               [3]])]
       (is (not (tree-balanced? tree-1)))
       (is (not (tree-balanced? tree-2)))
       (is (not (tree-balanced? tree-3))))))

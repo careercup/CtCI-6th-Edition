@@ -1,13 +1,10 @@
 (ns chapter-4.chapter-4-q4
   (:import (data_structures.tree BinaryTreeNode)))
 
-
 (defn tree-height [^BinaryTreeNode node]
-  (if (nil? node)
-    0
-    (+ 1 (tree-height (:left node)) (tree-height (:right node)))))
+  (cond (nil? node) 0
+        :else (+ 1 (-> node :left tree-height) (-> node :right tree-height))))
 
 (defn tree-balanced? [tree]
-  (let [root tree
-        height-delta (- (tree-height (:left root)) (tree-height (:right root)))]
+  (let [height-delta (- (-> tree :left tree-height) (-> tree :right tree-height))]
     (<= (Math/abs height-delta) 1)))

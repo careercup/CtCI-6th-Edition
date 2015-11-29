@@ -1,4 +1,5 @@
-(ns data-structures.tree)
+(ns data-structures.tree
+  (:require [clojure.zip :as zip]))
 
 (defrecord BinaryTreeNode [data left right])
 
@@ -44,3 +45,25 @@
             (post-order-walk (:right node))
             [(:data node)])
     nil))
+
+;;
+;; Zipper implementation for parent navigation
+;; See: http://tech.puredanger.com/2010/10/22/zippers-with-records-in-clojure/
+;;
+
+(defn- branch? [_] true)
+(defn- children [node] (remove nil? (seq [(:left node) (:right node)])))
+(defn- make-node [node children] (->BinaryTreeNode (:data node) (first children) (second children)))
+
+(defn create-tree-zipper [tree-spec]
+  (let [root (create-tree tree-spec)]
+    (zip/zipper branch? children make-node root)))
+
+(defn zip-left-child [zipper-node]
+  (-> zipper-node zip/down))
+
+(defn zip-right-child [zipper-node]
+  (-> zipper-node zip/down zip/right))
+
+(defn zip-parent [zipper-node]
+  (-> zipper-node zip/up))
