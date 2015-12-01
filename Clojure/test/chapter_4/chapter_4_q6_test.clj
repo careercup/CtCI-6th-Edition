@@ -1,4 +1,5 @@
-(ns chapter-4.chapter-4-q6-test
+(ns ^{:author "Leeor Engel"}
+  chapter-4.chapter-4-q6-test
   (:require [clojure.test :refer :all]
             [data-structures.tree :refer :all]
             [chapter-4.chapter-4-q6 :refer :all]
@@ -48,7 +49,4 @@
                         zip-right-child
                         zip-right-child
                         zip-right-child)]
-    (is (= 10 (-> lowest-left successor :data))))
-  )
-
-(run-tests)
+    (is (= 10 (-> lowest-left successor :data)))))

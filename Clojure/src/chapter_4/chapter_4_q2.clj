@@ -1,4 +1,5 @@
-(ns chapter-4.chapter-4-q2
+(ns ^{:author "Leeor Engel"}
+  chapter-4.chapter-4-q2
   (:require [data-structures.tree :refer :all]))
 
 (defn minimal-tree [sorted-vec]

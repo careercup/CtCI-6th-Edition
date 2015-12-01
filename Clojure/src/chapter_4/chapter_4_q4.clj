@@ -1,4 +1,5 @@
-(ns chapter-4.chapter-4-q4
+(ns ^{:author "Leeor Engel"}
+  chapter-4.chapter-4-q4
   (:import (data_structures.tree BinaryTreeNode)))
 
 (defn tree-height [^BinaryTreeNode node]

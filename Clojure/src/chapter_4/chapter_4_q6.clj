@@ -1,4 +1,5 @@
-(ns chapter-4.chapter-4-q6
+(ns ^{:author "Leeor Engel"}
+  chapter-4.chapter-4-q6
   (:require [clojure.zip :as zip]
             [data-structures.tree :refer :all]))
 

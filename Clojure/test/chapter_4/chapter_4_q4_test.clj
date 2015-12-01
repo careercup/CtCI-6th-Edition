@@ -1,4 +1,5 @@
-(ns chapter-4.chapter-4-q4-test
+(ns ^{:author "Leeor Engel"}
+  chapter-4.chapter-4-q4-test
   (:require [clojure.test :refer :all]
             [data-structures.tree :refer :all]
             [chapter-4.chapter-4-q4 :refer :all]))
@@ -47,5 +48,3 @@
       (is (not (tree-balanced? tree-1)))
       (is (not (tree-balanced? tree-2)))
       (is (not (tree-balanced? tree-3))))))
-
-(run-tests)

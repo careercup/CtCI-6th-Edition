@@ -1,4 +1,5 @@
-(ns chapter-4.chapter-4-q3-test
+(ns ^{:author "Leeor Engel"}
+  chapter-4.chapter-4-q3-test
   (:require [clojure.test :refer :all]
             [data-structures.tree :refer :all]
             [chapter-4.chapter-4-q3 :refer :all]))
@@ -40,5 +41,3 @@
             1 '(2 3)
             2 '(5 6 10)
             3 '(1 23)} actual))))
-
-(run-tests)

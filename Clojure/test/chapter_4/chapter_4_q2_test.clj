@@ -1,4 +1,5 @@
-(ns chapter-4.chapter-4-q2-test
+(ns ^{:author "Leeor Engel"}
+  chapter-4.chapter-4-q2-test
   (:require [clojure.test :refer :all]
             [data-structures.tree :refer :all]
             [chapter-4.chapter-4-q2 :refer :all]))
@@ -39,5 +40,3 @@
                                      [4
                                       [] [5]]])]
       (is (= expected-bst (minimal-tree arr))))))
-
-(run-tests)

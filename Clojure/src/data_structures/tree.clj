@@ -1,4 +1,5 @@
-(ns data-structures.tree
+(ns ^{:author "Leeor Engel"}
+  data-structures.tree
   (:require [clojure.zip :as zip]))
 
 (defrecord BinaryTreeNode [data left right])

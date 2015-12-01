@@ -1,4 +1,5 @@
-(ns chapter-4.chapter-4-q5
+(ns ^{:author "Leeor Engel"}
+  chapter-4.chapter-4-q5
   (:require [data-structures.tree :refer :all]))
 
 ;; O(n)

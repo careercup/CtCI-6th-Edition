@@ -1,4 +1,5 @@
-(ns data-structures.tree-test
+(ns ^{:author "Leeor Engel"}
+  data-structures.tree-test
   (:require [clojure.test :refer :all]
             [data-structures.tree :refer :all]))
 

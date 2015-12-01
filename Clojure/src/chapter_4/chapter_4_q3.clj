@@ -1,4 +1,5 @@
-(ns chapter-4.chapter-4-q3)
+(ns ^{:author "Leeor Engel"}
+  chapter-4.chapter-4-q3)
 
 (defn list-of-depths-helper [node depth]
   (if (some? node)

@@ -1,4 +1,5 @@
-(ns chapter-4.chapter-4-q5-test
+(ns ^{:author "Leeor Engel"}
+  chapter-4.chapter-4-q5-test
   (:require [clojure.test :refer :all]
             [data-structures.tree :refer :all]
             [chapter-4.chapter-4-q5 :refer :all]))
@@ -68,5 +69,3 @@
       (is (alt-valid-bst? tree-1))
       (is (alt-valid-bst? tree-2))
       (is (not (alt-valid-bst? tree-3))))))
-
-(run-tests)
