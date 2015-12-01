@@ -1,10 +1,11 @@
-(ns chapter-2.chapter-2-q8-test
+(ns ^{:author "Leeor Engel"}
+  chapter-2.chapter-2-q8-test
   (:require [clojure.test :refer :all]
             [data-structures.mutable-linked-list :refer :all]
             [chapter-2.chapter-2-q8 :refer :all])
   (:import
     (clojure.lang Atom)
-    (data_structures.linked_list SinglyLinkedList)))
+    (data_structures.mutable_linked_list SinglyLinkedList)))
 
 (defn cycle-list [^SinglyLinkedList l cycle-point-data last-node-data]
   (let [^Atom cycle-node (find-node l cycle-point-data)

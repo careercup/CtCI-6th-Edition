@@ -1,4 +1,5 @@
-(ns chapter-2.chapter-2-q6-test
+(ns ^{:author "Leeor Engel"}
+  chapter-2.chapter-2-q6-test
   (:require [clojure.test :refer :all]
             [data-structures.mutable-linked-list :refer :all]
             [chapter-2.chapter-2-q6 :refer :all]))
@@ -10,3 +11,4 @@
   (is (palindrome? (create-linked-list 1 2 2 1)))
   (is (not (palindrome? (create-linked-list 1 2 1 4))))
   (is (not (palindrome? (create-linked-list 1 2 1 4 1 2 1 1)))))
+

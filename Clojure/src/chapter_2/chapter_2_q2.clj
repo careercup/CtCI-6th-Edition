@@ -1,4 +1,5 @@
-(ns chapter-2.chapter-2-q2)
+(ns ^{:author "Leeor Engel"}
+  chapter-2.chapter-2-q2)
 
 ;; O(n+k)
 (defn kth-to-last [l k]

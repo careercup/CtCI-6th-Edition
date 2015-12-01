@@ -1,9 +1,10 @@
-(ns chapter-2.chapter-2-q5
+(ns ^{:author "Leeor Engel"}
+  chapter-2.chapter-2-q5
   (:require
     [data-structures.mutable-linked-list :refer :all])
   (:import
     (clojure.lang Atom)
-    (data_structures.linked_list SinglyLinkedList)))
+    (data_structures.mutable_linked_list SinglyLinkedList)))
 
 (defn- next-sum
   ([^Atom n1 ^Atom n2]

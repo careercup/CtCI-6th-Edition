@@ -1,4 +1,5 @@
-(ns chapter-2.chapter-2-q2-test
+(ns ^{:author "Leeor Engel"}
+  chapter-2.chapter-2-q2-test
   (:require [clojure.test :refer :all]
             [data-structures.linked-list :refer :all]
             [chapter-2.chapter-2-q2 :refer :all]))

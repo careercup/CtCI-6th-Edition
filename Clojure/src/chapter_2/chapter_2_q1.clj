@@ -1,4 +1,5 @@
-(ns chapter-2.chapter-2-q1)
+(ns ^{:author "Leeor Engel"}
+  chapter-2.chapter-2-q1)
 
 ;;
 ;; Implementations using clojure's built-in list type, which is a singly-linked list.
