@@ -1,4 +1,5 @@
-(ns data-structures.stack)
+(ns ^{:author "Leeor Engel"}
+  data-structures.stack)
 
 (defprotocol Stack
   (stack-pop [this])

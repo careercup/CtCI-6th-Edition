@@ -1,4 +1,5 @@
-(ns data-structures.mutable-stack-test
+(ns ^{:author "Leeor Engel"}
+  data-structures.mutable-stack-test
   (:require [clojure.test :refer :all]
             [data-structures.mutable-stack :refer :all]))
 

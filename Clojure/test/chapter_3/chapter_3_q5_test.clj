@@ -1,4 +1,5 @@
-(ns chapter-3.chapter-3-q5-test
+(ns ^{:author "Leeor Engel"}
+  chapter-3.chapter-3-q5-test
   (:require [clojure.test :refer :all]
             [data-structures.stack :refer :all]
             [data-structures.persistent-stack :refer :all]
@@ -29,5 +30,3 @@
       (let [sorted (sort-stack stack)]
         (is (= 2 (stack-peek sorted)))
         (is (= (create-stack (list 6 15 25 26 34 81)) (stack-pop sorted)))))))
-
-(run-tests)

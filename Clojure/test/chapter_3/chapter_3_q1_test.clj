@@ -1,4 +1,5 @@
-(ns chapter-3.chapter-3-q1-test
+(ns ^{:author "Leeor Engel"}
+  chapter-3.chapter-3-q1-test
   (:require [clojure.test :refer :all]
             [chapter-3.chapter-3-q1 :refer :all]))
 

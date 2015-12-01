@@ -1,4 +1,5 @@
-(ns chapter-3.chapter-3-q6
+(ns ^{:author "Leeor Engel"}
+  chapter-3.chapter-3-q6
   (import java.util.LinkedList
           (java.util Date)))
 

@@ -1,4 +1,5 @@
-(ns data-structures.stack-test
+(ns ^{:author "Leeor Engel"}
+  data-structures.stack-test
   (:require [clojure.test :refer :all]
             [data-structures.persistent-stack :refer :all]))
 

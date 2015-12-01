@@ -1,4 +1,5 @@
-(ns chapter-3.chapter-3-q3
+(ns ^{:author "Leeor Engel"}
+  chapter-3.chapter-3-q3
   (:require [data-structures.stack :refer :all]
             [data-structures.persistent-stack :refer :all])
   (:import (data_structures.persistent_stack PersistentStack)))

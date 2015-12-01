@@ -1,4 +1,5 @@
-(ns chapter-3.chapter-3-q4-test
+(ns ^{:author "Leeor Engel"}
+  chapter-3.chapter-3-q4-test
   (:require [clojure.test :refer :all]
             [data-structures.persistent-stack :refer :all]
             [chapter-3.chapter-3-q4 :refer :all]))
@@ -45,5 +46,3 @@
                         (create-stack '(3 4))) q12))
       (is (= (->MyQueue (create-stack '())
                         (create-stack '(6 7 8 9 10))) q15)))))
-
-(run-tests)

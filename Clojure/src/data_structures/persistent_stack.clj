@@ -1,4 +1,5 @@
-(ns data-structures.persistent-stack
+(ns ^{:author "Leeor Engel"}
+  data-structures.persistent-stack
   (:require [data-structures.stack :refer :all]))
 
 (defrecord PersistentStack [top]

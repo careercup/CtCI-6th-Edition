@@ -1,4 +1,5 @@
-(ns chapter-3.chapter-3-q6-test
+(ns ^{:author "Leeor Engel"}
+  chapter-3.chapter-3-q6-test
   (:require [clojure.test :refer :all]
             [chapter-3.chapter-3-q6 :refer :all]))
 
@@ -97,5 +98,3 @@
             (= "fido" (:name a5)))
         (is (= nil a6)
             (= nil a7))))))
-
-(run-tests)

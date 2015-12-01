@@ -1,4 +1,5 @@
-(ns chapter-3.chapter-3-q2
+(ns ^{:author "Leeor Engel"}
+  chapter-3.chapter-3-q2
   (:require [data-structures.stack :refer :all]
             [data-structures.mutable-stack :refer :all]))
 

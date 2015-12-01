@@ -1,4 +1,5 @@
-(ns chapter-3.chapter-3-q3-test
+(ns ^{:author "Leeor Engel"}
+  chapter-3.chapter-3-q3-test
   (:require [clojure.test :refer :all]
             [chapter-3.chapter-3-q3 :refer :all]))
 
@@ -72,7 +73,4 @@
       (= 2 (stack-set-size ss10))
       (is (= :G (stack-set-peek ss10)))
       (is (= :H (stack-set-peek ss11)))
-      (= 2 (stack-set-size ss11))))
-  )
-
-(run-tests)
+      (= 2 (stack-set-size ss11)))))

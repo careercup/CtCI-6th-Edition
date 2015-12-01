@@ -1,4 +1,5 @@
-(ns data-structures.mutable-stack
+(ns ^{:author "Leeor Engel"}
+  data-structures.mutable-stack
   (:require [data-structures.stack :refer :all])
   (:import (clojure.lang Atom)))
 
