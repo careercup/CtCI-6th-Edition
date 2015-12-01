@@ -1,32 +1,29 @@
-(ns chapter-2.chapter-2-q2
-  (:require
-    [data-structures.linked-list :refer :all])
-  (:import (clojure.lang Atom)
-           (data_structures.linked_list SinglyLinkedList)))
+(ns chapter-2.chapter-2-q2)
 
 ;; O(n+k)
-(defn get-kth-to-last [^SinglyLinkedList l k]
-  (let [len (length l)
+(defn kth-to-last [l k]
+  (let [len (count l)
         node-idx (- len k)]
-    (loop [^Atom n (:head l)
-           idx 0]
-      (if (= node-idx idx)
-        n
-        (recur (:next @n)
-               (inc idx))))))
+    (reduce (fn [idx node]
+              (if (= idx node-idx)
+                (reduced node)
+                (if (= idx len) nil (inc idx)))) 1 l)))
 
 
-(defn- get-kth-to-last-recur-helper [^Atom n k depth]
-  (if (nil? (:next @n))
-    (if (= depth (inc (- depth k)))
-      [n depth]
+(defn- kth-to-last? [depth length k]
+  (= depth (- length k)))
+
+(defn- get-kth-to-last-recur-helper [l k depth]
+  (if (empty? (rest l))
+    (if (zero? k)
+      [l depth]
       [nil depth])
-    (let [[m length] (get-kth-to-last-recur-helper (:next @n) k (inc depth))]
-      (if (and (nil? m) (= (- length k) (dec depth)))
-        [n length]
+    (let [[m length] (get-kth-to-last-recur-helper (rest l) k (inc depth))]
+      (if (and (nil? m) (kth-to-last? depth length k))
+        [l length]
         [m length]))))
 
 ;; O(n) time, O(n) space
-(defn get-kth-to-last-recursive [^SinglyLinkedList l k]
-  (let [[n _] (get-kth-to-last-recur-helper (:head l) k 1)]
-    n))
+(defn kth-to-last-recursive [l k]
+  (let [[list-starting-at-kth _] (get-kth-to-last-recur-helper l k 1)]
+    (first list-starting-at-kth)))

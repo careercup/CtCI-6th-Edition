@@ -1,6 +1,6 @@
 (ns data-structures.linked-list-test
   (:require [clojure.test :refer :all]
-            [data-structures.linked-list :refer :all]))
+            [data-structures.mutable-linked-list :refer :all]))
 
 (defmacro create-linked-nodes [data & more]
   (let [datas (into [data] more)]

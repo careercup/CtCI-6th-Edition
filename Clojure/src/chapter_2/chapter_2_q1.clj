@@ -4,9 +4,6 @@
 ;; Implementations using clojure's built-in list type, which is a singly-linked list.
 ;;
 
-(defn create-linked-list [spec-vec]
-  (into '() (reverse spec-vec)))
-
 ;; O(n) time, O(n) space
 (defn remove-dupes-with-buffer [l]
   (second (reduce (fn [[seen deduped] node]

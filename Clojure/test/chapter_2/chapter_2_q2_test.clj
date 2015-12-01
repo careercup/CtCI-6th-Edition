@@ -3,26 +3,14 @@
             [data-structures.linked-list :refer :all]
             [chapter-2.chapter-2-q2 :refer :all]))
 
-(deftest get-kth-to-last-test
-  ;(is (nil? (get-kth-to-last (create-linked-list 1 2 3) 0)))
-  (is (lists-eq?
-        (create-linked-list 3)
-        (->SinglyLinkedList (get-kth-to-last (create-linked-list 1 2 3) 1))))
-  (is (lists-eq?
-        (create-linked-list 2 3)
-        (->SinglyLinkedList (get-kth-to-last (create-linked-list 1 2 3) 2))))
-  (is (lists-eq?
-        (create-linked-list 1 2 3)
-        (->SinglyLinkedList (get-kth-to-last (create-linked-list 1 2 3) 3)))))
+(deftest kth-to-last-test
+  (is (= 3 (kth-to-last (create-linked-list [1 2 3]) 0)))
+  (is (= 2 (kth-to-last (create-linked-list [1 2 3]) 1)))
+  (is (= 1 (kth-to-last (create-linked-list [1 2 3]) 2)))
+  (is (nil? (kth-to-last (create-linked-list [1 2 3]) 3))))
 
-(deftest get-kth-to-last-recursive-test
-  (is (nil? (get-kth-to-last-recursive (create-linked-list 1 2 3) 0)))
-  (is (lists-eq?
-        (create-linked-list 3)
-        (->SinglyLinkedList (get-kth-to-last-recursive (create-linked-list 1 2 3) 1))))
-  (is (lists-eq?
-        (create-linked-list 2 3)
-        (->SinglyLinkedList (get-kth-to-last-recursive (create-linked-list 1 2 3) 2))))
-  (is (lists-eq?
-        (create-linked-list 1 2 3)
-        (->SinglyLinkedList (get-kth-to-last-recursive (create-linked-list 1 2 3) 3)))))
+(deftest kth-to-last-recursive-test
+  (is (= 3 (kth-to-last-recursive (create-linked-list [1 2 3]) 0)))
+  (is (= 2 (kth-to-last-recursive (create-linked-list [1 2 3]) 1)))
+  (is (= 1 (kth-to-last-recursive (create-linked-list [1 2 3]) 2)))
+  (is (nil? (kth-to-last-recursive (create-linked-list [1 2 3]) 3))))

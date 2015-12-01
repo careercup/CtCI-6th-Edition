@@ -1,6 +1,6 @@
 (ns chapter-2.chapter-2-q3-test
   (:require [clojure.test :refer :all]
-            [data-structures.linked-list :refer :all]
+            [data-structures.mutable-linked-list :refer :all]
             [chapter-2.chapter-2-q3 :refer :all]))
 
 (deftest remove-middle-node-test

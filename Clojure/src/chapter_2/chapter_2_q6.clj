@@ -1,6 +1,6 @@
 (ns chapter-2.chapter-2-q6
   (:require
-    [data-structures.linked-list :refer :all])
+    [data-structures.mutable-linked-list :refer :all])
   (:import (clojure.lang Atom)
            (data_structures.linked_list SinglyLinkedList)))
 
