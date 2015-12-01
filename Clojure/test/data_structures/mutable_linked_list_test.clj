@@ -1,4 +1,4 @@
-(ns data-structures.linked-list-test
+(ns data-structures.mutable-linked-list-test
   (:require [clojure.test :refer :all]
             [data-structures.mutable-linked-list :refer :all]))
 
@@ -64,5 +64,3 @@
         actual (delete-node (create-linked-list 1 2 3 4) 3)]
     (is (lists-eq? expected actual)
         (str "Was: " (to-vec (:head actual))))))
-
-(run-tests)
