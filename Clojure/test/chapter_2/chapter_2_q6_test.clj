@@ -12,5 +12,3 @@
   (is (not (palindrome? (create-linked-list [1 2 1 4]))))
   (is (not (palindrome? (create-linked-list [1 2 1 4 1 2 1 1])))))
 
-(run-tests)
-
