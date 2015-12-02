@@ -1,17 +1,13 @@
 (ns ^{:author "Leeor Engel"}
-  chapter-2.chapter-2-q5
-  (:require
-    [data-structures.mutable-linked-list :refer :all])
-  (:import
-    (clojure.lang Atom)
-    (data_structures.mutable_linked_list SinglyLinkedList)))
+chapter-2.chapter-2-q5
+  (:require [data-structures.linked-list :refer :all]))
 
 (defn- next-sum
-  ([^Atom n1 ^Atom n2]
+  ([n1 n2]
    (next-sum n1 n2 0))
-  ([^Atom n1 ^Atom n2 carry-over]
-   (let [n1-data (if (nil? n1) 0 (:data @n1))
-         n2-data (if (nil? n2) 0 (:data @n2))]
+  ([n1 n2 carry-over]
+   (let [n1-data (if (nil? n1) 0 n1)
+         n2-data (if (nil? n2) 0 n2)]
      (+ n1-data n2-data carry-over))))
 
 (defn- get-high-digit [sum]
@@ -22,83 +18,66 @@
 ;; Solution 1
 ;;
 
-(defn sum-lists [^SinglyLinkedList l1 ^SinglyLinkedList l2]
-  (loop [^Atom n1 (:head l1)
-         ^Atom n2 (:head l2)
-         ^Atom sum-list-head nil
-         ^Atom next-new-node nil
-         carry-over 0]
-    (if (and (nil? n1) (nil? n2))
-      (do (when (> carry-over 0)
-            (reset! next-new-node (create-node (:data @next-new-node) (create-node-ref carry-over))))
-          (->SinglyLinkedList sum-list-head))
-      (let [sum (next-sum n1 n2 carry-over)
-            remainder (mod sum 10)
-            new-node (create-node-ref remainder)]
-        (recur
-          (if (nil? n1) nil (:next @n1))
-          (if (nil? n2) nil (:next @n2))
-          (if (nil? sum-list-head) new-node sum-list-head)
-          (if (nil? next-new-node)
-            new-node
-            (do (reset! next-new-node (create-node (:data @next-new-node) new-node))
-                new-node))
-          (get-high-digit sum))))))
+(defn- map-all [f c1 c2]
+  "like 3-arity map, but continues to consume until all are exhausted. nil's are passed for exhausted lists."
+  (lazy-seq
+    (let [s1 (seq c1) s2 (seq c2)]
+      (when (or s1 s2)
+        (cons (f (first s1) (first s2))
+              (map-all f (rest s1) (rest s2)))))))
+
+(defn sum-lists [l1 l2]
+  (let [steps (reductions (fn [[sum-list carry-over] [digit-1 digit-2]]
+                            (let [sum (next-sum digit-1 digit-2 carry-over)
+                                  remainder (mod sum 10)]
+                              [(conj sum-list remainder) (get-high-digit sum)]))
+                          ['() 0]
+                          (map-all vector l1 l2))
+        sum-list (map first (map first (rest steps)))
+        [_ carry-over] (last steps)]
+    (if (pos? carry-over)
+      (cons carry-over sum-list)
+      sum-list)))
 
 ;;;;
 ;; Follow Up - Solution 1: pad and recurse add
 ;;;;
 
-(defn- zero-pad [^SinglyLinkedList l length to-len]
+(defn- zero-pad-left [l length to-len]
   (let [num-to-pad (- to-len length)]
-    (loop [^SinglyLinkedList padded l
-           pad-remaining num-to-pad]
-      (if (> pad-remaining 0)
-        (recur (add-node padded 0)
-               (dec pad-remaining))
-        padded))))
+    (concat (repeat num-to-pad 0) l)))
 
-(defn sum-lists-forward [^SinglyLinkedList l1 ^SinglyLinkedList l2]
-  (let [l1-len (length l1)
-        l2-len (length l2)
+(defn sum-lists-forward [l1 l2]
+  (let [l1-len (count l1) l2-len (count l2)
         max-len (max l1-len l2-len)
-        normalized-l1 (zero-pad l1 l1-len max-len)
-        normalized-l2 (zero-pad l2 l2-len max-len)]
-    (loop [^Atom n1 (:head normalized-l1)
-           ^Atom n2 (:head normalized-l2)
-           ^SinglyLinkedList sum-list nil
-           carry-over 0]
-      (if (and (nil? n1) (nil? n2))
-        (if (nil? sum-list)
-          (create-linked-list carry-over)
-          (append-to-tail sum-list carry-over))
-        (let [sum (next-sum n1 n2)
-              low-digit (mod sum 10)
-              high-digit (get-high-digit sum)
-              sum-with-carry (+ carry-over high-digit)]
-          (recur (if (nil? n1) nil (:next @n1))
-                 (if (nil? n2) nil (:next @n2))
-                 (if (zero? sum-with-carry)
-                   sum-list
-                   (if (nil? sum-list)
-                     (create-linked-list sum-with-carry)
-                     (append-to-tail sum-list sum-with-carry)))
-                 low-digit))))))
+        normalized-l1 (zero-pad-left l1 l1-len max-len)
+        normalized-l2 (zero-pad-left l2 l2-len max-len)
+        steps (reductions (fn [[sum-list carry-over] [digit-1 digit-2]]
+                            (let [sum (next-sum digit-1 digit-2)
+                                  low-digit (mod sum 10)
+                                  high-digit (get-high-digit sum)
+                                  sum-with-carry (+ carry-over high-digit)
+                                  new-sum-list (if (pos? sum-with-carry)
+                                                 (conj sum-list sum-with-carry)
+                                                 sum-list)]
+                              [new-sum-list low-digit]))
+                          ['() 0]
+                          (map vector normalized-l1 normalized-l2))
+        digits-no-carry-over (map first (rest steps))
+        sum-list (filter some? (map first digits-no-carry-over))
+        [_ carry-over] (last steps)]
+    (if (pos? carry-over)
+      (concat sum-list (list carry-over))
+      sum-list)))
 
 ;;;;
 ;; Follow Up - Solution 2: string concatenation and conversion to/from integers
 ;;;;
 
-(defn- num-list-as-str [^SinglyLinkedList l]
-  (loop [^Atom n (:head l)
-         num-str ""]
-    (if (nil? n)
-      num-str
-      (recur (:next @n)
-             (str num-str (:data @n))))))
+(defn- num-list-as-str [l] (apply str l))
 
-(defn sum-lists-forward-concat [^SinglyLinkedList l1 ^SinglyLinkedList l2]
+(defn sum-lists-forward-concat [l1 l2]
   (let [num-1 (Integer/parseInt (num-list-as-str l1))
         num-2 (Integer/parseInt (num-list-as-str l2))
         sum (+ num-1 num-2)]
-    (apply create-linked-list (map #(Integer/parseInt (str %)) (str sum)))))
+    (apply create-linked-list (vector (map #(Integer/parseInt (str %)) (str sum))))))
