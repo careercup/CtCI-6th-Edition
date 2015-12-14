@@ -2,12 +2,15 @@ module Main where
 
 import Test.Hspec
 import Test.QuickCheck
-import qualified Data.Tree as T
-import qualified Data.BinaryTree as BT
-import qualified Data.BST as BST
+import Ch1
+import Ch2
+import Ch3
+--import Ch4
 
 main :: IO ()
 main = do
   putStrLn "________________________Starting test suite________________________"
-  T.testTree
-  BST.testBST
+  ch1
+  ch2
+  ch3
+  --ch4

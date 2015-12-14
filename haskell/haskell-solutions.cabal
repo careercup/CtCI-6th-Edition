@@ -48,7 +48,7 @@ cabal-version:       >=1.10
 
 library
   -- Modules exported by the library.
-  exposed-modules:     Data.Tree
+  exposed-modules:     Main
   
   -- Modules included in this library but not exported.
   -- other-modules:       
@@ -63,7 +63,10 @@ library
 
   -- Directories containing source files.
   hs-source-dirs:      src
-                     , src/chapter-4
+                     , src/chapter-1
+                     , src/chapter-2
+                     , src/chapter-3
+--                     , src/chapter-4
   
   -- Base language which the package is written in.
   default-language:    Haskell2010
