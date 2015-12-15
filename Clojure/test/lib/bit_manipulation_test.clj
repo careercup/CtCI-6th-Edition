@@ -35,7 +35,4 @@
   (is (= 2r11 (ones 2)))
   (is (= 2r111 (ones 3)))
   (is (= 2r1111 (ones 4)))
-  (is (= 2r11111 (ones 5)))
-  )
-
-(run-tests)
+  (is (= 2r11111 (ones 5))))
