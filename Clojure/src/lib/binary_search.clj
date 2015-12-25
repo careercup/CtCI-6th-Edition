@@ -9,4 +9,4 @@
 
 (defn binary-search [v x]
   "Performs a binary search on a sorted vector v and returns the index of x if found."
-  (binary-search-helper v x 0 (->> v count dec)))
+  (binary-search-helper v x 0 (-> v count dec)))
