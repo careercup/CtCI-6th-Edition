@@ -10,5 +10,3 @@
   (is (= 3 (binary-search [1 2 3 4] 4)))
   (is (= 2 (binary-search [1 2 3 5 9 10 56 78] 3)))
   (is (= 7 (binary-search [1 2 3 5 9 10 78 96] 96))))
-
-(run-tests)
