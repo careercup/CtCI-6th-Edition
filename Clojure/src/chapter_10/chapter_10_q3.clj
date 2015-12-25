@@ -2,12 +2,6 @@
   (:require [medley.core :refer :all]
             [lib.binary-search :refer :all]))
 
-;; SOLUTION SKETCH:
-;; you will also need to record this as the offset once you find the number (if its in the second half)
-;; Then check which side the the number is on by comparing it to the number at this offset
-;; perform a binary search on the side its on. If its on the higher side return its index
-;; otherwise return from other side.
-
 (defn- start-offset-idx
   "Returns the index of the smallest element in v."
   [v]
