@@ -14,11 +14,13 @@
   "Searches for element x in sorted but rotated vector v."
   [v x]
   (let [offset-idx (start-offset-idx v)]
-    (let [min-val (get v 0)
-          max-val (get v (dec offset-idx))]
-      (if (<= min-val x max-val)
-        (binary-search (subvec v 0 offset-idx) x)
-        (if-let [res (binary-search (subvec v offset-idx) x)]
-          (+ offset-idx res)
-          nil)))))
+    (if (vector? offset-idx)
+      (binary-search v x)
+      (let [min-val (get v 0)
+            max-val (get v (dec offset-idx))]
+        (if (<= min-val x max-val)
+          (binary-search (subvec v 0 offset-idx) x)
+          (if-let [res (binary-search (subvec v offset-idx) x)]
+            (+ offset-idx res)
+            nil))))))
 
