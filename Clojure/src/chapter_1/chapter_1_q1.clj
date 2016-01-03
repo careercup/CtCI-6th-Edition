@@ -4,7 +4,7 @@
   "Find if collection is unique, search for repetitions in sorted string."
   [coll]
   (let [sorted-string (clojure.string/join (sort coll))]
-    (empty? (re-find #"(\w)\1+" sorted-string))))
+    (empty? (re-find #"(.)\1+" sorted-string))))
 
 (defn unique-coll-set
   "Find if collection is unique, compare collection count with set"

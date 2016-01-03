@@ -12,6 +12,7 @@
   (is (unique-coll-sort "ab"))
   (is (unique-coll-sort "abcdef"))
   (is (not (unique-coll-sort "aba")))
+  (is (not (unique-coll-sort "$#a#gh")))
   (is (not (unique-coll-sort "bcaa"))))
 
 ;; map lookup
