@@ -1,4 +1,4 @@
-package Q7_07_Jigsaw;
+package Q7_06_Jigsaw;
 
 import java.util.HashMap;
 import java.util.Map.Entry;
