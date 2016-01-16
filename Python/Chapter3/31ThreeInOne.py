@@ -32,7 +32,7 @@ class MultiStack:
               
     def IndexOfTop(self, stacknum):
         offset = stacknum*self.stacksize
-        return offset + self.sizes[stacknum] 
+        return offset + self.sizes[stacknum] - 1 
     
 def ThreeInOne():
     newstack = MultiStack(2)
