@@ -5,10 +5,19 @@ import (
 )
 
 func TestIsUnique(t *testing.T) {
-	if IsUnique("abcd") != true {
-		t.Fatalf("Should be true, was false.")
+	cases := []struct {
+		input    string
+		expected bool
+	}{
+		{"abcd", true},
+		{"abcc", false},
+		{" ", true},
+		{"", true},
 	}
-	if IsUnique("abcc") != false {
-		t.Fatalf("Should be false, was true.")
+	for _, c := range cases {
+		actual := IsUnique(c.input)
+		if actual != c.expected {
+			t.Fatalf("Input %s. Expected: %b, actual: %b\n", c.input, c.expected, actual)
+		}
 	}
 }

@@ -1,5 +1,5 @@
 # Test Instructions
-Add the go folder of this repo to your GOPATH:
+Add the `go` folder of this repo to your `GOPATH`:
 ```
 export GOPATH=$GOPATH:/path/to/repo/go
 ```
