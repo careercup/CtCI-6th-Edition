@@ -1,6 +1,7 @@
 package chapter2
 
 // Using hash table to track duplicates.
+// Using remove solution from problem 3.
 func (ll *DoublyLinkedList) RemoveDuplicates() {
 	seen := make(map[int]struct{})
 	node := ll.head
