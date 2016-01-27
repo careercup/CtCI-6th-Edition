@@ -1,7 +1,5 @@
 package chapter2
 
-import ()
-
 type DoublyLinkedList struct {
 	head  *node
 	tail  *node
