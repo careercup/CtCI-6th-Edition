@@ -1,7 +1,6 @@
 package chapter2
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -10,12 +9,12 @@ func TestKFromTail(t *testing.T) {
 	ll := GetLinkedListFromValues(vals)
 	actual := ll.KFromTail(3)
 	expected := 4
-	if !reflect.DeepEqual(expected, actual) {
+	if expected != actual {
 		t.Fatalf("Expected: %v, actual: %v\n", expected, actual)
 	}
 	actual = ll.KFromTail(0)
 	expected = 6
-	if !reflect.DeepEqual(expected, actual) {
+	if expected != actual {
 		t.Fatalf("Expected: %v, actual: %v\n", expected, actual)
 	}
 }
@@ -25,12 +24,12 @@ func TestKFromTail2(t *testing.T) {
 	ll := GetLinkedListFromValues(vals)
 	actual := ll.KFromTail2(3)
 	expected := 4
-	if !reflect.DeepEqual(expected, actual) {
+	if expected != actual {
 		t.Fatalf("Expected: %v, actual: %v\n", expected, actual)
 	}
 	actual = ll.KFromTail2(0)
 	expected = 6
-	if !reflect.DeepEqual(expected, actual) {
+	if expected != actual {
 		t.Fatalf("Expected: %v, actual: %v\n", expected, actual)
 	}
 }

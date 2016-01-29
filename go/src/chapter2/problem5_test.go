@@ -1,7 +1,6 @@
 package chapter2
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -40,7 +39,7 @@ func TestAddTwoLists(t *testing.T) {
 		l1 := GetLinkedListFromValues(c.vals1)
 		l2 := GetLinkedListFromValues(c.vals2)
 		actual := AddTwoLists(l1, l2)
-		if !reflect.DeepEqual(c.expected, actual) {
+		if c.expected != actual {
 			t.Fatalf("Expected: %v, actual: %v\n", c.expected, actual)
 		}
 	}

@@ -1,7 +1,6 @@
 package chapter2
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -38,7 +37,7 @@ func TestIsPalindrome(t *testing.T) {
 	for _, c := range cases {
 		ll := GetLinkedListFromValues(c.vals)
 		actual := ll.IsPalindrome()
-		if !reflect.DeepEqual(c.expected, actual) {
+		if c.expected != actual {
 			t.Fatalf("Expected: %v, actual: %v\n", c.expected, actual)
 		}
 	}

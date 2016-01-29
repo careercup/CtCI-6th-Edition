@@ -1,7 +1,6 @@
 package chapter2
 
 import (
-	"reflect"
 	"testing"
 )
 
@@ -66,7 +65,7 @@ func TestAreIntersectingNegative(t *testing.T) {
 	}
 	for _, c := range cases {
 		actual := AreIntersecting(c.l1, c.l2)
-		if !reflect.DeepEqual(c.expected, actual) {
+		if c.expected != actual {
 			t.Fatalf("Expected: %v, actual: %v\n", c.expected, actual)
 		}
 	}
