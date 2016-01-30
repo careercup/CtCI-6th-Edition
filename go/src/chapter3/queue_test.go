@@ -34,7 +34,7 @@ func TestQueue(t *testing.T) {
 			}
 		}
 		if !reflect.DeepEqual(c.vals, actual) {
-			t.Fatalf("Expected: %d, actual: %d\n", c.vals, actual)
+			t.Fatalf("Expected: %v, actual: %v\n", c.vals, actual)
 		}
 	}
 
