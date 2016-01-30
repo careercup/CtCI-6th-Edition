@@ -6,8 +6,8 @@ import (
 
 type Stackable interface {
 	Push(int)
-	Pop() int
-	Peek() int
+	Pop() (int, error)
+	Peek() (int, error)
 	IsEmpty() bool
 }
 
@@ -39,7 +39,7 @@ func (s *Stack) Pop() (int, error) {
 
 func (s *Stack) Peek() (int, error) {
 	if s.top == nil {
-		return -1, errors.New("Cannot pop. Stack is empty.")
+		return -1, errors.New("Cannot peek. Stack is empty.")
 	}
 	return s.top.value, nil
 }
