@@ -30,7 +30,6 @@ public class Quicksort {
 				right--;
 			}
 		}
-		AssortedMethods.printIntArray(arr);
 		return left; 
 	}
 	

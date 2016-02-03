@@ -25,29 +25,20 @@ public class Question {
 		left = mergesort(left);
 		right = mergesort(right);
 
-		while (left.size() > 0 || right.size() > 0)
-		{
-			if (left.size() == 0)
-			{
+		while (left.size() > 0 || right.size() > 0) {
+			if (left.size() == 0) {
 				inStack.push(right.pop());
-			}
-			else if (right.size() == 0)
-			{
+			} else if (right.size() == 0) {
 				inStack.push(left.pop());
-			}
-			else if (right.peek().compareTo(left.peek()) <= 0)
-			{
+			} else if (right.peek().compareTo(left.peek()) <= 0) {
 				inStack.push(left.pop());
-			}
-			else
-			{
+			} else {
 				inStack.push(right.pop());
 			}
 		}
 
 		Stack<Integer> reverseStack = new Stack<Integer>();
-		while (inStack.size() > 0)
-		{
+		while (inStack.size() > 0) {
 			reverseStack.push(inStack.pop());
 		}
 
