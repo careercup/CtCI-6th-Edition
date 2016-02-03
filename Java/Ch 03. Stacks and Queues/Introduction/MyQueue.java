@@ -1,6 +1,5 @@
 package Introduction;
 
-import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 
 public class MyQueue<T> {
@@ -38,7 +37,7 @@ public class MyQueue<T> {
 	}
 	
 	public T peek() {
-		if (first == null) throw new EmptyStackException();
+		if (first == null) throw new NoSuchElementException();
 		return first.data;
 	}
 	
