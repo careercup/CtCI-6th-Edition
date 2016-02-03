@@ -1,5 +1,9 @@
 package Q16_09_Operations;
 
+import java.util.Random;
+
+import CtCILibrary.AssortedMethods;
+
 public class Question {
 	/* Flip a positive sign to negative, or a negative sign to pos */
 	public static int negate(int a) {
@@ -80,36 +84,32 @@ public class Question {
 		}
 	}
 	
-	public static int randomInt(int n) {
-		return (int) (Math.random() * n);
-	}
-	
 	public static void main(String[] args) {
-		negateOptimized(29);
-		int q = multiply(-5, -10);
-		System.out.println(q);
+		int minRange = -100;
+		int maxRange = 100;
+		int cycles = 100;
 		
-		for (int i = 0; i < 100; i++) {
-			int a = randomInt(10);
-			int b = randomInt(10);
+		for (int i = 0; i < cycles; i++) {
+			int a = AssortedMethods.randomIntInRange(minRange, maxRange);
+			int b = AssortedMethods.randomIntInRange(minRange, maxRange);
 			int ans = minus(a, b);
 			if (ans != a - b) {
 				System.out.println("ERROR");
 			}
 			System.out.println(a + " - " + b + " = " + ans);
 		}
-		for (int i = 0; i < 100; i++) {
-			int a = randomInt(10);
-			int b = randomInt(10);
+		for (int i = 0; i < cycles; i++) {
+			int a = AssortedMethods.randomIntInRange(minRange, maxRange);
+			int b = AssortedMethods.randomIntInRange(minRange, maxRange);
 			int ans = multiply(a, b);
 			if (ans != a * b) {
 				System.out.println("ERROR");
 			}
 			System.out.println(a + " * " + b + " = " + ans);
 		}
-		for (int i = 0; i < 100; i++) {
-			int a = randomInt(10) + 1;
-			int b = randomInt(10) + 1;
+		for (int i = 0; i < cycles; i++) {
+			int a = AssortedMethods.randomIntInRange(minRange, maxRange);
+			int b = AssortedMethods.randomIntInRange(minRange, maxRange);
 			System.out.print(a + " / " + b + " = ");
 			int ans = divide(a, b);
 			if (ans != a / b) {
