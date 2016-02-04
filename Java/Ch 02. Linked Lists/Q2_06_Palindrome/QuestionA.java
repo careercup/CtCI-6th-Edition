@@ -3,47 +3,31 @@ package Q2_06_Palindrome;
 import CtCILibrary.LinkedListNode;
 
 public class QuestionA {
-	public static class HeadAndTail {
-		public LinkedListNode head;
-		public LinkedListNode tail;
-		public HeadAndTail(LinkedListNode h, LinkedListNode t) {
-			head = h;
-			tail = t;
-		}
+	public static boolean isPalindrome(LinkedListNode head) {
+		LinkedListNode reversed = reverseAndClone(head);
+		return isEqual(head, reversed);
 	}
-	
-	public static HeadAndTail reverse(LinkedListNode head) {
-		if (head == null) {
-			return null;
-		}
-		HeadAndTail ht = reverse(head.next);
-		LinkedListNode clonedHead = head.clone();
-		clonedHead.next = null;
 		
-		if (ht == null) {
-			return new HeadAndTail(clonedHead, clonedHead);
+	public static LinkedListNode reverseAndClone(LinkedListNode node) {
+		LinkedListNode head = null;
+		while (node != null) {
+			LinkedListNode n = new LinkedListNode(node.data); // Clone
+			n.next = head;
+			head = n;
+			node = node.next;
 		}
-		ht.tail.next = clonedHead;
-		return new HeadAndTail(ht.head, clonedHead);
-	}
-	
+		return head;
+	}	
+		
 	public static boolean isEqual(LinkedListNode one, LinkedListNode two) {
-		LinkedListNode head1 = one;
-		LinkedListNode head2 = two;
-		while (head1 != null && head2 != null) {
-			if (head1.data != head2.data) {
+		while (one != null && two != null) {
+			if (one.data != two.data) {
 				return false;
 			}
-			head1 = head1.next;
-			head2 = head2.next;
+			one = one.next;
+			two = two.next;
 		}
-		return head1 == null && head2 == null;
-	}
-	
-	public static boolean isPalindrome(LinkedListNode head) {
-		HeadAndTail reversed = reverse(head);
-		LinkedListNode reversedHead = reversed.head;
-		return isEqual(head, reversedHead);
+		return one == null && two == null;
 	}
 	
 	public static void main(String[] args) {
@@ -61,7 +45,7 @@ public class QuestionA {
 				nodes[i].setPrevious(nodes[i - 1]);
 			}
 		}
-		//nodes[length - 2].data = 9; // Uncomment to ruin palindrome
+		// nodes[length - 2].data = 9; // Uncomment to ruin palindrome
 		
 		LinkedListNode head = nodes[0];
 		System.out.println(head.printForward());
