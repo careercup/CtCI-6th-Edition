@@ -4,16 +4,16 @@ import CtCILibrary.AssortedMethods;
 
 public class Question {
 	// Assume string has sufficient free space at the end
-	public static void replaceSpaces(char[] str, int length) {
+	public static void replaceSpaces(char[] str, int trueLength) {
 		int spaceCount = 0, index, i = 0;
-		for (i = 0; i < length; i++) {
+		for (i = 0; i < trueLength; i++) {
 			if (str[i] == ' ') {
 				spaceCount++;
 			}
 		}
-		index = length + spaceCount * 2;
-		str[index] = '\0';
-		for (i = length - 1; i >= 0; i--) {
+		index = trueLength + spaceCount * 2;
+		if (trueLength < str.length) str[trueLength] = '\0';
+		for (i = trueLength - 1; i >= 0; i--) {
 			if (str[i] == ' ') {
 				str[index - 1] = '0';
 				str[index - 2] = '2';
@@ -26,18 +26,20 @@ public class Question {
 		}
 	}
 	
+	public static int findLastCharacter(char[] str) {
+		for (int i = str.length - 1; i >= 0; i--) {
+			if (str[i] != ' ') {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
 	public static void main(String[] args) {
-		String str = "abc d e f";
-		int spaces = 3;
-		int excess = 7;
-		char[] arr = new char[str.length() + spaces * 2 + 1 + excess];
-		for (int i = 0; i < str.length(); i++) {
-			arr[i] = str.charAt(i);
-		}
-		for (int i = str.length(); i < arr.length; i++) {
-			arr[i] = ' ';
-		}
-		replaceSpaces(arr, str.length());	
+		String str = "Mr John Smith    ";
+		char[] arr = str.toCharArray();
+		int trueLength = findLastCharacter(arr) + 1;
+		replaceSpaces(arr, trueLength);	
 		System.out.println("\"" + AssortedMethods.charArrayToString(arr) + "\"");
 	}
 }
