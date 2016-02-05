@@ -42,7 +42,7 @@ public class Question {
 		
 		/* If the lines are parallel, they intercept only if they have the same y intercept and start 2 is on line 1. */
 		if (line1.slope == line2.slope) {
-			if (line1.yintercept == line2.yintercept && isBetween(start1, start2, end2)) {
+			if (line1.yintercept == line2.yintercept && isBetween(start1, start2, end1)) {
 				return start2;
 			}
 			return null;
@@ -62,8 +62,8 @@ public class Question {
 	
 	public static void main(String[] args) {
 		int[][] coordinates = {
-				{8, 8}, {6, 6},
-				{1, 1}, {10, 10}};
+				{8, 8}, {8, 16},
+				{1, 1}, {1, 10}};
 		Point[] points = {createPoint(coordinates[0]), createPoint(coordinates[1]), createPoint(coordinates[2]), createPoint(coordinates[3])};
 		Point intersection = intersection(points[0], points[1], points[2], points[3]);
 		if (intersection == null) {
