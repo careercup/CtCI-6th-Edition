@@ -29,8 +29,8 @@ public class Sample_Code {
 	}
 	
 	public static int clearBitsIthrough0(int num, int i) {
-		int mask = ~(-1 >>> (31 - i));
-		return (num & mask);
+		int mask = (-1 << (i+1));
+		return num & mask;
 	}
 	
 	public static void main(String[] args) {
