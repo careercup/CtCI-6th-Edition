@@ -93,6 +93,7 @@ public class Question {
 				{"a", "b"},
 				{"b", "c"},
 				{"a", "c"},
+				{"a", "c"},
 				{"d", "e"},
 				{"b", "d"},
 				{"e", "f"},
@@ -109,9 +110,6 @@ public class Question {
 				System.out.println(s);
 			}
 		}
-		
-		int k = 16/2^2;
-		System.out.println(k);
 	}
 
 }

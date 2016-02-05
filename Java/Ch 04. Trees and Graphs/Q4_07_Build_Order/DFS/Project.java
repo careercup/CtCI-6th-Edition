@@ -21,6 +21,7 @@ public class Project {
 	public void addNeighbor(Project node) {
 		if (!map.containsKey(node.getName())) {
 			children.add(node);
+			map.put(node.getName(), node);
 		}
 	}
 	
