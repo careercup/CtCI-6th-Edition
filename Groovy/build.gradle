@@ -6,11 +6,15 @@ repositories {
     jcenter()
 }
 
+configurations {
+    all*.exclude([group: 'org.codehaus.groovy', module: 'groovy']) /* replaced by 'groovy-all' */
+}
+
 dependencies {
-    compile([group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.5', force: true],
+    compile([group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.5'],
     )
 
     testCompile([group: 'org.spockframework', name: 'spock-core', version: '1.1-groovy-2.4-SNAPSHOT'],
-                [group: 'com.nagternal', name: 'spock-genesis', version: '0.3.0'],
+                [group: 'com.nagternal', name: 'spock-genesis', version: '0.4.0'],
     )
 }
