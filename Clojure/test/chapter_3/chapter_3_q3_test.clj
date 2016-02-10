@@ -1,0 +1,76 @@
+(ns ^{:author "Leeor Engel"}
+  chapter-3.chapter-3-q3-test
+  (:require [clojure.test :refer :all]
+            [chapter-3.chapter-3-q3 :refer :all]))
+
+(deftest stack-set-test
+  (testing "threshold 1"
+    (let [ss1 (create-stack-set :A 1)
+          ss2 (stack-set-push ss1 :B)
+          ss3 (stack-set-push ss2 :C)
+          ss4 (stack-set-pop ss3)
+          ss5 (stack-set-pop ss4)
+          ss6 (stack-set-pop ss5)]
+      (is (not (stack-set-empty? ss1)))
+      (is (= :B (stack-set-peek ss2)))
+      (is (= :C (stack-set-peek ss3)))
+      (= 2 (stack-set-size ss2))
+      (= 3 (stack-set-size ss3))
+      (is (= :B (stack-set-peek ss4)))
+      (= 2 (stack-set-size ss4))
+      (is (= :A (stack-set-peek ss5)))
+      (= 1 (stack-set-size ss5))
+      (is (thrown? IllegalStateException (stack-set-peek ss6)))
+      (= 0 (stack-set-size ss6))))
+
+  (testing "threshold 2"
+    (let [ss1 (create-stack-set :A 1)
+          ss2 (stack-set-push ss1 :B)
+          ss3 (stack-set-push ss2 :C)
+          ss4 (stack-set-pop ss3)
+          ss5 (stack-set-pop ss4)
+          ss6 (stack-set-pop ss5)]
+      (is (not (stack-set-empty? ss1)))
+      (is (= :B (stack-set-peek ss2)))
+      (is (= :C (stack-set-peek ss3)))
+      (= 1 (stack-set-size ss2))
+      (= 2 (stack-set-size ss3))
+      (= 3 (stack-set-total-size ss3))
+      (is (= :B (stack-set-peek ss4)))
+      (= 1 (stack-set-size ss4))
+      (is (= :A (stack-set-peek ss5)))
+      (= 1 (stack-set-size ss5))
+      (is (thrown? IllegalStateException (stack-set-peek ss6)))
+      (= 0 (stack-set-size ss6))))
+
+  (testing "threshold 3"
+    (let [ss1 (create-stack-set :A 1)
+          ss2 (stack-set-push ss1 :B)
+          ss3 (stack-set-push ss2 :C)
+          ss4 (stack-set-pop ss3)
+          ss5 (stack-set-pop ss4)
+          ss6 (stack-set-pop ss5)
+          ss7 (stack-set-push ss6 :D)
+          ss8 (stack-set-push ss7 :E)
+          ss9 (stack-set-push ss8 :F)
+          ss10 (stack-set-push ss9 :G)
+          ss11 (stack-set-push ss10 :H)]
+
+      (is (not (stack-set-empty? ss1)))
+      (is (= :B (stack-set-peek ss2)))
+      (is (= :C (stack-set-peek ss3)))
+      (= 1 (stack-set-size ss2))
+      (= 1 (stack-set-size ss3))
+      (= 3 (stack-set-total-size ss3))
+      (is (= :B (stack-set-peek ss4)))
+      (= 1 (stack-set-size ss4))
+      (is (= :A (stack-set-peek ss5)))
+      (= 1 (stack-set-size ss5))
+      (= 0 (stack-set-size ss6))
+      (= 1 (stack-set-size ss7))
+      (= 1 (stack-set-size ss8))
+      (= 1 (stack-set-size ss9))
+      (= 2 (stack-set-size ss10))
+      (is (= :G (stack-set-peek ss10)))
+      (is (= :H (stack-set-peek ss11)))
+      (= 2 (stack-set-size ss11)))))

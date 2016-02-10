@@ -1,4 +1,5 @@
-(ns chapter-3.chapter-3-q1
+(ns ^{:author "Leeor Engel"}
+  chapter-3.chapter-3-q1
   (:import (clojure.lang Atom)))
 
 (defprotocol Stacks
