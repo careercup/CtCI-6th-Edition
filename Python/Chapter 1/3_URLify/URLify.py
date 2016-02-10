@@ -3,17 +3,7 @@ import unittest
 
 def urlify(string, length):
     '''function replaces single spaces with %20 and removes trailing spaces'''
-    counter = 0
-    output = ''
-    for char in string:
-        counter += 1
-        if counter > length:
-            return output
-        elif char == ' ':
-            output = output + '%20'
-        elif char != ' ':
-            output = output + char
-    return output
+    return string[:length].replace(' ', '%20')
 
 class Test(unittest.TestCase):
     '''Test Cases'''
