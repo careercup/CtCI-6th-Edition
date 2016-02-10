@@ -1,0 +1,19 @@
+{
+  "name": "CtCI-javascript-es2015",
+  "version": "1.0.0",
+  "description": "Cracking the Coding Interview solutions in JavaScript (ES2015)",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint . && echo All good!",
+    "test": "./node_modules/.bin/mocha"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.0.15",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.0.15",
+    "chai": "^3.4.0",
+    "eslint": "^1.8.0",
+    "mocha": "^2.3.3",
+    "mocha-eslint": "^1.0.0"
+  }
+}
