@@ -1,9 +1,13 @@
 package Q17_18_Shortest_Supersequence;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
+
+import CtCILibrary.HashMapList;
 
 public class QuestionD {
 
@@ -48,28 +52,26 @@ public class QuestionD {
 		return new Range(bestRangeMin, bestRangeMax);
 	}
 	
-	/* Get queue (linked list) of the indices at which this element appears in the big array. */
-	public static Queue<Integer> getLocations(int[] big, int small) {
-		Queue<Integer> locations = new LinkedList<Integer>();
-		for (int i = 0; i < big.length; i++) {
-			if (big[i] == small) {
-				locations.add(i);
-			}
-		}
-		return locations;
-	}
-	
 	/* Get list of queues (linked lists) storing the indices at which
 	 * each element in smallArray appears in bigArray. */
 	public static ArrayList<Queue<Integer>> getLocationsForElements(int[] big, int[] small) {
-		ArrayList<Queue<Integer>> allLocations = new ArrayList<Queue<Integer>>();
-		for (int e : small) {
-			Queue<Integer> locations = getLocations(big, e);
-			if (locations.size() == 0) {
-				return null;
-			}
-			allLocations.add(locations);
+		/* Initialize hash map from item value to locations. */
+		HashMap<Integer, Queue<Integer>> itemLocations = new HashMap<Integer, Queue<Integer>>();
+		for (int s : small) {
+			Queue<Integer> queue = new LinkedList<Integer>();
+			itemLocations.put(s, queue);
 		}
+		
+		/* Walk through big array, adding the item locations to hash map */
+		for (int i = 0; i < big.length; i++) {
+			Queue<Integer> queue = itemLocations.get(big[i]);
+			if (queue != null) {
+				queue.add(i);
+			}
+		}
+		
+		ArrayList<Queue<Integer>> allLocations = new ArrayList<Queue<Integer>>();
+		allLocations.addAll(itemLocations.values());
 		return allLocations;
 	}
 	
