@@ -74,11 +74,7 @@ public class Others {
 	
 	public static boolean evaluate(String expression, int start, int end) {
 		String result = reduce(expression, start, end);
-		if (result == "0") {
-			return false;
-		} else {
-			return true;
-		}
+		return result != "0";
 	}
 	
 	public static boolean isOperator(char c) {

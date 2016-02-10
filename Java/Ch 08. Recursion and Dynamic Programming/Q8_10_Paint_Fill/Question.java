@@ -50,8 +50,8 @@ public class Question {
 	}
 	
 	public static boolean PaintFill(Color[][] screen, int r, int c, Color ncolor) {
-		if (screen[r][c] == ncolor) return false;
-		return PaintFill(screen, r, c, screen[r][c], ncolor);
+		return screen[r][c] != ncolor
+			   && PaintFill(screen, r, c, screen[r][c], ncolor);
 	}
 	
 	public static void main(String[] args) {

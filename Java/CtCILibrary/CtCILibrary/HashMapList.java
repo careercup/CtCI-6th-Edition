@@ -31,8 +31,8 @@ public class HashMapList<T, E> {
 	/* Check if list at key contains value. */
 	public boolean containsKeyValue(T key, E value) {
 		List<E> list = get(key);
-		if (list == null) return false;
-		return list.contains(value);
+		return list != null
+			   && list.contains(value);
 	}
 	
 	/* Get the list of keys. */

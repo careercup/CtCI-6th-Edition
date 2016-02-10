@@ -14,10 +14,8 @@ public abstract class Entry {
 	}
 	
 	public boolean delete() {
-		if (parent == null) {
-			return false;
-		}
-		return parent.deleteEntry(this);
+		return parent != null
+			   && parent.deleteEntry(this);
 	}
 	
 	public abstract int size();

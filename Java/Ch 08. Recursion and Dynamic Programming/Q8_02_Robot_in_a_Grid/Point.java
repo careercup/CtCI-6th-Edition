@@ -19,10 +19,8 @@ public class Point {
 	
 	@Override
 	public boolean equals(Object o) {
-		if ((o instanceof Point) && (((Point) o).row == this.row) && (((Point) o).column == this.column)) {
-            return true;
-        } else {
-            return false;
-        }
+		return (o instanceof Point)
+			   && (((Point) o).row == row)
+			   && (((Point) o).column == column);
 	}
 }

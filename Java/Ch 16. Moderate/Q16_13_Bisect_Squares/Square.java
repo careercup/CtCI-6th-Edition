@@ -19,10 +19,10 @@ public class Square {
 	}
 	
 	public boolean contains(Square other) {
-		if (this.left <= other.left && this.right >= other.right && this.top <= other.top && this.bottom >= other.bottom) {
-			return true;
-		}
-		return false;
+		return left <= other.left
+			   && right >= other.right
+			   && top <= other.top
+			   && bottom >= other.bottom;
 	}
 	
 	/* Return the point where the line segment connecting mid1 and

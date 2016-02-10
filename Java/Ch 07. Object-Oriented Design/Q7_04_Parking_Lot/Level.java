@@ -36,10 +36,8 @@ public class Level {
 			return false;
 		}
 		int spotNumber = findAvailableSpots(vehicle);
-		if (spotNumber < 0) {
-			return false;
-		}
-		return parkStartingAtSpot(spotNumber, vehicle);
+		return spotNumber >= 0
+			   && parkStartingAtSpot(spotNumber, vehicle);
 	}
 	
 	/* Park a vehicle starting at the spot spotNumber, and continuing until vehicle.spotsNeeded. */

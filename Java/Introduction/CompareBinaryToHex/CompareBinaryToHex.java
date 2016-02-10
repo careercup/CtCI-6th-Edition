@@ -30,10 +30,9 @@ public class CompareBinaryToHex {
 	public static boolean compareBinToHex(CharSequence binary, CharSequence hex) {
 		int n1 = convertFromBase(binary, 2);
 		int n2 = convertFromBase(hex, 16);
-		if (n1 < 0 || n2 < 0) {
-			return false;
-		}
-		return n1 == n2;
+		return n1 >= 0
+			   && n2 >= 0
+			   && n1 == n2;
 	}
 	
 	public static void main(String[] args) {

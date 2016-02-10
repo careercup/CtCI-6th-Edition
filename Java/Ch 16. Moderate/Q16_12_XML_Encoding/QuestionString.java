@@ -101,11 +101,8 @@ public class QuestionString {
 	}
 
 	private boolean hasNextToken(String expectedToken) {
-		if (currentTokenIndex < tokens.size()) {
-			return tokens.get(currentTokenIndex).equals(expectedToken);
-		} else {
-			return false;
-		}
+		return currentTokenIndex < tokens.size()
+			   && tokens.get(currentTokenIndex).equals(expectedToken);
 	}
 
 	private boolean hasNextTokens(String... expectedTokens) {

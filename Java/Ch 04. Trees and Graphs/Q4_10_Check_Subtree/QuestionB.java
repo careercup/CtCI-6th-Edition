@@ -6,10 +6,8 @@ import CtCILibrary.TreeNode;
 public class QuestionB {
 
 	public static boolean containsTree(TreeNode t1, TreeNode t2) {
-		if (t2 == null) {
-			return true; // The empty tree is a subtree of every tree.
-		}
-		return subTree(t1, t2);
+		// The empty tree is a subtree of every tree.
+		return t2 == null || subTree(t1, t2);
 	}
 	
 	/* Checks if the binary tree rooted at r1 contains the binary tree 
@@ -28,15 +26,11 @@ public class QuestionB {
 	 * binary tree rooted at r2 as a subtree starting at r1.
 	 */
 	public static boolean matchTree(TreeNode r1, TreeNode r2) {
-		if (r1 == null && r2 == null) {
-			return true; // nothing left in the subtree
-		} else if (r1 == null || r2 == null) { 
-			return false; // exactly tree is empty, therefore trees don't match
-		} else if (r1.data != r2.data) {  
-			return false;  // data doesn't match
-		} else {
-			return matchTree(r1.left, r2.left) && matchTree(r1.right, r2.right);
-		}
+		return (r1 == null && r2 == null)    /* nothing left in the subtree*/
+			   || (r1 != null && r2 != null) /* exactly tree is empty, therefore trees don't match */
+				  && (r1.data == r2.data)    /* data doesn't match */
+				  && matchTree(r1.left, r2.left)
+				  && matchTree(r1.right, r2.right);
 	}
 
 	public static void main(String[] args) {

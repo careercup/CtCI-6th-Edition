@@ -47,13 +47,9 @@ public class QuestionEff {
 		if (topLeft.zerosBelow < size) { // Check left edge
 			return false;
 		}
-		if (topRight.zerosBelow < size) { // Check right edge
-			return false;
-		}
-		if (bottomRight.zerosRight < size) { // Check bottom edge
-			return false;
-		}
-		return true;
+		// Check right edge
+		return topRight.zerosBelow >= size
+			   && bottomRight.zerosRight >= size;
 	}
 	
 	public static SquareCell[][] processSquare(int[][] matrix) {

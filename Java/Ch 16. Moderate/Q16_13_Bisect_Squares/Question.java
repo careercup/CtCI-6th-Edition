@@ -16,11 +16,8 @@ public class Question {
 	}	
 	
 	public static boolean isApproxEqual(double d1, double d2) {
-		double epsilon = .001;	
-		if (Math.abs(d1 - d2) < epsilon) {
-			return true;
-		}
-		return false;
+		double epsilon = 0.001;
+		return Math.abs(d1 - d2) < epsilon;
 	}
 	
 	public static boolean isApproxEqual(Point p1, Point p2) {

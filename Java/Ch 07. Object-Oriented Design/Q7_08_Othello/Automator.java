@@ -76,10 +76,8 @@ public class Automator {
 	}	
 	
 	public boolean isOver() {
-		if (players[0].getScore() == 0 || players[1].getScore() == 0) {
-			return true;
-		}
-		return false;
+		return players[0].getScore() == 0
+			   || players[1].getScore() == 0;
 	}
 	
 	public void printScores() {
