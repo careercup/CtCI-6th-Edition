@@ -5,5 +5,13 @@ Thanks goes out to the generous programmers below:
 * [gaylelaakmann](https://github.com/gaylelaakmann)
 * [Aristarkhov](https://github.com/Aristarkhov)
 * [asaph](https://github.com/asaph)
+* [krishmunot](https://github.com/krishmunot)
 * [dawsonbotsford](https://github.com/dawsonbotsford)
+<<<<<<< HEAD
+* [leeor](https://github.com/leeorengel)
+* [mandliya](https://github.com/mandliya)
+* [kv-kunalvyas](https://github.com/kv-kunalvyas)
 * [henryhkim](https://github.com/henryhkim)
+=======
+* [henryhkim](https://github.com/henryhkim)
+>>>>>>> refs/remotes/gaylemcd/pr/9
