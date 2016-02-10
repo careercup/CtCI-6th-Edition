@@ -30,19 +30,19 @@ public class CallHandler {
     	callQueues = new ArrayList<List<Call>>(LEVELS); 
     	
         // Create respondents.
-        ArrayList<Employee> respondents = new ArrayList<Employee>(NUM_RESPONDENTS);
+        List<Employee> respondents = new ArrayList<Employee>(NUM_RESPONDENTS);
         for (int k = 0; k < NUM_RESPONDENTS - 1; k++) {
             respondents.add(new Respondent(this));
         }
         employeeLevels.add(respondents);
 
         // Create managers.
-        ArrayList<Employee> managers = new ArrayList<Employee>(NUM_MANAGERS);
+        List<Employee> managers = new ArrayList<Employee>(NUM_MANAGERS);
         managers.add(new Manager(this));
         employeeLevels.add(managers);
 
         // Create directors.
-        ArrayList<Employee> directors = new ArrayList<Employee>(NUM_DIRECTORS);
+        List<Employee> directors = new ArrayList<Employee>(NUM_DIRECTORS);
         directors.add(new Director(this));
         employeeLevels.add(directors);
     }

@@ -1,6 +1,7 @@
 package Q8_14_Boolean_Evaluation;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Others {
 	public enum Term {
@@ -135,8 +136,8 @@ public class Others {
 		return newexpression;
 		
 	}
-	
-	public static int bruteForce(String expression, HashMap<String, Boolean> completed, boolean result, boolean[] flags) {
+
+	public static int bruteForce(String expression, Map<String, Boolean> completed, boolean result, boolean[] flags) {
 		int count = 0;
 		boolean isDone = true;
 		if (completed.containsKey(expression)) {
@@ -206,9 +207,9 @@ public class Others {
 			}			
 		}
 		return c;
-	}	
-	
-	public static int countDP(String exp, boolean result, int start, int end, HashMap<String, Integer> cache) {
+	}
+
+	public static int countDP(String exp, boolean result, int start, int end, Map<String, Integer> cache) {
 		String key = "" + result + start + end;
 		if (cache.containsKey(key)) {
 			return cache.get(key);
@@ -272,8 +273,8 @@ public class Others {
 		}		
 		return (int)num;
 	}
-	
-	public static int countDPEff(String exp, boolean result, int start, int end, HashMap<String, Integer> cache) {
+
+	public static int countDPEff(String exp, boolean result, int start, int end, Map<String, Integer> cache) {
 		String key = "" + start + end;
 		int count = 0;
 		if (!cache.containsKey(key)) {

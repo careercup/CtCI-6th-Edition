@@ -1,6 +1,6 @@
 package Q7_01_Deck_of_Cards;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Question {
 
@@ -16,7 +16,7 @@ public class Question {
 			} else {
 			System.out.println("-- Initial --");
 			automator.printHandsAndScore();
-			ArrayList<Integer> blackjacks = automator.getBlackJacks();
+				List<Integer> blackjacks = automator.getBlackJacks();
 			if (blackjacks.size() > 0) {
 				System.out.print("Blackjack at ");
 				for (int i : blackjacks) {
@@ -30,7 +30,7 @@ public class Question {
 				} else {
 					System.out.println("\n-- Completed Game --");
 					automator.printHandsAndScore();
-					ArrayList<Integer> winners = automator.getWinners();
+					List<Integer> winners = automator.getWinners();
 					if (winners.size() > 0) {
 						System.out.print("Winners: ");
 						for (int i : winners) {

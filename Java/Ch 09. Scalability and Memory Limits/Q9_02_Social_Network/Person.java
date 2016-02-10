@@ -1,9 +1,10 @@
 package Q9_02_Social_Network;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Person {
-	private ArrayList<Integer> friends = new ArrayList<Integer>();
+	private List<Integer> friends = new ArrayList<Integer>();
 	private int personID;
 	private String info;
 	
@@ -12,7 +13,7 @@ public class Person {
 		this.info = info;
 	}
 
-	public ArrayList<Integer> getFriends() {
+	public List<Integer> getFriends() {
 		return friends;
 	}
 	

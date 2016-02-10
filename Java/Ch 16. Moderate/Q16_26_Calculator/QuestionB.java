@@ -7,7 +7,7 @@ public class QuestionB {
 	}
 	
 	/* Return the operator that occurs as offset. */
-	public static Operator parseNextOperator(String sequence, int offset) {
+	public static Operator parseNextOperator(CharSequence sequence, int offset) {
 		if (offset < sequence.length()) {
 			char op = sequence.charAt(offset);
 			switch(op) {
@@ -21,7 +21,7 @@ public class QuestionB {
 	}	
 	
 	/* Return the number that starts at offset. */
-	public static int parseNextNumber(String seq, int offset) {
+	public static int parseNextNumber(CharSequence seq, int offset) {
 		StringBuilder sb = new StringBuilder();
 		while (offset < seq.length() && Character.isDigit(seq.charAt(offset))) {
 			sb.append(seq.charAt(offset));
@@ -75,8 +75,8 @@ public class QuestionB {
 			}
 		}
 	}
-	
-	public static double compute(String sequence) {
+
+	public static double compute(CharSequence sequence) {
 		Stack<Double> numberStack = new Stack<Double>();
 		Stack<Operator> operatorStack = new Stack<Operator>();
 		

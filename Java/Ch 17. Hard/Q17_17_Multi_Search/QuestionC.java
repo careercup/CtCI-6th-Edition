@@ -1,8 +1,9 @@
 package Q17_17_Multi_Search;
 
-import java.util.ArrayList;
-
 import CtCILibrary.HashMapList;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuestionC {
 	public static Trie createTreeFromStrings(String[] smalls, int maxSize) {
@@ -14,9 +15,9 @@ public class QuestionC {
 		}
 		return tree;
 	}
-	
-	public static ArrayList<String> findStringsAtLoc(TrieNode root, String big, int start) {
-		ArrayList<String> strings = new ArrayList<String>();
+
+	public static List<String> findStringsAtLoc(TrieNode root, String big, int start) {
+		List<String> strings = new ArrayList<String>();
 		int index = start;
 		while (index < big.length()) {
 			root = root.getChild(big.charAt(index));
@@ -29,8 +30,8 @@ public class QuestionC {
 		}
 		return strings;
 	}
-	
-	public static void insertIntoHashMap(ArrayList<String> strings, HashMapList<String, Integer> map, int index) {
+
+	public static void insertIntoHashMap(List<String> strings, HashMapList<String, Integer> map, int index) {
 		for (String s : strings) {
 			map.put(s, index);
 		}
@@ -41,7 +42,7 @@ public class QuestionC {
 		TrieNode root = createTreeFromStrings(smalls, big.length()).getRoot();
 		
 		for (int i = 0; i < big.length(); i++) {
-			ArrayList<String> strings = findStringsAtLoc(root, big, i);
+			List<String> strings = findStringsAtLoc(root, big, i);
 			insertIntoHashMap(strings, lookup, i);
 		}
 		

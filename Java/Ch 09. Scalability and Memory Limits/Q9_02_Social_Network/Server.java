@@ -1,10 +1,11 @@
 package Q9_02_Social_Network;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Server {
-	HashMap<Integer, Machine> machines = new HashMap<Integer, Machine>();
-	HashMap<Integer, Integer> personToMachineMap = new HashMap<Integer, Integer>();
+	Map<Integer, Machine> machines = new HashMap<Integer, Machine>();
+	Map<Integer, Integer> personToMachineMap = new HashMap<Integer, Integer>();
 	
 	public Machine getMachineWithId(int machineID) {
 		return machines.get(machineID);

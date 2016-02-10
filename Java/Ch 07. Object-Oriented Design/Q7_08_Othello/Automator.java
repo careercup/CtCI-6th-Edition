@@ -1,14 +1,15 @@
 package Q7_08_Othello;
 
-import java.util.ArrayList;
-
 import CtCILibrary.AssortedMethods;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /* A helper class to automate this game. This is just used for testing purposes. */
 public class Automator {
 	private Player[] players;
 	private Player lastPlayer = null;
-	public ArrayList<Location> remainingMoves = new ArrayList<Location>();
+	public List<Location> remainingMoves = new ArrayList<Location>();
 	private static Automator instance;
 	
 	private Automator() {

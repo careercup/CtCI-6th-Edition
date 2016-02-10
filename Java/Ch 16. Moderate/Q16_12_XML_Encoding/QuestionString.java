@@ -4,13 +4,14 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class QuestionString {
 	private Map<String, Byte> tagMap;
 	private static final Byte[] END = { 0, 1 };
 
-	private ArrayList<String> tokens;
+	private List<String> tokens;
 	private int currentTokenIndex;
 
 	public QuestionString(Map<String, Byte> tagMap) {this.tagMap = tagMap;}

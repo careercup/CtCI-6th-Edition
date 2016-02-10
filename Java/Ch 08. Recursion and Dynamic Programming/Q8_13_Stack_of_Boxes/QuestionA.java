@@ -2,9 +2,10 @@ package Q8_13_Stack_of_Boxes;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
-public class QuestionA {	
-	public static int createStack(ArrayList<Box> boxes) {
+public class QuestionA {
+	public static int createStack(List<Box> boxes) {
 		Collections.sort(boxes, new BoxComparator());
 		int maxHeight = 0;
 		for (int i = 0; i < boxes.size(); i++) {
@@ -13,8 +14,8 @@ public class QuestionA {
 		}
 		return maxHeight;
 	}
-	
-	public static int createStack(ArrayList<Box> boxes, int bottomIndex) {
+
+	public static int createStack(List<Box> boxes, int bottomIndex) {
 		Box bottom = boxes.get(bottomIndex);
 		int maxHeight = 0;
 		for (int i = bottomIndex + 1; i < boxes.size(); i++) {
@@ -30,7 +31,7 @@ public class QuestionA {
 	
 	public static void main(String[] args) {
 		Box[] boxList = { new Box(6, 4, 4), new Box(8, 6, 2), new Box(5, 3, 3), new Box(7, 8, 3), new Box(4, 2, 2), new Box(9, 7, 3)};
-		ArrayList<Box> boxes = new ArrayList<Box>();
+		List<Box> boxes = new ArrayList<Box>();
 		for (Box b : boxList) {
 			boxes.add(b);
 		}

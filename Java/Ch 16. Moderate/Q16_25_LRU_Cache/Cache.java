@@ -1,10 +1,11 @@
 package Q16_25_LRU_Cache;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Cache {			
 	private int maxCacheSize;
-	private HashMap<Integer, LinkedListNode> map = new HashMap<Integer, LinkedListNode>();
+	private Map<Integer, LinkedListNode> map = new HashMap<Integer, LinkedListNode>();
 	private LinkedListNode listHead = null;
 	public LinkedListNode listTail = null;
 	

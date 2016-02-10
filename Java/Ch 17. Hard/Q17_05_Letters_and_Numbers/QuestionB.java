@@ -1,7 +1,7 @@
 package Q17_05_Letters_and_Numbers;
 
 import java.util.HashMap;
-
+import java.util.Map;
 
 public class QuestionB {
 	/* Compute the difference between the number of letters and 
@@ -23,7 +23,7 @@ public class QuestionB {
 	/* Find the matching pair of values in the deltas array with the 
 	 * largest difference in indices. */ 	
 	public static int[] findLongestMatch(int[] deltas) {
-		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 		map.put(0,  -1);
 		int[] max = new int[2];
 		for (int i = 0; i < deltas.length; i++) {

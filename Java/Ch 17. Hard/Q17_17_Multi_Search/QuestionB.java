@@ -1,12 +1,11 @@
 package Q17_17_Multi_Search;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import CtCILibrary.HashMapList;
 
+import java.util.List;
+
 public class QuestionB {
-	public static void subtractValue(ArrayList<Integer> locations, int delta) {
+	public static void subtractValue(List<Integer> locations, int delta) {
 		if (locations == null) return;
 		for (int i = 0; i < locations.size(); i++) {
 			locations.set(i, locations.get(i) - delta);
@@ -27,8 +26,8 @@ public class QuestionB {
         Trie tree = createTrieFromString(big);
 		for (String s : smalls) {
 			/* Get terminating location of each occurrence.*/
-        	ArrayList<Integer> locations = tree.search(s);
-        	
+			List<Integer> locations = tree.search(s);
+
         	/* Adjust to starting location. */
         	subtractValue(locations, s.length());
         	

@@ -1,12 +1,10 @@
 package Q6_10_Test_Strips;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Random;
+import java.util.*;
 
 public class QuestionB {
-	public static ArrayList<Bottle> createBottles(int nBottles, int poisoned) {
-		ArrayList<Bottle> bottles = new ArrayList<Bottle>();
+	public static List<Bottle> createBottles(int nBottles, int poisoned) {
+		List<Bottle> bottles = new ArrayList<Bottle>();
 		for (int i = 0; i < nBottles; i++) {
 			bottles.add(new Bottle(i));
 		}
@@ -22,7 +20,7 @@ public class QuestionB {
 		return bottles;
 	}
 
-	public static int findPoisonedBottle(ArrayList<Bottle> bottles, ArrayList<TestStrip> strips) {
+	public static int findPoisonedBottle(List<Bottle> bottles, List<TestStrip> strips) {
 		if (bottles.size() > 1000 || strips.size() < 10) return -1;
 		
 		int tests = 4; // three digits, plus one extra
@@ -34,7 +32,7 @@ public class QuestionB {
 		}
 		
 		/* Get results. */
-		HashSet<Integer> previousResults = new HashSet<Integer>();
+		Set<Integer> previousResults = new HashSet<Integer>();
 		int[] digits = new int[tests];
 		for (int day = 0; day < tests; day++) {
 			int resultDay = day + TestStrip.DAYS_FOR_RESULT;
@@ -64,7 +62,7 @@ public class QuestionB {
 	}
 	
 	/* Run set of tests for this day. */
-	public static void runTestSet(ArrayList<Bottle> bottles, ArrayList<TestStrip> strips, int day) {
+	public static void runTestSet(List<Bottle> bottles, List<TestStrip> strips, int day) {
 		if (day > 3) return; // only works for 3 days (digits) + one extra
 
 		for (Bottle bottle : bottles) {
@@ -87,7 +85,7 @@ public class QuestionB {
 	}	
 	
 	/* Get results that are positive for a particular day, excluding prior results. */
-	public static int getPositiveOnDay(ArrayList<TestStrip> testStrips, int day, HashSet<Integer> previousResults) {
+	public static int getPositiveOnDay(List<TestStrip> testStrips, int day, Collection<Integer> previousResults) {
 		for (TestStrip testStrip : testStrips) {
 			int id = testStrip.getId();
 			if (testStrip.isPositiveOnDay(day) && !previousResults.contains(id)) {
@@ -95,10 +93,10 @@ public class QuestionB {
 			}
 		}
 		return -1;
-	}	
-	
-	public static ArrayList<TestStrip> createTestStrips(int nTestStrips) {
-		ArrayList<TestStrip> testStrips = new ArrayList<TestStrip>();
+	}
+
+	public static List<TestStrip> createTestStrips(int nTestStrips) {
+		List<TestStrip> testStrips = new ArrayList<TestStrip>();
 		for (int i = 0; i < nTestStrips; i++) {
 			testStrips.add(new TestStrip(i));
 		}
@@ -109,8 +107,8 @@ public class QuestionB {
 		int nBottles = 1000;
 		int nTestStrips = 10;
 		for (int poisoned = 0; poisoned < nBottles; poisoned++) {
-			ArrayList<Bottle> bottles = createBottles(nBottles, poisoned);
-			ArrayList<TestStrip> testStrips = createTestStrips(nTestStrips);
+			List<Bottle> bottles = createBottles(nBottles, poisoned);
+			List<TestStrip> testStrips = createTestStrips(nTestStrips);
 			int poisonedId = findPoisonedBottle(bottles, testStrips);
 			System.out.println("Suspected Bottle: " + poisonedId);
 			if (poisonedId != poisoned) {

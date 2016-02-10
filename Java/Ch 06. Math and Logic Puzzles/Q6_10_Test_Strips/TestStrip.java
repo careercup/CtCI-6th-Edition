@@ -1,10 +1,11 @@
 package Q6_10_Test_Strips;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TestStrip {
-	public static int DAYS_FOR_RESULT = 7; 
-	private ArrayList<ArrayList<Bottle>> dropsByDay = new ArrayList<ArrayList<Bottle>>();
+	public static int DAYS_FOR_RESULT = 7;
+	private List<List<Bottle>> dropsByDay = new ArrayList<List<Bottle>>();
 	private int id;
 	
 	public TestStrip(int id) {
@@ -25,12 +26,12 @@ public class TestStrip {
 	/* Add drop from bottle on specific day. */
 	public void addDropOnDay(int day, Bottle bottle) {
 		sizeDropsForDay(day);
-		ArrayList<Bottle> drops = dropsByDay.get(day);
+		List<Bottle> drops = dropsByDay.get(day);
 		drops.add(bottle);
 	}
 	
 	/* Checks if any of the bottles in the set are poisoned. */
-	private boolean hasPoison(ArrayList<Bottle> bottles) {
+	private boolean hasPoison(Iterable<Bottle> bottles) {
 		for (Bottle b : bottles) {
 			if (b.isPoisoned()) {
 				return true;
@@ -38,9 +39,9 @@ public class TestStrip {
 		}
 		return false;
 	}
-	
-	/* Gets bottles that were used in the test DAYS_FOR_RESULT days ago. */ 
-	public ArrayList<Bottle> getLastWeeksBottles(int day) {
+
+	/* Gets bottles that were used in the test DAYS_FOR_RESULT days ago. */
+	public List<Bottle> getLastWeeksBottles(int day) {
 		if (day < DAYS_FOR_RESULT) {
 			return null;
 		}
@@ -54,7 +55,7 @@ public class TestStrip {
 			return false;
 		}
 		for (int d = 0; d <= testDay; d++) {
-			ArrayList<Bottle> bottles = dropsByDay.get(d);
+			List<Bottle> bottles = dropsByDay.get(d);
 			if (hasPoison(bottles)) {
 				return true;
 			}

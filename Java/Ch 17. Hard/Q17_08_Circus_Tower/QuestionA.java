@@ -1,16 +1,17 @@
 package Q17_08_Circus_Tower;
 
 import java.util.ArrayList;
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
 
 public class QuestionA {
-	public static ArrayList<HtWt> longestIncreasingSeq(ArrayList<HtWt> items) {
+	public static List<HtWt> longestIncreasingSeq(List<HtWt> items) {
 		Collections.sort(items);
 		return bestSeqAtIndex(items, new ArrayList<HtWt>(), 0);
 	}
 	
 	// Returns longer sequence
-	private static ArrayList<HtWt> max(ArrayList<HtWt> seq1, ArrayList<HtWt> seq2) {
+	private static List<HtWt> max(List<HtWt> seq1, List<HtWt> seq2) {
 		if (seq1 == null) {
 			return seq2;
 		} else if (seq2 == null) {
@@ -18,8 +19,8 @@ public class QuestionA {
 		}
 		return seq1.size() > seq2.size() ? seq1 : seq2;
 	}
-	
-	private static boolean canAppend(ArrayList<HtWt> solution, HtWt value) {
+
+	private static boolean canAppend(List<HtWt> solution, HtWt value) {
 		if (solution == null) {
 			return false;
 		}
@@ -29,20 +30,20 @@ public class QuestionA {
 		HtWt last = solution.get(solution.size() - 1);
 		return last.isBefore(value);
 	}
-	
-	private static ArrayList<HtWt> bestSeqAtIndex(ArrayList<HtWt> array, ArrayList<HtWt> sequence, int index) {
+
+	private static List<HtWt> bestSeqAtIndex(List<HtWt> array, List<HtWt> sequence, int index) {
 		if (index >= array.size()) return sequence;
 		
 		HtWt value = array.get(index);
-		
-		ArrayList<HtWt> bestWith = null;
+
+		List<HtWt> bestWith = null;
 		if (canAppend(sequence, value)) {
-			ArrayList<HtWt> sequenceWith = (ArrayList<HtWt>) sequence.clone();
+			List<HtWt> sequenceWith = new ArrayList<HtWt>(sequence);
 			sequenceWith.add(value);
 			bestWith = bestSeqAtIndex(array, sequenceWith, index + 1);
 		}
-		
-		ArrayList<HtWt> bestWithout = bestSeqAtIndex(array, sequence, index + 1);
+
+		List<HtWt> bestWithout = bestSeqAtIndex(array, sequence, index + 1);
 		
 		if (bestWith == null || bestWithout.size() > bestWith.size()) {
 			return bestWithout;
@@ -50,9 +51,9 @@ public class QuestionA {
 			return bestWith;
 		}
 	}
-	
-	public static ArrayList<HtWt> initialize() {
-		ArrayList<HtWt> items = new ArrayList<HtWt>();
+
+	public static List<HtWt> initialize() {
+		List<HtWt> items = new ArrayList<HtWt>();
 		
 		HtWt item = new HtWt(65, 60);
 		items.add(item);
@@ -83,8 +84,8 @@ public class QuestionA {
 		
 		return items;
 	}
-	
-	public static void printList(ArrayList<HtWt> list) {
+
+	public static void printList(List<HtWt> list) {
 		for (HtWt item : list) {
 			System.out.println(item.toString() + " ");
 		}
@@ -92,8 +93,8 @@ public class QuestionA {
 	
 	
 	public static void main(String[] args) {
-		ArrayList<HtWt> items = initialize();
-		ArrayList<HtWt> solution = longestIncreasingSeq(items);
+		List<HtWt> items = initialize();
+		List<HtWt> solution = longestIncreasingSeq(items);
 		printList(solution);
 	}
 

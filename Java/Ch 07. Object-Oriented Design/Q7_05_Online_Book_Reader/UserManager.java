@@ -1,9 +1,9 @@
 package Q7_05_Online_Book_Reader;
 
-import java.util.HashMap;
+import java.util.Map;
 
 public class UserManager {
-	private HashMap<Integer, User> users;
+	private Map<Integer, User> users;
 	
 	public User addUser(int id, String details, int accountType) {
 		if (users.containsKey(id)) {

@@ -1,9 +1,10 @@
 package Q7_04_Parking_Lot;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Vehicle {
-	protected ArrayList<ParkingSpot> parkingSpots = new ArrayList<ParkingSpot>();
+	protected List<ParkingSpot> parkingSpots = new ArrayList<ParkingSpot>();
 	protected String licensePlate;
 	protected int spotsNeeded;
 	protected VehicleSize size;

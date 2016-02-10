@@ -1,9 +1,10 @@
 package Q9_02_Social_Network;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Machine {
-	public HashMap<Integer, Person> persons = new HashMap<Integer, Person>();
+	public Map<Integer, Person> persons = new HashMap<Integer, Person>();
 	public int machineID;
 	
 	public Person getPersonWithID(int personID) {

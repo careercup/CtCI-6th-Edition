@@ -1,11 +1,12 @@
 package Q7_06_Jigsaw;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 
 public class Piece {
 	private final static int NUMBER_OF_EDGES = 4;
-	private HashMap<Orientation, Edge> edges = new HashMap<Orientation, Edge>();
+	private Map<Orientation, Edge> edges = new HashMap<Orientation, Edge>();
 	
 	public Piece(Edge[] edgeList) {		
 		Orientation[] orientations = Orientation.values();
@@ -35,7 +36,7 @@ public class Piece {
 	/* Rotate edges by "numberRotations". */
 	public void rotateEdgesBy(int numberRotations) {
 		Orientation[] orientations = Orientation.values();
-		HashMap<Orientation, Edge> rotated = new HashMap<Orientation, Edge>();
+		Map<Orientation, Edge> rotated = new HashMap<Orientation, Edge>();
 		
 		numberRotations = numberRotations % NUMBER_OF_EDGES;
 		if (numberRotations < 0) numberRotations += NUMBER_OF_EDGES;

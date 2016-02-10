@@ -19,8 +19,8 @@ public class QuestionC {
 		}
 		return compressed.toString();
 	}
-	
-	public static int countCompression(String str) {
+
+	public static int countCompression(CharSequence str) {
 		int compressedLength = 0;
 		int countConsecutive = 0;
 		for (int i = 0; i < str.length(); i++) {

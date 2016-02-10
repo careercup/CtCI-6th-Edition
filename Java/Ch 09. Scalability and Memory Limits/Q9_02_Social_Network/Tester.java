@@ -2,10 +2,11 @@ package Q9_02_Social_Network;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 
 public class Tester {
 
-	public static void printPeople(LinkedList<Person> path) {
+	public static void printPeople(Iterable<Person> path) {
 		if (path == null) {
 			System.out.println("No path");
 		} else {
@@ -40,7 +41,7 @@ public class Tester {
 	
 	public static void main(String[] args) {
 		int nPeople = 11;
-		HashMap<Integer, Person> people = new HashMap<Integer, Person>();
+		Map<Integer, Person> people = new HashMap<Integer, Person>();
 		for (int i = 0; i < nPeople; i++) {
 			Person p = new Person(i);
 			people.put(i, p);

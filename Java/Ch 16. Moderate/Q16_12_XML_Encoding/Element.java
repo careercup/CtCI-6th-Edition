@@ -1,10 +1,11 @@
 package Q16_12_XML_Encoding;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Element {
-	public ArrayList<Attribute> attributes;
-	public ArrayList<Element> children;
+	public List<Attribute> attributes;
+	public List<Element> children;
 	public String name;
 	public String value;
 	

@@ -2,9 +2,10 @@ package Q3_03_Stack_of_Plates;
 
 import java.util.ArrayList;
 import java.util.EmptyStackException;
+import java.util.List;
 
 public class SetOfStacks {
-	ArrayList<Stack> stacks = new ArrayList<Stack>();
+	List<Stack> stacks = new ArrayList<Stack>();
 	public int capacity;
 	
 	public SetOfStacks(int capacity) { 

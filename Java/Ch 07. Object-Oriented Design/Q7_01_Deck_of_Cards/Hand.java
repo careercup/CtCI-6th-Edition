@@ -1,9 +1,10 @@
 package Q7_01_Deck_of_Cards;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Hand <T extends Card> {
-	protected ArrayList<T> cards = new ArrayList<T>();
+	protected List<T> cards = new ArrayList<T>();
 	
 	public int score() {
 		int score = 0;

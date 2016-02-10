@@ -1,6 +1,6 @@
 package Q4_07_Build_Order.EdgeRemoval;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Question {
 
@@ -25,7 +25,7 @@ public class Question {
 	
 	/* A helper function to insert projects with zero dependencies 
 	 * into the order array, starting at index offset. */
-	public static int addNonDependent(Project[] order, ArrayList<Project> projects, int offset) {
+	public static int addNonDependent(Project[] order, List<Project> projects, int offset) {
 		for (Project project : projects) {
 			if (project.getNumberDependencies() == 0) {
 				order[offset] = project;
@@ -34,8 +34,8 @@ public class Question {
 		}
 		return offset;
 	}
-	
-	public static Project[] orderProjects(ArrayList<Project> projects) {
+
+	public static Project[] orderProjects(List<Project> projects) {
 		Project[] order = new Project[projects.size()];
 		
 		/* Add “roots” to the build order first.*/
@@ -52,7 +52,7 @@ public class Question {
 			}
 			
 			/* Remove myself as a dependency. */
-			ArrayList<Project> children = current.getChildren();
+			List<Project> children = current.getChildren();
 			for (Project child : children) {
 				child.decrementDependencies();
 			}			

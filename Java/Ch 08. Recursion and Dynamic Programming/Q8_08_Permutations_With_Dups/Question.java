@@ -2,10 +2,12 @@ package Q8_08_Permutations_With_Dups;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public class Question {	
-	public static HashMap<Character, Integer> buildFreqTable(String s) {
-		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+public class Question {
+	public static Map<Character, Integer> buildFreqTable(String s) {
+		Map<Character, Integer> map = new HashMap<Character, Integer>();
 		for (char c : s.toCharArray()) {
 			if (!map.containsKey(c)) {
 				map.put(c, 0);
@@ -14,8 +16,8 @@ public class Question {
 		}
 		return map;
 	}
-	
-	public static void printPerms(HashMap<Character, Integer> map, String prefix, int remaining, ArrayList<String> result) {
+
+	public static void printPerms(Map<Character, Integer> map, String prefix, int remaining, List<String> result) {
 		if (remaining == 0) {
 			result.add(prefix);
 			return;
@@ -30,17 +32,17 @@ public class Question {
 			}
 		}
 	}
-	
-	public static ArrayList<String> printPerms(String s) {
-		ArrayList<String> result = new ArrayList<String>();
-		HashMap<Character, Integer> map = buildFreqTable(s);
+
+	public static List<String> printPerms(String s) {
+		List<String> result = new ArrayList<String>();
+		Map<Character, Integer> map = buildFreqTable(s);
 		printPerms(map, "", s.length(), result);
 		return result;
 	}
 	
 	public static void main(String[] args) {
 		String s = "aabbccc";
-		ArrayList<String> result = printPerms(s);
+		List<String> result = printPerms(s);
 		System.out.println("Count: " + result.size());
 		for (String r : result) {
 			System.out.println(r);

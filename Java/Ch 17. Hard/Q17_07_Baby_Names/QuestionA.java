@@ -1,7 +1,7 @@
 package Q17_07_Baby_Names;
 
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
@@ -9,8 +9,8 @@ public class QuestionA {
 
 	/* Read through (name, frequency) pairs and initialize a mapping
 	 * of names to NameSets (equivalence classes).*/
-	public static HashMap<String, NameSet> constructGroups(HashMap<String, Integer> names) {
-		HashMap<String, NameSet> groups = new HashMap<String, NameSet>();
+	public static Map<String, NameSet> constructGroups(Map<String, Integer> names) {
+		Map<String, NameSet> groups = new HashMap<String, NameSet>();
 		for (Entry<String, Integer> entry : names.entrySet()) {
 		    String name = entry.getKey();
 		    int frequency = entry.getValue();
@@ -19,8 +19,8 @@ public class QuestionA {
 		}
 		return groups;
 	}
-	
-	public static void mergeClasses(HashMap<String, NameSet> groups, String[][] synonyms) {
+
+	public static void mergeClasses(Map<String, NameSet> groups, String[][] synonyms) {
 		for (String[] entry : synonyms) {
 		    String name1 = entry[0];
 		    String name2 = entry[1];
@@ -43,23 +43,23 @@ public class QuestionA {
 		    }
 		}
 	}
-	
-	public static HashMap<String, Integer> convertToMap(HashMap<String, NameSet> groups) {
-		HashMap<String, Integer> list = new HashMap<String, Integer>();
+
+	public static Map<String, Integer> convertToMap(Map<String, NameSet> groups) {
+		Map<String, Integer> list = new HashMap<String, Integer>();
 		for (NameSet group : groups.values()) {
 			list.put(group.getRootName(), group.getFrequency());
 		}
 		return list;
 	}
-	
-	public static HashMap<String, Integer> trulyMostPopular(HashMap<String, Integer> names, String[][] synonyms) {
-		HashMap<String, NameSet> groups = constructGroups(names);
+
+	public static Map<String, Integer> trulyMostPopular(Map<String, Integer> names, String[][] synonyms) {
+		Map<String, NameSet> groups = constructGroups(names);
 		mergeClasses(groups, synonyms);
 		return convertToMap(groups);
 	}
 	
 	public static void main(String[] args) {
-		HashMap<String, Integer> names = new HashMap<String, Integer>();
+		Map<String, Integer> names = new HashMap<String, Integer>();
 		
 		names.put("John", 3);
 		names.put("Jonathan", 4);
@@ -75,8 +75,8 @@ public class QuestionA {
 			 {"Jonathan", "Johnny"}, 
 			 {"Chris", "Kris"}, 
 			 {"Brian", "Bryan"}};
-		
-		HashMap<String, Integer> finalList = trulyMostPopular(names, synonyms);
+
+		Map<String, Integer> finalList = trulyMostPopular(names, synonyms);
 		for (Entry<String, Integer> entry : finalList.entrySet()) {
 		    String name = entry.getKey();
 		    int frequency = entry.getValue();

@@ -1,10 +1,9 @@
 package Q17_11_Word_Distance;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import CtCILibrary.AssortedMethods;
 import CtCILibrary.HashMapList;
+
+import java.util.List;
 
 public class QuestionB {
 	
@@ -15,8 +14,8 @@ public class QuestionB {
 		}
 		return locations;
 	}
-	
-	public static LocationPair findMinDistancePair(ArrayList<Integer> array1, ArrayList<Integer> array2) {
+
+	public static LocationPair findMinDistancePair(List<Integer> array1, List<Integer> array2) {
 		if (array1 == null || array2 == null || array1.size() == 0 || array2.size() == 0) {
 			return null;
 		}
@@ -40,8 +39,8 @@ public class QuestionB {
 	}
 	
 	public static LocationPair findClosest(String word1, String word2, HashMapList<String, Integer> locations) {
-		ArrayList<Integer> locations1 = locations.get(word1);
-		ArrayList<Integer> locations2 = locations.get(word2);		
+		List<Integer> locations1 = locations.get(word1);
+		List<Integer> locations2 = locations.get(word2);
 		return findMinDistancePair(locations1, locations2);
 	}
 	

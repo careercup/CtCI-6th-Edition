@@ -1,6 +1,7 @@
 package Q8_14_Boolean_Evaluation;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class QuestionB {
 	
@@ -8,8 +9,8 @@ public class QuestionB {
 	public static boolean stringToBool(String c) {
 		return c.equals("1") ? true : false;
 	}
-	
-	public static int countEval(String s, boolean result, HashMap<String, Integer> memo) {
+
+	public static int countEval(String s, boolean result, Map<String, Integer> memo) {
 		count++;
 		if (s.length() == 0) return 0;
 		if (s.length() == 1) return stringToBool(s) == result ? 1 : 0;

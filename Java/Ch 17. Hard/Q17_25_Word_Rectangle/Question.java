@@ -1,8 +1,9 @@
 package Q17_25_Word_Rectangle;
 
-import java.util.ArrayList;
 import CtCILibrary.AssortedMethods;
 import CtCILibrary.Trie;
+
+import java.util.List;
 
 public class Question {
 	private int maxWordLength;
@@ -57,7 +58,7 @@ public class Question {
 			return null;
 		}
 		if (trieList[height - 1] == null) {
-			ArrayList<String> words = groupList[height - 1].getWords();
+			List<String> words = groupList[height - 1].getWords();
 			trieList[height - 1] = new Trie(words); 
 		}
 		return makePartialRectangle(length, height, new Rectangle(length));

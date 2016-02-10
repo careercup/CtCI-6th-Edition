@@ -21,7 +21,7 @@ public class NameSet {
 	public String getRootName() {
 		return rootName;
 	}
-	
+
 	public void copyNamesWithFrequency(Set<String> more, int freq) {
 		names.addAll(more);
 		frequency += freq;

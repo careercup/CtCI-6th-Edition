@@ -1,13 +1,14 @@
 package Q7_07_Chat_Server;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Conversation {
-	protected ArrayList<User> participants = new ArrayList<User>();
+	protected List<User> participants = new ArrayList<User>();
 	protected int id;
-	protected ArrayList<Message> messages = new ArrayList<Message>();
-	
-	public ArrayList<Message> getMessages() {
+	protected List<Message> messages = new ArrayList<Message>();
+
+	public List<Message> getMessages() {
 		return messages;
 	}
 	

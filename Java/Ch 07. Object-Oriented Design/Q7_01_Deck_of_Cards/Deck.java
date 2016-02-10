@@ -1,17 +1,17 @@
 package Q7_01_Deck_of_Cards;
 
-import java.util.ArrayList;
-
 import CtCILibrary.AssortedMethods;
 
+import java.util.List;
+
 public class Deck <T extends Card> {
-	private ArrayList<T> cards;
+	private List<T> cards;
 	private int dealtIndex = 0; // marks first undealt card
 	
 	public Deck() {
 	}
-	
-	public void setDeckOfCards(ArrayList<T> deckOfCards) {
+
+	public void setDeckOfCards(List<T> deckOfCards) {
 		cards = deckOfCards;
 	}
 	

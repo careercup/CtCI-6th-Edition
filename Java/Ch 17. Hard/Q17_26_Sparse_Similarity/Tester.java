@@ -1,22 +1,20 @@
 package Q17_26_Sparse_Similarity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 import java.util.Map.Entry;
 
 public class Tester {
-	public static ArrayList<Integer> removeDups(int[] array) {
-		HashSet<Integer> set = new HashSet<Integer>();
+	public static List<Integer> removeDups(int[] array) {
+		Set<Integer> set = new HashSet<Integer>();
 		for (int a : array) {
 			set.add(a);
 		}
-		ArrayList<Integer> list = new ArrayList<Integer>();
+		List<Integer> list = new ArrayList<Integer>();
 		list.addAll(set);
 		return list;
 	}
-	
-	public static boolean isEqual(HashMap<DocPair, Double> one, HashMap<DocPair, Double> two) {
+
+	public static boolean isEqual(Map<DocPair, Double> one, Map<DocPair, Double> two) {
 		if (one.size() != two.size()) {
 			return false;
 		}
@@ -33,17 +31,17 @@ public class Tester {
 		}
 		return true;
 	}
-	
-	public static void printSim(HashMap<DocPair, Double> similarities) {
+
+	public static void printSim(Map<DocPair, Double> similarities) {
 		for (Entry<DocPair, Double> result : similarities.entrySet()) {
 			DocPair pair = result.getKey();
 			Double sim = result.getValue();
 			System.out.println(pair.doc1 + ", " + pair.doc2 + " : " + sim);
 		}
 	}
-	
-	public static void addTo(HashMap<Integer, Document> documents, int id, int[] array) {
-		ArrayList<Integer> w = removeDups(array);
+
+	public static void addTo(Map<Integer, Document> documents, int id, int[] array) {
+		List<Integer> w = removeDups(array);
 		Document doc = new Document(id, w);
 		documents.put(id, doc);
 	}
@@ -51,15 +49,15 @@ public class Tester {
 	public static void main(String[] args) {
 		/*int numDocuments = 5;
 		int docSize = 5;
-		HashMap<Integer, Document> documents = new HashMap<Integer, Document>();
+		Map<Integer, Document> documents = new HashMap<Integer, Document>();
 		for (int i = 0; i < numDocuments; i++) {
 			int[] words = AssortedMethods.randomArray(docSize, 0, 10);
-			ArrayList<Integer> w = removeDups(words);
+			List<Integer> w = removeDups(words);
 			System.out.println(i + ": " + w.toString());
 			Document doc = new Document(i, w);
 			documents.put(i, doc);
 		}*/
-		HashMap<Integer, Document> documents = new HashMap<Integer, Document>();
+		Map<Integer, Document> documents = new HashMap<Integer, Document>();
 		
 		int[] array1 = {14, 15, 100, 9, 3};
 		addTo(documents, 13, array1);
@@ -72,11 +70,10 @@ public class Tester {
 
 		int[] array4 = {7, 10};
 		addTo(documents, 24, array4);
-		
-		
-		HashMap<DocPair, Double> simA = QuestionA.computeSimilarities(documents);
-		HashMap<DocPair, Double> simB = QuestionB.computeSimilarities(documents);
-		HashMap<DocPair, Double> simC = QuestionC.computeSimilarities(documents);
+
+		Map<DocPair, Double> simA = QuestionA.computeSimilarities(documents);
+		Map<DocPair, Double> simB = QuestionB.computeSimilarities(documents);
+		Map<DocPair, Double> simC = QuestionC.computeSimilarities(documents);
 		System.out.println("----------");
 		printSim(simA);
 		System.out.println("----------");

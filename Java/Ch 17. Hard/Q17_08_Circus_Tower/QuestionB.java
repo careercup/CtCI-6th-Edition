@@ -1,12 +1,13 @@
 package Q17_08_Circus_Tower;
 
 import java.util.ArrayList;
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
 
 public class QuestionB {
 
 	// Returns longer sequence
-	private static ArrayList<HtWt> max(ArrayList<HtWt> seq1, ArrayList<HtWt> seq2) {
+	private static List<HtWt> max(List<HtWt> seq1, List<HtWt> seq2) {
 		if (seq1 == null) {
 			return seq2;
 		} else if (seq2 == null) {
@@ -14,8 +15,8 @@ public class QuestionB {
 		}
 		return seq1.size() > seq2.size() ? seq1 : seq2;
 	}
-	
-	private static boolean canAppend(ArrayList<HtWt> solution, HtWt value) {
+
+	private static boolean canAppend(List<HtWt> solution, HtWt value) {
 		if (solution == null) {
 			return false;
 		}
@@ -25,41 +26,41 @@ public class QuestionB {
 		HtWt last = solution.get(solution.size() - 1);
 		return last.isBefore(value);
 	}
-	
-	public static ArrayList<HtWt> longestIncreasingSeq(ArrayList<HtWt> array) {
+
+	public static List<HtWt> longestIncreasingSeq(List<HtWt> array) {
 		Collections.sort(array);
-		
-		ArrayList<ArrayList<HtWt>> solutions = new ArrayList<ArrayList<HtWt>>();
-		ArrayList<HtWt> bestSequence = null;
+
+		List<List<HtWt>> solutions = new ArrayList<List<HtWt>>();
+		List<HtWt> bestSequence = null;
 		for (int i = 0; i < array.size(); i++) {
-			ArrayList<HtWt> longestAtIndex = bestSeqAtIndex(array, solutions, i);
+			List<HtWt> longestAtIndex = bestSeqAtIndex(array, solutions, i);
 			solutions.add(i, longestAtIndex);
 			bestSequence = max(bestSequence, longestAtIndex);
 		}
 		
 		return bestSequence;
 	}
-	
-	private static ArrayList<HtWt> bestSeqAtIndex(ArrayList<HtWt> array, ArrayList<ArrayList<HtWt>> solutions, int index) {
+
+	private static List<HtWt> bestSeqAtIndex(List<HtWt> array, List<List<HtWt>> solutions, int index) {
 		HtWt value = array.get(index);
-		
-		ArrayList<HtWt> bestSequence = new ArrayList<HtWt>();
+
+		List<HtWt> bestSequence = new ArrayList<HtWt>();
 		
 		for (int i = 0; i < index; i++) {
-			ArrayList<HtWt> solution = solutions.get(i);
+			List<HtWt> solution = solutions.get(i);
 			if (canAppend(solution, value)) {
 				bestSequence = max(solution, bestSequence);
 			}
 		}
-		
-		ArrayList<HtWt> best = (ArrayList<HtWt>) bestSequence.clone();
+
+		List<HtWt> best = new ArrayList<HtWt>(bestSequence);
 		best.add(value);
 		
 		return best;
 	}
-	
-	public static ArrayList<HtWt> initialize() {
-		ArrayList<HtWt> items = new ArrayList<HtWt>();
+
+	public static List<HtWt> initialize() {
+		List<HtWt> items = new ArrayList<HtWt>();
 		
 		HtWt item = new HtWt(65, 60);
 		items.add(item);
@@ -90,16 +91,16 @@ public class QuestionB {
 		
 		return items;
 	}
-	
-	public static void printList(ArrayList<HtWt> list) {
+
+	public static void printList(List<HtWt> list) {
 		for (HtWt item : list) {
 			System.out.println(item.toString() + " ");
 		}
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<HtWt> items = initialize();
-		ArrayList<HtWt> solution = longestIncreasingSeq(items);
+		List<HtWt> items = initialize();
+		List<HtWt> solution = longestIncreasingSeq(items);
 		printList(solution);
 	}
 

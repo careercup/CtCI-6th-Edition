@@ -2,11 +2,13 @@ package Q17_25_Word_Rectangle;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /* A container for a group of words of the same length. */
 public class WordGroup {
-	private HashMap<String, Boolean> lookup = new HashMap<String, Boolean>();
-    private ArrayList<String> group = new ArrayList<String>();
+    private Map<String, Boolean> lookup = new HashMap<String, Boolean>();
+    private List<String> group = new ArrayList<String>();
     
     public WordGroup() {
 
@@ -28,8 +30,8 @@ public class WordGroup {
     public String getWord(int i) {
         return group.get(i);
     }
-    
-    public ArrayList<String> getWords(){ 
+
+    public List<String> getWords() {
         return group;
     }
     

@@ -1,15 +1,11 @@
 package Q9_02_Social_Network;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class QuestionA {
-	public static LinkedList<Person> findPathBFS(HashMap<Integer, Person> people, int source, int destination) {
+	public static LinkedList<Person> findPathBFS(Map<Integer, Person> people, int source, int destination) {
 		Queue<PathNode> toVisit = new LinkedList<PathNode>();
-		HashSet<Integer> visited = new HashSet<Integer>();
+		Set<Integer> visited = new HashSet<Integer>();
 		toVisit.add(new PathNode(people.get(source), null));
 		visited.add(source);
 		while (!toVisit.isEmpty()) {
@@ -20,7 +16,7 @@ public class QuestionA {
 			}
 			
 			/* Search friends. */
-			ArrayList<Integer> friends = person.getFriends();
+			List<Integer> friends = person.getFriends();
 			for (int friendId : friends) {
 				if (!visited.contains(friendId)) {
 					visited.add(friendId);
@@ -34,7 +30,7 @@ public class QuestionA {
 	
 	public static void main(String[] args) {
 		int nPeople = 11;
-		HashMap<Integer, Person> people = new HashMap<Integer, Person>();
+		Map<Integer, Person> people = new HashMap<Integer, Person>();
 		for (int i = 0; i < nPeople; i++) {
 			Person p = new Person(i);
 			people.put(i, p);
@@ -52,7 +48,7 @@ public class QuestionA {
 		
 		int i = 1;
 		int j = 10;
-		LinkedList<Person> path1 = findPathBFS(people, i, j);
+		List<Person> path1 = findPathBFS(people, i, j);
 		Tester.printPeople(path1);
 	}
 

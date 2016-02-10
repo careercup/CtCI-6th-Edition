@@ -1,7 +1,9 @@
 package CtCILibrary;
 
-import java.util.*;
 import java.awt.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class AssortedMethods {
 	public static int randomInt(int n) {
@@ -177,7 +179,7 @@ public class AssortedMethods {
 		return buffer.toString();
 	}
 
-	public static String listOfPointsToString(ArrayList<Point> list) {
+	public static String listOfPointsToString(List<Point> list) {
 		StringBuilder buffer = new StringBuilder();
 		for (Point p : list) {
 			buffer.append("(" + p.x + "," + p.y + ")");
@@ -241,10 +243,10 @@ public class AssortedMethods {
 	public static Trie getTrieDictionary() {
 		return new Trie(getListOfWords());
 	}
-	
-	public static HashSet<String> getWordListAsHashSet() {
+
+	public static Set<String> getWordListAsHashSet() {
 		String[] wordList = getListOfWords();
-		HashSet<String> wordSet = new HashSet<String>();
+		Set<String> wordSet = new HashSet<String>();
 		for (String s : wordList) {
 			wordSet.add(s);
 		}

@@ -1,15 +1,17 @@
 package Q4_03_List_of_Depths;
 
-import CtCILibrary.*;
+import CtCILibrary.AssortedMethods;
+import CtCILibrary.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class QuestionBFS {
 
-	public static ArrayList<LinkedList<TreeNode>> createLevelLinkedList(TreeNode root) {
-		ArrayList<LinkedList<TreeNode>> result = new ArrayList<LinkedList<TreeNode>>();
+	public static List<LinkedList<TreeNode>> createLevelLinkedList(TreeNode root) {
+		List<LinkedList<TreeNode>> result = new ArrayList<LinkedList<TreeNode>>();
 		
 		/* "Visit" the root */
 		LinkedList<TreeNode> current = new LinkedList<TreeNode>();
@@ -19,7 +21,7 @@ public class QuestionBFS {
 		
 		while (current.size() > 0) {
 			result.add(current); // Add previous level
-			LinkedList<TreeNode> parents = current; // Go to next level
+			List<TreeNode> parents = current; // Go to next level
 			current = new LinkedList<TreeNode>(); 
 			for (TreeNode parent : parents) {
 				/* Visit the children */
@@ -34,10 +36,10 @@ public class QuestionBFS {
 
 		return result;
 	}
-	
-	public static void printResult(ArrayList<LinkedList<TreeNode>> result){
+
+	public static void printResult(List<LinkedList<TreeNode>> result) {
 		int depth = 0;
-		for(LinkedList<TreeNode> entry : result) {
+		for (List<TreeNode> entry : result) {
 			Iterator<TreeNode> i = entry.listIterator();
 			System.out.print("Link list at depth " + depth + ":");
 			while(i.hasNext()){
@@ -52,7 +54,7 @@ public class QuestionBFS {
 	public static void main(String[] args) {
 		int[] nodes_flattened = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		TreeNode root = AssortedMethods.createTreeFromArray(nodes_flattened);
-		ArrayList<LinkedList<TreeNode>> list = createLevelLinkedList(root);
+		List<LinkedList<TreeNode>> list = createLevelLinkedList(root);
 		printResult(list);
 	}
 

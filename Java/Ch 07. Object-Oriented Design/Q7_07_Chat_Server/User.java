@@ -1,18 +1,16 @@
 package Q7_07_Chat_Server;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
+import java.util.*;
 
 public class User {
 	private int id;
 	private UserStatus status = null;
-	private HashMap<Integer, PrivateChat> privateChats = new HashMap<Integer, PrivateChat>();
-	private ArrayList<GroupChat> groupChats = new ArrayList<GroupChat>();
-	private HashMap<Integer, AddRequest> receivedAddRequests = new HashMap<Integer, AddRequest>();
-	private HashMap<Integer, AddRequest> sentAddRequests = new HashMap<Integer, AddRequest>();
-	
-	private HashMap<Integer, User> contacts = new HashMap<Integer, User>();
+	private Map<Integer, PrivateChat> privateChats = new HashMap<Integer, PrivateChat>();
+	private List<GroupChat> groupChats = new ArrayList<GroupChat>();
+	private Map<Integer, AddRequest> receivedAddRequests = new HashMap<Integer, AddRequest>();
+	private Map<Integer, AddRequest> sentAddRequests = new HashMap<Integer, AddRequest>();
+
+	private Map<Integer, User> contacts = new HashMap<Integer, User>();
 	private String accountName;
 	private String fullName;
 	

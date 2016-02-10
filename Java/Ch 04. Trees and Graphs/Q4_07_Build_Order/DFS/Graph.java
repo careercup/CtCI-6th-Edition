@@ -2,10 +2,12 @@ package Q4_07_Build_Order.DFS;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Graph {
-	private ArrayList<Project> nodes = new ArrayList<Project>();
-	private HashMap<String, Project> map = new HashMap<String, Project>();
+	private List<Project> nodes = new ArrayList<Project>();
+	private Map<String, Project> map = new HashMap<String, Project>();
 	
 	public Project getOrCreateNode(String name) {
 		if (!map.containsKey(name)) {
@@ -22,8 +24,8 @@ public class Graph {
 		Project end = getOrCreateNode(endName);
 		start.addNeighbor(end);
 	}
-	
-	public ArrayList<Project> getNodes() {
+
+	public List<Project> getNodes() {
 		return nodes;
 	}
 }

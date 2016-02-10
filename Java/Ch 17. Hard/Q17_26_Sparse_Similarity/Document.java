@@ -1,17 +1,17 @@
 package Q17_26_Sparse_Similarity;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Document {
-	private ArrayList<Integer> words;
+	private List<Integer> words;
 	private int docId;
-	
-	public Document(int id, ArrayList<Integer> w) {
+
+	public Document(int id, List<Integer> w) {
 		docId = id;
 		words = w;
 	}
-	
-	public ArrayList<Integer> getWords() {
+
+	public List<Integer> getWords() {
 		return words;
 	}
 	

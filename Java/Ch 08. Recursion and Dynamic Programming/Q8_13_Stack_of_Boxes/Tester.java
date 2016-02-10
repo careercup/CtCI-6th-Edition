@@ -1,6 +1,7 @@
 package Q8_13_Stack_of_Boxes;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Tester {
@@ -11,9 +12,9 @@ public class Tester {
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<Box> boxes1 = new ArrayList<Box>();
-		ArrayList<Box> boxes2 = new ArrayList<Box>();
-		ArrayList<Box> boxes3 = new ArrayList<Box>();
+		List<Box> boxes1 = new ArrayList<Box>();
+		List<Box> boxes2 = new ArrayList<Box>();
+		List<Box> boxes3 = new ArrayList<Box>();
 		for (int i = 0; i < 200; i++) {
 			Box b = createRandomBox();
 			boxes1.add(b);

@@ -1,8 +1,9 @@
 package Q16_04_Tic_Tac_Win;
 
-import java.util.ArrayList;
-
 import CtCILibrary.AssortedMethods;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuestionG {
 	public static class Check {
@@ -31,7 +32,7 @@ public class QuestionG {
 		int size = board.length;
 		
 		/* Create list of things to check. */
-		ArrayList<Check> instructions = new ArrayList<Check>();
+		List<Check> instructions = new ArrayList<Check>();
 		for (int i = 0; i < board.length; i++) {
 			instructions.add(new Check(0, i, 1, 0));
 			instructions.add(new Check(i, 0, 0, 1));

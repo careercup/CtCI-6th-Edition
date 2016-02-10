@@ -1,11 +1,9 @@
 package CtCILibrary;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Set;
+import java.util.*;
 
 public class HashMapList<T, E> {
-	private HashMap<T, ArrayList<E>> map = new HashMap<T, ArrayList<E>>();
+	private Map<T, List<E>> map = new HashMap<T, List<E>>();
 	
 	/* Insert item into list at key. */
 	public void put(T key, E item) {
@@ -16,12 +14,12 @@ public class HashMapList<T, E> {
 	}
 	
 	/* Insert list of items at key. */
-	public void put(T key, ArrayList<E> items) {
+	public void put(T key, List<E> items) {
 		map.put(key, items);
 	}
 	
 	/* Get list of items at key. */
-	public ArrayList<E> get(T key) {
+	public List<E> get(T key) {
 		return map.get(key);
 	}
 	
@@ -32,7 +30,7 @@ public class HashMapList<T, E> {
 	
 	/* Check if list at key contains value. */
 	public boolean containsKeyValue(T key, E value) {
-		ArrayList<E> list = get(key);
+		List<E> list = get(key);
 		if (list == null) return false;
 		return list.contains(value);
 	}

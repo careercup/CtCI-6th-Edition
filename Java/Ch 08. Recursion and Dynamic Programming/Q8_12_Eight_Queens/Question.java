@@ -1,6 +1,7 @@
 package Q8_12_Eight_Queens;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Question {
 	public static int GRID_SIZE = 8;
@@ -30,8 +31,8 @@ public class Question {
 		}
 		return true;
 	}
-	
-	public static void placeQueens(int row, Integer[] columns, ArrayList<Integer[]> results) {
+
+	public static void placeQueens(int row, Integer[] columns, List<Integer[]> results) {
 		if (row == GRID_SIZE) { // Found valid placement
 			results.add(columns.clone()); 
 		} else {
@@ -74,9 +75,7 @@ public class Question {
         System.out.println(line.toString());
     }
 
-
-	
-	public static void printBoards(ArrayList<Integer[]> boards) {
+	public static void printBoards(List<Integer[]> boards) {
 		for (int i = 0; i < boards.size(); i++) {
 			Integer[] board = boards.get(i);
 			printBoard(board);
@@ -84,7 +83,7 @@ public class Question {
 	}
 	   
 	public static void main(String[] args) {
-		ArrayList<Integer[]> results = new ArrayList<Integer[]>();
+		List<Integer[]> results = new ArrayList<Integer[]>();
 		Integer[] columns = new Integer[GRID_SIZE];
 		clear(columns);
 		placeQueens(0, columns, results);

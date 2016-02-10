@@ -1,12 +1,13 @@
 package Q16_02_Word_Frequencies;
 
-import java.util.*;
-
 import CtCILibrary.AssortedMethods;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class QuestionB {
-	public static HashMap<String, Integer> setupDictionary(String[] book) {
-		HashMap<String, Integer> table = new HashMap<String, Integer>();
+	public static Map<String, Integer> setupDictionary(String[] book) {
+		Map<String, Integer> table = new HashMap<String, Integer>();
 		for (String word : book) {
 			word = word.toLowerCase();
 			if (word.trim() != "") {
@@ -18,7 +19,7 @@ public class QuestionB {
 		}
 		return table;
 	}
-	public static int getFrequency(HashMap<String, Integer> table, String word) {
+	public static int getFrequency(Map<String, Integer> table, String word) {
 		if (table == null || word == null) {
 			return -1;
 		}
@@ -31,7 +32,7 @@ public class QuestionB {
 	
 	public static void main(String[] args) {
 		String[] wordlist = AssortedMethods.getLongTextBlobAsStringList();
-		HashMap<String, Integer> dictionary = setupDictionary(wordlist);
+		Map<String, Integer> dictionary = setupDictionary(wordlist);
 		
 		String[] words = {"the", "Lara", "and", "outcropping", "career", "it"};
 		for (String word : words) {

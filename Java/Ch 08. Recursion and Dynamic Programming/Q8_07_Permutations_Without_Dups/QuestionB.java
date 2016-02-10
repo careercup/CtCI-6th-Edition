@@ -1,11 +1,12 @@
 package Q8_07_Permutations_Without_Dups;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuestionB {
-	public static ArrayList<String> getPerms(String remainder) {
+	public static List<String> getPerms(String remainder) {
 		int len = remainder.length();
-		ArrayList<String> result = new ArrayList<String>();
+		List<String> result = new ArrayList<String>();
 		
 		/* Base case. */
 		if (len == 0) {
@@ -18,7 +19,7 @@ public class QuestionB {
 			/* Remove char i and find permutations of remaining characters.*/
 			String before = remainder.substring(0, i);
 			String after = remainder.substring(i + 1, len);
-			ArrayList<String> partials = getPerms(before + after);
+			List<String> partials = getPerms(before + after);
 			
 			/* Prepend char i to each permutation.*/
 			for (String s : partials) {
@@ -30,7 +31,7 @@ public class QuestionB {
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<String> list = getPerms("abc");
+		List<String> list = getPerms("abc");
 		System.out.println("There are " + list.size() + " permutations.");
 		for (String s : list) {
 			System.out.println(s);

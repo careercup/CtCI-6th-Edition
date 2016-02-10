@@ -2,10 +2,12 @@ package Q17_17_Multi_Search;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class TrieNode {
-	private HashMap<Character, TrieNode> children;
-	private ArrayList<Integer> indexes;
+	private Map<Character, TrieNode> children;
+	private List<Integer> indexes;
 	private char value;
 	
 	public TrieNode() { 
@@ -31,8 +33,8 @@ public class TrieNode {
 			children.put('\0', null);
 		}
 	}
-	
-	public ArrayList<Integer> search(String s) {
+
+	public List<Integer> search(String s) {
 		if (s == null || s.length() == 0) {
 			return indexes;
 		} else {

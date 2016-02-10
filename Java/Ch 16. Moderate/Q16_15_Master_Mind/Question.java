@@ -37,8 +37,8 @@ public class Question {
 	}
 	
 	public static int MAX_COLORS = 4;
-	
-	public static Result estimate(String guess, String solution) {
+
+	public static Result estimate(CharSequence guess, CharSequence solution) {
 		if (guess.length() != solution.length()) return null;
 		Result res = new Result();
 		int[] frequencies = new int[MAX_COLORS];

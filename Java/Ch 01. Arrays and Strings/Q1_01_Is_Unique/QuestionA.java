@@ -1,7 +1,7 @@
 package Q1_01_Is_Unique;
 
 public class QuestionA {
-	public static boolean isUniqueChars(String str) {
+	public static boolean isUniqueChars(CharSequence str) {
 		if (str.length() > 128) {
 			return false;
 		}

@@ -1,10 +1,9 @@
 package Q16_14_Best_Line;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Set;
-
 import CtCILibrary.HashMapList;
+
+import java.util.List;
+import java.util.Set;
 
 public class Question {	
 	/* Find line that goes through most number of points. */
@@ -34,7 +33,7 @@ public class Question {
 		Set<Double> slopes = linesBySlope.keySet();
 		
 		for (double slope : slopes) {
-			ArrayList<Line> lines = linesBySlope.get(slope);
+			List<Line> lines = linesBySlope.get(slope);
 			for (Line line : lines) {
 				/* count lines that are equivalent to current line */
 				int count = countEquivalentLines(linesBySlope, line);
@@ -63,7 +62,7 @@ public class Question {
 	}
 	
 	/* Count lines within an array of lines which are "equivalent" (slope and y-intercept are within an epsilon value) to a given line */
-	public static int countEquivalentLines(ArrayList<Line> lines, Line line) {
+	public static int countEquivalentLines(List<Line> lines, Line line) {
 		if (lines == null) {
 			return 0;
 		}

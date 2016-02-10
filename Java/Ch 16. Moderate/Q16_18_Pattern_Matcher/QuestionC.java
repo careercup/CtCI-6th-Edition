@@ -14,8 +14,8 @@ public class QuestionC {
 		}
 		return sb.toString();
 	}
-	
-	public static int countOf(String pattern, char c) {
+
+	public static int countOf(CharSequence pattern, char c) {
 		int count = 0;
 		for (int i = 0; i < pattern.length(); i++) {
 			if (pattern.charAt(i) == c) {

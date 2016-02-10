@@ -1,6 +1,6 @@
 package Q4_07_Build_Order.DFS;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class Question {
@@ -31,7 +31,7 @@ public class Question {
 		
 		if (project.getState() == Project.State.BLANK) {
 			project.setState(Project.State.PARTIAL);
-			ArrayList<Project> children = project.getChildren();
+			List<Project> children = project.getChildren();
 			for (Project child : children) {
 				if (!doDFS(child, stack)) {
 					return false;
@@ -42,8 +42,8 @@ public class Question {
 		}
 		return true;
 	}
-	
-	public static Stack<Project> orderProjects(ArrayList<Project> projects) {
+
+	public static Stack<Project> orderProjects(List<Project> projects) {
 		Stack<Project> stack = new Stack<Project>();
 		for (Project project : projects) {
 			if (project.getState() == Project.State.BLANK) {

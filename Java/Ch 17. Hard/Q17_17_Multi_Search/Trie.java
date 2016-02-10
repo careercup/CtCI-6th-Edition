@@ -1,6 +1,6 @@
 package Q17_17_Multi_Search;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Trie {
 	private TrieNode root = new TrieNode();
@@ -12,8 +12,8 @@ public class Trie {
 	public Trie() {
 		
 	}
-	
-	public ArrayList<Integer> search(String s) {
+
+	public List<Integer> search(String s) {
 		return root.search(s);
 	}
 	

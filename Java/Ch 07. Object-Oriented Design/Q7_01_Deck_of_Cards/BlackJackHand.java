@@ -1,6 +1,7 @@
 package Q7_01_Deck_of_Cards;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class BlackJackHand extends Hand<BlackJackCard> {
 	public BlackJackHand() {
@@ -8,7 +9,7 @@ public class BlackJackHand extends Hand<BlackJackCard> {
 	}
 	
 	public int score() {
-		ArrayList<Integer> scores = possibleScores();
+		List<Integer> scores = possibleScores();
 		int maxUnder = Integer.MIN_VALUE;
 		int minOver = Integer.MAX_VALUE;
 		for (int score : scores) {
@@ -20,9 +21,9 @@ public class BlackJackHand extends Hand<BlackJackCard> {
 		}
 		return maxUnder == Integer.MIN_VALUE ? minOver : maxUnder;
 	}
-	
-	private ArrayList<Integer> possibleScores() {
-		ArrayList<Integer> scores = new ArrayList<Integer>();
+
+	private List<Integer> possibleScores() {
+		List<Integer> scores = new ArrayList<Integer>();
 		if (cards.size() == 0) {
 			return scores;
 		}
@@ -31,8 +32,8 @@ public class BlackJackHand extends Hand<BlackJackCard> {
 		}
 		return scores;
 	}
-	
-	private void addCardToScoreList(BlackJackCard card, ArrayList<Integer> scores) {
+
+	private void addCardToScoreList(BlackJackCard card, List<Integer> scores) {
 		if (scores.size() == 0) {
 			scores.add(0);
 		} 
