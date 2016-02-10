@@ -94,7 +94,7 @@ public class QuestionB {
 
 	public static void printList(List<HtWt> list) {
 		for (HtWt item : list) {
-			System.out.println(item.toString() + " ");
+			System.out.println(item + " ");
 		}
 	}
 	

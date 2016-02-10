@@ -19,7 +19,7 @@ public class QuestionC {
 	
 	public static void main(String[] args) {
 		Set<Integer> lengths = allLengths(12, 1, 3);
-		System.out.println(lengths.toString());
+		System.out.println(lengths);
 	}
 
 }

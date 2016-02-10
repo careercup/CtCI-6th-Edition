@@ -7,7 +7,7 @@ public class QuestionA {
 	public static BigInteger productToN(int n) {
 		BigInteger fullProduct = new BigInteger("1");
 		for (int i = 2; i <= n; i++) {
-			fullProduct = fullProduct.multiply(new BigInteger(i + ""));
+			fullProduct = fullProduct.multiply(BigInteger.valueOf(i));
 		}
 		return fullProduct;
 	}

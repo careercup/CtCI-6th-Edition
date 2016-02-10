@@ -26,7 +26,7 @@ public class QuestionB {
 		int[] test = {-1, -1, -1, -1, 0, 0, 0, 0, 1, 1};
 		List<Pair> pairs = printPairSums(test, -1);
 		for (Pair p : pairs) {
-			System.out.println(p.toString());
+			System.out.println(p);
 		}
 	}
 }

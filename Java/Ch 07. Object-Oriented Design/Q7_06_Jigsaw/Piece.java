@@ -92,8 +92,8 @@ public class Piece {
 		StringBuilder sb = new StringBuilder();
 		Orientation[] orientations = Orientation.values();
 		for (Orientation o : orientations) {
-			sb.append(edges.get(o).toString() + ",");
+			sb.append(edges.get(o) + ",");
 		}
-		return "[" + sb.toString() + "]";
+		return "[" + sb + "]";
 	}
 }

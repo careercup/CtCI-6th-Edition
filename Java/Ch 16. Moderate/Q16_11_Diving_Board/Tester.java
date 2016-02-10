@@ -12,10 +12,10 @@ public class Tester {
 		Set<Integer> lengthsB = QuestionB.allLengths(nSticks, shorter, longer);
 		Set<Integer> lengthsC = QuestionC.allLengths(nSticks, shorter, longer);
 		System.out.println(QuestionB.counter);
-		
-		System.out.println(lengthsA.toString());
-		System.out.println(lengthsB.toString());
-		System.out.println(lengthsC.toString());
+
+		System.out.println(lengthsA);
+		System.out.println(lengthsB);
+		System.out.println(lengthsC);
 		
 		System.out.println(lengthsA.equals(lengthsB) && lengthsA.equals(lengthsC));
 		System.out.println("Calls for A: " + QuestionA.counter);

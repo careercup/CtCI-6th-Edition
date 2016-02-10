@@ -52,7 +52,7 @@ public class CircularArray<T> implements Iterable<T> {
 		@Override
 		public TI next() {
 			_current++;
-			TI item = (TI) _items[convert(_current)];
+			TI item = _items[convert(_current)];
 			return item;
 		}
 		

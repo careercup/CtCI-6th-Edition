@@ -34,8 +34,8 @@ public class Question {
 			printSquare(s1);
 			printSquare(s2);
 			printLine(line);
-			System.out.println(start.toString());
-			System.out.println(end.toString());
+			System.out.println(start);
+			System.out.println(end);
 			System.out.println();
 			return r;
 		}

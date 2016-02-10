@@ -8,7 +8,7 @@ public class Tester {
 		if (list == null) {
 			System.out.println("No path.");
 		} else {
-			System.out.println(list.toString());
+			System.out.println(list);
 		}
 	}
 	

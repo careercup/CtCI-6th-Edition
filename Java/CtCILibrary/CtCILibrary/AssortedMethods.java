@@ -1,11 +1,9 @@
 package CtCILibrary;
 
 import java.awt.*;
-import java.util.HashSet;
-import java.util.LinkedList;
+import java.util.*;
 import java.util.List;
 import java.util.Queue;
-import java.util.Set;
 
 public class AssortedMethods {
 	public static int randomInt(int n) {
@@ -112,7 +110,7 @@ public class AssortedMethods {
 		String s = "";
 		for (int i = 0; i < 32; i++) {
 			Integer lsb = new Integer(a & 1);
-			s = lsb.toString() + s;
+			s = lsb + s;
 			a = a >> 1;
 		}
 		return s;
@@ -207,7 +205,7 @@ public class AssortedMethods {
 			boolean done = false;
 			int i = 1;
 			while (!done) {
-				TreeNode r = (TreeNode) queue.element();
+				TreeNode r = queue.element();
 				if (r.left == null) {
 					r.left = new TreeNode(array[i]);
 					i++;

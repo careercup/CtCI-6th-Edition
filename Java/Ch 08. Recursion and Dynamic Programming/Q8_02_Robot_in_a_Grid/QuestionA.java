@@ -42,7 +42,7 @@ public class QuestionA {
 
 		List<Point> path = getPath(maze);
 		if (path != null) {
-			System.out.println(path.toString());
+			System.out.println(path);
 		} else {
 			System.out.println("No path found.");
 		}

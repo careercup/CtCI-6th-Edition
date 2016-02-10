@@ -83,14 +83,14 @@ public class Question {
 		System.out.println("Points on Graph\n***************");
 		GraphPoint[] points = new GraphPoint[n_points - 1];
 		for (int i = 0; i < n_points / 2; i++) {
-			GraphPoint p = new GraphPoint(i, 2.3 * ((double)i) + 20.0);
+			GraphPoint p = new GraphPoint(i, 2.3 * i + 20.0);
 			points[i] = p;
-			System.out.println(p.toString());
+			System.out.println(p);
 		}
 		for (int i = 0; i < n_points / 2 - 1; i++) {
-			GraphPoint p = new GraphPoint(i, 3.0 * ((double)i) + 1.0);
+			GraphPoint p = new GraphPoint(i, 3.0 * i + 1.0);
 			points[n_points / 2 + i] = p;
-			System.out.println(p.toString());
+			System.out.println(p);
 		}
 		System.out.println("****************\n");
 		return points;

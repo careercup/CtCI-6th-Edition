@@ -34,7 +34,7 @@ public class Question {
 	}
 	
 	public static char ithLetter(int i) {
-		return (char) (((int) 'a') + i);
+		return (char) ('a' + i);
 	}
 	
 	public static void main(String[] args) {

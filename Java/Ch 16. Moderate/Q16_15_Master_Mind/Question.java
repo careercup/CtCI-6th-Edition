@@ -136,7 +136,7 @@ public class Question {
 		if (res1.hits == res2.hits && res1.pseudoHits == res2.pseudoHits) {
 			return true;
 		} else {
-			System.out.println("FAIL: (" + guess + ", " + solution + "): " + res1.toString() + " | " + res2.toString());
+			System.out.println("FAIL: (" + guess + ", " + solution + "): " + res1 + " | " + res2);
 			return false;
 		}
 	}

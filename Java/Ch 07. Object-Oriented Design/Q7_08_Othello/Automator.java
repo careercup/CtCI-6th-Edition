@@ -83,6 +83,6 @@ public class Automator {
 	}
 	
 	public void printScores() {
-		System.out.println("Score: " + players[0].getColor().toString() + ": " + players[0].getScore() + ", " + players[1].getColor().toString() + ": " + players[1].getScore());
+		System.out.println("Score: " + players[0].getColor() + ": " + players[0].getScore() + ", " + players[1].getColor() + ": " + players[1].getScore());
 	}
 }

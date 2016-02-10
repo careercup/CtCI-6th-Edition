@@ -9,6 +9,6 @@ public class Line {
 	}
 	
 	public String toString() {
-		return "Line from " + start.toString() + " to " + end.toString();
+		return "Line from " + start + " to " + end;
 	}
 }

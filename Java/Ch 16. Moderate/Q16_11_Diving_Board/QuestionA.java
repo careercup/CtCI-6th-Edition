@@ -24,7 +24,7 @@ public class QuestionA {
 
 	public static void main(String[] args) {
 		Set<Integer> lengths = allLengths(12, 1, 3);
-		System.out.println(lengths.toString());
+		System.out.println(lengths);
 		System.out.println(counter);
 	}
 

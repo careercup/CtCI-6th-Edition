@@ -76,7 +76,7 @@ public class QuestionB {
 		for (int i = 0; i < numDocuments; i++) {
 			int[] words = AssortedMethods.randomArray(docSize, 0, 10);
 			List<Integer> w = Tester.removeDups(words);
-			System.out.println(i + ": " + w.toString());
+			System.out.println(i + ": " + w);
 			Document doc = new Document(i, w);
 			documents.put(i, doc);
 		}

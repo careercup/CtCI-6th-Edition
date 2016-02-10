@@ -37,14 +37,14 @@ public class Tester {
 			
 			if (seq1.size() != seq2.size() || seq1.size() != seq3.size()) {
 				System.out.println("ERROR: " + seq1.size() + ", " + seq2.size() + ", " + seq3.size());
-				System.out.println(seq1.toString());
-				System.out.println(seq2.toString());
+				System.out.println(seq1);
+				System.out.println(seq2);
 				break;
 			} else {
 				System.out.println("SUCCESS: " + seq1.size() + " == " + seq2.size() + " == " + seq3.size());
-				System.out.println(seq1.toString());
-				System.out.println(seq2.toString());	
-				System.out.println(seq3.toString());			
+				System.out.println(seq1);
+				System.out.println(seq2);
+				System.out.println(seq3);
 			}
 		}
 	}

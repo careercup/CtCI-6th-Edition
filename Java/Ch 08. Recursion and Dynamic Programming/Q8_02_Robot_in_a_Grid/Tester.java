@@ -14,13 +14,13 @@ public class Tester {
 		List<Point> pathA = QuestionA.getPath(maze);
 		List<Point> pathB = QuestionB.getPath(maze);
 		if (pathA != null) {
-			System.out.println(pathA.toString());
+			System.out.println(pathA);
 		} else {
 			System.out.println("No path found.");
 		}
 		
 		if (pathB != null) {
-			System.out.println(pathB.toString());
+			System.out.println(pathB);
 		} else {
 			System.out.println("No path found.");
 		}		

@@ -65,10 +65,10 @@ public class Tester {
 			
 			if (allEqual(results)) {
 				System.out.println("Success: " + terms + "->" + b);
-				System.out.println(results.toString());
+				System.out.println(results);
 			} else {
 				System.out.println("Failure: " + terms);
-				System.out.println(results.toString());
+				System.out.println(results);
 				break;
 			}
 		}

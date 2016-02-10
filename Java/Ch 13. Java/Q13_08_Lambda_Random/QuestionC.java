@@ -21,7 +21,7 @@ public class QuestionC {
 	public static void main(String... args) {
 		List<Integer> list = Arrays.asList(1, 2, 3, 4);
  		List<Integer> subset = getRandomSubset(list);
- 		System.out.println(subset.toString());
+		System.out.println(subset);
  	}
 
 }

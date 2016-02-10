@@ -1,6 +1,6 @@
 package Q17_24_Max_Submatrix;
 
-import CtCILibrary.*;
+import CtCILibrary.AssortedMethods;
 
 public class QuestionA {
 	public static SubMatrix getMaxMatrix(int[][] matrix) {
@@ -36,7 +36,7 @@ public class QuestionA {
 		int[][] matrix = AssortedMethods.randomMatrix(10, 10, -5, 5);
 		AssortedMethods.printMatrix(matrix);
 		SubMatrix sub = getMaxMatrix(matrix);
-		System.out.println(sub.toString());
+		System.out.println(sub);
 	}
 
 }

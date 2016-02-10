@@ -28,7 +28,7 @@ public class Tower {
 	}
 	
 	public void print() {
-		System.out.println("Contents of Tower " + index() + ": " + disks.toString());
+		System.out.println("Contents of Tower " + index() + ": " + disks);
 	}
 	
     public void moveDisks(int n, Tower destination, Tower buffer){

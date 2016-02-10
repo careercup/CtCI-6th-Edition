@@ -30,7 +30,7 @@ public class Question {
 		for (Dummy d : dummies) {
 			String name = d.getName();
 			Dummy dummy = hash.get(name);
-			System.out.println("Dummy named " + name + ": " + dummy.toString());
+			System.out.println("Dummy named " + name + ": " + dummy);
 		}
 	}
 

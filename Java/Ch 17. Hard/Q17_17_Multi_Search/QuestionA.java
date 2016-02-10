@@ -38,6 +38,6 @@ public class QuestionA {
 		String big = "mississippi";
 		String[] smalls = {"is", "ppi", "hi", "sis", "i", "mississippi"};
 		HashMapList<String, Integer> locations = searchAll(big, smalls);
-        System.out.println(locations.toString());
+		System.out.println(locations);
 	}
 }

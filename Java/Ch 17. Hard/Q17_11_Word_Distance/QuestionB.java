@@ -50,7 +50,7 @@ public class QuestionB {
 		String word2 = "life";
 		HashMapList<String, Integer> locations = getWordLocations(wordlist);
 		LocationPair pair = findClosest(word1, word2, locations);
-		System.out.println("Distance between <" + word1 + "> and <" + word2 + ">: " + pair.toString());		
+		System.out.println("Distance between <" + word1 + "> and <" + word2 + ">: " + pair);
 	}
 
 }

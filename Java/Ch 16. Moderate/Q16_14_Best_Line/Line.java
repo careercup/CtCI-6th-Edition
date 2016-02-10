@@ -27,7 +27,7 @@ public class Line {
 		
 	public static double floorToNearestEpsilon(double d) {
 		int r = (int) (d / epsilon);
-		return ((double) r) * epsilon;
+		return r * epsilon;
 	}
     
 	public boolean isEquivalent(Object o) {  

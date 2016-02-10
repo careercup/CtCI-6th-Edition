@@ -25,7 +25,7 @@ public class QuestionA {
 		String word1 = "river";
 		String word2 = "life";
 		LocationPair pair = findClosest(wordlist, word1, word2);
-		System.out.println("Distance between <" + word1 + "> and <" + word2 + ">: " + pair.toString());		
+		System.out.println("Distance between <" + word1 + "> and <" + word2 + ">: " + pair);
 
 	}
 

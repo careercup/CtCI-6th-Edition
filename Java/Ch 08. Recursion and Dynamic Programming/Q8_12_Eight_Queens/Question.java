@@ -72,8 +72,8 @@ public class Question {
         StringBuilder line = new StringBuilder();
         for (int i=0;i<GRID_SIZE*2+1;i++)
             line.append('-');
-        System.out.println(line.toString());
-    }
+		System.out.println(line);
+	}
 
 	public static void printBoards(List<Integer[]> boards) {
 		for (Integer[] board : boards) {

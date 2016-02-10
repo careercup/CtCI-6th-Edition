@@ -34,7 +34,7 @@ public class QuestionB {
 		}
 
 		List<List<Integer>> subsets2 = getSubsets(list);
-		System.out.println(subsets2.toString());		
+		System.out.println(subsets2);
 	}
 
 }
