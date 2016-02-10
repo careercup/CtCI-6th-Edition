@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class QuestionB {
 	public static Map<String, Integer> setupDictionary(String[] book) {
-		Map<String, Integer> table = new HashMap<String, Integer>();
+		Map<String, Integer> table = new HashMap<>();
 		for (String word : book) {
 			word = word.toLowerCase();
 			if (word.trim() != "") {

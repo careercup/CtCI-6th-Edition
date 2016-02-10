@@ -10,7 +10,7 @@ public class QuestionH {
 		if (board.length != board[0].length) return Piece.Empty;
 		int size = board.length;
 
-		List<PositionIterator> instructions = new ArrayList<PositionIterator>();
+		List<PositionIterator> instructions = new ArrayList<>();
 		for (int i = 0; i < board.length; i++) {
 			instructions.add(new PositionIterator(new Position(0, i), 1, 0, size));
 			instructions.add(new PositionIterator(new Position(i, 0), 0, 1, size));

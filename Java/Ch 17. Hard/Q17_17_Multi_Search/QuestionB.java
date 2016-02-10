@@ -22,8 +22,8 @@ public class QuestionB {
 	}
 	
 	public static HashMapList<String, Integer> searchAll(String big, String[] smalls) {
-		HashMapList<String, Integer> lookup = new HashMapList<String, Integer>();
-        Trie tree = createTrieFromString(big);
+		HashMapList<String, Integer> lookup = new HashMapList<>();
+		Trie tree = createTrieFromString(big);
 		for (String s : smalls) {
 			/* Get terminating location of each occurrence.*/
 			List<Integer> locations = tree.search(s);

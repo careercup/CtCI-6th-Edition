@@ -44,7 +44,7 @@ public class Question {
 	}
 
 	public static Stack<Project> orderProjects(List<Project> projects) {
-		Stack<Project> stack = new Stack<Project>();
+		Stack<Project> stack = new Stack<>();
 		for (Project project : projects) {
 			if (project.getState() == Project.State.BLANK) {
 				if (!doDFS(project, stack)) {

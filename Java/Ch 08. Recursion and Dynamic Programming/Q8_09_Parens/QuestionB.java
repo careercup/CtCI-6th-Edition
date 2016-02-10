@@ -21,7 +21,7 @@ public class QuestionB {
 
 	public static List<String> generateParens(int count) {
 		char[] str = new char[count*2];
-		List<String> list = new ArrayList<String>();
+		List<String> list = new ArrayList<>();
 		addParen(list, count, count, str, 0);
 		return list;
 	}

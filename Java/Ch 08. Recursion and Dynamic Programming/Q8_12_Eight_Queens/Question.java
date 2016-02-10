@@ -82,7 +82,7 @@ public class Question {
 	}
 	   
 	public static void main(String[] args) {
-		List<Integer[]> results = new ArrayList<Integer[]>();
+		List<Integer[]> results = new ArrayList<>();
 		Integer[] columns = new Integer[GRID_SIZE];
 		clear(columns);
 		placeQueens(0, columns, results);

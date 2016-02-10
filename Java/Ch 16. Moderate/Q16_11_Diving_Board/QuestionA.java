@@ -7,7 +7,7 @@ public class QuestionA {
 	public static int counter = 0;
 
 	public static Set<Integer> allLengths(int k, int shorter, int longer) {
-		Set<Integer> lengths = new HashSet<Integer>();
+		Set<Integer> lengths = new HashSet<>();
 		getAllLengths(k, 0, shorter, longer, lengths);
 		return lengths;
 	}

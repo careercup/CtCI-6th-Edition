@@ -102,9 +102,9 @@ public class Puzzle {
 	
 	public boolean solve() {
 		/* Group pieces. */
-		Queue<Piece> cornerPieces = new LinkedList<Piece>();
-		Queue<Piece> borderPieces = new LinkedList<Piece>();
-		Queue<Piece> insidePieces = new LinkedList<Piece>();
+		Queue<Piece> cornerPieces = new LinkedList<>();
+		Queue<Piece> borderPieces = new LinkedList<>();
+		Queue<Piece> insidePieces = new LinkedList<>();
 		groupPieces(cornerPieces, borderPieces, insidePieces);
 		
 		/* Walk through puzzle, finding the piece that joins the previous one. */

@@ -44,7 +44,7 @@ public class Question {
 		}
 
 		/* Shuffle and rotate pieces. */
-		LinkedList<Piece> pieces = new LinkedList<Piece>();
+		LinkedList<Piece> pieces = new LinkedList<>();
 		Random r = new Random();
 		for (int row = 0; row < size; row++) {
 			for (int column = 0; column < size; column++) {

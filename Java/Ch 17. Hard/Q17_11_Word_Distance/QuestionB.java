@@ -8,7 +8,7 @@ import java.util.List;
 public class QuestionB {
 	
 	public static HashMapList<String, Integer> getWordLocations(String[] words) {
-		HashMapList<String, Integer> locations = new HashMapList<String, Integer>();
+		HashMapList<String, Integer> locations = new HashMapList<>();
 		for (int i = 0; i < words.length; i++) {
 			locations.put(words[i], i);
 		}

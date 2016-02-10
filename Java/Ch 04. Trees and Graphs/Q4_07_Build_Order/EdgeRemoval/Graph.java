@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 public class Graph {
-	private List<Project> nodes = new ArrayList<Project>();
-	private Map<String, Project> map = new HashMap<String, Project>();
+	private List<Project> nodes = new ArrayList<>();
+	private Map<String, Project> map = new HashMap<>();
 	
 	public Project getOrCreateNode(String name) {
 		if (!map.containsKey(name)) {

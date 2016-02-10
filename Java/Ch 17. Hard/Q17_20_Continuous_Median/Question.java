@@ -76,8 +76,8 @@ public class Question {
 
 		maxHeapComparator = new MaxHeapComparator();
 		minHeapComparator = new MinHeapComparator();
-		maxHeap = new PriorityQueue<Integer>(arraySize - arraySize/2, maxHeapComparator);
-		minHeap = new PriorityQueue<Integer>(arraySize/2, minHeapComparator);
+		maxHeap = new PriorityQueue<>(arraySize - arraySize / 2, maxHeapComparator);
+		minHeap = new PriorityQueue<>(arraySize / 2, minHeapComparator);
 		
 		for(int i = 0; i < arraySize; i++) {
 			int randomNumber = (int) (Math.random( ) * (range+1));

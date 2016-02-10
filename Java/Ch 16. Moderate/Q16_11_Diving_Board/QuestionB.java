@@ -7,8 +7,8 @@ public class QuestionB {
 	public static int counter = 0;
 
 	public static Set<Integer> allLengths(int k, int shorter, int longer) {
-		Set<Integer> lengths = new HashSet<Integer>();
-		Set<String> visited = new HashSet<String>();
+		Set<Integer> lengths = new HashSet<>();
+		Set<String> visited = new HashSet<>();
 		getAllLengths(k, 0, shorter, longer, lengths, visited);
 		return lengths;
 	}

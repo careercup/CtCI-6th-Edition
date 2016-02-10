@@ -7,8 +7,8 @@ import java.util.Map;
 
 /* A container for a group of words of the same length. */
 public class WordGroup {
-    private Map<String, Boolean> lookup = new HashMap<String, Boolean>();
-    private List<String> group = new ArrayList<String>();
+    private Map<String, Boolean> lookup = new HashMap<>();
+    private List<String> group = new ArrayList<>();
     
     public WordGroup() {
 

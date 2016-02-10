@@ -19,7 +19,7 @@ public class Question {
 			return negative + " " + convert(-1 * num);
 		}
 
-		Deque<String> parts = new LinkedList<String>();
+		Deque<String> parts = new LinkedList<>();
 		int chunkCount = 0;
 		
 		while (num > 0) {
@@ -46,7 +46,7 @@ public class Question {
 	}
 	
 	public static String convertChunk(int number) {
-		Deque<String> parts = new LinkedList<String>();
+		Deque<String> parts = new LinkedList<>();
 		
 		/* Convert hundreds place */
 		if (number >= 100) {

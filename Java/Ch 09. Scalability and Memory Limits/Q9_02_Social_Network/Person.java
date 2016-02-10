@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
-	private List<Integer> friends = new ArrayList<Integer>();
+	private List<Integer> friends = new ArrayList<>();
 	private int personID;
 	private String info;
 	

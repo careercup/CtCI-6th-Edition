@@ -11,7 +11,7 @@ public class Cache {
 	public int size = 0;
 	
 	public Cache() {
-		map = new HashMap<String, Node>();
+		map = new HashMap<>();
 	}
 	
 	public void moveToFront(Node node) {

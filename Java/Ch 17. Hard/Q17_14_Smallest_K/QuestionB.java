@@ -1,9 +1,9 @@
 package Q17_14_Smallest_K;
 
+import CtCILibrary.AssortedMethods;
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
-
-import CtCILibrary.AssortedMethods;
 
 public class QuestionB {
 	
@@ -33,7 +33,7 @@ public class QuestionB {
 	
 	/* Create max heap of smallest k elements. */	
 	public static PriorityQueue<Integer> getKMaxHeap(int[] array, int k) {
-		PriorityQueue<Integer> heap = new PriorityQueue<Integer>(k, new MaxHeapComparator());
+		PriorityQueue<Integer> heap = new PriorityQueue<>(k, new MaxHeapComparator());
 		for (int a : array) {
 			if (heap.size() < k) { // If space remaining
 				heap.add(a);

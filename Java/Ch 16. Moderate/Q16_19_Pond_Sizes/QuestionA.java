@@ -5,7 +5,7 @@ import java.util.List;
 
 public class QuestionA {
 	public static List<Integer> computePondSizes(int[][] land) {
-		List<Integer> pondSizes = new ArrayList<Integer>();
+		List<Integer> pondSizes = new ArrayList<>();
 		for (int r = 0; r < land.length; r++) {
 			for (int c = 0; c < land[r].length; c++) {
 				if (land[r][c] == 0) {

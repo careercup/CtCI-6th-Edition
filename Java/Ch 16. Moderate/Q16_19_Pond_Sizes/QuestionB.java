@@ -7,7 +7,7 @@ public class QuestionB {
 
 	public static List<Integer> computePondSizes(int[][] land) {
 		boolean[][] visited = new boolean[land.length][land[0].length];
-		List<Integer> pondSizes = new ArrayList<Integer>();
+		List<Integer> pondSizes = new ArrayList<>();
 		for (int r = 0; r < land.length; r++) {
 			for (int c = 0; c < land[r].length; c++) {
 				int size = computeSize(land, visited, r, c);

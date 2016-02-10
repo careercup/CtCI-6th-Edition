@@ -1,10 +1,10 @@
 package Q7_10_Minesweeper;
 
+import Q7_10_Minesweeper.Game.GameState;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Random;
-
-import Q7_10_Minesweeper.Game.GameState;
 
 public class Board {
 	private int nRows;
@@ -133,9 +133,9 @@ public class Board {
 				{-1, -1}, {-1, 0}, {-1, 1},
 				{ 0, -1},          { 0, 1},
 				{ 1, -1}, { 1, 0}, { 1, 1}
-		};		
-		
-		Queue<Cell> toExplore = new LinkedList<Cell>();
+		};
+
+		Queue<Cell> toExplore = new LinkedList<>();
 		toExplore.add(cell);
 		
 		while (!toExplore.isEmpty()) {

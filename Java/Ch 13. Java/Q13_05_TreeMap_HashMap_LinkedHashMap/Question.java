@@ -18,9 +18,9 @@ public class Question {
 	}
 	
 	public static void main(String[] args) {
-		Map<Integer, String> treeMap = new TreeMap<Integer, String>();
-		Map<Integer, String> hashMap = new HashMap<Integer, String>();
-		Map<Integer, String> linkedHashMap = new LinkedHashMap<Integer, String>();
+		Map<Integer, String> treeMap = new TreeMap<>();
+		Map<Integer, String> hashMap = new HashMap<>();
+		Map<Integer, String> linkedHashMap = new LinkedHashMap<>();
 		
 		System.out.println("\nHashMap - Arbitrary Order:");
 		insertAndPrint(hashMap);

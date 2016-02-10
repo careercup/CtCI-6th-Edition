@@ -63,9 +63,9 @@ public class Question {
 
 	/* Divide a by b by literally counting how many times b can go into
 	 * a. That is, count how many times you can add b to itself until you reach a. */
-	public static int divide(int a, int b) throws java.lang.ArithmeticException {
+	public static int divide(int a, int b) throws ArithmeticException {
 		if (b == 0) {
-			throw new java.lang.ArithmeticException("ERROR: Divide by zero.");
+			throw new ArithmeticException("ERROR: Divide by zero.");
 		}
 		int absa = abs(a);
 		int absb = abs(b);

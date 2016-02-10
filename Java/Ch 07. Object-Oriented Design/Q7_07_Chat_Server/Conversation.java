@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Conversation {
-	protected List<User> participants = new ArrayList<User>();
+	protected List<User> participants = new ArrayList<>();
 	protected int id;
-	protected List<Message> messages = new ArrayList<Message>();
+	protected List<Message> messages = new ArrayList<>();
 
 	public List<Message> getMessages() {
 		return messages;

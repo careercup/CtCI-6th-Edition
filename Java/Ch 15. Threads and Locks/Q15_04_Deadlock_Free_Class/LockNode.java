@@ -18,7 +18,7 @@ public class LockNode {
 	
 	public LockNode(int id, int max) {
 		lockId = id;
-		children = new ArrayList<LockNode>();
+		children = new ArrayList<>();
 		maxLocks = max;
 	}
 	

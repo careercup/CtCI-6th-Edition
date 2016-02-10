@@ -5,11 +5,11 @@ import java.util.Map.Entry;
 
 public class Tester {
 	public static List<Integer> removeDups(int[] array) {
-		Set<Integer> set = new HashSet<Integer>();
+		Set<Integer> set = new HashSet<>();
 		for (int a : array) {
 			set.add(a);
 		}
-		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> list = new ArrayList<>();
 		list.addAll(set);
 		return list;
 	}
@@ -57,7 +57,7 @@ public class Tester {
 			Document doc = new Document(i, w);
 			documents.put(i, doc);
 		}*/
-		Map<Integer, Document> documents = new HashMap<Integer, Document>();
+		Map<Integer, Document> documents = new HashMap<>();
 		
 		int[] array1 = {14, 15, 100, 9, 3};
 		addTo(documents, 13, array1);

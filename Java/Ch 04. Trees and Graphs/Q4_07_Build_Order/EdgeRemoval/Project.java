@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 public class Project {
-	private List<Project> children = new ArrayList<Project>();
-	private Map<String, Project> map = new HashMap<String, Project>();
+	private List<Project> children = new ArrayList<>();
+	private Map<String, Project> map = new HashMap<>();
 	private String name;
 	private int dependencies = 0;
 	

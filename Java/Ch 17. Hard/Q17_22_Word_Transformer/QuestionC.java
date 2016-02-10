@@ -70,7 +70,7 @@ public class QuestionC {
 	}
 
 	public static List<String> getWildcardRoots(String word) {
-		List<String> words = new ArrayList<String>();
+		List<String> words = new ArrayList<>();
 		for (int i = 0; i < word.length(); i++) {
 			String w = word.substring(0, i) + "_" + word.substring(i + 1);
 			words.add(w);
@@ -79,7 +79,7 @@ public class QuestionC {
 	}	
 	
 	public static HashMapList<String, String> getWildcardToWordList(String[] words) {
-		HashMapList<String, String> wildcardToWords = new HashMapList<String, String>();
+		HashMapList<String, String> wildcardToWords = new HashMapList<>();
 		for (String word : words) {
 			List<String> linked = getWildcardRoots(word);
 			for (String linkedWord : linked) {
@@ -91,7 +91,7 @@ public class QuestionC {
 
 	public static List<String> getValidLinkedWords(String word, HashMapList<String, String> wildcardToWords) {
 		List<String> wildcards = getWildcardRoots(word);
-		List<String> linkedWords = new ArrayList<String>();
+		List<String> linkedWords = new ArrayList<>();
 		for (String wildcard : wildcards) {
 			Iterable<String> words = wildcardToWords.get(wildcard);
 			for (String linkedWord : words) {

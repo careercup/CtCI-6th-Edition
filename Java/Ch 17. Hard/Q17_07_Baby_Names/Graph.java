@@ -10,8 +10,8 @@ public class Graph {
 	private Map<String, GraphNode> map;
 	
 	public Graph() {
-		map = new HashMap<String, GraphNode>();
-		nodes = new ArrayList<GraphNode>();
+		map = new HashMap<>();
+		nodes = new ArrayList<>();
 	}
 	
 	public boolean hasNode(String name) {

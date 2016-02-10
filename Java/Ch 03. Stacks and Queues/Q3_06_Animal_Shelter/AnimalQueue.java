@@ -4,8 +4,8 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 public class AnimalQueue {
-	Deque<Dog> dogs = new LinkedList<Dog>();
-	Deque<Cat> cats = new LinkedList<Cat>();
+	Deque<Dog> dogs = new LinkedList<>();
+	Deque<Cat> cats = new LinkedList<>();
 	private int order = 0;
 	
 	public void enqueue(Animal a) {

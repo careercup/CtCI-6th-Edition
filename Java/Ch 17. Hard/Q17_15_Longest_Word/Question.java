@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class Question {
 	public static String printLongestWord(String arr[]) {
-		Map<String, Boolean> map = new HashMap<String, Boolean>();
+		Map<String, Boolean> map = new HashMap<>();
 		for (String str : arr) {
 			map.put(str, true);
 		}

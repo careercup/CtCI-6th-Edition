@@ -10,8 +10,8 @@ import java.util.Set;
 public class QuestionB {
 	public static List<Point> getPath(boolean[][] maze) {
 		if (maze == null || maze.length == 0) return null;
-		List<Point> path = new ArrayList<Point>();
-		Set<Point> failedPoints = new HashSet<Point>();
+		List<Point> path = new ArrayList<>();
+		Set<Point> failedPoints = new HashSet<>();
 		if (getPath(maze, maze.length - 1, maze[0].length - 1, path, failedPoints)) {
 			return path;
 		}

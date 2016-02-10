@@ -42,7 +42,7 @@ public class QuestionA {
 	}
 
 	public static List<Bottle> createBottles(int nBottles, int poisoned) {
-		List<Bottle> bottles = new ArrayList<Bottle>();
+		List<Bottle> bottles = new ArrayList<>();
 		for (int i = 0; i < nBottles; i++) {
 			bottles.add(new Bottle(i));
 		}
@@ -59,7 +59,7 @@ public class QuestionA {
 	}
 
 	public static List<TestStrip> createTestStrips(int nTestStrips) {
-		List<TestStrip> testStrips = new ArrayList<TestStrip>();
+		List<TestStrip> testStrips = new ArrayList<>();
 		for (int i = 0; i < nTestStrips; i++) {
 			testStrips.add(new TestStrip(i));
 		}

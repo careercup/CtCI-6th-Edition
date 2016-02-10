@@ -18,7 +18,7 @@ public class LockFactory {
 	private LockFactory(int count) {
 		numberOfLocks = count;
 		locks = new LockNode[numberOfLocks];
-		lockOrder = new HashMap<Integer, LinkedList<LockNode>>();
+		lockOrder = new HashMap<>();
 		for (int i = 0; i < numberOfLocks; i++) {
 			locks[i] = new LockNode(i, count);
 		}
@@ -52,7 +52,7 @@ public class LockFactory {
 	 * need the locks in. Verify that this order does not create a deadlock (a cycle in a directed graph)
 	 */
 	public boolean declare(int ownerId, int[] resourcesInOrder) {
-		Map<Integer, Boolean> touchedNodes = new HashMap<Integer, Boolean>();
+		Map<Integer, Boolean> touchedNodes = new HashMap<>();
 		
 		/* add nodes to graph */
 		int index = 1;
@@ -76,7 +76,7 @@ public class LockFactory {
 		
 		/* No cycles detected. Save the order that was declared, so that we can verify that the
 		 * process is really calling the locks in the order it said it would. */
-		LinkedList<LockNode> list = new LinkedList<LockNode>();
+		LinkedList<LockNode> list = new LinkedList<>();
 		for (int order : resourcesInOrder) {
 			LockNode resource = locks[order];
 			list.add(resource);

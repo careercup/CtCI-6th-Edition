@@ -1,5 +1,7 @@
 package Q16_16_Sub_Sort;
 
+import java.util.Arrays;
+
 public class Question {
 
 	public static int findEndOfLeftSubsequence(int[] array) {
@@ -84,7 +86,7 @@ public class Question {
 		for (int i = left_index; i <= right_index; i++) {
 			middle[i - left_index] = array[i];
 		}
-		java.util.Arrays.sort(middle);
+		Arrays.sort(middle);
 		for (int i = left_index; i <= right_index; i++) {
 			array[i] = middle[i - left_index];
 		}

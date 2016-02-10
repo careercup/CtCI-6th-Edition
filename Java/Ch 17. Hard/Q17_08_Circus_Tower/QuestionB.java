@@ -30,7 +30,7 @@ public class QuestionB {
 	public static List<HtWt> longestIncreasingSeq(List<HtWt> array) {
 		Collections.sort(array);
 
-		List<List<HtWt>> solutions = new ArrayList<List<HtWt>>();
+		List<List<HtWt>> solutions = new ArrayList<>();
 		List<HtWt> bestSequence = null;
 		for (int i = 0; i < array.size(); i++) {
 			List<HtWt> longestAtIndex = bestSeqAtIndex(array, solutions, i);
@@ -44,7 +44,7 @@ public class QuestionB {
 	private static List<HtWt> bestSeqAtIndex(List<HtWt> array, List<List<HtWt>> solutions, int index) {
 		HtWt value = array.get(index);
 
-		List<HtWt> bestSequence = new ArrayList<HtWt>();
+		List<HtWt> bestSequence = new ArrayList<>();
 		
 		for (int i = 0; i < index; i++) {
 			List<HtWt> solution = solutions.get(i);
@@ -53,14 +53,14 @@ public class QuestionB {
 			}
 		}
 
-		List<HtWt> best = new ArrayList<HtWt>(bestSequence);
+		List<HtWt> best = new ArrayList<>(bestSequence);
 		best.add(value);
 		
 		return best;
 	}
 
 	public static List<HtWt> initialize() {
-		List<HtWt> items = new ArrayList<HtWt>();
+		List<HtWt> items = new ArrayList<>();
 		
 		HtWt item = new HtWt(65, 60);
 		items.add(item);

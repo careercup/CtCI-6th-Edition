@@ -26,23 +26,23 @@ public class CallHandler {
     List<List<Call>> callQueues; 
 
     public CallHandler() {
-    	employeeLevels = new ArrayList<List<Employee>>(LEVELS);
-    	callQueues = new ArrayList<List<Call>>(LEVELS); 
-    	
+        employeeLevels = new ArrayList<>(LEVELS);
+        callQueues = new ArrayList<>(LEVELS);
+
         // Create respondents.
-        List<Employee> respondents = new ArrayList<Employee>(NUM_RESPONDENTS);
+        List<Employee> respondents = new ArrayList<>(NUM_RESPONDENTS);
         for (int k = 0; k < NUM_RESPONDENTS - 1; k++) {
             respondents.add(new Respondent(this));
         }
         employeeLevels.add(respondents);
 
         // Create managers.
-        List<Employee> managers = new ArrayList<Employee>(NUM_MANAGERS);
+        List<Employee> managers = new ArrayList<>(NUM_MANAGERS);
         managers.add(new Manager(this));
         employeeLevels.add(managers);
 
         // Create directors.
-        List<Employee> directors = new ArrayList<Employee>(NUM_DIRECTORS);
+        List<Employee> directors = new ArrayList<>(NUM_DIRECTORS);
         directors.add(new Director(this));
         employeeLevels.add(directors);
     }

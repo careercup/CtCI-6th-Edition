@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Board {
-	private Set<Position> whites = new HashSet<Position>();
+	private Set<Position> whites = new HashSet<>();
 	private Ant ant = new Ant();
 	private Position topLeftCorner = new Position(0, 0);
 	private Position bottomRightCorner = new Position(0, 0);

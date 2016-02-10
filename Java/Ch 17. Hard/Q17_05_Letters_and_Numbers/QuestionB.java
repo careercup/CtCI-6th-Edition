@@ -23,7 +23,7 @@ public class QuestionB {
 	/* Find the matching pair of values in the deltas array with the 
 	 * largest difference in indices. */ 	
 	public static int[] findLongestMatch(int[] deltas) {
-		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+		Map<Integer, Integer> map = new HashMap<>();
 		map.put(0,  -1);
 		int[] max = new int[2];
 		for (int i = 0; i < deltas.length; i++) {

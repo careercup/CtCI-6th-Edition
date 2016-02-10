@@ -29,7 +29,7 @@ public class QuestionB {
 			return 0;
 		}
 		int val = 1;
-		Queue<Integer> q = new LinkedList<Integer>();
+		Queue<Integer> q = new LinkedList<>();
 		addProducts(q, 1);
 		for (int i = 0; i < k; i++) { // Start at 1 since we've already done one iteration
 			val = removeMin(q);

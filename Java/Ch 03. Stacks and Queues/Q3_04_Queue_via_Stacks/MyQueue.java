@@ -6,8 +6,8 @@ public class MyQueue<T> {
 	Stack<T> stackNewest, stackOldest;
 	
 	public MyQueue() {
-		stackNewest = new Stack<T>();
-		stackOldest = new Stack<T>();
+		stackNewest = new Stack<>();
+		stackOldest = new Stack<>();
 	}
 	
 	public int size() {

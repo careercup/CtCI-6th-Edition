@@ -54,7 +54,7 @@ public class QuestionB {
 	}
 
 	public static List<String> getValidT9Words(String number, Trie trie) {
-		List<String> results = new ArrayList<String>();
+		List<String> results = new ArrayList<>();
 		getValidWords(number, 0, "", trie.getRoot(), results);
 		return results;
 	}	

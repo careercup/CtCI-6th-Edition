@@ -122,7 +122,7 @@ public class QuestionString {
 	}
 
 	private void tokenize(char[] input) {
-		tokens = new ArrayList<String>();
+		tokens = new ArrayList<>();
 		int i = 0;
 		while (i < input.length) {
 			i = setNextToken(input, i);
@@ -166,7 +166,7 @@ public class QuestionString {
 
 	public static void main(String args[]) {
 		try {
-			Map<String, Byte> tagMap = new HashMap<String, Byte>();
+			Map<String, Byte> tagMap = new HashMap<>();
 			tagMap.put("a", (byte) 10);
 			tagMap.put("root", (byte) 11);
 			tagMap.put("href", (byte) 20);

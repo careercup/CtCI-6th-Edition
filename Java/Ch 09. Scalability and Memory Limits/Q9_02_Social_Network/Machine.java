@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Machine {
-	public Map<Integer, Person> persons = new HashMap<Integer, Person>();
+	public Map<Integer, Person> persons = new HashMap<>();
 	public int machineID;
 	
 	public Person getPersonWithID(int personID) {

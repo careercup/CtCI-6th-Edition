@@ -9,14 +9,14 @@ public class QuestionB {
 	/* find path to transform startWord into endWord. */
 	public static Deque<String> transform(String start, String stop, String[] words) {
 		HashMapList<String, String> wildcardToWordList = createWildcardToWordMap(words);
-		Set<String> visited = new HashSet<String>();
+		Set<String> visited = new HashSet<>();
 		return transform(visited, start, stop, wildcardToWordList);
 	}
 	
 	/* Do a depth-first search from start to stop, traveling through each word that is one edit away. */
 	public static LinkedList<String> transform(Set<String> visited, String start, String stop, HashMapList<String, String> wildcardToWordList) {
 		if (start.equals(stop)) {
-			LinkedList<String> path = new LinkedList<String>();
+			LinkedList<String> path = new LinkedList<>();
 			path.add(start);
 			return path;
 		} else if (visited.contains(start)) {
@@ -39,7 +39,7 @@ public class QuestionB {
 	
 	/* Insert words in dictionary into mapping from wildcard form -> word. */
 	public static HashMapList<String, String> createWildcardToWordMap(String[] words) {
-		HashMapList<String, String> wildcardToWords = new HashMapList<String, String>();
+		HashMapList<String, String> wildcardToWords = new HashMapList<>();
 		for (String word : words) {
 			List<String> linked = getWildcardRoots(word);
 			for (String linkedWord : linked) {
@@ -51,7 +51,7 @@ public class QuestionB {
 	
 	/* Get list of wildcards associated with word. */
 	public static List<String> getWildcardRoots(String w) {
-		List<String> words = new ArrayList<String>();
+		List<String> words = new ArrayList<>();
 		for (int i = 0; i < w.length(); i++) {
 			String word = w.substring(0, i) + "_" + w.substring(i + 1);
 			words.add(word);
@@ -64,7 +64,7 @@ public class QuestionB {
 	/* Return words that are one edit away. */
 	public static List<String> getValidLinkedWords(String word, HashMapList<String, String> wildcardToWords) {
 		List<String> wildcards = getWildcardRoots(word);
-		List<String> linkedWords = new ArrayList<String>();
+		List<String> linkedWords = new ArrayList<>();
 		for (String wildcard : wildcards) {
 			Iterable<String> words = wildcardToWords.get(wildcard);
 			for (String linkedWord : words) {

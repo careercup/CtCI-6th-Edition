@@ -11,10 +11,10 @@ import java.util.List;
 public class QuestionBFS {
 
 	public static List<LinkedList<TreeNode>> createLevelLinkedList(TreeNode root) {
-		List<LinkedList<TreeNode>> result = new ArrayList<LinkedList<TreeNode>>();
+		List<LinkedList<TreeNode>> result = new ArrayList<>();
 		
 		/* "Visit" the root */
-		LinkedList<TreeNode> current = new LinkedList<TreeNode>();
+		LinkedList<TreeNode> current = new LinkedList<>();
 		if (root != null) {
 			current.add(root);
 		}
@@ -22,7 +22,7 @@ public class QuestionBFS {
 		while (current.size() > 0) {
 			result.add(current); // Add previous level
 			List<TreeNode> parents = current; // Go to next level
-			current = new LinkedList<TreeNode>(); 
+			current = new LinkedList<>();
 			for (TreeNode parent : parents) {
 				/* Visit the children */
 				if (parent.left != null) {

@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.Queue;
 
 public class BFSData {
-	public Queue<PathNode> toVisit = new LinkedList<PathNode>();
-	public Map<String, PathNode> visited = new HashMap<String, PathNode>();
+	public Queue<PathNode> toVisit = new LinkedList<>();
+	public Map<String, PathNode> visited = new HashMap<>();
 
 	public BFSData(String root) {
 		PathNode sourcePath = new PathNode(root, null);

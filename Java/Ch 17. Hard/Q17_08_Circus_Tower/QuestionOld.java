@@ -31,7 +31,7 @@ public class QuestionOld {
 		}
 		
 		// Append current_element
-		List<HtWt> new_solution = new ArrayList<HtWt>();
+		List<HtWt> new_solution = new ArrayList<>();
 		if (best_sequence != null) {
 			new_solution.addAll(best_sequence);
 		} 
@@ -45,7 +45,7 @@ public class QuestionOld {
 	public static List<HtWt> longestIncreasingSeq(List<HtWt> array) {
 		Collections.sort(array);
 
-		List<List<HtWt>> solutions = new ArrayList<List<HtWt>>();
+		List<List<HtWt>> solutions = new ArrayList<>();
 		longestIncreasingSubsequence(array, solutions, 0);
 
 		List<HtWt> best_sequence = null;
@@ -57,7 +57,7 @@ public class QuestionOld {
 	}
 
 	public static List<HtWt> initialize() {
-		List<HtWt> items = new ArrayList<HtWt>();
+		List<HtWt> items = new ArrayList<>();
 		
 		HtWt item = new HtWt(65, 60);
 		items.add(item);

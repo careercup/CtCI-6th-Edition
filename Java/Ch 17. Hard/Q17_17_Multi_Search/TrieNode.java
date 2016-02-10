@@ -10,9 +10,9 @@ public class TrieNode {
 	private List<Integer> indexes;
 	private char value;
 	
-	public TrieNode() { 
-		children = new HashMap<Character, TrieNode>();
-		indexes = new ArrayList<Integer>();
+	public TrieNode() {
+		children = new HashMap<>();
+		indexes = new ArrayList<>();
 	}
 	
 	

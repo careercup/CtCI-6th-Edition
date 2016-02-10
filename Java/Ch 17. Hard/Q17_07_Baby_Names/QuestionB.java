@@ -42,7 +42,7 @@ public class QuestionB {
 	/* Do DFS of each component. If a node has been visited before,
 	 * then its component has already been computed. */
 	public static Map<String, Integer> getTrueFrequencies(Graph graph) {
-		Map<String, Integer> rootNames = new HashMap<String, Integer>();
+		Map<String, Integer> rootNames = new HashMap<>();
 		for (GraphNode node : graph.getNodes()) {
 			if (!node.isVisited()) {
 				int frequency = getComponentFrequency(node);
@@ -61,7 +61,7 @@ public class QuestionB {
 	}
 	
 	public static void main(String[] args) {
-		Map<String, Integer> names = new HashMap<String, Integer>();
+		Map<String, Integer> names = new HashMap<>();
 		
 		names.put("John", 3);
 		names.put("Jonathan", 4);

@@ -8,7 +8,7 @@ public class Directory extends Entry {
 	
 	public Directory(String n, Directory p) {
 		super(n, p);
-		contents = new ArrayList<Entry>();
+		contents = new ArrayList<>();
 	}
 
 	protected List<Entry> getContents() {

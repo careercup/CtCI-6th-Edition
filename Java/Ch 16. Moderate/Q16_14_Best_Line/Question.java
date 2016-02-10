@@ -14,7 +14,7 @@ public class Question {
 	
 	/* Add each pair of points as a line to the list. */
 	public static HashMapList<Double, Line> getListOfLines(GraphPoint[] points) {
-		HashMapList<Double, Line> linesBySlope = new HashMapList<Double, Line>();
+		HashMapList<Double, Line> linesBySlope = new HashMapList<>();
 		for (int i = 0; i < points.length; i++) {
 			for (int j = i + 1; j < points.length; j++) {
 				Line line = new Line(points[i], points[j]);

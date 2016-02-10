@@ -6,7 +6,7 @@ import java.util.List;
 
 public class QuestionC {
 	public static List<Pair> printPairSums(int[] array, int sum) {
-		List<Pair> result = new ArrayList<Pair>();
+		List<Pair> result = new ArrayList<>();
 		Arrays.sort(array);
 		int first = 0;
 		int last = array.length - 1;

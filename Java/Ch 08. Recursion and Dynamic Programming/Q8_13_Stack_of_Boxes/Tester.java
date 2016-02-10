@@ -12,9 +12,9 @@ public class Tester {
 	}
 	
 	public static void main(String[] args) {
-		List<Box> boxes1 = new ArrayList<Box>();
-		List<Box> boxes2 = new ArrayList<Box>();
-		List<Box> boxes3 = new ArrayList<Box>();
+		List<Box> boxes1 = new ArrayList<>();
+		List<Box> boxes2 = new ArrayList<>();
+		List<Box> boxes3 = new ArrayList<>();
 		for (int i = 0; i < 200; i++) {
 			Box b = createRandomBox();
 			boxes1.add(b);

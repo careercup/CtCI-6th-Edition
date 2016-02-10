@@ -6,7 +6,7 @@ public class StackWithMin2 extends Stack<Integer> {
 	Stack<Integer> s2;
 	
 	public StackWithMin2() {
-		s2 = new Stack<Integer>();		
+		s2 = new Stack<>();
 	}
 	
 	public void push(int value){

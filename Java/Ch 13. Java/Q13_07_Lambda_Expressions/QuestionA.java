@@ -16,7 +16,7 @@ public class QuestionA {
 	}
 
 	public static void main(String... args) {
-		List<Country> countries = new ArrayList<Country>();
+		List<Country> countries = new ArrayList<>();
  		countries.add(new Country("United States", "North America", 1));
  		countries.add(new Country("Canada", "North America", 5));
  		countries.add(new Country("India", "Asia", 9));

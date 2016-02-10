@@ -6,7 +6,7 @@ import java.util.List;
 public class QuestionB {
 	public static List<String> getPerms(String remainder) {
 		int len = remainder.length();
-		List<String> result = new ArrayList<String>();
+		List<String> result = new ArrayList<>();
 		
 		/* Base case. */
 		if (len == 0) {

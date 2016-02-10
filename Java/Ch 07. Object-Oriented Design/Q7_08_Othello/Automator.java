@@ -9,7 +9,7 @@ import java.util.List;
 public class Automator {
 	private Player[] players;
 	private Player lastPlayer = null;
-	public List<Location> remainingMoves = new ArrayList<Location>();
+	public List<Location> remainingMoves = new ArrayList<>();
 	private static Automator instance;
 	
 	private Automator() {

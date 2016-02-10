@@ -23,7 +23,7 @@ public class BTreePrinter {
 
         BTreePrinter.printWhitespaces(firstSpaces);
 
-        List<TreeNode> newNodes = new ArrayList<TreeNode>();
+        List<TreeNode> newNodes = new ArrayList<>();
         for (TreeNode node : nodes) {
             if (node != null) {
                 System.out.print(node.data);

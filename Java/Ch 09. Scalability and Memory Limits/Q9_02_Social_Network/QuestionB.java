@@ -66,7 +66,7 @@ public class QuestionB {
 	
 	public static void main(String[] args) {
 		int nPeople = 11;
-		Map<Integer, Person> people = new HashMap<Integer, Person>();
+		Map<Integer, Person> people = new HashMap<>();
 		for (int i = 0; i < nPeople; i++) {
 			Person p = new Person(i);
 			people.put(i, p);

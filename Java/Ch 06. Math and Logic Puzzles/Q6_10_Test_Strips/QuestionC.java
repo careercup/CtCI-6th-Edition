@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class QuestionC {
 	public static List<Bottle> createBottles(int nBottles, int poisoned) {
-		List<Bottle> bottles = new ArrayList<Bottle>();
+		List<Bottle> bottles = new ArrayList<>();
 		for (int i = 0; i < nBottles; i++) {
 			bottles.add(new Bottle(i));
 		}
@@ -45,7 +45,7 @@ public class QuestionC {
 	
 	/* Get test strips that are positive on a particular day. */
 	public static List<Integer> getPositiveOnDay(List<TestStrip> testStrips, int day) {
-		List<Integer> positive = new ArrayList<Integer>();
+		List<Integer> positive = new ArrayList<>();
 		for (TestStrip testStrip : testStrips) {
 			int id = testStrip.getId();
 			if (testStrip.isPositiveOnDay(day)) {
@@ -65,7 +65,7 @@ public class QuestionC {
 	}
 
 	public static List<TestStrip> createTestStrips(int nTestStrips) {
-		List<TestStrip> testStrips = new ArrayList<TestStrip>();
+		List<TestStrip> testStrips = new ArrayList<>();
 		for (int i = 0; i < nTestStrips; i++) {
 			testStrips.add(new TestStrip(i));
 		}

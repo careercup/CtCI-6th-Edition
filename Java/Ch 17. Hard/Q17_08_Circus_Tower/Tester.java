@@ -21,9 +21,9 @@ public class Tester {
 	
 	public static void main(String[] args) {
 		for (int j = 0; j < 100; j++) {
-			List<HtWt> arrayA = new ArrayList<HtWt>();
-			List<HtWt> arrayB = new ArrayList<HtWt>();
-			List<HtWt> arrayC = new ArrayList<HtWt>();
+			List<HtWt> arrayA = new ArrayList<>();
+			List<HtWt> arrayB = new ArrayList<>();
+			List<HtWt> arrayC = new ArrayList<>();
 			for (int i = 0; i < 10; i++)  {
 				HtWt value = new HtWt(randomInt(100), randomInt(100));
 				arrayA.add(value);

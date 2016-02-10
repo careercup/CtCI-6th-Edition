@@ -32,7 +32,7 @@ public class QuestionG {
 		int size = board.length;
 		
 		/* Create list of things to check. */
-		List<Check> instructions = new ArrayList<Check>();
+		List<Check> instructions = new ArrayList<>();
 		for (int i = 0; i < board.length; i++) {
 			instructions.add(new Check(0, i, 1, 0));
 			instructions.add(new Check(i, 0, 0, 1));

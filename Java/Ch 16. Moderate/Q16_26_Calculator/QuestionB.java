@@ -77,8 +77,8 @@ public class QuestionB {
 	}
 
 	public static double compute(CharSequence sequence) {
-		Stack<Double> numberStack = new Stack<Double>();
-		Stack<Operator> operatorStack = new Stack<Operator>();
+		Stack<Double> numberStack = new Stack<>();
+		Stack<Operator> operatorStack = new Stack<>();
 		
 		for (int i = 0; i < sequence.length(); i++) {
 			try

@@ -5,7 +5,7 @@ import java.util.*;
 public class QuestionA {
 
 	public static List<String> wordsOneAway(String word) {
-		List<String> words = new ArrayList<String>();
+		List<String> words = new ArrayList<>();
 		for (int i = 0; i < word.length(); i++) {
 			for (char c = 'a'; c <= 'z'; c++) {
 				String w = word.substring(0, i) + c + word.substring(i + 1);
@@ -17,7 +17,7 @@ public class QuestionA {
 
 	public static LinkedList<String> transform(Set<String> visited, String startWord, String stopWord, Set<String> dictionary) {
 		if (startWord.equals(stopWord)) {
-			LinkedList<String> path = new LinkedList<String>();
+			LinkedList<String> path = new LinkedList<>();
 			path.add(startWord);
 			return path;
 		} else if (visited.contains(startWord) || !dictionary.contains(startWord)) {
@@ -40,12 +40,12 @@ public class QuestionA {
 
 	public static Deque<String> transform(String start, String stop, String[] words) {
 		Set<String> dict = setupDictionary(words);
-		Set<String> visited = new HashSet<String>();
+		Set<String> visited = new HashSet<>();
 		return transform(visited, start, stop, dict);
 	}
 
 	public static Set<String> setupDictionary(String[] words) {
-		Set<String> hash = new HashSet<String>();
+		Set<String> hash = new HashSet<>();
 		for (String word : words) {
 			hash.add(word.toLowerCase());
 		}

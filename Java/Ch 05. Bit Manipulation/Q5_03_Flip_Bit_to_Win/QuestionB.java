@@ -15,7 +15,7 @@ public class QuestionB {
 	 * off with the number of 0s (which might be 0) and then alternates
 	 * with the counts of each value.*/
 	public static List<Integer> getAlternatingSequences(int n) {
-		List<Integer> sequences = new ArrayList<Integer>();
+		List<Integer> sequences = new ArrayList<>();
 		
 		int searchingFor = 0;
 		int counter = 0;

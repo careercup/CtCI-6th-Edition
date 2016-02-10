@@ -10,7 +10,7 @@ public class QuestionA {
 	/* Read through (name, frequency) pairs and initialize a mapping
 	 * of names to NameSets (equivalence classes).*/
 	public static Map<String, NameSet> constructGroups(Map<String, Integer> names) {
-		Map<String, NameSet> groups = new HashMap<String, NameSet>();
+		Map<String, NameSet> groups = new HashMap<>();
 		for (Entry<String, Integer> entry : names.entrySet()) {
 		    String name = entry.getKey();
 		    int frequency = entry.getValue();
@@ -45,7 +45,7 @@ public class QuestionA {
 	}
 
 	public static Map<String, Integer> convertToMap(Map<String, NameSet> groups) {
-		Map<String, Integer> list = new HashMap<String, Integer>();
+		Map<String, Integer> list = new HashMap<>();
 		for (NameSet group : groups.values()) {
 			list.put(group.getRootName(), group.getFrequency());
 		}
@@ -59,7 +59,7 @@ public class QuestionA {
 	}
 	
 	public static void main(String[] args) {
-		Map<String, Integer> names = new HashMap<String, Integer>();
+		Map<String, Integer> names = new HashMap<>();
 		
 		names.put("John", 3);
 		names.put("Jonathan", 4);

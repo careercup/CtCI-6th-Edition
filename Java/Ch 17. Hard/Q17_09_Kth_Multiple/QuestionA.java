@@ -7,7 +7,7 @@ import java.util.List;
 public class QuestionA {
 
 	public static List<Integer> allPossibleKFactors(int k) {
-		List<Integer> values = new ArrayList<Integer>();
+		List<Integer> values = new ArrayList<>();
 		for (int a = 0; a <= k; a++) { // 3
 			int powA = (int) Math.pow(3,  a);
 			for (int b = 0; b <= k; b++) { // 5

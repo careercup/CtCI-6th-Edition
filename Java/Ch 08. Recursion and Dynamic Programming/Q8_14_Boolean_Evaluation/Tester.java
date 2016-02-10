@@ -55,7 +55,7 @@ public class Tester {
 			int a = QuestionA.countEval(terms, result);
 			int b = QuestionB.countEval(terms, result);
 
-			Map<String, Integer> results = new HashMap<String, Integer>();
+			Map<String, Integer> results = new HashMap<>();
 			results.put("oBF", oBF);
 			results.put("oR", oR);
 			results.put("oDP", oDP);

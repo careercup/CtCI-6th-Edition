@@ -5,12 +5,12 @@ import java.util.*;
 public class User {
 	private int id;
 	private UserStatus status = null;
-	private Map<Integer, PrivateChat> privateChats = new HashMap<Integer, PrivateChat>();
-	private List<GroupChat> groupChats = new ArrayList<GroupChat>();
-	private Map<Integer, AddRequest> receivedAddRequests = new HashMap<Integer, AddRequest>();
-	private Map<Integer, AddRequest> sentAddRequests = new HashMap<Integer, AddRequest>();
+	private Map<Integer, PrivateChat> privateChats = new HashMap<>();
+	private List<GroupChat> groupChats = new ArrayList<>();
+	private Map<Integer, AddRequest> receivedAddRequests = new HashMap<>();
+	private Map<Integer, AddRequest> sentAddRequests = new HashMap<>();
 
-	private Map<Integer, User> contacts = new HashMap<Integer, User>();
+	private Map<Integer, User> contacts = new HashMap<>();
 	private String accountName;
 	private String fullName;
 	

@@ -8,7 +8,7 @@ public class QuestionC {
 
 	public static Set<Integer> allLengths(int k, int shorter, int longer) {
 		counter++;
-		Set<Integer> lengths = new HashSet<Integer>();
+		Set<Integer> lengths = new HashSet<>();
 		for (int nShorter = 0; nShorter <= k; nShorter++) {
 			int nLonger = k - nShorter;
 			int length = nShorter * shorter + nLonger * longer;

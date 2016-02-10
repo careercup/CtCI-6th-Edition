@@ -5,7 +5,7 @@ import java.util.List;
 
 public class QuestionA {
 	public static List<Pair> printPairSums(int[] array, int sum) {
-		List<Pair> result = new ArrayList<Pair>();
+		List<Pair> result = new ArrayList<>();
 		for (int i = 0 ; i < array.length; i++) {
 			for (int j = i + 1; j < array.length; j++) {
 				if (array[i] + array[j] == sum) {

@@ -41,7 +41,7 @@ public class QuestionC {
 	}
 
 	public static Set<Integer> getContents(int[] array) {
-		Set<Integer> set = new HashSet<Integer>();
+		Set<Integer> set = new HashSet<>();
 		for (int a : array) {
 			set.add(a);
 		}

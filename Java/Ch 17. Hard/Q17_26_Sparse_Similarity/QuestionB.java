@@ -16,7 +16,7 @@ public class QuestionB {
 	
 	/* Create hash table from each word to where it appears. */
 	public static HashMapList<Integer, Integer> groupWords(Map<Integer, Document> documents) {
-		HashMapList<Integer, Integer> wordToDocs = new HashMapList<Integer, Integer>();
+		HashMapList<Integer, Integer> wordToDocs = new HashMapList<>();
 
 		for (Document doc : documents.values()) {
 			List<Integer> words = doc.getWords();
@@ -32,7 +32,7 @@ public class QuestionB {
 	 * documents and then each pair within that list, incrementing the 
 	 * intersection of each page. */
 	public static Map<DocPair, Double> computeIntersections(HashMapList<Integer, Integer> wordToDocs) {
-		Map<DocPair, Double> similarities = new HashMap<DocPair, Double>();
+		Map<DocPair, Double> similarities = new HashMap<>();
 		Set<Integer> words = wordToDocs.keySet();
 		for (int word : words) {
 			List<Integer> docs = wordToDocs.get(word);
@@ -72,7 +72,7 @@ public class QuestionB {
 	public static void main(String[] args) {
 		int numDocuments = 10;
 		int docSize = 5;
-		Map<Integer, Document> documents = new HashMap<Integer, Document>();
+		Map<Integer, Document> documents = new HashMap<>();
 		for (int i = 0; i < numDocuments; i++) {
 			int[] words = AssortedMethods.randomArray(docSize, 0, 10);
 			List<Integer> w = Tester.removeDups(words);

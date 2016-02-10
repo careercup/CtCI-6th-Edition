@@ -9,7 +9,7 @@ public class QuestionA {
 		if (str == null) {
 			return null;
 		}
-		List<String> permutations = new ArrayList<String>();
+		List<String> permutations = new ArrayList<>();
 		if (str.length() == 0) { // base case
 			permutations.add("");
 			return permutations;

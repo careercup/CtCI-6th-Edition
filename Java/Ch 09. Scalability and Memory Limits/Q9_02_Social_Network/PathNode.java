@@ -15,7 +15,7 @@ public class PathNode {
 	}
 	
 	public LinkedList<Person> collapse(boolean startsWithRoot) {
-		LinkedList<Person> path = new LinkedList<Person>();
+		LinkedList<Person> path = new LinkedList<>();
 		PathNode node = this;
 		while (node != null) {
 			if (startsWithRoot) {

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class TestStrip {
 	public static int DAYS_FOR_RESULT = 7;
-	private List<List<Bottle>> dropsByDay = new ArrayList<List<Bottle>>();
+	private List<List<Bottle>> dropsByDay = new ArrayList<>();
 	private int id;
 	
 	public TestStrip(int id) {

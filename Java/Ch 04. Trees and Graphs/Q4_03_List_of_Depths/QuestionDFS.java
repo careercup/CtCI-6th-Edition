@@ -14,7 +14,7 @@ public class QuestionDFS {
 		if (root == null) return;
 		LinkedList<TreeNode> list = null;
 		if (lists.size() == level) { // Level not contained in list
-			list = new LinkedList<TreeNode>();
+			list = new LinkedList<>();
 			/* Levels are always traversed in order. So, if this is the first time we've visited level i,
 			 * we must have seen levels 0 through i - 1. We can therefore safely add the level at the end. */
 			lists.add(list);  
@@ -27,7 +27,7 @@ public class QuestionDFS {
 	}
 
 	public static List<LinkedList<TreeNode>> createLevelLinkedList(TreeNode root) {
-		List<LinkedList<TreeNode>> lists = new ArrayList<LinkedList<TreeNode>>();
+		List<LinkedList<TreeNode>> lists = new ArrayList<>();
 		createLevelLinkedList(root, lists, 0);
 		return lists;
 	}

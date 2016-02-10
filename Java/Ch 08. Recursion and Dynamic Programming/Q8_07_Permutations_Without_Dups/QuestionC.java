@@ -19,7 +19,7 @@ public class QuestionC {
 	}
 
 	public static List<String> getPerms(String str) {
-		List<String> result = new ArrayList<String>();
+		List<String> result = new ArrayList<>();
 		getPerms("", str, result);
 		return result;
 	}

@@ -7,8 +7,8 @@ import java.util.Map;
 
 public class Project {
 	public enum State {COMPLETE, PARTIAL, BLANK};
-	private List<Project> children = new ArrayList<Project>();
-	private Map<String, Project> map = new HashMap<String, Project>();
+	private List<Project> children = new ArrayList<>();
+	private Map<String, Project> map = new HashMap<>();
 	private String name;
 	private State state = State.BLANK;
 	

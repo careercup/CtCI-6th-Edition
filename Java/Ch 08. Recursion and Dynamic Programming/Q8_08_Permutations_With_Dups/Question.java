@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Question {
 	public static Map<Character, Integer> buildFreqTable(String s) {
-		Map<Character, Integer> map = new HashMap<Character, Integer>();
+		Map<Character, Integer> map = new HashMap<>();
 		for (char c : s.toCharArray()) {
 			if (!map.containsKey(c)) {
 				map.put(c, 0);
@@ -34,7 +34,7 @@ public class Question {
 	}
 
 	public static List<String> printPerms(String s) {
-		List<String> result = new ArrayList<String>();
+		List<String> result = new ArrayList<>();
 		Map<Character, Integer> map = buildFreqTable(s);
 		printPerms(map, "", s.length(), result);
 		return result;

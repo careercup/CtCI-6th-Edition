@@ -29,7 +29,7 @@ public class BlackJackGameAutomator {
 	}
 
 	public List<Integer> getBlackJacks() {
-		List<Integer> winners = new ArrayList<Integer>();
+		List<Integer> winners = new ArrayList<>();
 		for (int i = 0; i < hands.length; i++) {
 			if (hands[i].isBlackJack()) {
 				winners.add(i);
@@ -64,7 +64,7 @@ public class BlackJackGameAutomator {
 	}
 
 	public List<Integer> getWinners() {
-		List<Integer> winners = new ArrayList<Integer>();
+		List<Integer> winners = new ArrayList<>();
 		int winningScore = 0;
 		for (int i = 0; i < hands.length; i++) {
 			BlackJackHand hand = hands[i];
@@ -82,7 +82,7 @@ public class BlackJackGameAutomator {
 	}
 	
 	public void initializeDeck() {
-		List<BlackJackCard> cards = new ArrayList<BlackJackCard>();
+		List<BlackJackCard> cards = new ArrayList<>();
 		for (int i = 1; i <= 13; i++) {
 			for (int j = 0; j <= 3; j++) {
 				Suit suit = Suit.getSuitFromValue(j);
@@ -90,8 +90,8 @@ public class BlackJackGameAutomator {
 				cards.add(card);
 			}
 		}
-		
-		deck = new Deck<BlackJackCard>();
+
+		deck = new Deck<>();
 		deck.setDeckOfCards(cards);
 		deck.shuffle();	
 	}

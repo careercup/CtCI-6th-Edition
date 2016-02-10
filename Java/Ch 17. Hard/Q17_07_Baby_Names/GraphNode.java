@@ -15,8 +15,8 @@ public class GraphNode {
 	public GraphNode(String nm, int freq) {
 		name = nm;
 		frequency = freq;
-		neighbors = new ArrayList<GraphNode>();
-		map = new HashMap<String, GraphNode>();
+		neighbors = new ArrayList<>();
+		map = new HashMap<>();
 	}
 
 	public String getName() {

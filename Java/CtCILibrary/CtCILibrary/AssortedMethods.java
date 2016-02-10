@@ -2,7 +2,9 @@ package CtCILibrary;
 
 import java.awt.*;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 import java.util.Set;
 
 public class AssortedMethods {
@@ -200,7 +202,7 @@ public class AssortedMethods {
 	public static TreeNode createTreeFromArray(int[] array) {
 		if (array.length > 0) {
 			TreeNode root = new TreeNode(array[0]);
-			java.util.Queue<TreeNode> queue = new java.util.LinkedList<TreeNode>();
+			Queue<TreeNode> queue = new LinkedList<>();
 			queue.add(root);
 			boolean done = false;
 			int i = 1;
@@ -246,7 +248,7 @@ public class AssortedMethods {
 
 	public static Set<String> getWordListAsHashSet() {
 		String[] wordList = getListOfWords();
-		Set<String> wordSet = new HashSet<String>();
+		Set<String> wordSet = new HashSet<>();
 		for (String s : wordList) {
 			wordSet.add(s);
 		}

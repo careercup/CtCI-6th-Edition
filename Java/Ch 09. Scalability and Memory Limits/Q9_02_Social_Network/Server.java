@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Server {
-	Map<Integer, Machine> machines = new HashMap<Integer, Machine>();
-	Map<Integer, Integer> personToMachineMap = new HashMap<Integer, Integer>();
+	Map<Integer, Machine> machines = new HashMap<>();
+	Map<Integer, Integer> personToMachineMap = new HashMap<>();
 	
 	public Machine getMachineWithId(int machineID) {
 		return machines.get(machineID);

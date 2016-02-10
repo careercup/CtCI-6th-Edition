@@ -50,7 +50,7 @@ public class QuestionA {
 	}
 
 	public static List<String> getValidT9Words(String number, Set<String> wordList) {
-		List<String> results = new ArrayList<String>();
+		List<String> results = new ArrayList<>();
 		getValidWords(number, 0, "", wordList, results);
 		return results;
 	}

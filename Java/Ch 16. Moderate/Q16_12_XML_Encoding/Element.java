@@ -11,15 +11,15 @@ public class Element {
 	
 	public Element(String n) {
 		name = n;
-		attributes = new ArrayList<Attribute>();
-		children = new ArrayList<Element>();
+		attributes = new ArrayList<>();
+		children = new ArrayList<>();
 	}
 	
 	public Element(String n, String v) {
 		name = n;
 		value = v;
-		attributes = new ArrayList<Attribute>();
-		children = new ArrayList<Element>();
+		attributes = new ArrayList<>();
+		children = new ArrayList<>();
 	}	
 	
 	public String getNameCode() {

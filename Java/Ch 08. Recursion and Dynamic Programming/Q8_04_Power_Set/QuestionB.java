@@ -6,7 +6,7 @@ import java.util.List;
 public class QuestionB {
 
 	public static List<Integer> convertIntToSet(int x, List<Integer> set) {
-		List<Integer> subset = new ArrayList<Integer>();
+		List<Integer> subset = new ArrayList<>();
 		int index = 0;
 		for (int k = x; k > 0; k >>= 1) {
 			if ((k & 1) == 1) {
@@ -18,7 +18,7 @@ public class QuestionB {
 	}
 
 	public static List<List<Integer>> getSubsets(List<Integer> set) {
-		List<List<Integer>> allsubsets = new ArrayList<List<Integer>>();
+		List<List<Integer>> allsubsets = new ArrayList<>();
 		int max = 1 << set.size(); /* Compute 2^n */ 
 		for (int k = 0; k < max; k++) {
 			List<Integer> subset = convertIntToSet(k, set);
@@ -28,7 +28,7 @@ public class QuestionB {
 	}
 	
 	public static void main(String[] args) {
-		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> list = new ArrayList<>();
 		for (int i = 0; i < 3; i++) {
 			list.add(i);
 		}

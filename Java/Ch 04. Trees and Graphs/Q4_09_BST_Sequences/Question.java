@@ -13,7 +13,7 @@ public class Question {
 		/* One list is empty. Add the remainder to [a cloned] prefix and
 		 * store result. */
 		if (first.size() == 0 || second.size() == 0) {
-			LinkedList<Integer> result = new LinkedList<Integer>(prefix);
+			LinkedList<Integer> result = new LinkedList<>(prefix);
 			result.addAll(first);
 			result.addAll(second);
 			results.add(result);
@@ -39,14 +39,14 @@ public class Question {
 	}
 
 	public static List<LinkedList<Integer>> allSequences(TreeNode node) {
-		List<LinkedList<Integer>> result = new ArrayList<LinkedList<Integer>>();
+		List<LinkedList<Integer>> result = new ArrayList<>();
 		
 		if (node == null) {
 			result.add(new LinkedList<Integer>());
 			return result;
 		}
 
-		Deque<Integer> prefix = new LinkedList<Integer>();
+		Deque<Integer> prefix = new LinkedList<>();
 		prefix.add(node.data);
 		
 		/* Recurse on left and right subtrees. */
@@ -56,7 +56,7 @@ public class Question {
 		/* Weave together each list from the left and right sides. */
 		for (Deque<Integer> left : leftSeq) {
 			for (Deque<Integer> right : rightSeq) {
-				List<LinkedList<Integer>> weaved = new ArrayList<LinkedList<Integer>>();
+				List<LinkedList<Integer>> weaved = new ArrayList<>();
 				weaveLists(left, right, weaved, prefix);
 				result.addAll(weaved);
 			}

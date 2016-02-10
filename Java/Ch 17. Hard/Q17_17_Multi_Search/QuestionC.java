@@ -17,7 +17,7 @@ public class QuestionC {
 	}
 
 	public static List<String> findStringsAtLoc(TrieNode root, String big, int start) {
-		List<String> strings = new ArrayList<String>();
+		List<String> strings = new ArrayList<>();
 		int index = start;
 		while (index < big.length()) {
 			root = root.getChild(big.charAt(index));
@@ -38,7 +38,7 @@ public class QuestionC {
 	}
 	
 	public static HashMapList<String, Integer> searchAll(String big, String[] smalls) {
-		HashMapList<String, Integer> lookup = new HashMapList<String, Integer>();
+		HashMapList<String, Integer> lookup = new HashMapList<>();
 		TrieNode root = createTreeFromStrings(smalls, big.length()).getRoot();
 		
 		for (int i = 0; i < big.length(); i++) {

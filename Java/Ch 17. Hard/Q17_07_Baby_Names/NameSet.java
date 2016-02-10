@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class NameSet {
-	private Set<String> names = new HashSet<String>();
+	private Set<String> names = new HashSet<>();
 	private int frequency = 0;
 	private String rootName;
 	

@@ -17,7 +17,7 @@ public class TrieNode {
 	/* Constructs a trie node and stores this character as the node's value.
 	 * Initializes the list of child nodes of this node to an empty hash map. */
     public TrieNode() {
-    	children = new HashMap<Character, TrieNode>();
+        children = new HashMap<>();
     }
 
     /* Constructs a trie node and stores in the node the char passed in

@@ -5,7 +5,7 @@ import java.util.EmptyStackException;
 import java.util.List;
 
 public class SetOfStacks {
-	List<Stack> stacks = new ArrayList<Stack>();
+	List<Stack> stacks = new ArrayList<>();
 	public int capacity;
 	
 	public SetOfStacks(int capacity) { 

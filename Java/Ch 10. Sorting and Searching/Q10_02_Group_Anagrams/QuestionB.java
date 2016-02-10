@@ -8,7 +8,7 @@ import java.util.List;
 
 public class QuestionB {
 	public static void sort(String[] array) {
-		HashMapList<String, String> mapList = new HashMapList<String, String>();
+		HashMapList<String, String> mapList = new HashMapList<>();
 		
 		/* Group words by anagram */
 		for (String s : array) {

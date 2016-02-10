@@ -3,7 +3,7 @@ package CtCILibrary;
 import java.util.*;
 
 public class HashMapList<T, E> {
-	private Map<T, List<E>> map = new HashMap<T, List<E>>();
+	private Map<T, List<E>> map = new HashMap<>();
 	
 	/* Insert item into list at key. */
 	public void put(T key, E item) {

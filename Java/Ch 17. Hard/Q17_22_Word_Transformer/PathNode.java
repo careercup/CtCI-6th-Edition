@@ -16,7 +16,7 @@ public class PathNode {
 	
 	/* Traverse path and return linked list of nodes. */
 	public LinkedList<String> collapse(boolean startsWithRoot) {
-		LinkedList<String> path = new LinkedList<String>();
+		LinkedList<String> path = new LinkedList<>();
 		PathNode node = this;
 		while (node != null) {
 			if (startsWithRoot) {

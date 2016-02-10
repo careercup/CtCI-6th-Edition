@@ -5,7 +5,7 @@ import java.util.*;
 public class QuestionD {
 
 	public static Range getShortestClosure(List<Queue<Integer>> lists) {
-		PriorityQueue<HeapNode> minHeap = new PriorityQueue<HeapNode>();
+		PriorityQueue<HeapNode> minHeap = new PriorityQueue<>();
 		int max = Integer.MIN_VALUE;
 		
 		/* Insert min element from each list. */ 
@@ -49,9 +49,9 @@ public class QuestionD {
 	 * each element in smallArray appears in bigArray. */
 	public static List<Queue<Integer>> getLocationsForElements(int[] big, int[] small) {
 		/* Initialize hash map from item value to locations. */
-		Map<Integer, Queue<Integer>> itemLocations = new HashMap<Integer, Queue<Integer>>();
+		Map<Integer, Queue<Integer>> itemLocations = new HashMap<>();
 		for (int s : small) {
-			Queue<Integer> queue = new LinkedList<Integer>();
+			Queue<Integer> queue = new LinkedList<>();
 			itemLocations.put(s, queue);
 		}
 		
@@ -63,7 +63,7 @@ public class QuestionD {
 			}
 		}
 
-		List<Queue<Integer>> allLocations = new ArrayList<Queue<Integer>>();
+		List<Queue<Integer>> allLocations = new ArrayList<>();
 		allLocations.addAll(itemLocations.values());
 		return allLocations;
 	}

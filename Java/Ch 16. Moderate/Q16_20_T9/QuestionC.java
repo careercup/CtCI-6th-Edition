@@ -36,7 +36,7 @@ public class QuestionC {
 	
 	/* Convert mapping of number->letters into letter->number */
 	public static Map<Character, Character> createLetterToNumberMap() {
-		Map<Character, Character> letterToNumberMap = new HashMap<Character, Character>();
+		Map<Character, Character> letterToNumberMap = new HashMap<>();
 		for (int i = 0; i < t9Letters.length; i++) {
 			char[] letters = t9Letters[i];
 			if (letters != null) {
@@ -56,7 +56,7 @@ public class QuestionC {
 		Map<Character, Character> letterToNumberMap = createLetterToNumberMap();
 		
 		/* Create word -> number map */
-		HashMapList<String, String> wordsToNumbers = new HashMapList<String, String>(); 
+		HashMapList<String, String> wordsToNumbers = new HashMapList<>();
 		for (String word : words) {
 			String numbers = convertToT9(word, letterToNumberMap);
 			wordsToNumbers.put(numbers, word);

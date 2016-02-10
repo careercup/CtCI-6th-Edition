@@ -8,7 +8,7 @@ import java.util.Random;
 public class QuestionA {
 
 	public static List<Integer> getRandomSubset(List<Integer> list) {
-		List<Integer> subset = new ArrayList<Integer>();
+		List<Integer> subset = new ArrayList<>();
 		Random random = new Random();
 		for (int item : list) {
 			if (random.nextBoolean()) {

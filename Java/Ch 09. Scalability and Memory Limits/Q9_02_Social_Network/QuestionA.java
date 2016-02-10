@@ -4,8 +4,8 @@ import java.util.*;
 
 public class QuestionA {
 	public static LinkedList<Person> findPathBFS(Map<Integer, Person> people, int source, int destination) {
-		Queue<PathNode> toVisit = new LinkedList<PathNode>();
-		Set<Integer> visited = new HashSet<Integer>();
+		Queue<PathNode> toVisit = new LinkedList<>();
+		Set<Integer> visited = new HashSet<>();
 		toVisit.add(new PathNode(people.get(source), null));
 		visited.add(source);
 		while (!toVisit.isEmpty()) {
@@ -30,7 +30,7 @@ public class QuestionA {
 	
 	public static void main(String[] args) {
 		int nPeople = 11;
-		Map<Integer, Person> people = new HashMap<Integer, Person>();
+		Map<Integer, Person> people = new HashMap<>();
 		for (int i = 0; i < nPeople; i++) {
 			Person p = new Person(i);
 			people.put(i, p);

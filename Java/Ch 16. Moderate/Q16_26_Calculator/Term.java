@@ -25,7 +25,7 @@ public class Term {
 	}
 
 	public static List<Term> parseTermSequence(CharSequence sequence) {
-		List<Term> terms = new ArrayList<Term>();
+		List<Term> terms = new ArrayList<>();
 		int offset = 0;
 		while (offset < sequence.length()) {
 			Operator op = Operator.BLANK;

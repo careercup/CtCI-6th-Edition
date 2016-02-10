@@ -38,7 +38,7 @@ public class QuestionA {
 
 		List<HtWt> bestWith = null;
 		if (canAppend(sequence, value)) {
-			List<HtWt> sequenceWith = new ArrayList<HtWt>(sequence);
+			List<HtWt> sequenceWith = new ArrayList<>(sequence);
 			sequenceWith.add(value);
 			bestWith = bestSeqAtIndex(array, sequenceWith, index + 1);
 		}
@@ -53,7 +53,7 @@ public class QuestionA {
 	}
 
 	public static List<HtWt> initialize() {
-		List<HtWt> items = new ArrayList<HtWt>();
+		List<HtWt> items = new ArrayList<>();
 		
 		HtWt item = new HtWt(65, 60);
 		items.add(item);

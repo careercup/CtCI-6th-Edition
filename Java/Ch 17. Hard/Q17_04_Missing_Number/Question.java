@@ -8,7 +8,7 @@ public class Question {
     /* Create a random array of numbers from 0 to n, but skip 'missing' */
     public static List<BitInteger> initialize(int n, int missing) {
         BitInteger.INTEGER_SIZE = Integer.toBinaryString(n).length();
-        List<BitInteger> array = new ArrayList<BitInteger>();
+        List<BitInteger> array = new ArrayList<>();
         
         for (int i = 1; i <= n; i++) {
         	array.add(new BitInteger(i == missing ? 0 : i));
@@ -31,8 +31,8 @@ public class Question {
         if (column < 0) { // Base case and error condition
             return 0;
         }
-        List<BitInteger> oneBits = new ArrayList<BitInteger>(input.size() / 2);
-        List<BitInteger> zeroBits = new ArrayList<BitInteger>(input.size() / 2);
+        List<BitInteger> oneBits = new ArrayList<>(input.size() / 2);
+        List<BitInteger> zeroBits = new ArrayList<>(input.size() / 2);
         for (BitInteger t : input) {
             if (t.fetch(column) == 0) {
                 zeroBits.add(t);

@@ -6,7 +6,7 @@ import java.util.*;
 
 public class QuestionA {
 	public static Map<DocPair, Double> computeSimilarities(Map<Integer, Document> documents) {
-		List<Document> docs = new ArrayList<Document>();
+		List<Document> docs = new ArrayList<>();
 		for (Document doc : documents.values()) {
 			docs.add(doc);
 		}
@@ -14,7 +14,7 @@ public class QuestionA {
 	}
 
 	public static Map<DocPair, Double> computeSimilarities(List<Document> documents) {
-		Map<DocPair, Double> similarities = new HashMap<DocPair, Double>();
+		Map<DocPair, Double> similarities = new HashMap<>();
 		for (int i = 0; i < documents.size(); i++) {
 			for (int j = i + 1; j < documents.size(); j++) {
 				Document doc1 = documents.get(i);
@@ -31,7 +31,7 @@ public class QuestionA {
 		
 	public static double computeSimilarity(Document doc1, Document doc2) {
 		int intersection = 0;
-		Set<Integer> set1 = new HashSet<Integer>();
+		Set<Integer> set1 = new HashSet<>();
 		set1.addAll(doc1.getWords());
 		
 		for (int word : doc2.getWords()) {
@@ -46,11 +46,11 @@ public class QuestionA {
 	}
 
 	public static List<Integer> removeDups(int[] array) {
-		Set<Integer> set = new HashSet<Integer>();
+		Set<Integer> set = new HashSet<>();
 		for (int a : array) {
 			set.add(a);
 		}
-		List<Integer> list = new ArrayList<Integer>();
+		List<Integer> list = new ArrayList<>();
 		list.addAll(set);
 		return list;
 	}
@@ -58,7 +58,7 @@ public class QuestionA {
 	public static void main(String[] args) {
 		int numDocuments = 10;
 		int docSize = 5;
-		Map<Integer, Document> documents = new HashMap<Integer, Document>();
+		Map<Integer, Document> documents = new HashMap<>();
 		for (int i = 0; i < numDocuments; i++) {
 			int[] words = AssortedMethods.randomArray(docSize, 0, 10);
 			List<Integer> w = Tester.removeDups(words);

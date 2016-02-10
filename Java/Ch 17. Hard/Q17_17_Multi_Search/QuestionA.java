@@ -16,7 +16,7 @@ public class QuestionA {
 	}
 
 	public static List<Integer> search(CharSequence big, CharSequence small) {
-		List<Integer> locations = new ArrayList<Integer>();
+		List<Integer> locations = new ArrayList<>();
 		for (int i = 0; i < big.length() - small.length() + 1; i++) {
 			if (isSubstringAtLocation(big, small, i)) {
 				locations.add(i);
@@ -26,7 +26,7 @@ public class QuestionA {
 	}
 
 	public static HashMapList<String, Integer> searchAll(CharSequence big, String[] smalls) {
-		HashMapList<String, Integer> lookup = new HashMapList<String, Integer>();
+		HashMapList<String, Integer> lookup = new HashMapList<>();
 		for (String small : smalls) {
 			List<Integer> locations = search(big, small);
 			lookup.put(small, locations);
