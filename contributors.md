@@ -11,3 +11,4 @@ Thanks goes out to the generous programmers below:
 * [mandliya](https://github.com/mandliya)
 * [kv-kunalvyas](https://github.com/kv-kunalvyas)
 * [henryhkim](https://github.com/henryhkim)
+* [paplorinc](https://github.com/paplorinc)
