@@ -8,7 +8,7 @@ public class Line {
 	private boolean infinite_slope = false;
 	
 	public Line(GraphPoint p, GraphPoint q) {
-		if (Math.abs(p.x - q.x) > epsilon) { // if x�s are different
+		if (Math.abs(p.x - q.x) > epsilon) { // if x's are different
 			slope = (p.y - q.y) / (p.x - q.x); // compute slope
 			intercept = p.y - slope * p.x; // y intercept from y=mx+b
 		} else {

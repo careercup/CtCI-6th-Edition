@@ -9,11 +9,7 @@ import java.util.Map;
 public class WordGroup {
     private Map<String, Boolean> lookup = new HashMap<>();
     private List<String> group = new ArrayList<>();
-    
-    public WordGroup() {
 
-    }
-    
     public boolean containsWord(String s) {
     	return lookup.containsKey(s);
     }

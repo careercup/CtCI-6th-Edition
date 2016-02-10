@@ -13,9 +13,7 @@ public class Q_09 {
 	public static int[] appendToNew(int[] array, int value) {
 		// copy all elements over to new array
 		int[] bigger = new int[array.length + 1];
-		for (int i = 0; i < array.length; i++) {
-			bigger[i] = array[i];
-		}
+		System.arraycopy(array, 0, bigger, 0, array.length);
 
 		// add new element
 		bigger[bigger.length - 1] = value;

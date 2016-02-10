@@ -1,5 +1,7 @@
 package Q4_07_Build_Order.DFS;
 
+import Q4_07_Build_Order.DFS.Project.State;
+
 import java.util.List;
 import java.util.Stack;
 
@@ -25,19 +27,19 @@ public class Question {
 	}
 	
 	public static boolean doDFS(Project project, Stack<Project> stack) {
-		if (project.getState() == Project.State.PARTIAL) {
+		if (project.getState() == State.PARTIAL) {
 			return false; // Cycle
 		}
-		
-		if (project.getState() == Project.State.BLANK) {
-			project.setState(Project.State.PARTIAL);
+
+		if (project.getState() == State.BLANK) {
+			project.setState(State.PARTIAL);
 			List<Project> children = project.getChildren();
 			for (Project child : children) {
 				if (!doDFS(child, stack)) {
 					return false;
 				}
 			}
-			project.setState(Project.State.COMPLETE);
+			project.setState(State.COMPLETE);
 			stack.push(project);
 		}
 		return true;
@@ -46,7 +48,7 @@ public class Question {
 	public static Stack<Project> orderProjects(List<Project> projects) {
 		Stack<Project> stack = new Stack<>();
 		for (Project project : projects) {
-			if (project.getState() == Project.State.BLANK) {
+			if (project.getState() == State.BLANK) {
 				if (!doDFS(project, stack)) {
 					return null;
 				}

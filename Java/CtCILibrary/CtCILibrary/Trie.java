@@ -8,11 +8,10 @@ import java.util.List;
 public class Trie
 {
     // The root of this trie.
-    private TrieNode root;
+    private TrieNode root = new TrieNode();
 
     /* Takes a list of strings as an argument, and constructs a trie that stores these strings. */
     public Trie(List<String> list) {
-        root = new TrieNode();
         for (String word : list) {
             root.addWord(word);
         }
@@ -21,7 +20,6 @@ public class Trie
 
     /* Takes a list of strings as an argument, and constructs a trie that stores these strings. */    
     public Trie(String[] list) {
-        root = new TrieNode();
         for (String word : list) {
             root.addWord(word);
         }

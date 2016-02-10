@@ -1,9 +1,9 @@
 package Q16_18_Pattern_Matcher;
 
 public class QuestionC {
-	
-	public static String buildFromPattern(String pattern, String main, String alt) {	
-		StringBuffer sb = new StringBuffer();
+
+	public static String buildFromPattern(String pattern, String main, String alt) {
+		StringBuilder sb = new StringBuilder();
 		char first = pattern.charAt(0);
 		for (char c : pattern.toCharArray()) {
 			if (c == first) {

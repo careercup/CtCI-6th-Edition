@@ -63,9 +63,7 @@ public class QuestionD {
 			}
 		}
 
-		List<Queue<Integer>> allLocations = new ArrayList<>();
-		allLocations.addAll(itemLocations.values());
-		return allLocations;
+		return new ArrayList<>(itemLocations.values());
 	}
 	
 	public static Range shortestSupersequence(int[] big, int[] small) {

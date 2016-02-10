@@ -4,9 +4,7 @@ public class QuestionA {
 	public static char[] extractSubarray(char[] array, int start, int end) {
 		if (start > end) return null;		
 		char[] subarray = new char[end - start + 1];
-		for (int i = start; i <= end; i++) {
-			subarray[i - start] = array[i];
-		}
+		System.arraycopy(array, start, subarray, start - start, end + 1 - start);
 		return subarray;
 	}
 	

@@ -36,9 +36,7 @@ public class Q_12 {
 
 	public static void merge(int[] array, int[] helper, int low, int middle, int high) {
 		/* Copy both halves into a helper array */
-		for (int i = low; i <= high; i++) {
-			helper[i] = array[i];
-		}
+		System.arraycopy(array, low, helper, low, high + 1 - low);
 
 		int helperLeft = low;
 		int helperRight = middle + 1;
@@ -61,9 +59,7 @@ public class Q_12 {
 		/* Copy the rest of the left side of the array into the
 		 * target array */
 		int remaining = middle - helperLeft;
-		for (int i = 0; i <= remaining; i++) {
-			array[current + i] = helper[helperLeft + i];
-		}
+		System.arraycopy(helper, helperLeft + 0, array, current + 0, remaining + 1);
 	}	
 	
 	public static int intersection(int[] a, int[] b) {

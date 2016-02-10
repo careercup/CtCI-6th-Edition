@@ -4,8 +4,8 @@ public class QuestionC {
 	public static String compress(String str) {
 		int finalLength = countCompression(str);
 		if (finalLength >= str.length()) return str;
-		
-		StringBuffer compressed = new StringBuffer(finalLength); // initialize capacity
+
+		StringBuilder compressed = new StringBuilder(finalLength); // initialize capacity
 		int countConsecutive = 0;
 		for (int i = 0; i < str.length(); i++) {
 			countConsecutive++;

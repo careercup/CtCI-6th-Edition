@@ -11,9 +11,7 @@ public class Grid {
 	/* Copy old values into new array, with an offset/shift applied to the row and columns. */
 	private void copyWithShift(boolean[][] oldGrid, boolean[][] newGrid, int shiftRow, int shiftColumn) {
 		for (int r = 0; r < oldGrid.length; r++) {
-			for (int c = 0; c < oldGrid[0].length; c++) {
-				newGrid[r + shiftRow][c + shiftColumn] = oldGrid[r][c];
-			}
+			System.arraycopy(oldGrid[r], 0, newGrid[r + shiftRow], 0 + shiftColumn, oldGrid[0].length);
 		}
 	}
 	
@@ -83,7 +81,7 @@ public class Grid {
 			}
 			sb.append("\n");
 		}
-		sb.append("Ant: " + ant.orientation + ". \n");
+		sb.append("Ant: ").append(ant.orientation).append(". \n");
 		return sb.toString();
 	}
 }

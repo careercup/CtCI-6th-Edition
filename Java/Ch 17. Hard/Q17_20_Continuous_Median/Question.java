@@ -40,7 +40,7 @@ public class Question {
 		if (maxHeap.size() == minHeap.size()) {
 			return ((double) minHeap.peek() + maxHeap.peek()) / 2;
 		} else {
-			/* If maxHeap and minHeap are of different sizes, then maxHeap must have one extra element. Return maxHeap�s top element.*/			
+			/* If maxHeap and minHeap are of different sizes, then maxHeap must have one extra element. Return maxHeap's top element.*/
 			return maxHeap.peek();
 		} 
 	}

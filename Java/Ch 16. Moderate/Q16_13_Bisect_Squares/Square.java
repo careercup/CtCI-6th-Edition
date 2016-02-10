@@ -45,9 +45,9 @@ public class Square {
 		double y1 = 0;
 		
 		/* Calculate slope using the equation (y1 - y2) / (x1 - x2).
-		 * Note: if the slope is �steep� (>1) then the end of the
+		 * Note: if the slope is 'steep' (>1) then the end of the
 		 * line segment will hit size / 2 units away from the middle
-		 * on the y axis. If the slope is �shallow� (<1) the end of
+		 * on the y axis. If the slope is 'shallow' (<1) the end of
 		 * the line segment will hit size / 2 units away from the
 		 * middle on the x axis. */
 		if (Math.abs(slope) == 1) {

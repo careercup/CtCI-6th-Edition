@@ -15,8 +15,7 @@ public class QuestionA {
 			int item = set.get(index);
 			List<List<Integer>> moresubsets = new ArrayList<>();
 			for (List<Integer> subset : allsubsets) {
-				List<Integer> newsubset = new ArrayList<>();
-				newsubset.addAll(subset); 
+				List<Integer> newsubset = new ArrayList<>(subset);
 				newsubset.add(item);
 				moresubsets.add(newsubset);
 			}

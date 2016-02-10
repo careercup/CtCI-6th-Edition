@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BlackJackHand extends Hand<BlackJackCard> {
-	public BlackJackHand() {
-		
-	}
-	
 	public int score() {
 		List<Integer> scores = possibleScores();
 		int maxUnder = Integer.MIN_VALUE;

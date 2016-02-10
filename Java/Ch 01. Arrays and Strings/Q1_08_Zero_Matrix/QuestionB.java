@@ -88,9 +88,7 @@ public class QuestionB {
 	public static int[][] cloneMatrix(int[][] matrix) {
 		int[][] c = new int[matrix.length][matrix[0].length];
 		for (int i = 0; i < matrix.length; i++) {
-			for (int j = 0; j < matrix[0].length; j++) {
-				c[i][j] = matrix[i][j];
-			}
+			System.arraycopy(matrix[i], 0, c[i], 0, matrix[0].length);
 		}
 		return c;
 	}

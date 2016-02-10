@@ -9,9 +9,7 @@ public class Tester {
 		for (int a : array) {
 			set.add(a);
 		}
-		List<Integer> list = new ArrayList<>();
-		list.addAll(set);
-		return list;
+		return new ArrayList<>(set);
 	}
 
 	public static boolean isEqual(Map<DocPair, Double> one, Map<DocPair, Double> two) {

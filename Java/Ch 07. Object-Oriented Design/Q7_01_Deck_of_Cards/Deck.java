@@ -7,9 +7,6 @@ import java.util.List;
 public class Deck <T extends Card> {
 	private List<T> cards;
 	private int dealtIndex = 0; // marks first undealt card
-	
-	public Deck() {
-	}
 
 	public void setDeckOfCards(List<T> deckOfCards) {
 		cards = deckOfCards;

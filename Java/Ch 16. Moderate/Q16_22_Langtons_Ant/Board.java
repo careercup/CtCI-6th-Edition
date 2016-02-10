@@ -8,9 +8,7 @@ public class Board {
 	private Ant ant = new Ant();
 	private Position topLeftCorner = new Position(0, 0);
 	private Position bottomRightCorner = new Position(0, 0);
-	
-	public Board() { }
-	
+
 	/* Move ant. */
 	public void move() {
 		ant.turn(isWhite(ant.position)); // Turn
@@ -70,7 +68,7 @@ public class Board {
 			}
 			sb.append("\n");
 		}
-		sb.append("Ant: " + ant.orientation + ". \n");
+		sb.append("Ant: ").append(ant.orientation).append(". \n");
 		return sb.toString();
 	}
 }

@@ -19,9 +19,9 @@ public class Tester {
 	}
 	
 	public static String arrayToString(int[] array) {
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		for (int a : array) {
-			sb.append(a + " ");
+			sb.append(a).append(" ");
 		}
 		return sb.toString();
 	}

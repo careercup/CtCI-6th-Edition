@@ -83,13 +83,9 @@ public class Question {
 	 */
 	public static boolean validate(int[] array, int left_index, int right_index) {
 		int[] middle = new int[right_index - left_index + 1];
-		for (int i = left_index; i <= right_index; i++) {
-			middle[i - left_index] = array[i];
-		}
+		System.arraycopy(array, left_index, middle, left_index - left_index, right_index + 1 - left_index);
 		Arrays.sort(middle);
-		for (int i = left_index; i <= right_index; i++) {
-			array[i] = middle[i - left_index];
-		}
+		System.arraycopy(middle, left_index - left_index, array, left_index, right_index + 1 - left_index);
 		for (int i = 1; i < array.length; i++) {
 			if (array[i-1] > array[i]) {
 				return false;

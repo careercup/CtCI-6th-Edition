@@ -31,9 +31,8 @@ public class QuestionA {
 		
 	public static double computeSimilarity(Document doc1, Document doc2) {
 		int intersection = 0;
-		Set<Integer> set1 = new HashSet<>();
-		set1.addAll(doc1.getWords());
-		
+		Set<Integer> set1 = new HashSet<>(doc1.getWords());
+
 		for (int word : doc2.getWords()) {
 			if (set1.contains(word)) {
 				intersection++;
@@ -50,9 +49,7 @@ public class QuestionA {
 		for (int a : array) {
 			set.add(a);
 		}
-		List<Integer> list = new ArrayList<>();
-		list.addAll(set);
-		return list;
+		return new ArrayList<>(set);
 	}
 	
 	public static void main(String[] args) {
