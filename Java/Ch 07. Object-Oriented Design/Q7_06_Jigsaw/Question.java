@@ -61,14 +61,12 @@ public class Question {
 	
 	public static String solutionToString(Piece[][] solution) {
 		StringBuilder sb = new StringBuilder();
-		for (int h = 0; h < solution.length; h++) {
-			for (int w = 0; w < solution[h].length; w++) {
-				Piece p = solution[h][w];
-				if (p == null) {
+		for (Piece[] pieces : solution) {
+			for (Piece piece : pieces) {
+				if (piece == null) {
 					sb.append("null");
-				}
-				else {
-					sb.append(p.toString());
+				} else {
+					sb.append(piece);
 				}
 			}
 			sb.append("\n");

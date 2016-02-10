@@ -76,8 +76,7 @@ public class Question {
     }
 
 	public static void printBoards(List<Integer[]> boards) {
-		for (int i = 0; i < boards.size(); i++) {
-			Integer[] board = boards.get(i);
+		for (Integer[] board : boards) {
 			printBoard(board);
 		}
 	}

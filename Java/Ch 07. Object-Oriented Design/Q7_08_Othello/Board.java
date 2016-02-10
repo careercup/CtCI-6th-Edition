@@ -122,11 +122,11 @@ public class Board {
 	}
 	
 	public void printBoard() {
-		for (int r = 0; r < board.length; r++) {
-			for (int c = 0; c < board[r].length; c++) {
-				if (board[r][c] == null) {
+		for (Piece[] pieces : board) {
+			for (Piece piece : pieces) {
+				if (piece == null) {
 					System.out.print("_");
-				} else if (board[r][c].getColor() == Color.White) {
+				} else if (piece.getColor() == Color.White) {
 					System.out.print("W");
 				} else {
 					System.out.print("B");

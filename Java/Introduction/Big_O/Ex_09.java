@@ -2,10 +2,10 @@ package Big_O;
 
 public class Ex_09 {
 	public static void printUnorderedPairs(int[] arrayA, int[] arrayB) {
-		for (int i = 0; i < arrayA.length; i++) {
-			for (int j = 0; j < arrayB.length; j++) {
-				if (arrayA[i] < arrayB[j]) {
-					System.out.println(arrayA[i] + "," + arrayB[j]);
+		for (int valueA : arrayA) {
+			for (int valueB : arrayB) {
+				if (valueA < valueB) {
+					System.out.println(valueA + "," + valueB);
 				}
 			}
 		}

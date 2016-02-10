@@ -79,8 +79,8 @@ public class QuestionB {
 		char b = '1';
 		char a = 'a';
 		char[] array = {a, b, a, b, a, b, b, b, b, b, a, a, a, a, a, b, a, b, a, b, b, a, a, a, a, a, a, a};
-		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + " ");
+		for (char value : array) {
+			System.out.print(value + " ");
 		}
 		System.out.println();
 		char[] max = findLongestSubarray(array);
@@ -88,8 +88,8 @@ public class QuestionB {
 			System.out.println("No equal subarray");
 		} else {
 			System.out.println(max.length);
-			for (int i = 0; i < max.length; i++) {
-				System.out.print(max[i] + " ");
+			for (char value : max) {
+				System.out.print(value + " ");
 			}
 	
 			System.out.println("\nIs Valid? " + isEqual(max, 0, max.length));

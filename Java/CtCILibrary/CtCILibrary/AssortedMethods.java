@@ -131,27 +131,27 @@ public class AssortedMethods {
 	}
 
 	public static void printMatrix(int[][] matrix) {
-		for (int i = 0; i < matrix.length; i++) {
-			for (int j = 0; j < matrix[i].length; j++) {
-				if (matrix[i][j] < 10 && matrix[i][j] > -10) {
+		for (int[] row : matrix) {
+			for (int value : row) {
+				if (value < 10 && value > -10) {
 					System.out.print(" ");
 				}
-				if (matrix[i][j] < 100 && matrix[i][j] > -100) {
+				if (value < 100 && value > -100) {
 					System.out.print(" ");
 				}
-				if (matrix[i][j] >= 0) {
+				if (value >= 0) {
 					System.out.print(" ");
 				}
-				System.out.print(" " + matrix[i][j]);
+				System.out.print(" " + value);
 			}
 			System.out.println();
 		}
 	}
 
 	public static void printMatrix(boolean[][] matrix) {
-		for (int i = 0; i < matrix.length; i++) {
-			for (int j = 0; j < matrix[i].length; j++) {
-				if (matrix[i][j]) {
+		for (boolean[] row : matrix) {
+			for (boolean value : row) {
+				if (value) {
 					System.out.print("1");
 				} else {
 					System.out.print("0");
@@ -162,8 +162,8 @@ public class AssortedMethods {
 	}
 
 	public static void printIntArray(int[] array) {
-		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + " ");
+		for (int value : array) {
+			System.out.print(value + " ");
 		}
 		System.out.println("");
 	}

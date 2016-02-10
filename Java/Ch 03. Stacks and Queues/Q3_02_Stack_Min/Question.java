@@ -11,7 +11,7 @@ public class Question {
 			System.out.print(value + ", ");
 		}
 		System.out.println('\n');
-		for (int i = 0; i < array.length; i++) {
+		for (int value : array) {
 			System.out.println("Popped " + stack.pop().value + ", " + stack2.pop());
 			System.out.println("New min is " + stack.min() + ", " + stack2.min());
 		}

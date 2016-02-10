@@ -75,11 +75,11 @@ public class Square {
 		Point start = p1;
 		Point end = p1;		
 		Point[] points = {p2, p3, p4};
-		for (int i = 0; i < points.length; i++) {
-			if (points[i].x < start.x || (points[i].x == start.x && points[i].y < start.y)) {
-				start = points[i];
-			} else if (points[i].x > end.x || (points[i].x == end.x && points[i].y > end.y)) {
-				end = points[i];
+		for (Point point : points) {
+			if (point.x < start.x || (point.x == start.x && point.y < start.y)) {
+				start = point;
+			} else if (point.x > end.x || (point.x == end.x && point.y > end.y)) {
+				end = point;
 			}
 		}
 			

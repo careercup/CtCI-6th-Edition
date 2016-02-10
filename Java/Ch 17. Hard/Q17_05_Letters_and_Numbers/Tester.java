@@ -9,8 +9,8 @@ public class Tester {
 		char b = 'b';
 		char a = '1';
 		char[] array = {a, b, a, b, a, b, b, b, b, b, a, a, a, a, a, b, a, b, a, b, b, a, a, a, a, a, a, a};
-		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + " ");
+		for (char value : array) {
+			System.out.print(value + " ");
 		}
 		System.out.println();
 		System.out.println();
@@ -21,8 +21,8 @@ public class Tester {
 			System.out.println("A is null.");
 		} else {
 			System.out.println("A: " + maxA.length);
-			for (int i = 0; i < maxA.length; i++) {
-				System.out.print(maxA[i] + " ");
+			for (char value : maxA) {
+				System.out.print(value + " ");
 			}
 			System.out.println("\nIs Valid? " + QuestionA.hasEqualLettersNumbers(maxA, 0, maxA.length - 1));
 			System.out.println();
@@ -32,8 +32,8 @@ public class Tester {
 			System.out.println("B is null.");
 		} else {
 			System.out.println("B: " + maxB.length);
-			for (int i = 0; i < maxB.length; i++) {
-				System.out.print(maxB[i] + " ");
+			for (char value : maxB) {
+				System.out.print(value + " ");
 			}	
 			System.out.println("\nIs Valid? " + QuestionA.hasEqualLettersNumbers(maxB, 0, maxB.length - 1));
 		}

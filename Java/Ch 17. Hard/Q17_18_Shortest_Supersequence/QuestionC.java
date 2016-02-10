@@ -18,8 +18,8 @@ public class QuestionC {
 	/* Get closure for each index. */
 	public static int[] getClosures(int[] big, int[] small) {
 		int[] closure = new int[big.length];
-		for (int i = 0; i < small.length; i++) {
-			sweepForClosure(big, closure, small[i]);
+		for (int value : small) {
+			sweepForClosure(big, closure, value);
 		}
 		return closure;
 	}

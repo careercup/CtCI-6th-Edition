@@ -28,8 +28,8 @@ public class QuestionB {
 		}		
 		
 		// Check if first column has a zero
-		for (int i = 0; i < matrix.length; i++) {
-			if (matrix[i][0] == 0) {
+		for (int[] row : matrix) {
+			if (row[0] == 0) {
 				colHasZero = true;
 				break;
 			}

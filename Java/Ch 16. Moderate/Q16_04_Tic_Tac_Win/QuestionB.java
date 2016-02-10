@@ -44,14 +44,12 @@ public class QuestionB {
 	}
 	
 	public static boolean hasWonDiagonal(Piece[][] board, int direction) {
-		int row = 0;
 		int column = direction == 1 ? 0 : board.length - 1;
 		Piece first = board[0][column];
-		for (int i = 0; i < board.length; i++) {
-			if (board[row][column] != first) {
+		for (Piece[] row : board) {
+			if (row[column] != first) {
 				return false;
 			}
-			row += 1;
 			column += direction;
 		}
 		return true;

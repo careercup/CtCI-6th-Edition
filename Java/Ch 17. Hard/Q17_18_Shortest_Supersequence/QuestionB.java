@@ -28,11 +28,11 @@ public class QuestionB {
 	 * for this index (which will be the min of this column. */
 	public static int getClosureForIndex(int[][] nextElements, int index) {
 		int max = -1;
-		for (int i = 0; i < nextElements.length; i++) {
-			if (nextElements[i][index] == -1) {
+		for (int[] nextElement : nextElements) {
+			if (nextElement[index] == -1) {
 				return -1;
 			}
-			max = Math.max(max, nextElements[i][index]);
+			max = Math.max(max, nextElement[index]);
 		}
 		return max;
 	}

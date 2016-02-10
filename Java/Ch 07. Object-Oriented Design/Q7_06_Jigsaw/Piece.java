@@ -65,8 +65,8 @@ public class Piece {
 	/* Check if this piece has a border edge. */
 	public boolean isBorder() {
 		Orientation[] orientations = Orientation.values();
-		for (int i = 0; i < orientations.length; i++) {
-			if (edges.get(orientations[i]).getShape() == Shape.FLAT) {
+		for (Orientation orientation : orientations) {
+			if (edges.get(orientation).getShape() == Shape.FLAT) {
 				return true;
 			}
 		}

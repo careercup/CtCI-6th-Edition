@@ -13,8 +13,8 @@ public class ParkingLot {
 	
 	/* Park the vehicle in a spot (or multiple spots). Return false if failed. */
 	public boolean parkVehicle(Vehicle vehicle) {
-		for (int i = 0; i < levels.length; i++) {
-			if (levels[i].parkVehicle(vehicle)) {
+		for (Level level : levels) {
+			if (level.parkVehicle(vehicle)) {
 				return true;
 			}
 		}

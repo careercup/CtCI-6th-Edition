@@ -65,8 +65,8 @@ public class Question {
 			System.out.print(" " + minHeapArray[i]);
 		}
 		System.out.print("\nMaxHeap =");
-		for (int i = 0; i < maxHeapArray.length; i++){
-			System.out.print(" " + maxHeapArray[i]);
+		for (int value : maxHeapArray) {
+			System.out.print(" " + value);
 		}
 	}
 

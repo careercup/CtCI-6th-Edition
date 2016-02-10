@@ -24,8 +24,8 @@ public abstract class Vehicle {
 	
 	/* Remove car from spot, and notify spot that it's gone */
 	public void clearSpots() {
-		for (int i = 0; i < parkingSpots.size(); i++) {
-			parkingSpots.get(i).removeVehicle();
+		for (ParkingSpot parkingSpot : parkingSpots) {
+			parkingSpot.removeVehicle();
 		}
 		parkingSpots.clear();
 	}

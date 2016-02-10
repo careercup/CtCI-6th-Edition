@@ -61,10 +61,9 @@ public class Automator {
 		shuffle();
 		lastPlayer = lastPlayer == players[0] ? players[1] : players[0];
 		String color = lastPlayer.getColor().toString();
-		for (int i = 0; i < remainingMoves.size(); i++) {
-			Location loc = remainingMoves.get(i);
+		for (Location loc : remainingMoves) {
 			boolean success = lastPlayer.playPiece(loc.getRow(), loc.getColumn());
-			
+
 			if (success) {
 				System.out.println("Success: " + color + " move at (" + loc.getRow() + ", " + loc.getColumn() + ")");
 				board.printBoard();

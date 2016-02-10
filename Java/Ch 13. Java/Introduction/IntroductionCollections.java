@@ -20,9 +20,8 @@ public class IntroductionCollections {
 		Deque<String> myLinkedList = new LinkedList<String>();
 		myLinkedList.add("two");
 		myLinkedList.addFirst("one");
-		Iterator<String> iter = myLinkedList.iterator();
-		while (iter.hasNext()) {
-			System.out.println(iter.next());
+		for (String value : myLinkedList) {
+			System.out.println(value);
 		}
 		
 		// Hash Map

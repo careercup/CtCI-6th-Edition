@@ -27,12 +27,11 @@ public class Tester {
 				{"adfdsfadsf", "affdsfads", "false"},
 				{"pale", "pkle", "true"},
 				{"pkle", "pable", "false"}};
-		for (int i = 0; i < tests.length; i++) {
-			String[] test = tests[i];
+		for (String[] test : tests) {
 			String a = test[0];
 			String b = test[1];
 			boolean expected = test[2].equals("true");
-			
+
 			test(a, b, expected);
 			test(b, a, expected);
 		}

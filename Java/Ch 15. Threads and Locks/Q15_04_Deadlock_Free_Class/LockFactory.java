@@ -77,8 +77,8 @@ public class LockFactory {
 		/* No cycles detected. Save the order that was declared, so that we can verify that the
 		 * process is really calling the locks in the order it said it would. */
 		LinkedList<LockNode> list = new LinkedList<LockNode>();
-		for (int i = 0; i < resourcesInOrder.length; i++) {
-			LockNode resource = locks[resourcesInOrder[i]];
+		for (int order : resourcesInOrder) {
+			LockNode resource = locks[order];
 			list.add(resource);
 		}
 		lockOrder.put(ownerId, list);

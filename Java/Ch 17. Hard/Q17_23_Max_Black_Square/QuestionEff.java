@@ -20,8 +20,8 @@ public class QuestionEff {
 	
 	public static Subsquare findSquare(int[][] matrix){
 		assert(matrix.length > 0);
-		for (int row = 0; row < matrix.length; row++){
-			assert(matrix[row].length == matrix.length);
+		for (int[] row : matrix) {
+			assert (row.length == matrix.length);
 		}
 		
 		SquareCell[][] processed = processSquare(matrix);

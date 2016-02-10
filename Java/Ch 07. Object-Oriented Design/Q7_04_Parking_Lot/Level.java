@@ -78,8 +78,7 @@ public class Level {
 	
 	public void print() {
 		int lastRow = -1;
-		for (int i = 0; i < spots.length; i++) {
-			ParkingSpot spot = spots[i];
+		for (ParkingSpot spot : spots) {
 			if (spot.getRow() != lastRow) {
 				System.out.print("  ");
 				lastRow = spot.getRow();

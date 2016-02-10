@@ -4,9 +4,9 @@ public class QuestionB {
 	public static int missingOne(int[] array) {
 		int max_value = array.length + 1;
 		int remainder = max_value * (max_value + 1) / 2;
-		
-		for (int i = 0; i < array.length; i++) {
-			remainder -= array[i];
+
+		for (int value : array) {
+			remainder -= value;
 		}
 		return remainder;
 	}

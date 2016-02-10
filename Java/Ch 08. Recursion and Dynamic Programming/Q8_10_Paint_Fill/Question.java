@@ -23,9 +23,9 @@ public class Question {
 	}
 	
 	public static void PrintScreen(Color[][] screen) {
-		for (int r = 0; r < screen.length; r++) {
-			for (int c = 0; c < screen[0].length; c++) {
-				System.out.print(PrintColor(screen[r][c]));
+		for (Color[] row : screen) {
+			for (Color color : row) {
+				System.out.print(PrintColor(color));
 			}
 			System.out.println();
 		}

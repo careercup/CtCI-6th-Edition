@@ -40,21 +40,21 @@ public class BTreePrinter {
         System.out.println("");
 
         for (int i = 1; i <= endgeLines; i++) {
-            for (int j = 0; j < nodes.size(); j++) {
+            for (TreeNode node : nodes) {
                 BTreePrinter.printWhitespaces(firstSpaces - i);
-                if (nodes.get(j) == null) {
+                if (node == null) {
                     BTreePrinter.printWhitespaces(endgeLines + endgeLines + i + 1);
                     continue;
                 }
 
-                if (nodes.get(j).left != null)
+                if (node.left != null)
                     System.out.print("/");
                 else
                     BTreePrinter.printWhitespaces(1);
 
                 BTreePrinter.printWhitespaces(i + i - 1);
 
-                if (nodes.get(j).right != null)
+                if (node.right != null)
                     System.out.print("\\");
                 else
                     BTreePrinter.printWhitespaces(1);
