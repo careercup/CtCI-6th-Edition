@@ -10,5 +10,5 @@ Thanks goes out to the generous programmers below:
 * [leeor](https://github.com/leeorengel)
 * [mandliya](https://github.com/mandliya)
 * [kv-kunalvyas](https://github.com/kv-kunalvyas)
-* [henryhkim](https://github.com/henryhkim)
 * [lee-woodridge](https://github.com/lee-woodridge)
+* [henryhkim](https://github.com/henryhkim)
