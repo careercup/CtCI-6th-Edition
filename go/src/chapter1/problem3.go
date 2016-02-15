@@ -26,3 +26,27 @@ func URLify(input string) string {
 	}
 	return string(temp)
 }
+
+// Less "real world" version taking a []rune with spaces
+// on the end to be able to URLify in place.
+// O(n), in place.
+func URLifySlice(input []rune) {
+	inWord := false
+	slowPtr := len(input) - 1
+	for i := len(input) - 1; i >= 0; i-- {
+		if input[i] == rune(' ') {
+			if inWord {
+				input[slowPtr-2] = rune('%')
+				input[slowPtr-1] = rune('2')
+				input[slowPtr] = rune('0')
+				slowPtr -= 3
+			}
+		} else {
+			if !inWord {
+				inWord = true
+			}
+			input[slowPtr] = input[i]
+			slowPtr--
+		}
+	}
+}
