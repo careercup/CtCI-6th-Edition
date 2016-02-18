@@ -10,3 +10,6 @@
 [submodule "Groovy"]
 	path = Groovy
 	url = https://github.com/careercup/CtCI-6th-Edition-Groovy.git
+[submodule "Python"]
+	path = Python
+	url = https://github.com/careercup/CtCI-6th-Edition-Python.git
