@@ -13,3 +13,6 @@
 [submodule "Python"]
 	path = Python
 	url = https://github.com/careercup/CtCI-6th-Edition-Python.git
+[submodule "Swift"]
+	path = Swift
+	url = https://github.com/careercup/CtCI-6th-Edition-Swift.git
