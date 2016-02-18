@@ -7,3 +7,6 @@
 [submodule "Clojure"]
 	path = Clojure
 	url = https://github.com/careercup/CtCI-6th-Edition-Clojure.git
+[submodule "Groovy"]
+	path = Groovy
+	url = https://github.com/careercup/CtCI-6th-Edition-Groovy.git
