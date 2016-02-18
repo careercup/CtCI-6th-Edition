@@ -19,3 +19,6 @@
 [submodule "Haskell"]
 	path = Haskell
 	url = https://github.com/careercup/CtCI-6th-Edition-Haskell.git
+[submodule "JavaScript"]
+	path = JavaScript
+	url = https://github.com/careercup/CtCI-6th-Edition-JavaScript.git
