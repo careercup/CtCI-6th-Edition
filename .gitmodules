@@ -1,0 +1,24 @@
+[submodule "php"]
+	path = php
+	url = https://github.com/careercup/CtCI-6th-Edition-php.git
+[submodule "cpp"]
+	path = cpp
+	url = https://github.com/careercup/CtCI-6th-Edition-cpp.git
+[submodule "Clojure"]
+	path = Clojure
+	url = https://github.com/careercup/CtCI-6th-Edition-Clojure.git
+[submodule "Groovy"]
+	path = Groovy
+	url = https://github.com/careercup/CtCI-6th-Edition-Groovy.git
+[submodule "Python"]
+	path = Python
+	url = https://github.com/careercup/CtCI-6th-Edition-Python.git
+[submodule "Swift"]
+	path = Swift
+	url = https://github.com/careercup/CtCI-6th-Edition-Swift.git
+[submodule "Haskell"]
+	path = Haskell
+	url = https://github.com/careercup/CtCI-6th-Edition-Haskell.git
+[submodule "JavaScript"]
+	path = JavaScript
+	url = https://github.com/careercup/CtCI-6th-Edition-JavaScript.git
