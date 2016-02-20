@@ -9,11 +9,10 @@ public class TreeNode {
 	public int data;      
 	public TreeNode left;    
 	public TreeNode right; 
-	private int size = 0;
+	private int size = 1;
 
 	public TreeNode(int d) {
 		data = d;
-		size = 1;
 	}
 	
 	public void insertInOrder(int d) {
