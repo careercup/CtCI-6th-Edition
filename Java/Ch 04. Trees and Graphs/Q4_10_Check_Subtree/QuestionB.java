@@ -4,30 +4,28 @@ import CtCILibrary.AssortedMethods;
 import CtCILibrary.TreeNode;
 
 public class QuestionB {
-
 	public static boolean containsTree(TreeNode t1, TreeNode t2) {
-		if (t2 == null) {
-			return true; // The empty tree is a subtree of every tree.
-		}
-		return subTree(t1, t2);
+		return t2 == null // The empty tree is a subtree of every tree.
+			   || subTree(t1, t2);
 	}
 	
 	/* Checks if the binary tree rooted at r1 contains the binary tree 
 	 * rooted at r2 as a subtree somewhere within it.
 	 */
-	public static boolean subTree(TreeNode r1, TreeNode r2) {
+	private static boolean subTree(TreeNode r1, TreeNode r2) {
 		if (r1 == null) {
 			return false; // big tree empty & subtree still not found.
-		} else if (r1.data == r2.data && matchTree(r1,r2)) {
+		} else if (r1.data == r2.data && matchTree(r1, r2)) {
 			return true;
+		} else {
+			return subTree(r1.left, r2) || subTree(r1.right, r2);
 		}
-		return subTree(r1.left, r2) || subTree(r1.right, r2); 
 	}
 
 	/* Checks if the binary tree rooted at r1 contains the 
 	 * binary tree rooted at r2 as a subtree starting at r1.
 	 */
-	public static boolean matchTree(TreeNode r1, TreeNode r2) {
+	private static boolean matchTree(TreeNode r1, TreeNode r2) {
 		if (r1 == null && r2 == null) {
 			return true; // nothing left in the subtree
 		} else if (r1 == null || r2 == null) { 
@@ -64,5 +62,4 @@ public class QuestionB {
 			System.out.println("t4 is not a subtree of t3");
 		}
 	}
-
 }
