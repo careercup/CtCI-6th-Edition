@@ -25,3 +25,6 @@
 [submodule "JavaScript-ES2015"]
 	path = JavaScript-ES2015
 	url = https://github.com/careercup/CtCI-6th-Edition-JavaScript-ES2015.git
+[submodule "Go"]
+	path = Go
+	url = https://github.com/careercup/CtCI-6th-Edition-Go.git
