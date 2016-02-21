@@ -36,11 +36,13 @@ Pull requests pertaining to Java solutions should be submitted to the main [CtCI
 
 - [CtCI-6th-Edition-Clojure](https://github.com/careercup/CtCI-6th-Edition-Clojure)
 - [CtCI-6th-Edition-cpp](https://github.com/careercup/CtCI-6th-Edition-cpp)
+- [CtCI-6th-Edition-Go](https://github.com/careercup/CtCI-6th-Edition-Go)
 - [CtCI-6th-Edition-Groovy](https://github.com/careercup/CtCI-6th-Edition-Groovy)
 - [CtCI-6th-Edition-Haskell](https://github.com/careercup/CtCI-6th-Edition-Haskell)
 - [CtCI-6th-Edition-JavaScript](https://github.com/careercup/CtCI-6th-Edition-JavaScript)
-- [CtCI-6th-Edition-Python](https://github.com/careercup/CtCI-6th-Edition-Python)
+- [CtCI-6th-Edition-JavaScript-ES2015](https://github.com/careercup/CtCI-6th-Edition-JavaScript-ES2015)
 - [CtCI-6th-Edition-php](https://github.com/careercup/CtCI-6th-Edition-php)
+- [CtCI-6th-Edition-Python](https://github.com/careercup/CtCI-6th-Edition-Python)
 - [CtCI-6th-Edition-Swift](https://github.com/careercup/CtCI-6th-Edition-Swift)
 
 ###Adding a new Language
