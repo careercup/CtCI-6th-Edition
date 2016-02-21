@@ -27,20 +27,15 @@ public class Question {
 				if (n.data < last_printed) {
 					return false;
 				}
-			} else {
+			} else if (n.data <= last_printed) {
 				// Right child "is not allowed" be equal to parent.
-				if (n.data <= last_printed) {
-					return false;
-				}
+				return false;
 			}
 		}
 		last_printed = n.data;
 		
 		// Check / recurse right
-		if (!checkBST(n.right, false)) {
-			return false;
-		}
-		return true;
+		return checkBST(n.right, false);
 	}
 
 	public static void main(String[] args) {
