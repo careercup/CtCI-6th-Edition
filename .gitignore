@@ -1,5 +1,3 @@
 bin/
-.project## Ignore Visual Studio temporary files, build results, and
-
 #JavaScript
 javascript/node_modules
