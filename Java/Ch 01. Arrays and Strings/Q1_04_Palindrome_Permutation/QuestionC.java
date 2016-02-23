@@ -4,14 +4,8 @@ public class QuestionC {
 	/* Toggle the ith bit in the integer. */
 	public static int toggle(int bitVector, int index) {
 		if (index < 0) return bitVector;
-		
-		int mask = 1 << index;
-		if ((bitVector & mask) == 0) {
-			bitVector |= mask;
-		} else {
-			bitVector &= ~mask;
-		}
-		return bitVector;
+
+		return bitVector ^ 1 << index;
 	}
 	
 	/* Create bit vector for string. For each letter with value i,
