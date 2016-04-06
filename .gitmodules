@@ -28,3 +28,6 @@
 [submodule "Go"]
 	path = Go
 	url = https://github.com/careercup/CtCI-6th-Edition-Go.git
+[submodule "CtCI-6th-Edition-CSharp"]
+	path = CtCI-6th-Edition-CSharp
+	url = https://github.com/careercup/CtCI-6th-Edition-CSharp.git

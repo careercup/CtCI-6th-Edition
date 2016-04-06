@@ -36,6 +36,7 @@ Pull requests pertaining to Java solutions should be submitted to the main [CtCI
 
 - [CtCI-6th-Edition-Clojure](https://github.com/careercup/CtCI-6th-Edition-Clojure)
 - [CtCI-6th-Edition-cpp](https://github.com/careercup/CtCI-6th-Edition-cpp)
+- [CtCI-6th-Edition-CSharp](https://github.com/careercup/CtCI-6th-Edition-CSharp)
 - [CtCI-6th-Edition-Go](https://github.com/careercup/CtCI-6th-Edition-Go)
 - [CtCI-6th-Edition-Groovy](https://github.com/careercup/CtCI-6th-Edition-Groovy)
 - [CtCI-6th-Edition-Haskell](https://github.com/careercup/CtCI-6th-Edition-Haskell)
