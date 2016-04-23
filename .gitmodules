@@ -31,3 +31,6 @@
 [submodule "CtCI-6th-Edition-CSharp"]
 	path = CSharp
 	url = https://github.com/careercup/CtCI-6th-Edition-CSharp.git
+[submodule "c"]
+	path = c
+	url = https://github.com/careercup/CtCI-6th-Edition-C.git

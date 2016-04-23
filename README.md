@@ -35,6 +35,7 @@ their own dedicated repos which are referenced from this repo as git submodules.
 Pull requests pertaining to Java solutions should be submitted to the main [CtCI-6th-Edition repo](https://github.com/careercup/CtCI-6th-Edition). Please submit pull requests for all other languages to the appropriate language-specific repo.
 
 - [CtCI-6th-Edition-Clojure](https://github.com/careercup/CtCI-6th-Edition-Clojure)
+- [CtCI-6th-Edition-C](https://github.com/careercup/CtCI-6th-Edition-C)
 - [CtCI-6th-Edition-cpp](https://github.com/careercup/CtCI-6th-Edition-cpp)
 - [CtCI-6th-Edition-CSharp](https://github.com/careercup/CtCI-6th-Edition-CSharp)
 - [CtCI-6th-Edition-Go](https://github.com/careercup/CtCI-6th-Edition-Go)
