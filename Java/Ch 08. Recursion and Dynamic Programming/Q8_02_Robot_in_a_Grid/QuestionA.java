@@ -1,21 +1,22 @@
 package Q8_02_Robot_in_a_Grid;
 
-import java.util.ArrayList;
-
 import CtCILibrary.AssortedMethods;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class QuestionA {
-	
-	public static ArrayList<Point> getPath(boolean[][] maze) {
+
+	public static List<Point> getPath(boolean[][] maze) {
 		if (maze == null || maze.length == 0) return null;
-		ArrayList<Point> path = new ArrayList<Point>();
+		List<Point> path = new ArrayList<>();
 		if (getPath(maze, maze.length - 1, maze[0].length - 1, path)) {
 			return path;
 		}
 		return null;
-	}	
-	
-	public static boolean getPath(boolean[][] maze, int row, int col, ArrayList<Point> path) {
+	}
+
+	public static boolean getPath(boolean[][] maze, int row, int col, List<Point> path) {
 		// If out of bounds or not available, return.
 		if (col < 0 || row < 0 || !maze[row][col]) {
 			return false;
@@ -38,10 +39,10 @@ public class QuestionA {
 		boolean[][] maze = AssortedMethods.randomBooleanMatrix(size, size, 70);
 		
 		AssortedMethods.printMatrix(maze);
-		
-		ArrayList<Point> path = getPath(maze);
+
+		List<Point> path = getPath(maze);
 		if (path != null) {
-			System.out.println(path.toString());
+			System.out.println(path);
 		} else {
 			System.out.println("No path found.");
 		}

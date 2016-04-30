@@ -1,12 +1,11 @@
 package Q17_17_Multi_Search;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import CtCILibrary.HashMapList;
 
+import java.util.List;
+
 public class QuestionB {
-	public static void subtractValue(ArrayList<Integer> locations, int delta) {
+	public static void subtractValue(List<Integer> locations, int delta) {
 		if (locations == null) return;
 		for (int i = 0; i < locations.size(); i++) {
 			locations.set(i, locations.get(i) - delta);
@@ -23,12 +22,12 @@ public class QuestionB {
 	}
 	
 	public static HashMapList<String, Integer> searchAll(String big, String[] smalls) {
-		HashMapList<String, Integer> lookup = new HashMapList<String, Integer>();
-        Trie tree = createTrieFromString(big);
+		HashMapList<String, Integer> lookup = new HashMapList<>();
+		Trie tree = createTrieFromString(big);
 		for (String s : smalls) {
 			/* Get terminating location of each occurrence.*/
-        	ArrayList<Integer> locations = tree.search(s);
-        	
+			List<Integer> locations = tree.search(s);
+
         	/* Adjust to starting location. */
         	subtractValue(locations, s.length());
         	
@@ -43,6 +42,6 @@ public class QuestionB {
 		String big = "mississippi";
 		String[] smalls = {"is", "ppi", "hi", "sis", "i", "mississippi"};
 		HashMapList<String, Integer> locations = searchAll(big, smalls);
-        System.out.println(locations.toString());
+		System.out.println(locations);
 	}
 }

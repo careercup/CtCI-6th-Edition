@@ -10,11 +10,11 @@ public class QuestionE {
 		Piece first;
 		
 		/* Check rows. */
-		for (int i = 0; i < size; i++) {
-			first = board[i][0];
+		for (Piece[] pieces : board) {
+			first = pieces[0];
 			if (first == Piece.Empty) continue;
 			for (int j = 1; j < size; j++) {
-				if (board[i][j] != first) {
+				if (pieces[j] != first) {
 					break;
 				} else if (j == size - 1) {
 					return first;

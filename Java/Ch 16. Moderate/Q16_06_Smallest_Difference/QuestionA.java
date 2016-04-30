@@ -6,10 +6,10 @@ public class QuestionA {
 			return -1;
 		}
 		int min = Integer.MAX_VALUE;
-		for (int i = 0; i < array1.length; i++) {
-			for (int j = 0; j < array2.length; j++) {
-				if (Math.abs(array1[i] - array2[j]) < min) {
-					min = Math.abs(array1[i] - array2[j]);
+		for (int value1 : array1) {
+			for (int value2 : array2) {
+				if (Math.abs(value1 - value2) < min) {
+					min = Math.abs(value1 - value2);
 				}
 			}
 		}

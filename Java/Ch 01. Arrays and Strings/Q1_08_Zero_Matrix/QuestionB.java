@@ -28,8 +28,8 @@ public class QuestionB {
 		}		
 		
 		// Check if first column has a zero
-		for (int i = 0; i < matrix.length; i++) {
-			if (matrix[i][0] == 0) {
+		for (int[] row : matrix) {
+			if (row[0] == 0) {
 				colHasZero = true;
 				break;
 			}
@@ -88,9 +88,7 @@ public class QuestionB {
 	public static int[][] cloneMatrix(int[][] matrix) {
 		int[][] c = new int[matrix.length][matrix[0].length];
 		for (int i = 0; i < matrix.length; i++) {
-			for (int j = 0; j < matrix[0].length; j++) {
-				c[i][j] = matrix[i][j];
-			}
+			System.arraycopy(matrix[i], 0, c[i], 0, matrix[0].length);
 		}
 		return c;
 	}

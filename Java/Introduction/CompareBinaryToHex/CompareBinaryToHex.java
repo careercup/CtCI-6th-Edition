@@ -12,8 +12,8 @@ public class CompareBinaryToHex {
 		}
 		return -1;
 	}
-	
-	public static int convertFromBase(String number, int base) {
+
+	public static int convertFromBase(CharSequence number, int base) {
 		if (base < 2 || (base > 10 && base != 16)) return -1;
 		int value = 0;
 		for (int i = number.length() - 1; i >= 0; i--) {
@@ -26,14 +26,13 @@ public class CompareBinaryToHex {
 		}
 		return value;
 	}
-	
-	public static boolean compareBinToHex(String binary, String hex) {
+
+	public static boolean compareBinToHex(CharSequence binary, CharSequence hex) {
 		int n1 = convertFromBase(binary, 2);
 		int n2 = convertFromBase(hex, 16);
-		if (n1 < 0 || n2 < 0) {
-			return false;
-		}
-		return n1 == n2;
+		return n1 >= 0
+			   && n2 >= 0
+			   && n1 == n2;
 	}
 	
 	public static void main(String[] args) {

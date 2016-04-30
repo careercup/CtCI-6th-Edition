@@ -1,22 +1,20 @@
 package CtCILibrary;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /* One node in the trie. Most of the logic of the trie is implemented
  * in this class.
  */
 public class TrieNode {
     /* The children of this node in the trie.*/
-    private HashMap<Character, TrieNode> children;
+    private Map<Character, TrieNode> children = new HashMap<>();
     private boolean terminates = false;
 
     // The character stored in this node as data.
-    private char character;	
+    private char character;
 
-	/* Constructs a trie node and stores this character as the node's value.
-	 * Initializes the list of child nodes of this node to an empty hash map. */
     public TrieNode() {
-    	children = new HashMap<Character, TrieNode>();
     }
 
     /* Constructs a trie node and stores in the node the char passed in
@@ -24,7 +22,6 @@ public class TrieNode {
      * node to an empty hash map.
      */
     public TrieNode(char character) {
-        this();
         this.character = character;
     }
 

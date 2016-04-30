@@ -11,8 +11,7 @@ public class BitInteger {
 	public BitInteger(int value){
 		bits = new boolean[INTEGER_SIZE];
 		for (int j = 0; j < INTEGER_SIZE; j++){
-			if (((value >> j) & 1) == 1) bits[INTEGER_SIZE - 1 - j] = true;
-			else bits[INTEGER_SIZE - 1 - j] = false;
+			bits[INTEGER_SIZE - 1 - j] = (((value >> j) & 1) == 1);
 		}
 	}
 	
@@ -24,14 +23,12 @@ public class BitInteger {
 	
 	/** Sets k-th most-significant bit. */
 	public void set(int k, int bitValue){
-		if (bitValue == 0 ) bits[k] = false;
-		else bits[k] = true;
+		bits[k] = (bitValue != 0);
 	}
 	
 	/** Sets k-th most-significant bit. */
 	public void set(int k, char bitValue){
-		if (bitValue == '0' ) bits[k] = false;
-		else bits[k] = true;
+		bits[k] = (bitValue != '0');
 	}
 	
 	/** Sets k-th most-significant bit. */

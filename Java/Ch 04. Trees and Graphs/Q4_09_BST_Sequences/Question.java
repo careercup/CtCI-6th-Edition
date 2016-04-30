@@ -1,17 +1,19 @@
 package Q4_09_BST_Sequences;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-
 import CtCILibrary.TreeNode;
 
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Question {
-	
-	public static void weaveLists(LinkedList<Integer> first, LinkedList<Integer> second, ArrayList<LinkedList<Integer>> results, LinkedList<Integer> prefix) {
+
+	public static void weaveLists(Deque<Integer> first, Deque<Integer> second, List<LinkedList<Integer>> results, Deque<Integer> prefix) {
 		/* One list is empty. Add the remainder to [a cloned] prefix and
 		 * store result. */
 		if (first.size() == 0 || second.size() == 0) {
-			LinkedList<Integer> result = (LinkedList<Integer>) prefix.clone();
+			LinkedList<Integer> result = new LinkedList<>(prefix);
 			result.addAll(first);
 			result.addAll(second);
 			results.add(result);
@@ -35,26 +37,26 @@ public class Question {
 		prefix.removeLast();	
 		second.addFirst(headSecond);
 	}
-	
-	public static ArrayList<LinkedList<Integer>> allSequences(TreeNode node) {
-		ArrayList<LinkedList<Integer>> result = new ArrayList<LinkedList<Integer>>();
+
+	public static List<LinkedList<Integer>> allSequences(TreeNode node) {
+		List<LinkedList<Integer>> result = new ArrayList<>();
 		
 		if (node == null) {
 			result.add(new LinkedList<Integer>());
 			return result;
-		} 
-		
-		LinkedList<Integer> prefix = new LinkedList<Integer>();
+		}
+
+		Deque<Integer> prefix = new LinkedList<>();
 		prefix.add(node.data);
 		
 		/* Recurse on left and right subtrees. */
-		ArrayList<LinkedList<Integer>> leftSeq = allSequences(node.left);
-		ArrayList<LinkedList<Integer>> rightSeq = allSequences(node.right);
+		List<LinkedList<Integer>> leftSeq = allSequences(node.left);
+		List<LinkedList<Integer>> rightSeq = allSequences(node.right);
 		
 		/* Weave together each list from the left and right sides. */
-		for (LinkedList<Integer> left : leftSeq) {
-			for (LinkedList<Integer> right : rightSeq) {
-				ArrayList<LinkedList<Integer>> weaved = new ArrayList<LinkedList<Integer>>();
+		for (Deque<Integer> left : leftSeq) {
+			for (Deque<Integer> right : rightSeq) {
+				List<LinkedList<Integer>> weaved = new ArrayList<>();
 				weaveLists(left, right, weaved, prefix);
 				result.addAll(weaved);
 			}
@@ -68,8 +70,8 @@ public class Question {
 		for (int a : array) {
 			node.insertInOrder(a);
 		}
-		ArrayList<LinkedList<Integer>> allSeq = allSequences(node);
-		for (LinkedList<Integer> list : allSeq) {
+		List<LinkedList<Integer>> allSeq = allSequences(node);
+		for (List<Integer> list : allSeq) {
 			System.out.println(list);
 		}
 		System.out.println(allSeq.size());

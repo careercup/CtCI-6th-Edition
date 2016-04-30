@@ -1,6 +1,6 @@
 package Q16_26_Calculator;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class QuestionA {
 	public static Term collapseTerm(Term primary, Term secondary) {
@@ -30,8 +30,8 @@ public class QuestionA {
 	   works by reading left to right and applying each term to
 	   a result. When we see a multiplication or division, we 
 	   instead apply this sequence to a temporary variable. */
-	public static double compute(String sequence) {
-		ArrayList<Term> terms = Term.parseTermSequence(sequence);
+	public static double compute(CharSequence sequence) {
+		List<Term> terms = Term.parseTermSequence(sequence);
 		if (terms == null) return Integer.MIN_VALUE;
 		
 		double result = 0;

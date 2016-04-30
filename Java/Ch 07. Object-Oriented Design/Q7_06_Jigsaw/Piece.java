@@ -1,11 +1,12 @@
 package Q7_06_Jigsaw;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 
 public class Piece {
 	private final static int NUMBER_OF_EDGES = 4;
-	private HashMap<Orientation, Edge> edges = new HashMap<Orientation, Edge>();
+	private Map<Orientation, Edge> edges = new HashMap<>();
 	
 	public Piece(Edge[] edgeList) {		
 		Orientation[] orientations = Orientation.values();
@@ -35,7 +36,7 @@ public class Piece {
 	/* Rotate edges by "numberRotations". */
 	public void rotateEdgesBy(int numberRotations) {
 		Orientation[] orientations = Orientation.values();
-		HashMap<Orientation, Edge> rotated = new HashMap<Orientation, Edge>();
+		Map<Orientation, Edge> rotated = new HashMap<>();
 		
 		numberRotations = numberRotations % NUMBER_OF_EDGES;
 		if (numberRotations < 0) numberRotations += NUMBER_OF_EDGES;
@@ -64,8 +65,8 @@ public class Piece {
 	/* Check if this piece has a border edge. */
 	public boolean isBorder() {
 		Orientation[] orientations = Orientation.values();
-		for (int i = 0; i < orientations.length; i++) {
-			if (edges.get(orientations[i]).getShape() == Shape.FLAT) {
+		for (Orientation orientation : orientations) {
+			if (edges.get(orientation).getShape() == Shape.FLAT) {
 				return true;
 			}
 		}
@@ -91,8 +92,8 @@ public class Piece {
 		StringBuilder sb = new StringBuilder();
 		Orientation[] orientations = Orientation.values();
 		for (Orientation o : orientations) {
-			sb.append(edges.get(o).toString() + ",");
+			sb.append(edges.get(o)).append(",");
 		}
-		return "[" + sb.toString() + "]";
+		return "[" + sb + "]";
 	}
 }

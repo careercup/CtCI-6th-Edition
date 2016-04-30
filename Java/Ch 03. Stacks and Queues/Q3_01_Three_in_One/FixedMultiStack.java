@@ -1,8 +1,8 @@
 package Q3_01_Three_in_One;
 
-import java.util.EmptyStackException;
-
 import CtCILibrary.AssortedMethods;
+
+import java.util.EmptyStackException;
 
 public class FixedMultiStack {
 	private int numberOfStacks = 3;
@@ -72,9 +72,7 @@ public class FixedMultiStack {
 	
 	public int[] getStackValues(int stackNum) {
 		int[] items = new int[sizes[stackNum]];
-		for (int i = 0; i < items.length; i++) {
-			items[i] = values[stackNum * stackCapacity + i];
-		}
+		System.arraycopy(values, stackNum * stackCapacity + 0, items, 0, items.length);
 		return items;
 	}
 	

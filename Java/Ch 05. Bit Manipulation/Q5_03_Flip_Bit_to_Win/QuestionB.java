@@ -1,20 +1,21 @@
 package Q5_03_Flip_Bit_to_Win;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class QuestionB {
 	
 	public static int longestSequence(int n) {
 		if (n == -1) return Integer.BYTES * 8;
-		ArrayList<Integer> sequences = getAlternatingSequences(n);
+		List<Integer> sequences = getAlternatingSequences(n);
 		return findLongestSequence(sequences);
 	}	
 	
 	/* Return a list of the sizes of the sequences. The sequence starts 
 	 * off with the number of 0s (which might be 0) and then alternates
 	 * with the counts of each value.*/
-	public static ArrayList<Integer> getAlternatingSequences(int n) {
-		ArrayList<Integer> sequences = new ArrayList<Integer>();
+	public static List<Integer> getAlternatingSequences(int n) {
+		List<Integer> sequences = new ArrayList<>();
 		
 		int searchingFor = 0;
 		int counter = 0;
@@ -32,8 +33,8 @@ public class QuestionB {
 		
 		return sequences;
 	}
-	
-	public static int findLongestSequence(ArrayList<Integer> seq) {
+
+	public static int findLongestSequence(List<Integer> seq) {
 		int maxSeq = 1;
 		
 		for (int i = 0; i < seq.size(); i += 2) {

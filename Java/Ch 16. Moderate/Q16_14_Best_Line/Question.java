@@ -1,10 +1,9 @@
 package Q16_14_Best_Line;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Set;
-
 import CtCILibrary.HashMapList;
+
+import java.util.List;
+import java.util.Set;
 
 public class Question {	
 	/* Find line that goes through most number of points. */
@@ -15,7 +14,7 @@ public class Question {
 	
 	/* Add each pair of points as a line to the list. */
 	public static HashMapList<Double, Line> getListOfLines(GraphPoint[] points) {
-		HashMapList<Double, Line> linesBySlope = new HashMapList<Double, Line>();
+		HashMapList<Double, Line> linesBySlope = new HashMapList<>();
 		for (int i = 0; i < points.length; i++) {
 			for (int j = i + 1; j < points.length; j++) {
 				Line line = new Line(points[i], points[j]);
@@ -34,7 +33,7 @@ public class Question {
 		Set<Double> slopes = linesBySlope.keySet();
 		
 		for (double slope : slopes) {
-			ArrayList<Line> lines = linesBySlope.get(slope);
+			List<Line> lines = linesBySlope.get(slope);
 			for (Line line : lines) {
 				/* count lines that are equivalent to current line */
 				int count = countEquivalentLines(linesBySlope, line);
@@ -63,7 +62,7 @@ public class Question {
 	}
 	
 	/* Count lines within an array of lines which are "equivalent" (slope and y-intercept are within an epsilon value) to a given line */
-	public static int countEquivalentLines(ArrayList<Line> lines, Line line) {
+	public static int countEquivalentLines(List<Line> lines, Line line) {
 		if (lines == null) {
 			return 0;
 		}
@@ -84,14 +83,14 @@ public class Question {
 		System.out.println("Points on Graph\n***************");
 		GraphPoint[] points = new GraphPoint[n_points - 1];
 		for (int i = 0; i < n_points / 2; i++) {
-			GraphPoint p = new GraphPoint(i, 2.3 * ((double)i) + 20.0);
+			GraphPoint p = new GraphPoint(i, 2.3 * i + 20.0);
 			points[i] = p;
-			System.out.println(p.toString());
+			System.out.println(p);
 		}
 		for (int i = 0; i < n_points / 2 - 1; i++) {
-			GraphPoint p = new GraphPoint(i, 3.0 * ((double)i) + 1.0);
+			GraphPoint p = new GraphPoint(i, 3.0 * i + 1.0);
 			points[n_points / 2 + i] = p;
-			System.out.println(p.toString());
+			System.out.println(p);
 		}
 		System.out.println("****************\n");
 		return points;

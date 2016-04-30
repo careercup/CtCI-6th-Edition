@@ -1,13 +1,11 @@
 package Q16_24_Pairs_With_Sum;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 public class QuestionB {
-	public static ArrayList<Pair> printPairSums(int[] array, int sum) {
-		ArrayList<Pair> result = new ArrayList<Pair>();
-		HashMap<Integer, Integer> unpairedCount = new HashMap<Integer, Integer>();
+	public static List<Pair> printPairSums(int[] array, int sum) {
+		List<Pair> result = new ArrayList<>();
+		Map<Integer, Integer> unpairedCount = new HashMap<>();
 		for (int x : array) {
 			int complement = sum - x;
 			if (unpairedCount.getOrDefault(complement, 0) > 0) {
@@ -19,17 +17,16 @@ public class QuestionB {
 		}
 		return result;
 	}
-	
-	public static void adjustCounterBy(HashMap<Integer, Integer> counter, int key, int delta) {
+
+	public static void adjustCounterBy(Map<Integer, Integer> counter, int key, int delta) {
 		counter.put(key, counter.getOrDefault(key, 0) + delta);
 	}
-	
-	
+
 	public static void main(String[] args) {
 		int[] test = {-1, -1, -1, -1, 0, 0, 0, 0, 1, 1};
-		ArrayList<Pair> pairs = printPairSums(test, -1);
+		List<Pair> pairs = printPairSums(test, -1);
 		for (Pair p : pairs) {
-			System.out.println(p.toString());
+			System.out.println(p);
 		}
 	}
 }

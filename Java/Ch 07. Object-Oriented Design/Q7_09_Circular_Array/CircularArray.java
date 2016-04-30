@@ -23,7 +23,7 @@ public class CircularArray<T> implements Iterable<T> {
 	
 	public T get(int i) {
 		if (i < 0 || i >= items.length) {
-			throw new java.lang.IndexOutOfBoundsException("Index " + i + " is out of bounds");
+			throw new IndexOutOfBoundsException("Index " + i + " is out of bounds");
 		}
 		return items[convert(i)];
 	}
@@ -33,7 +33,7 @@ public class CircularArray<T> implements Iterable<T> {
 	}
 	
 	public Iterator<T> iterator() {
-		return new CircularArrayIterator<T>(this);
+		return new CircularArrayIterator<>(this);
 	}
 	
 	private class CircularArrayIterator<TI> implements Iterator<TI> {
@@ -52,7 +52,7 @@ public class CircularArray<T> implements Iterable<T> {
 		@Override
 		public TI next() {
 			_current++;
-			TI item = (TI) _items[convert(_current)];
+			TI item = _items[convert(_current)];
 			return item;
 		}
 		

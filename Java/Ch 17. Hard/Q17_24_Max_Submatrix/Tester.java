@@ -8,13 +8,13 @@ public class Tester {
 		int[][] matrix = AssortedMethods.randomMatrix(10, 10, -5, 5);
 		AssortedMethods.printMatrix(matrix);
 		SubMatrix subA = QuestionA.getMaxMatrix(matrix);
-		System.out.println(subA.toString());
+		System.out.println(subA);
 		
 		SubMatrix subB = QuestionB.getMaxMatrix(matrix);
-		System.out.println(subB.toString());
+		System.out.println(subB);
 		
 		SubMatrix subC = QuestionC.getMaxMatrix(matrix);
-		System.out.println(subC.toString());	
+		System.out.println(subC);
 	}
 
 }

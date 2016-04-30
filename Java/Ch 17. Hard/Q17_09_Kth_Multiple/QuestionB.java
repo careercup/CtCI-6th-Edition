@@ -1,7 +1,7 @@
 package Q17_09_Kth_Multiple;
 
-import java.util.Queue;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class QuestionB {
 
@@ -17,7 +17,7 @@ public class QuestionB {
 		}
 		return min;
 	}
-	
+
 	public static void addProducts(Queue<Integer> q, int v) {
 		q.add(v * 3);
 		q.add(v * 5);
@@ -29,7 +29,7 @@ public class QuestionB {
 			return 0;
 		}
 		int val = 1;
-		Queue<Integer> q = new LinkedList<Integer>();
+		Queue<Integer> q = new LinkedList<>();
 		addProducts(q, 1);
 		for (int i = 0; i < k; i++) { // Start at 1 since we've already done one iteration
 			val = removeMin(q);

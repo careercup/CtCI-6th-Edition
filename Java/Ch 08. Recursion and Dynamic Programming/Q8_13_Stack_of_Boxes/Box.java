@@ -11,20 +11,16 @@ public class Box {
 	}
 	
 	public boolean canBeUnder(Box b) {
-		if (width > b.width && height > b.height && depth > b.depth) {
-			return true;
-		}
-		return false;
+		return width > b.width
+			   && height > b.height
+			   && depth > b.depth;
 	}
 	
 	public boolean canBeAbove(Box b) {
-		if (b == null) {
-			return true;
-		}
-		if (width < b.width && height < b.height && depth < b.depth) {
-			return true;
-		}
-		return false;		
+		return b == null
+			   || width < b.width
+				  && height < b.height
+				  && depth < b.depth;
 	}
 	
 	public String toString() {

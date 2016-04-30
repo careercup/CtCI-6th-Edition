@@ -76,9 +76,7 @@ public class Rectangle {
         if (s.length() == length) {
             char temp[][] = new char[height + 1][length];
             for (int i = 0; i < height; i++) {
-                for (int j = 0; j < length; j++) {
-                    temp[i][j] = matrix[i][j];
-                }
+                System.arraycopy(matrix[i], 0, temp[i], 0, length);
             }
             s.getChars(0, length, temp[height], 0);
 

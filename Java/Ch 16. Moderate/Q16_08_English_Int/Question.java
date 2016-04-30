@@ -1,8 +1,9 @@
 package Q16_08_English_Int;
 
-import java.util.LinkedList;
-
 import CtCILibrary.AssortedMethods;
+
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class Question {
 	public static String[] smalls = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"};
@@ -17,8 +18,8 @@ public class Question {
 		} else if (num < 0) {
 			return negative + " " + convert(-1 * num);
 		}
-		
-		LinkedList<String> parts = new LinkedList<String>();
+
+		Deque<String> parts = new LinkedList<>();
 		int chunkCount = 0;
 		
 		while (num > 0) {
@@ -34,7 +35,7 @@ public class Question {
 	}
 	
 	/* Convert a linked list of strings to a string, dividing it up with spaces. */
-	public static String listToString(LinkedList<String> parts) {
+	public static String listToString(Deque<String> parts) {
 		StringBuilder sb = new StringBuilder();
 		while (parts.size() > 1) {
 			sb.append(parts.pop());
@@ -45,7 +46,7 @@ public class Question {
 	}
 	
 	public static String convertChunk(int number) {
-		LinkedList<String> parts = new LinkedList<String>();
+		Deque<String> parts = new LinkedList<>();
 		
 		/* Convert hundreds place */
 		if (number >= 100) {

@@ -18,8 +18,8 @@ public class Q_11 {
 			}
 		}
 	}
-	
-	public static boolean isInOrder(String s) {
+
+	public static boolean isInOrder(CharSequence s) {
 		for (int i = 1; i < s.length(); i++) {
 			int prev = ithLetter(s.charAt(i - 1));
 			int curr = ithLetter(s.charAt(i));
@@ -31,7 +31,7 @@ public class Q_11 {
 	}
 	
 	public static char ithLetter(int i) {
-		return (char) (((int) 'a') + i);
+		return (char) ('a' + i);
 	}
 	
 	public static void main(String[] args) {

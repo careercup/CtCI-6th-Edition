@@ -1,6 +1,7 @@
 package Q7_12_Hash_Table;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Hasher<K, V> {
 	private static class LinkedListNode<K, V> {
@@ -21,13 +22,12 @@ public class Hasher<K, V> {
 				return data;
 			}
 		}
-	}	
-	
-	private ArrayList<LinkedListNode<K, V>> arr;
+	}
+
+	private List<LinkedListNode<K, V>> arr;
 	public Hasher(int capacity) {
 		/* Create list of linked lists. */
-		arr = new ArrayList<LinkedListNode<K, V>>();
-		arr.ensureCapacity(capacity);
+		arr = new ArrayList<>(capacity);
 		for (int i = 0; i < capacity; i++) {
 			arr.add(null);
 		}
@@ -40,8 +40,8 @@ public class Hasher<K, V> {
 			node.value = value; // just update the value.
 			return;
 		}
-		
-		node = new LinkedListNode<K, V>(key, value);
+
+		node = new LinkedListNode<>(key, value);
 		int index = getIndexForKey(key);
 		if (arr.get(index) != null) {
 			node.next = arr.get(index);

@@ -2,11 +2,12 @@ package Q17_09_Kth_Multiple;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class QuestionA {
 
-	public static ArrayList<Integer> allPossibleKFactors(int k) {
-		ArrayList<Integer> values = new ArrayList<Integer>();
+	public static List<Integer> allPossibleKFactors(int k) {
+		List<Integer> values = new ArrayList<>();
 		for (int a = 0; a <= k; a++) { // 3
 			int powA = (int) Math.pow(3,  a);
 			for (int b = 0; b <= k; b++) { // 5
@@ -25,7 +26,7 @@ public class QuestionA {
 	}
 	
 	public static int getKthMagicNumber(int k) {
-		ArrayList<Integer> possibilities = allPossibleKFactors(k);
+		List<Integer> possibilities = allPossibleKFactors(k);
 		Collections.sort(possibilities);
 		return possibilities.get(k);
 	}

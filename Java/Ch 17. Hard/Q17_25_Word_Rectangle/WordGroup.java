@@ -2,16 +2,14 @@ package Q17_25_Word_Rectangle;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /* A container for a group of words of the same length. */
 public class WordGroup {
-	private HashMap<String, Boolean> lookup = new HashMap<String, Boolean>();
-    private ArrayList<String> group = new ArrayList<String>();
-    
-    public WordGroup() {
+    private Map<String, Boolean> lookup = new HashMap<>();
+    private List<String> group = new ArrayList<>();
 
-    }
-    
     public boolean containsWord(String s) {
     	return lookup.containsKey(s);
     }
@@ -28,8 +26,8 @@ public class WordGroup {
     public String getWord(int i) {
         return group.get(i);
     }
-    
-    public ArrayList<String> getWords(){ 
+
+    public List<String> getWords() {
         return group;
     }
     
@@ -37,25 +35,25 @@ public class WordGroup {
     	WordGroup[] groupList;
     	int maxWordLength = 0;
 		// Find out the length of the longest word
-		for (int i = 0; i < list.length; i++) {
-			if (list[i].length() > maxWordLength) {
-				maxWordLength = list[i].length();
-			}
-		}
+        for (String value : list) {
+            if (value.length() > maxWordLength) {
+                maxWordLength = value.length();
+            }
+        }
 
 		/* Group the words in the dictionary into lists of words of 
 		 * same length.groupList[i] will contain a list of words, each 
 		 * of length (i+1). */
 		groupList = new WordGroup[maxWordLength];
-		for (int i = 0; i < list.length; i++) {
-			/* We do wordLength - 1 instead of just wordLength since this is used as
-			 * an index and no words are of length 0 */
-			int wordLength = list[i].length() - 1; 
-			if (groupList[wordLength] == null) {
-				groupList[wordLength] = new WordGroup();
-			}
-			groupList[wordLength].addWord(list[i]);
-		}
-		return groupList;
+        for (String value : list) {
+            /* We do wordLength - 1 instead of just wordLength since this is used as
+             * an index and no words are of length 0 */
+            int wordLength = value.length() - 1;
+            if (groupList[wordLength] == null) {
+                groupList[wordLength] = new WordGroup();
+            }
+            groupList[wordLength].addWord(value);
+        }
+        return groupList;
     }
 }

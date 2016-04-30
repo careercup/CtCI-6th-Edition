@@ -1,10 +1,12 @@
 package Q4_01_Route_Between_Nodes;
 
+import Q4_01_Route_Between_Nodes.Question.State;
+
 class Node {
     private Node adjacent[];
     public int adjacentCount;
     private String vertex;
-    public Question.State state;
+    public State state;
     public Node(String vertex, int adjacentLength) {
         this.vertex = vertex;                
         adjacentCount = 0;        

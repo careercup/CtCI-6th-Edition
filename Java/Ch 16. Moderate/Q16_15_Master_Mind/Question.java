@@ -37,8 +37,8 @@ public class Question {
 	}
 	
 	public static int MAX_COLORS = 4;
-	
-	public static Result estimate(String guess, String solution) {
+
+	public static Result estimate(CharSequence guess, CharSequence solution) {
 		if (guess.length() != solution.length()) return null;
 		Result res = new Result();
 		int[] frequencies = new int[MAX_COLORS];
@@ -86,24 +86,24 @@ public class Question {
 	}
 	
 	public static Result estimateBad(String g, String s) {
-		char[] guess = g.toCharArray();
+		char[] guesses = g.toCharArray();
 		char[] solution = s.toCharArray();
 		int hits = 0;
-		for (int i = 0; i < guess.length; i++) {
-			if (guess[i] == solution[i]) {
+		for (int i = 0; i < guesses.length; i++) {
+			if (guesses[i] == solution[i]) {
 				hits++;
 				solution[i] = '0';
-				guess[i] = '0';
+				guesses[i] = '0';
 			}
 		}
 		
 		int pseudohits = 0;
-		
-		for (int i = 0; i < guess.length; i++) {
-			if (guess[i] != '0') {
+
+		for (char guess : guesses) {
+			if (guess != '0') {
 				for (int j = 0; j < solution.length; j++) {
 					if (solution[j] != '0') {
-						if (solution[j] == guess[i]) {
+						if (solution[j] == guess) {
 							pseudohits++;
 							solution[j] = '0';
 							break;
@@ -136,7 +136,7 @@ public class Question {
 		if (res1.hits == res2.hits && res1.pseudoHits == res2.pseudoHits) {
 			return true;
 		} else {
-			System.out.println("FAIL: (" + guess + ", " + solution + "): " + res1.toString() + " | " + res2.toString());
+			System.out.println("FAIL: (" + guess + ", " + solution + "): " + res1 + " | " + res2);
 			return false;
 		}
 	}

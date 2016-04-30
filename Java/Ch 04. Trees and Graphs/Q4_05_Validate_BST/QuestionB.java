@@ -5,17 +5,11 @@ import CtCILibrary.TreeNode;
 
 public class QuestionB {
 	public static boolean checkBST(TreeNode n, Integer min, Integer max) {
-		if (n == null) {
-			return true;
-		}
-		if ((min != null && n.data <= min) || (max != null && n.data > max)) {
-			return false;
-		}
-		if (!checkBST(n.left, min, n.data) ||
-			!checkBST(n.right, n.data, max)) {
-			return false;
-		}
-		return true;
+		return n == null
+			   || (min == null || n.data > min)
+				  && (max == null || n.data <= max)
+				  && checkBST(n.left, min, n.data)
+				  && checkBST(n.right, n.data, max);
 	}
 		
 	public static boolean checkBST(TreeNode n) {

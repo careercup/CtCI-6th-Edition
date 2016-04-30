@@ -7,7 +7,7 @@ public class Question {
 	 */
 	public static void main(String[] args) {
 		int size = 10;
-		CircularArray<String> array = new CircularArray<String>(size);
+		CircularArray<String> array = new CircularArray<>(size);
 		for (int i = 0; i < size; i++) {
 			array.set(i, String.valueOf(i));
 		}

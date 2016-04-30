@@ -1,7 +1,7 @@
 package Q16_18_Pattern_Matcher;
 
 public class QuestionD {
-	public static boolean doesMatch(String pattern, String value) {
+	public static boolean doesMatch(String pattern, CharSequence value) {
 		if (pattern.length() == 0) return value.length() == 0;
 		
 		char mainChar = pattern.charAt(0);
@@ -24,9 +24,9 @@ public class QuestionD {
 			}
 		}
 		return false;
-	}	
-	
-	public static boolean matches(String pattern, String value, int mainSize, int altSize, int firstAlt) {
+	}
+
+	public static boolean matches(CharSequence pattern, CharSequence value, int mainSize, int altSize, int firstAlt) {
 		int stringIndex = mainSize;
 		for (int i = 1; i < pattern.length(); i++) {
 			int size = pattern.charAt(i) == pattern.charAt(0) ? mainSize : altSize;
@@ -38,8 +38,8 @@ public class QuestionD {
 		}
 		return true;
 	}
-	
-	public static boolean isEqual(String s1, int offset1, int offset2, int size) {
+
+	public static boolean isEqual(CharSequence s1, int offset1, int offset2, int size) {
 		for (int i = 0; i < size; i++) {
 			if (s1.charAt(offset1 + i) != s1.charAt(offset2 + i)) {
 				return false;
@@ -47,8 +47,8 @@ public class QuestionD {
 		}
 		return true;
 	}
-	
-	public static int countOf(String pattern, char c) {
+
+	public static int countOf(CharSequence pattern, char c) {
 		int count = 0;
 		for (int i = 0; i < pattern.length(); i++) {
 			if (pattern.charAt(i) == c) {

@@ -20,15 +20,14 @@ public class Question {
 	public static void main(String[] args) {
 		int size = 100;
 		int[] list = AssortedMethods.randomArray(size, -100, 100);
-		for (int i = 0; i < list.length; i++) {
-			track(list[i]);
+		for (int value : list) {
+			track(value);
 		}
 		
 		int[] tracker = new int[size];
-		for (int i = 0; i < list.length; i++) {
-			int v = list[i];
-			int rank1 = root.getRank(list[i]);
-			tracker[rank1] = v;		
+		for (int v : list) {
+			int rank1 = root.getRank(v);
+			tracker[rank1] = v;
 		}
 		
 		for (int i = 0; i < tracker.length - 1; i++) {

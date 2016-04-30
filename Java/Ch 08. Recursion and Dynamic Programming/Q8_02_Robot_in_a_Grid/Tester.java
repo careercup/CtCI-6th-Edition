@@ -1,8 +1,8 @@
 package Q8_02_Robot_in_a_Grid;
 
-import java.util.ArrayList;
-
 import CtCILibrary.AssortedMethods;
+
+import java.util.List;
 
 public class Tester {
 	public static void main(String[] args) {
@@ -10,17 +10,17 @@ public class Tester {
 		boolean[][] maze = AssortedMethods.randomBooleanMatrix(size, size, 70);
 		
 		AssortedMethods.printMatrix(maze);
-		
-		ArrayList<Point> pathA = QuestionA.getPath(maze);
-		ArrayList<Point> pathB = QuestionB.getPath(maze);
+
+		List<Point> pathA = QuestionA.getPath(maze);
+		List<Point> pathB = QuestionB.getPath(maze);
 		if (pathA != null) {
-			System.out.println(pathA.toString());
+			System.out.println(pathA);
 		} else {
 			System.out.println("No path found.");
 		}
 		
 		if (pathB != null) {
-			System.out.println(pathB.toString());
+			System.out.println(pathB);
 		} else {
 			System.out.println("No path found.");
 		}		

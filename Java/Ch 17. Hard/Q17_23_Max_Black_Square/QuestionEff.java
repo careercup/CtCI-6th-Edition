@@ -20,8 +20,8 @@ public class QuestionEff {
 	
 	public static Subsquare findSquare(int[][] matrix){
 		assert(matrix.length > 0);
-		for (int row = 0; row < matrix.length; row++){
-			assert(matrix[row].length == matrix.length);
+		for (int[] row : matrix) {
+			assert (row.length == matrix.length);
 		}
 		
 		SquareCell[][] processed = processSquare(matrix);
@@ -47,13 +47,9 @@ public class QuestionEff {
 		if (topLeft.zerosBelow < size) { // Check left edge
 			return false;
 		}
-		if (topRight.zerosBelow < size) { // Check right edge
-			return false;
-		}
-		if (bottomRight.zerosRight < size) { // Check bottom edge
-			return false;
-		}
-		return true;
+		// Check right edge
+		return topRight.zerosBelow >= size
+			   && bottomRight.zerosRight >= size;
 	}
 	
 	public static SquareCell[][] processSquare(int[][] matrix) {

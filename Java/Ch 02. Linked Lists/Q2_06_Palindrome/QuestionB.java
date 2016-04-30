@@ -8,8 +8,8 @@ public class QuestionB {
 	public static boolean isPalindrome(LinkedListNode head) {
 		LinkedListNode fast = head;
 		LinkedListNode slow = head;
-		
-		Stack<Integer> stack = new Stack<Integer>();
+
+		Stack<Integer> stack = new Stack<>();
 		
 		while (fast != null && fast.next != null) {
 			stack.push(slow.data);

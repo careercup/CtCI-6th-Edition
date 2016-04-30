@@ -39,9 +39,9 @@ public class Question {
 		return g;
 	}
 
-    public static boolean search(Graph g,Node start,Node end) {  
-        LinkedList<Node> q = new LinkedList<Node>();
-        for (Node u : g.getNodes()) {
+    public static boolean search(Graph g,Node start,Node end) {
+		LinkedList<Node> q = new LinkedList<>();
+		for (Node u : g.getNodes()) {
             u.state = State.Unvisited;
         }
         start.state = State.Visiting;

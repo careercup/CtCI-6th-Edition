@@ -1,15 +1,16 @@
 package Q17_13_ReSpace;
 
-import java.util.HashSet;
-
 import CtCILibrary.AssortedMethods;
-public class QuestionA {	
-	public static String bestSplit(HashSet<String> dictionary, String sentence) {
+
+import java.util.Set;
+
+public class QuestionA {
+	public static String bestSplit(Set<String> dictionary, String sentence) {
 		ParseResult r = split(dictionary, sentence, 0);
 		return r == null ? null : r.parsed;
 	}
-	
-	public static ParseResult split(HashSet<String> dictionary, String sentence, int start) {
+
+	public static ParseResult split(Set<String> dictionary, String sentence, int start) {
 		if (start >= sentence.length()) {
 			return new ParseResult(0, "");
 		} 
@@ -51,7 +52,7 @@ public class QuestionA {
 	}
 	
 	public static void main(String[] args) {
-		HashSet<String> dictionary = AssortedMethods.getWordListAsHashSet();
+		Set<String> dictionary = AssortedMethods.getWordListAsHashSet();
 		String sentence = "As one of the top companies in the world, Google"; // will surely attract the attention of computer gurus. This does not, however, mean the company is for everyone.";
 		sentence = clean(sentence);
 		System.out.println(sentence);

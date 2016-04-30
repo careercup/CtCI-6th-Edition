@@ -1,12 +1,13 @@
 package Q8_14_Boolean_Evaluation;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
 
 public class Tester {
-	
-	public static boolean allEqual(HashMap<String, Integer> map) {
+
+	public static boolean allEqual(Map<String, Integer> map) {
 		int val = 0;
 		for (Entry<String, Integer> e : map.entrySet()) {
 			if (val != 0 && val != e.getValue()) {
@@ -53,8 +54,8 @@ public class Tester {
 			
 			int a = QuestionA.countEval(terms, result);
 			int b = QuestionB.countEval(terms, result);
-			
-			HashMap<String, Integer> results = new HashMap<String, Integer>();
+
+			Map<String, Integer> results = new HashMap<>();
 			results.put("oBF", oBF);
 			results.put("oR", oR);
 			results.put("oDP", oDP);
@@ -64,10 +65,10 @@ public class Tester {
 			
 			if (allEqual(results)) {
 				System.out.println("Success: " + terms + "->" + b);
-				System.out.println(results.toString());
+				System.out.println(results);
 			} else {
 				System.out.println("Failure: " + terms);
-				System.out.println(results.toString());
+				System.out.println(results);
 				break;
 			}
 		}

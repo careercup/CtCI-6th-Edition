@@ -22,11 +22,7 @@ public class BitVector {
 		int b = vector[i / DATA_SIZE];
 		int bit_index = i % DATA_SIZE;
 
-		if (((b >> bit_index) & 1) == 1) {
-			return true;
-		} else {
-			return false;
-		}
+		return ((b >> bit_index) & 1) == 1;
 	}
 	
 	public void print() {

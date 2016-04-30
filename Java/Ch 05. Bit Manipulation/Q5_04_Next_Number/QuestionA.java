@@ -29,21 +29,15 @@ public class QuestionA {
 		while ((i & 1) == 1) {
 			i >>= 1;
 			count++;
-		}		
-		if (count == 31) {
-			return false;
 		}
-		return true;	
+		return count != 31;
 	}
 	
 	public static boolean hasValidPrev(int i) {
 		while ((i & 1) == 1) {
 			i >>= 1;
 		}
-		if (i == 0) {
-			return false;
-		}
-		return true;		
+		return i != 0;
 	}
 
 	public static int getNextSlow(int i) {

@@ -2,10 +2,12 @@ package Q4_07_Build_Order.EdgeRemoval;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Project {
-	private ArrayList<Project> children = new ArrayList<Project>();
-	private HashMap<String, Project> map = new HashMap<String, Project>();
+	private List<Project> children = new ArrayList<>();
+	private Map<String, Project> map = new HashMap<>();
 	private String name;
 	private int dependencies = 0;
 	
@@ -28,8 +30,8 @@ public class Project {
 	public void incrementDependencies() {
 		dependencies++;
 	}
-	
-	public ArrayList<Project> getChildren() {
+
+	public List<Project> getChildren() {
 		return children;
 	}
 	

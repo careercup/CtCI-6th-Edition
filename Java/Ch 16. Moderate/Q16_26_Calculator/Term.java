@@ -1,6 +1,7 @@
 package Q16_26_Calculator;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Term {	
 	private double value;
@@ -22,9 +23,9 @@ public class Term {
 	public void setNumber(double v) {
 		value = v;
 	}
-	
-	public static ArrayList<Term> parseTermSequence(String sequence) {
-		ArrayList<Term> terms = new ArrayList<Term>();
+
+	public static List<Term> parseTermSequence(CharSequence sequence) {
+		List<Term> terms = new ArrayList<>();
 		int offset = 0;
 		while (offset < sequence.length()) {
 			Operator op = Operator.BLANK;
@@ -56,8 +57,8 @@ public class Term {
 		}
 		return Operator.BLANK;
 	}
-	
-	public static int parseNextNumber(String sequence, int offset) {
+
+	public static int parseNextNumber(CharSequence sequence, int offset) {
 		StringBuilder sb = new StringBuilder();
 		while (offset < sequence.length() && Character.isDigit(sequence.charAt(offset))) {
 			sb.append(sequence.charAt(offset));

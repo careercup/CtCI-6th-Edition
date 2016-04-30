@@ -1,10 +1,10 @@
 package Q7_05_Online_Book_Reader;
 
-import java.util.HashMap;
+import java.util.Map;
 
 public class Library {
 
-	private HashMap<Integer, Book> books;
+	private Map<Integer, Book> books;
 	
 	public Book addBook(int id, String details) {
 		if (books.containsKey(id)) {

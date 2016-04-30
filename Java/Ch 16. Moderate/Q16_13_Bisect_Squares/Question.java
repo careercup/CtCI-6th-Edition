@@ -16,11 +16,8 @@ public class Question {
 	}	
 	
 	public static boolean isApproxEqual(double d1, double d2) {
-		double epsilon = .001;	
-		if (Math.abs(d1 - d2) < epsilon) {
-			return true;
-		}
-		return false;
+		double epsilon = 0.001;
+		return Math.abs(d1 - d2) < epsilon;
 	}
 	
 	public static boolean isApproxEqual(Point p1, Point p2) {
@@ -34,8 +31,8 @@ public class Question {
 			printSquare(s1);
 			printSquare(s2);
 			printLine(line);
-			System.out.println(start.toString());
-			System.out.println(end.toString());
+			System.out.println(start);
+			System.out.println(end);
 			System.out.println();
 			return r;
 		}

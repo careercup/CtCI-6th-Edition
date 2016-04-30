@@ -1,12 +1,12 @@
 package Q16_17_Contiguous_Sequence;
 
 public class Question {
-	
-	public static int getMaxSum(int[] a) {
+
+	public static int getMaxSum(int[] values) {
 		int maxSum = 0;
 		int runningSum = 0;
-		for (int i = 0; i < a.length; i++) {
-			runningSum += a[i];
+		for (int value : values) {
+			runningSum += value;
 			if (maxSum < runningSum) {
 				maxSum = runningSum;
 			} else if (runningSum < 0) {

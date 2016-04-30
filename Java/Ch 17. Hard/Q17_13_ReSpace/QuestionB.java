@@ -1,17 +1,17 @@
 package Q17_13_ReSpace;
 
-import java.util.HashSet;
-
 import CtCILibrary.AssortedMethods;
+
+import java.util.Set;
 public class QuestionB {
-	
-	public static String bestSplit(HashSet<String> dictionary, String sentence) {
+
+	public static String bestSplit(Set<String> dictionary, String sentence) {
 		ParseResult[] memo = new ParseResult[sentence.length()];
 		ParseResult r = split(dictionary, sentence, 0, memo);
 		return r == null ? null : r.parsed;
 	}
-	
-	public static ParseResult split(HashSet<String> dictionary, String sentence, int start, ParseResult[] memo) {
+
+	public static ParseResult split(Set<String> dictionary, String sentence, int start, ParseResult[] memo) {
 		if (start >= sentence.length()) {
 			return new ParseResult(0, "");
 		} if (memo[start] != null) {
@@ -55,7 +55,7 @@ public class QuestionB {
 	}
 	
 	public static void main(String[] args) {
-		HashSet<String> dictionary = AssortedMethods.getWordListAsHashSet();
+		Set<String> dictionary = AssortedMethods.getWordListAsHashSet();
 		String sentence = "As one of the topk companies in the world, Google will surely attract the attention of computer gurus. This does not, however, mean the company is for everyone.";
 		sentence = clean(sentence);
 		System.out.println(sentence);

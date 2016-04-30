@@ -41,10 +41,10 @@ public class QuestionC {
 		int max_value = array.length + 2;
 		int rem_square = squareSumToN(max_value, 2);
 		int rem_one = max_value * (max_value + 1) / 2;
-		
-		for (int i = 0; i < array.length; i++) {
-			rem_square -= array[i] * array[i];
-			rem_one -= array[i];
+
+		for (int value : array) {
+			rem_square -= value * value;
+			rem_one -= value;
 		}
 		
 		return solveEquation(rem_one, rem_square);

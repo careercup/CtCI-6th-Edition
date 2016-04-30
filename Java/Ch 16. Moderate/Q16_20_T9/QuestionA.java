@@ -1,10 +1,10 @@
 package Q16_20_T9;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-
 import CtCILibrary.AssortedMethods;
-import CtCILibrary.TrieNode;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public class QuestionA {
 	public static char[][] t9Letters = {
@@ -27,8 +27,8 @@ public class QuestionA {
 		int dig = Character.getNumericValue(digit) - Character.getNumericValue('0');
 		return t9Letters[dig];
 	}
-	
-	public static void getValidWords(String number, int index, String prefix, HashSet<String> wordSet, ArrayList<String> results) {
+
+	public static void getValidWords(String number, int index, String prefix, Set<String> wordSet, List<String> results) {
 		/* If it's a complete word, print it. */
 		if (index == number.length() ) {
 			if (wordSet.contains(prefix)) {
@@ -48,15 +48,15 @@ public class QuestionA {
 			}
 		}
 	}
-	
-	public static ArrayList<String> getValidT9Words(String number, HashSet<String> wordList) {
-		ArrayList<String> results = new ArrayList<String>();
+
+	public static List<String> getValidT9Words(String number, Set<String> wordList) {
+		List<String> results = new ArrayList<>();
 		getValidWords(number, 0, "", wordList, results);
 		return results;
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<String> words = getValidT9Words("33835676368", AssortedMethods.getWordListAsHashSet());
+		List<String> words = getValidT9Words("33835676368", AssortedMethods.getWordListAsHashSet());
 		for (String w: words) {
 			System.out.println(w);
 		}

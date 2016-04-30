@@ -4,13 +4,14 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class QuestionString {
 	private Map<String, Byte> tagMap;
 	private static final Byte[] END = { 0, 1 };
 
-	private ArrayList<String> tokens;
+	private List<String> tokens;
 	private int currentTokenIndex;
 
 	public QuestionString(Map<String, Byte> tagMap) {this.tagMap = tagMap;}
@@ -100,11 +101,8 @@ public class QuestionString {
 	}
 
 	private boolean hasNextToken(String expectedToken) {
-		if (currentTokenIndex < tokens.size()) {
-			return tokens.get(currentTokenIndex).equals(expectedToken);
-		} else {
-			return false;
-		}
+		return currentTokenIndex < tokens.size()
+			   && tokens.get(currentTokenIndex).equals(expectedToken);
 	}
 
 	private boolean hasNextTokens(String... expectedTokens) {
@@ -121,7 +119,7 @@ public class QuestionString {
 	}
 
 	private void tokenize(char[] input) {
-		tokens = new ArrayList<String>();
+		tokens = new ArrayList<>();
 		int i = 0;
 		while (i < input.length) {
 			i = setNextToken(input, i);
@@ -165,7 +163,7 @@ public class QuestionString {
 
 	public static void main(String args[]) {
 		try {
-			Map<String, Byte> tagMap = new HashMap<String, Byte>();
+			Map<String, Byte> tagMap = new HashMap<>();
 			tagMap.put("a", (byte) 10);
 			tagMap.put("root", (byte) 11);
 			tagMap.put("href", (byte) 20);

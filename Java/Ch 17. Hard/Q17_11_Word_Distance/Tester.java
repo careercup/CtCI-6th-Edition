@@ -1,8 +1,5 @@
 package Q17_11_Word_Distance;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import CtCILibrary.AssortedMethods;
 import CtCILibrary.HashMapList;
 
@@ -52,8 +49,8 @@ public class Tester {
 			boolean confirmC = searchConfirm(wordlist, word1, word2, pairA.distance());
 			
 			System.out.println("Distance between <" + word1 + "> and <" + word2 + ">: " + confirmC);
-			System.out.println(pairA.toString() + ": " + pairA.distance());
-			System.out.println(pairB.toString() + ": " + pairB.distance());
+			System.out.println(pairA + ": " + pairA.distance());
+			System.out.println(pairB + ": " + pairB.distance());
 			System.out.println();
 		}
 	}

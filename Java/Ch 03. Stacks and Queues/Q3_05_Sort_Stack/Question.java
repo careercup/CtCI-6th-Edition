@@ -1,8 +1,8 @@
 package Q3_05_Sort_Stack;
 
-import java.util.Stack;
-
 import CtCILibrary.AssortedMethods;
+
+import java.util.Stack;
 
 public class Question {
 	public static Stack<Integer> mergesort(Stack<Integer> inStack) {
@@ -10,8 +10,8 @@ public class Question {
 			return inStack;
 		}
 
-		Stack<Integer> left = new Stack<Integer>();
-		Stack<Integer> right = new Stack<Integer>();
+		Stack<Integer> left = new Stack<>();
+		Stack<Integer> right = new Stack<>();
 		int count = 0;
 		while (inStack.size() != 0) {
 			count++;
@@ -37,7 +37,7 @@ public class Question {
 			}
 		}
 
-		Stack<Integer> reverseStack = new Stack<Integer>();
+		Stack<Integer> reverseStack = new Stack<>();
 		while (inStack.size() > 0) {
 			reverseStack.push(inStack.pop());
 		}
@@ -46,7 +46,7 @@ public class Question {
 	}
 	
 	public static void sort(Stack<Integer> s) {
-		Stack<Integer> r = new Stack<Integer>();
+		Stack<Integer> r = new Stack<>();
 		while(!s.isEmpty()) {
 			/* Insert each element in s in sorted order into r. */
 			int tmp = s.pop();
@@ -63,7 +63,7 @@ public class Question {
 	}
 		
 	public static void main(String [] args) {
-		Stack<Integer> s = new Stack<Integer>();
+		Stack<Integer> s = new Stack<>();
 		for (int i = 0; i < 10; i++) {
 			int r = AssortedMethods.randomIntInRange(0,  1000);
 			s.push(r);

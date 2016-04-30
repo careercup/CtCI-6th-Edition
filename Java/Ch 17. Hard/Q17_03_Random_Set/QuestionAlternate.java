@@ -15,9 +15,7 @@ public class QuestionAlternate {
 			return null; 
 		} else if (i + 1 == m) { // Base case -- copy first m elements into array
 			int[] set = new int[m];
-			for (int k = 0; k < m; k++) {
-				set[k] = original[k];
-			}
+			System.arraycopy(original, 0, set, 0, m);
 			return set;
 		} else {
 			int[] set = pickMRecursively(original, m, i - 1);
@@ -34,9 +32,7 @@ public class QuestionAlternate {
 		int[] subset = new int[m];
 		
 		/* Fill in subset array with first part of original array */
-		for (int i = 0; i < m ; i++) {
-			subset[i] = original[i];
-		}
+		System.arraycopy(original, 0, subset, 0, m);
 		
 		/* Go through rest of original array. */
 		for (int i = m; i < original.length; i++) {

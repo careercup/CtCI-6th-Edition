@@ -1,10 +1,11 @@
 package Q16_19_Pond_Sizes;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class QuestionA {	
-	public static ArrayList<Integer> computePondSizes(int[][] land) {
-		ArrayList<Integer> pondSizes = new ArrayList<Integer>();
+public class QuestionA {
+	public static List<Integer> computePondSizes(int[][] land) {
+		List<Integer> pondSizes = new ArrayList<>();
 		for (int r = 0; r < land.length; r++) {
 			for (int c = 0; c < land[r].length; c++) {
 				if (land[r][c] == 0) {
@@ -33,7 +34,7 @@ public class QuestionA {
 	
 	public static void main(String[] args) {	
 		int[][] land = {{0, 2, 1, 0}, {0, 1, 0, 1}, {1, 1, 0, 1}, {0, 1, 0, 1}};
-		ArrayList<Integer> sizes = computePondSizes(land);
+		List<Integer> sizes = computePondSizes(land);
 		for (int sz : sizes) {
 			System.out.println(sz);
 		}

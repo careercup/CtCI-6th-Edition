@@ -1,11 +1,11 @@
 package Q16_20_T9;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-
 import CtCILibrary.AssortedMethods;
 import CtCILibrary.Trie;
 import CtCILibrary.TrieNode;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuestionB {
 	public static char[][] t9Letters = {
@@ -28,8 +28,8 @@ public class QuestionB {
 		int dig = Character.getNumericValue(digit) - Character.getNumericValue('0');
 		return t9Letters[dig];
 	}
-	
-	public static void getValidWords(String number, int index, String prefix, TrieNode trieNode, ArrayList<String> results) {
+
+	public static void getValidWords(String number, int index, String prefix, TrieNode trieNode, List<String> results) {
 		/* If it's a complete word, print it. */
 		if (index == number.length()) {
 			if (trieNode.terminates()) { // Is complete word
@@ -52,15 +52,15 @@ public class QuestionB {
 			}
 		}
 	}
-	
-	public static ArrayList<String> getValidT9Words(String number, Trie trie) {
-		ArrayList<String> results = new ArrayList<String>();
+
+	public static List<String> getValidT9Words(String number, Trie trie) {
+		List<String> results = new ArrayList<>();
 		getValidWords(number, 0, "", trie.getRoot(), results);
 		return results;
 	}	
 	
 	public static void main(String[] args) {
-		ArrayList<String> words = getValidT9Words("8733", AssortedMethods.getTrieDictionary());
+		List<String> words = getValidT9Words("8733", AssortedMethods.getTrieDictionary());
 		for (String w: words) {
 			System.out.println(w);
 		}		

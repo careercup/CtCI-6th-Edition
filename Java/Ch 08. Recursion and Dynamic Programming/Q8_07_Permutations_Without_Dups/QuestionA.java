@@ -1,14 +1,15 @@
 package Q8_07_Permutations_Without_Dups;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuestionA {
 
-	public static ArrayList<String> getPerms(String str) {
+	public static List<String> getPerms(String str) {
 		if (str == null) {
 			return null;
 		}
-		ArrayList<String> permutations = new ArrayList<String>();
+		List<String> permutations = new ArrayList<>();
 		if (str.length() == 0) { // base case
 			permutations.add("");
 			return permutations;
@@ -16,7 +17,7 @@ public class QuestionA {
 	            
 		char first = str.charAt(0); // get the first character
 		String remainder = str.substring(1); // remove the first character
-		ArrayList<String> words = getPerms(remainder);
+		List<String> words = getPerms(remainder);
 		for (String word : words) {
 			for (int j = 0; j <= word.length(); j++) {
 				String s = insertCharAt(word, first, j);
@@ -33,7 +34,7 @@ public class QuestionA {
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<String> list = getPerms("abcde");
+		List<String> list = getPerms("abcde");
 		System.out.println("There are " + list.size() + " permutations.");
 		for (String s : list) {
 			System.out.println(s);

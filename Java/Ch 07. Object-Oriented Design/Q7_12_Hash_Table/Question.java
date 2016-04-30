@@ -19,7 +19,7 @@ public class Question {
 		Dummy[] dummies = {bob, jim, alex, tim, maxwell, john, julie, christy, tim2};
 		
 		/* Test: Insert Elements. */
-		Hasher<String, Dummy> hash = new Hasher<String, Dummy>(3);
+		Hasher<String, Dummy> hash = new Hasher<>(3);
 		for (Dummy d : dummies) {
 			hash.put(d.getName(), d);
 		}
@@ -30,7 +30,7 @@ public class Question {
 		for (Dummy d : dummies) {
 			String name = d.getName();
 			Dummy dummy = hash.get(name);
-			System.out.println("Dummy named " + name + ": " + dummy.toString());
+			System.out.println("Dummy named " + name + ": " + dummy);
 		}
 	}
 

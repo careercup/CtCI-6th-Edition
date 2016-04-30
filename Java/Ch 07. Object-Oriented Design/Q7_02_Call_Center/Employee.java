@@ -51,10 +51,8 @@ abstract class Employee {
 
 	/* Assign a new call to an employee, if the employee is free. */
 	public boolean assignNewCall() {
-		if (!isFree()) {
-			return false;
-		}
-		return callHandler.assignCall(this);
+		return isFree()
+			   && callHandler.assignCall(this);
 	}
 
 	/* Returns whether or not the employee is free. */

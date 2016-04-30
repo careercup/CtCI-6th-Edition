@@ -2,10 +2,11 @@ package Q17_15_Longest_Word;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Question {
 	public static String printLongestWord(String arr[]) {
-		HashMap<String, Boolean> map = new HashMap<String, Boolean>();
+		Map<String, Boolean> map = new HashMap<>();
 		for (String str : arr) {
 			map.put(str, true);
 		}
@@ -18,8 +19,8 @@ public class Question {
 		}
 		return "";
 	}
-	
-	public static boolean canBuildWord(String str, boolean isOriginalWord, HashMap<String, Boolean> map) {
+
+	public static boolean canBuildWord(String str, boolean isOriginalWord, Map<String, Boolean> map) {
 		if (map.containsKey(str) && !isOriginalWord) {
 			return map.get(str);
 		}
@@ -897,7 +898,7 @@ public class Question {
 		
 		/* To see performance on a larger array, comment / delete the above "return arr;" line and uncomment the below code.
 		 * This will create a giant array by concatenating words from the above list.*/
-		/*ArrayList<String> list = new ArrayList<String>();
+		/*List<String> list = new ArrayList<String>();
 		for (int i = 0; i < arr.length; i++) {
 			int n = AssortedMethods.randomIntInRange(0, 1000);
 			String s = arr[i];

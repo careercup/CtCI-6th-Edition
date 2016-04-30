@@ -1,11 +1,12 @@
 package Q17_07_Baby_Names;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 
 public class QuestionB {
 	/* Add all names to graph as nodes. */
-	public static Graph constructGraph(HashMap<String, Integer> names) {
+	public static Graph constructGraph(Map<String, Integer> names) {
 		Graph graph = new Graph();
 		for (Entry<String, Integer> entry : names.entrySet()) {
 		    String name = entry.getKey();
@@ -40,8 +41,8 @@ public class QuestionB {
 	
 	/* Do DFS of each component. If a node has been visited before,
 	 * then its component has already been computed. */
-	public static HashMap<String, Integer> getTrueFrequencies(Graph graph) {
-		HashMap<String, Integer> rootNames = new HashMap<String, Integer>();
+	public static Map<String, Integer> getTrueFrequencies(Graph graph) {
+		Map<String, Integer> rootNames = new HashMap<>();
 		for (GraphNode node : graph.getNodes()) {
 			if (!node.isVisited()) {
 				int frequency = getComponentFrequency(node);
@@ -51,16 +52,16 @@ public class QuestionB {
 		}
 		return rootNames;
 	}
-	
-	public static HashMap<String, Integer> trulyMostPopular(HashMap<String, Integer> names, String[][] synonyms) {
+
+	public static Map<String, Integer> trulyMostPopular(Map<String, Integer> names, String[][] synonyms) {
 		Graph graph = constructGraph(names);
 		connectEdges(graph, synonyms);
-		HashMap<String, Integer> rootNames = getTrueFrequencies(graph);
+		Map<String, Integer> rootNames = getTrueFrequencies(graph);
 		return rootNames;
 	}
 	
 	public static void main(String[] args) {
-		HashMap<String, Integer> names = new HashMap<String, Integer>();
+		Map<String, Integer> names = new HashMap<>();
 		
 		names.put("John", 3);
 		names.put("Jonathan", 4);
@@ -76,8 +77,8 @@ public class QuestionB {
 			 {"Jonathan", "Johnny"}, 
 			 {"Chris", "Kris"}, 
 			 {"Brian", "Bryan"}};
-		
-		HashMap<String, Integer> rootNames = trulyMostPopular(names, synonyms);
+
+		Map<String, Integer> rootNames = trulyMostPopular(names, synonyms);
 		for (Entry<String, Integer> entry : rootNames.entrySet()) {
 		    String name = entry.getKey();
 		    int frequency = entry.getValue();

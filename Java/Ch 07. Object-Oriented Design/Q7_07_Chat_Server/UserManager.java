@@ -2,13 +2,14 @@ package Q7_07_Chat_Server;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 
 /* UserManager serves as the central place for the core user actions. */
 public class UserManager {
 	private static UserManager instance;
-	private HashMap<Integer, User> usersById = new HashMap<Integer, User>();
-	private HashMap<String, User> usersByAccountName = new HashMap<String, User>();
-	private HashMap<Integer, User> onlineUsers = new HashMap<Integer, User>();
+	private Map<Integer, User> usersById = new HashMap<>();
+	private Map<String, User> usersByAccountName = new HashMap<>();
+	private Map<Integer, User> onlineUsers = new HashMap<>();
 	
 	public static UserManager getInstance() {
 		if (instance == null) {

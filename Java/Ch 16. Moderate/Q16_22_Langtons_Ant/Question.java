@@ -5,7 +5,7 @@ public class Question {
 	public static void main(String[] args) {
 		Board board = new Board();
 		Grid grid = new Grid();
-		System.out.println(board.toString());
+		System.out.println(board);
 		for (int i = 0; i < 100; i++) {
 			System.out.println("\n\n---- MOVE " + i + " ----");
 			board.move();

@@ -1,6 +1,7 @@
 package Q16_21_Sum_Swap;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class QuestionC {
 	
@@ -19,7 +20,7 @@ public class QuestionC {
 	}
 	
 	public static int[] findDifference(int[] array1, int[] array2, int target) {
-		HashSet<Integer> contents2 = getContents(array2);
+		Set<Integer> contents2 = getContents(array2);
 		for (int one : array1) {
 			int two = one - target;
 			if (contents2.contains(two)) {
@@ -38,9 +39,9 @@ public class QuestionC {
 		if ((sum1 - sum2) % 2 != 0) return null;
 		return (sum1 - sum2) / 2;
 	}
-	
-	public static HashSet<Integer> getContents(int[] array) {
-		HashSet<Integer> set = new HashSet<Integer>();
+
+	public static Set<Integer> getContents(int[] array) {
+		Set<Integer> set = new HashSet<>();
 		for (int a : array) {
 			set.add(a);
 		}

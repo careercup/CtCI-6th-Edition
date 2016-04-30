@@ -1,9 +1,11 @@
 package Q1_02_Check_Permutation;
 
-public class QuestionA {	
+import java.util.Arrays;
+
+public class QuestionA {
 	public static String sort(String s) {
 		char[] content = s.toCharArray();
-		java.util.Arrays.sort(content);
+		Arrays.sort(content);
 		return new String(content);
 	}
 	

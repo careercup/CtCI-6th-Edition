@@ -1,10 +1,11 @@
 package Q8_07_Permutations_Without_Dups;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class QuestionC {
 
-	public static void getPerms(String prefix, String remainder, ArrayList<String> result) {
+	public static void getPerms(String prefix, String remainder, List<String> result) {
 		if (remainder.length() == 0) {
 			result.add(prefix);
 		}
@@ -16,15 +17,15 @@ public class QuestionC {
 			getPerms(prefix + c, before + after, result);
 		}
 	}
-	
-	public static ArrayList<String> getPerms(String str) {
-		ArrayList<String> result = new ArrayList<String>();
+
+	public static List<String> getPerms(String str) {
+		List<String> result = new ArrayList<>();
 		getPerms("", str, result);
 		return result;
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<String> list = getPerms("abc");
+		List<String> list = getPerms("abc");
 		System.out.println("There are " + list.size() + " permutations.");
 		for (String s : list) {
 			System.out.println(s);

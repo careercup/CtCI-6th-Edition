@@ -1,7 +1,7 @@
 package Q17_09_Kth_Multiple;
 
-import java.util.Queue;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class QuestionC {
 	public static void printQueue(Queue<Integer> q, int x) {
@@ -17,9 +17,9 @@ public class QuestionC {
 			return 0;
 		}
 		int val = 0;
-		Queue<Integer> queue3 = new LinkedList<Integer>();
-		Queue<Integer> queue5 = new LinkedList<Integer>();
-		Queue<Integer> queue7 = new LinkedList<Integer>();
+		Queue<Integer> queue3 = new LinkedList<>();
+		Queue<Integer> queue5 = new LinkedList<>();
+		Queue<Integer> queue7 = new LinkedList<>();
 		queue3.add(1);
 		for (int i = 0; i <= k; i++) { // Include 0th iteration through kth iteration
 			int v3 = queue3.size() > 0 ? queue3.peek() : Integer.MAX_VALUE; 

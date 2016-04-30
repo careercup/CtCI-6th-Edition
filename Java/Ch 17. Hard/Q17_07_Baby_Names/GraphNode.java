@@ -2,10 +2,12 @@ package Q17_07_Baby_Names;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class GraphNode {
-	private ArrayList<GraphNode> neighbors;
-	private HashMap<String, GraphNode> map;
+	private List<GraphNode> neighbors;
+	private Map<String, GraphNode> map;
 	private String name;
 	private int frequency;
 	private boolean visited = false;
@@ -13,8 +15,8 @@ public class GraphNode {
 	public GraphNode(String nm, int freq) {
 		name = nm;
 		frequency = freq;
-		neighbors = new ArrayList<GraphNode>();
-		map = new HashMap<String, GraphNode>();
+		neighbors = new ArrayList<>();
+		map = new HashMap<>();
 	}
 
 	public String getName() {
@@ -33,8 +35,8 @@ public class GraphNode {
 		map.put(node.getName(), node);
 		return true;
 	}
-	
-	public ArrayList<GraphNode> getNeighbors() {
+
+	public List<GraphNode> getNeighbors() {
 		return neighbors;
 	}
 		

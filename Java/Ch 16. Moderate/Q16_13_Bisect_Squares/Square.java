@@ -19,10 +19,10 @@ public class Square {
 	}
 	
 	public boolean contains(Square other) {
-		if (this.left <= other.left && this.right >= other.right && this.top <= other.top && this.bottom >= other.bottom) {
-			return true;
-		}
-		return false;
+		return left <= other.left
+			   && right >= other.right
+			   && top <= other.top
+			   && bottom >= other.bottom;
 	}
 	
 	/* Return the point where the line segment connecting mid1 and
@@ -45,9 +45,9 @@ public class Square {
 		double y1 = 0;
 		
 		/* Calculate slope using the equation (y1 - y2) / (x1 - x2).
-		 * Note: if the slope is �steep� (>1) then the end of the
+		 * Note: if the slope is 'steep' (>1) then the end of the
 		 * line segment will hit size / 2 units away from the middle
-		 * on the y axis. If the slope is �shallow� (<1) the end of
+		 * on the y axis. If the slope is 'shallow' (<1) the end of
 		 * the line segment will hit size / 2 units away from the
 		 * middle on the x axis. */
 		if (Math.abs(slope) == 1) {
@@ -75,11 +75,11 @@ public class Square {
 		Point start = p1;
 		Point end = p1;		
 		Point[] points = {p2, p3, p4};
-		for (int i = 0; i < points.length; i++) {
-			if (points[i].x < start.x || (points[i].x == start.x && points[i].y < start.y)) {
-				start = points[i];
-			} else if (points[i].x > end.x || (points[i].x == end.x && points[i].y > end.y)) {
-				end = points[i];
+		for (Point point : points) {
+			if (point.x < start.x || (point.x == start.x && point.y < start.y)) {
+				start = point;
+			} else if (point.x > end.x || (point.x == end.x && point.y > end.y)) {
+				end = point;
 			}
 		}
 			

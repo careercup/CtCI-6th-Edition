@@ -1,9 +1,11 @@
 package Q7_10_Minesweeper;
 
+import Q7_10_Minesweeper.Game.GameState;
+
 public class UserPlayResult {
 	private boolean successful;
-	private Game.GameState resultingState;
-	public UserPlayResult(boolean success, Game.GameState state) {
+	private GameState resultingState;
+	public UserPlayResult(boolean success, GameState state) {
 		successful = success;
 		resultingState = state;
 	}
@@ -11,8 +13,8 @@ public class UserPlayResult {
 	public boolean successfulMove() {
 		return successful;
 	}
-	
-	public Game.GameState getResultingState() {
+
+	public GameState getResultingState() {
 		return resultingState;
 	}
 }

@@ -1,10 +1,11 @@
 package Q3_06_Animal_Shelter;
 
+import java.util.Deque;
 import java.util.LinkedList;
 
 public class AnimalQueue {
-	LinkedList<Dog> dogs = new LinkedList<Dog>();
-	LinkedList<Cat> cats = new LinkedList<Cat>();
+	Deque<Dog> dogs = new LinkedList<>();
+	Deque<Cat> cats = new LinkedList<>();
 	private int order = 0;
 	
 	public void enqueue(Animal a) {

@@ -1,15 +1,17 @@
 package Q4_12_Paths_with_Sum;
-import java.util.HashMap;
 
 import CtCILibrary.TreeNode;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class QuestionB {
 	
 	public static int countPathsWithSum(TreeNode root, int targetSum) {
 		return countPathsWithSum(root, targetSum, 0, new HashMap<Integer, Integer>());
 	}
-	
-	public static int countPathsWithSum(TreeNode node, int targetSum, int runningSum, HashMap<Integer, Integer> pathCount) {
+
+	public static int countPathsWithSum(TreeNode node, int targetSum, int runningSum, Map<Integer, Integer> pathCount) {
 		if (node == null) return 0; // Base case
 		
 		runningSum += node.data;
@@ -33,8 +35,8 @@ public class QuestionB {
 		incrementHashTable(pathCount, runningSum, -1); // Remove runningSum
 		return totalPaths;
 	}
-	
-	public static void incrementHashTable(HashMap<Integer, Integer> hashTable, int key, int delta) {
+
+	public static void incrementHashTable(Map<Integer, Integer> hashTable, int key, int delta) {
 		int newCount = hashTable.getOrDefault(key, 0) + delta;
 		if (newCount == 0) { // Remove when zero to reduce space usage
 			hashTable.remove(key);

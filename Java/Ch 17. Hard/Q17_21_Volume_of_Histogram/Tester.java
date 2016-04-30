@@ -14,16 +14,16 @@ public class Tester {
 				{"22", "0"},
 				{"22 22", "0"},
 				{"0 0 4 0 0 6 0 0 3 0 8 0 2 0 5 2 0 3 0 0", "46"}};
-		for (int i = 0; i < tests.length; i++) {
-			String input = tests[i][0];
-			String output = tests[i][1];
+		for (String[] test : tests) {
+			String input = test[0];
+			String output = test[1];
 			String[] inputStringArray = input.split(" ");
 			int[] histogram = new int[inputStringArray.length];
 			for (int j = 0; j < inputStringArray.length; j++) {
 				histogram[j] = Integer.parseInt(inputStringArray[j]);
 			}
 			int targetVolume = Integer.parseInt(output);
-			
+
 			int volumeA = QuestionA.computeHistogramVolume(histogram);
 			int volumeB = QuestionB.computeHistogramVolume(histogram);
 			int volumeC = QuestionC.computeHistogramVolume(histogram);
@@ -31,7 +31,7 @@ public class Tester {
 				System.out.println("FAILURE: " + input + " -> wanted " + output + " but got (" + volumeA + ", " + volumeB + ", " + volumeC + ")");
 			} else {
 				System.out.println("SUCCESS: " + input + " -> " + targetVolume);
-			}		
+			}
 		}
 	}
 

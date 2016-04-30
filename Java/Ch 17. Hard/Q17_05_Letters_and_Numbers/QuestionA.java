@@ -4,9 +4,7 @@ public class QuestionA {
 	public static char[] extractSubarray(char[] array, int start, int end) {
 		if (start > end) return null;		
 		char[] subarray = new char[end - start + 1];
-		for (int i = start; i <= end; i++) {
-			subarray[i - start] = array[i];
-		}
+		System.arraycopy(array, start, subarray, start - start, end + 1 - start);
 		return subarray;
 	}
 	
@@ -37,14 +35,14 @@ public class QuestionA {
 		char b = '1';
 		char a = 'a';
 		char[] array = {a, b, a, b, a, b, b, b, b, b, a, a, a, a, a, b, a, b, a, b, b, a, a, a, a, a, a, a};
-		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + " ");
+		for (char value : array) {
+			System.out.print(value + " ");
 		}
 		System.out.println();
 		char[] max = findLongestSubarray(array);
 		System.out.println(max.length);
-		for (int i = 0; i < max.length; i++) {
-			System.out.print(max[i] + " ");
+		for (char value : max) {
+			System.out.print(value + " ");
 		}
 		System.out.println("\nIs Valid? " + hasEqualLettersNumbers(max, 0, max.length - 1));
 	}

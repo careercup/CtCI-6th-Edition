@@ -1,11 +1,13 @@
 package Q2_01_Remove_Dups;
 
-import java.util.HashSet;
 import CtCILibrary.LinkedListNode;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class QuestionA {
 	public static void deleteDups(LinkedListNode n) {
-		HashSet<Integer> set = new HashSet<Integer>();
+		Set<Integer> set = new HashSet<>();
 		LinkedListNode previous = null;
 		while (n != null) {
 			if (set.contains(n.data)) {

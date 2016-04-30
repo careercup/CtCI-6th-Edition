@@ -2,14 +2,16 @@ package Q17_07_Baby_Names;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Graph {
-	private ArrayList<GraphNode> nodes;
-	private HashMap<String, GraphNode> map;
+	private List<GraphNode> nodes;
+	private Map<String, GraphNode> map;
 	
 	public Graph() {
-		map = new HashMap<String, GraphNode>();
-		nodes = new ArrayList<GraphNode>();
+		map = new HashMap<>();
+		nodes = new ArrayList<>();
 	}
 	
 	public boolean hasNode(String name) {
@@ -30,8 +32,8 @@ public class Graph {
 	private GraphNode getNode(String name) {
 		return map.get(name);
 	}
-	
-	public ArrayList<GraphNode> getNodes() {
+
+	public List<GraphNode> getNodes() {
 		return nodes;
 	}
 	

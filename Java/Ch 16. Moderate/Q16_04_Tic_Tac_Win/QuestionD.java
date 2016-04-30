@@ -4,10 +4,7 @@ import CtCILibrary.AssortedMethods;
 
 public class QuestionD {
 	public static boolean hasWinner(Piece p1, Piece p2, Piece p3) {
-		if (p1 == Piece.Empty) {
-			return false;
-		}
-		return p1 == p2 && p2 == p3;
+		return p1 != Piece.Empty && p1 == p2 && p2 == p3;
 	}
 	
 	public static Piece hasWon(Piece[][] board) {

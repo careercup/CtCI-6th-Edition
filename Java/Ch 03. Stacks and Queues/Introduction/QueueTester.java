@@ -1,17 +1,17 @@
 package Introduction;
 
+import CtCILibrary.AssortedMethods;
+
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
 import java.util.Queue;
-
-import CtCILibrary.AssortedMethods;
 
 public class QueueTester {
 
 	public static void main(String[] args) {
 		int[] array = AssortedMethods.randomArray(100, -100, 100);
-		MyQueue<Integer> queue1 = new MyQueue<Integer>();		
-		Queue<Integer> queue2 = new LinkedList<Integer>();
+		MyQueue<Integer> queue1 = new MyQueue<Integer>();
+		Queue<Integer> queue2 = new LinkedList<>();
 		
 		for (int a : array) {
 			if (a < 0) {

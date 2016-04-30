@@ -2,11 +2,12 @@ package Q9_02_Social_Network;
 
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 
 public class BFSData {
-	public Queue<PathNode> toVisit = new LinkedList<PathNode>();
-	public HashMap<Integer, PathNode> visited = new HashMap<Integer, PathNode>();
+	public Queue<PathNode> toVisit = new LinkedList<>();
+	public Map<Integer, PathNode> visited = new HashMap<>();
 
 	public BFSData(Person root) {
 		PathNode sourcePath = new PathNode(root, null);

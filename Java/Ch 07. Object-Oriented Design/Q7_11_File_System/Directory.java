@@ -1,16 +1,17 @@
 package Q7_11_File_System;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Directory extends Entry {
-	protected ArrayList<Entry> contents;
+	protected List<Entry> contents;
 	
 	public Directory(String n, Directory p) {
 		super(n, p);
-		contents = new ArrayList<Entry>();
+		contents = new ArrayList<>();
 	}
-	
-	protected ArrayList<Entry> getContents() {
+
+	protected List<Entry> getContents() {
 		return contents;
 	}
 	

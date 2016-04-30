@@ -1,36 +1,31 @@
 package Introduction;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Vector;
+import java.util.*;
 
 public class IntroductionCollections {
 	public static void main(String[] args) {
 		// ArrayList
-		ArrayList<String> myArr = new ArrayList<String>();
+		List<String> myArr = new ArrayList<>();
 		myArr.add("one");
 		myArr.add("two");
 		System.out.println(myArr.get(0));
 		
 		// Vector
-		Vector<String> myVect = new Vector<String>();
+		List<String> myVect = new Vector<>();
 		myVect.add("one");
 		myVect.add("two");
 		System.out.println(myVect.get(0));
 		
 		// Linked List
-		LinkedList<String> myLinkedList = new LinkedList<String>();
+		Deque<String> myLinkedList = new LinkedList<>();
 		myLinkedList.add("two");
 		myLinkedList.addFirst("one");
-		Iterator<String> iter = myLinkedList.iterator();
-		while (iter.hasNext()) {
-			System.out.println(iter.next());
+		for (String value : myLinkedList) {
+			System.out.println(value);
 		}
 		
 		// Hash Map
-		HashMap<String, String> map = new HashMap<String, String>();
+		Map<String, String> map = new HashMap<>();
 		map.put("one", "uno");
 		map.put("two", "dos");
 		System.out.println(map.get("one"));

@@ -1,14 +1,14 @@
 package Q10_02_Group_Anagrams;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import CtCILibrary.AssortedMethods;
 import CtCILibrary.HashMapList;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class QuestionB {
 	public static void sort(String[] array) {
-		HashMapList<String, String> mapList = new HashMapList<String, String>();
+		HashMapList<String, String> mapList = new HashMapList<>();
 		
 		/* Group words by anagram */
 		for (String s : array) {
@@ -19,7 +19,7 @@ public class QuestionB {
 		/* Convert hash table to array */
 		int index = 0;
 		for (String key : mapList.keySet()) {
-			ArrayList<String> list = mapList.get(key);
+			List<String> list = mapList.get(key);
 			for (String t : list) {
 				array[index] = t;
 				index++;

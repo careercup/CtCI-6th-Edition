@@ -1,14 +1,15 @@
 package Q7_08_Othello;
 
-import java.util.ArrayList;
-
 import CtCILibrary.AssortedMethods;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /* A helper class to automate this game. This is just used for testing purposes. */
 public class Automator {
 	private Player[] players;
 	private Player lastPlayer = null;
-	public ArrayList<Location> remainingMoves = new ArrayList<Location>();
+	public List<Location> remainingMoves = new ArrayList<>();
 	private static Automator instance;
 	
 	private Automator() {
@@ -60,10 +61,9 @@ public class Automator {
 		shuffle();
 		lastPlayer = lastPlayer == players[0] ? players[1] : players[0];
 		String color = lastPlayer.getColor().toString();
-		for (int i = 0; i < remainingMoves.size(); i++) {
-			Location loc = remainingMoves.get(i);
+		for (Location loc : remainingMoves) {
 			boolean success = lastPlayer.playPiece(loc.getRow(), loc.getColumn());
-			
+
 			if (success) {
 				System.out.println("Success: " + color + " move at (" + loc.getRow() + ", " + loc.getColumn() + ")");
 				board.printBoard();
@@ -76,13 +76,11 @@ public class Automator {
 	}	
 	
 	public boolean isOver() {
-		if (players[0].getScore() == 0 || players[1].getScore() == 0) {
-			return true;
-		}
-		return false;
+		return players[0].getScore() == 0
+			   || players[1].getScore() == 0;
 	}
 	
 	public void printScores() {
-		System.out.println("Score: " + players[0].getColor().toString() + ": " + players[0].getScore() + ", " + players[1].getColor().toString() + ": " + players[1].getScore());
+		System.out.println("Score: " + players[0].getColor() + ": " + players[0].getScore() + ", " + players[1].getColor() + ": " + players[1].getScore());
 	}
 }

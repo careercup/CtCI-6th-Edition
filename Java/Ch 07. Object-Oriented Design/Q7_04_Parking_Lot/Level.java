@@ -36,10 +36,8 @@ public class Level {
 			return false;
 		}
 		int spotNumber = findAvailableSpots(vehicle);
-		if (spotNumber < 0) {
-			return false;
-		}
-		return parkStartingAtSpot(spotNumber, vehicle);
+		return spotNumber >= 0
+			   && parkStartingAtSpot(spotNumber, vehicle);
 	}
 	
 	/* Park a vehicle starting at the spot spotNumber, and continuing until vehicle.spotsNeeded. */
@@ -78,8 +76,7 @@ public class Level {
 	
 	public void print() {
 		int lastRow = -1;
-		for (int i = 0; i < spots.length; i++) {
-			ParkingSpot spot = spots[i];
+		for (ParkingSpot spot : spots) {
 			if (spot.getRow() != lastRow) {
 				System.out.print("  ");
 				lastRow = spot.getRow();

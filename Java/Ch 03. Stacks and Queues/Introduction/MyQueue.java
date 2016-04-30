@@ -15,8 +15,8 @@ public class MyQueue<T> {
 	private QueueNode<T> first;
 	private QueueNode<T> last;
 
-	public void add(T item) { 
-		QueueNode<T> t = new QueueNode<T>(item);
+	public void add(T item) {
+		QueueNode<T> t = new QueueNode<>(item);
 		if (last != null) {
 			last.next = t;
 		}

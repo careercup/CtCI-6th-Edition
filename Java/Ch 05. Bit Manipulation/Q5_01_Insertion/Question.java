@@ -17,7 +17,7 @@ public class Question {
 		int allOnes = ~0; // allOnes = 11111111
 		
 		int left = allOnes << (j + 1); // 1s through position j, then 0s. left = 11100000	
-	  	int right = ((1 << i) - 1); // 1’s after position i.  right = 00000011
+	  	int right = ((1 << i) - 1); // 1's after position i.  right = 00000011
 		int mask = left | right; // All 1s, except for 0s between i and j. mask = 11100011
 
 		/* Clear i through j, then put m in there */

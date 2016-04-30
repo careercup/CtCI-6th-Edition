@@ -3,7 +3,7 @@ package Q1_01_Is_Unique;
 public class QuestionB {
 
 	/* Assumes only letters a through z. */
-	public static boolean isUniqueChars(String str) {
+	public static boolean isUniqueChars(CharSequence str) {
 		if (str.length() > 26) { // Only 26 characters
 			return false;
 		}

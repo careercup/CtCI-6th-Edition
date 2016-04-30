@@ -21,11 +21,12 @@ public class QuestionC {
 		}
 		return parent;
 	}
-	
-	public static boolean covers(TreeNode root, TreeNode p) { 
-		if (root == null) return false;
-		if (root == p) return true;
-		return covers(root.left, p) || covers(root.right, p); 
+
+	public static boolean covers(TreeNode root, TreeNode p) {
+		return root != null
+			   && (root == p
+				   || covers(root.left, p)
+				   || covers(root.right, p));
 	}
 	
 	public static TreeNode getSibling(TreeNode node) {

@@ -1,19 +1,22 @@
 package Q7_06_Jigsaw;
 
+import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 public class Puzzle {
-	private LinkedList<Piece> pieces; /* Remaining pieces left to put away. */ 
+	private List<Piece> pieces; /* Remaining pieces left to put away. */
 	private Piece[][] solution;
 	private int size;
-	
-	public Puzzle(int size, LinkedList<Piece> pieces) {
+
+	public Puzzle(int size, List<Piece> pieces) {
 		this.pieces = pieces;
 		this.size = size;
 	}
 	
 	/* Group pieces into border pieces (including corners) and inside pieces. */
-	public void groupPieces(LinkedList<Piece> cornerPieces, LinkedList<Piece> borderPieces, LinkedList<Piece> insidePieces) {
+	public void groupPieces(Collection<Piece> cornerPieces, Collection<Piece> borderPieces, Collection<Piece> insidePieces) {
 		for (Piece p : pieces) {
 			if (p.isCorner()) {
 				cornerPieces.add(p);
@@ -46,7 +49,7 @@ public class Puzzle {
 	}
 	
 	/* Given a list of pieces, check if any have an edge that matches this piece. Return the edge*/
-	private Edge getMatchingEdge(Edge targetEdge, LinkedList<Piece> pieces) {
+	private Edge getMatchingEdge(Edge targetEdge, Iterable<Piece> pieces) {
 		for (Piece piece : pieces) {
 			Edge matchingEdge = piece.getMatchingEdge(targetEdge);
 			if (matchingEdge != null) {
@@ -55,9 +58,9 @@ public class Puzzle {
 		}	
 		return null;
 	}
-	
-	/* Put the edge/piece into the solution, turn it appropriately, and remove from list. */ 
-	private void setEdgeInSolution(LinkedList<Piece> pieces, Edge edge, int row, int column, Orientation orientation) {
+
+	/* Put the edge/piece into the solution, turn it appropriately, and remove from list. */
+	private void setEdgeInSolution(Collection<Piece> pieces, Edge edge, int row, int column, Orientation orientation) {
 		Piece piece = edge.getParentPiece();
 		piece.setEdgeAsOrientation(edge, orientation);
 		pieces.remove(piece);
@@ -65,7 +68,7 @@ public class Puzzle {
 	}
 	
 	/* Return the list where a piece with this index would be found. */
-	private LinkedList<Piece> getPieceListToSearch(LinkedList<Piece> cornerPieces, LinkedList<Piece> borderPieces, LinkedList<Piece> insidePieces, int row, int column) {
+	private Queue<Piece> getPieceListToSearch(Queue<Piece> cornerPieces, Queue<Piece> borderPieces, Queue<Piece> insidePieces, int row, int column) {
 		if (isBorderIndex(row) && isBorderIndex(column)) {
 			return cornerPieces;
 		} else if (isBorderIndex(row) || isBorderIndex(column)) {
@@ -76,7 +79,7 @@ public class Puzzle {
 	}
 	
 	/* Find the matching piece within piecesToSearch and insert it at row, column. */
-	private boolean fitNextEdge(LinkedList<Piece> piecesToSearch, int row, int column) {
+	private boolean fitNextEdge(Queue<Piece> piecesToSearch, int row, int column) {
 		if (row == 0 && column == 0) {
 			Piece p = piecesToSearch.remove();
 			orientTopLeftCorner(p);
@@ -99,16 +102,16 @@ public class Puzzle {
 	
 	public boolean solve() {
 		/* Group pieces. */
-		LinkedList<Piece> cornerPieces = new LinkedList<Piece>();
-		LinkedList<Piece> borderPieces = new LinkedList<Piece>();
-		LinkedList<Piece> insidePieces = new LinkedList<Piece>();
+		Queue<Piece> cornerPieces = new LinkedList<>();
+		Queue<Piece> borderPieces = new LinkedList<>();
+		Queue<Piece> insidePieces = new LinkedList<>();
 		groupPieces(cornerPieces, borderPieces, insidePieces);
 		
 		/* Walk through puzzle, finding the piece that joins the previous one. */
 		solution = new Piece[size][size];	
 		for (int row = 0; row < size; row++) {
 			for (int column = 0; column < size; column++) {
-				LinkedList<Piece> piecesToSearch = getPieceListToSearch(cornerPieces, borderPieces, insidePieces, row, column);
+				Queue<Piece> piecesToSearch = getPieceListToSearch(cornerPieces, borderPieces, insidePieces, row, column);
 				if (!fitNextEdge(piecesToSearch, row, column)) {
 					return false;
 				}

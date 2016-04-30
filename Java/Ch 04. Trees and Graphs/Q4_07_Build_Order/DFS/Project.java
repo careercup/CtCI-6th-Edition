@@ -2,11 +2,13 @@ package Q4_07_Build_Order.DFS;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Project {
 	public enum State {COMPLETE, PARTIAL, BLANK};
-	private ArrayList<Project> children = new ArrayList<Project>();
-	private HashMap<String, Project> map = new HashMap<String, Project>();
+	private List<Project> children = new ArrayList<>();
+	private Map<String, Project> map = new HashMap<>();
 	private String name;
 	private State state = State.BLANK;
 	
@@ -32,8 +34,8 @@ public class Project {
 	public void setState(State st) {
 		state = st;
 	}
-	
-	public ArrayList<Project> getChildren() {
+
+	public List<Project> getChildren() {
 		return children;
 	}
 }

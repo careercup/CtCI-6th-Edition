@@ -1,18 +1,11 @@
 package Q17_18_Shortest_Supersequence;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
-
-import CtCILibrary.HashMapList;
+import java.util.*;
 
 public class QuestionD {
 
-	public static Range getShortestClosure(ArrayList<Queue<Integer>> lists) {
-		PriorityQueue<HeapNode> minHeap = new PriorityQueue<HeapNode>();
+	public static Range getShortestClosure(List<Queue<Integer>> lists) {
+		PriorityQueue<HeapNode> minHeap = new PriorityQueue<>();
 		int max = Integer.MIN_VALUE;
 		
 		/* Insert min element from each list. */ 
@@ -54,11 +47,11 @@ public class QuestionD {
 	
 	/* Get list of queues (linked lists) storing the indices at which
 	 * each element in smallArray appears in bigArray. */
-	public static ArrayList<Queue<Integer>> getLocationsForElements(int[] big, int[] small) {
+	public static List<Queue<Integer>> getLocationsForElements(int[] big, int[] small) {
 		/* Initialize hash map from item value to locations. */
-		HashMap<Integer, Queue<Integer>> itemLocations = new HashMap<Integer, Queue<Integer>>();
+		Map<Integer, Queue<Integer>> itemLocations = new HashMap<>();
 		for (int s : small) {
-			Queue<Integer> queue = new LinkedList<Integer>();
+			Queue<Integer> queue = new LinkedList<>();
 			itemLocations.put(s, queue);
 		}
 		
@@ -69,14 +62,12 @@ public class QuestionD {
 				queue.add(i);
 			}
 		}
-		
-		ArrayList<Queue<Integer>> allLocations = new ArrayList<Queue<Integer>>();
-		allLocations.addAll(itemLocations.values());
-		return allLocations;
+
+		return new ArrayList<>(itemLocations.values());
 	}
 	
 	public static Range shortestSupersequence(int[] big, int[] small) {
-		ArrayList<Queue<Integer>> locations = getLocationsForElements(big, small);
+		List<Queue<Integer>> locations = getLocationsForElements(big, small);
 		if (locations == null) return null;
 		return getShortestClosure(locations);
 	}

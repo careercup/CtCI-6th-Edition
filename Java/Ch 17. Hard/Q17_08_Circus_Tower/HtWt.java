@@ -22,10 +22,7 @@ public class HtWt implements Comparable<HtWt> {
 	 * other.isBefore(this) are both false. This is different from the 
 	 * compareTo method, where if a < b then b > a. */
 	public boolean isBefore(HtWt other) {
-		if (height < other.height && weight < other.weight) {
-			return true;
-		} else {
-			return false;
-		}
+		return height < other.height
+			   && weight < other.weight;
 	}
 }

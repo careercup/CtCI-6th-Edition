@@ -20,29 +20,26 @@ public class CallHandler {
      * employeeLevels[1] = managers
      * employeeLevels[2] = directors
      */
-    List<List<Employee>> employeeLevels;
+    List<List<Employee>> employeeLevels = new ArrayList<>(LEVELS);
 
-	/* queues for each call�s rank */
-    List<List<Call>> callQueues; 
+	/* queues for each call's rank */
+    List<List<Call>> callQueues = new ArrayList<>(LEVELS);
 
     public CallHandler() {
-    	employeeLevels = new ArrayList<List<Employee>>(LEVELS);
-    	callQueues = new ArrayList<List<Call>>(LEVELS); 
-    	
         // Create respondents.
-        ArrayList<Employee> respondents = new ArrayList<Employee>(NUM_RESPONDENTS);
+        List<Employee> respondents = new ArrayList<>(NUM_RESPONDENTS);
         for (int k = 0; k < NUM_RESPONDENTS - 1; k++) {
             respondents.add(new Respondent(this));
         }
         employeeLevels.add(respondents);
 
         // Create managers.
-        ArrayList<Employee> managers = new ArrayList<Employee>(NUM_MANAGERS);
+        List<Employee> managers = new ArrayList<>(NUM_MANAGERS);
         managers.add(new Manager(this));
         employeeLevels.add(managers);
 
         // Create directors.
-        ArrayList<Employee> directors = new ArrayList<Employee>(NUM_DIRECTORS);
+        List<Employee> directors = new ArrayList<>(NUM_DIRECTORS);
         directors.add(new Director(this));
         employeeLevels.add(directors);
     }

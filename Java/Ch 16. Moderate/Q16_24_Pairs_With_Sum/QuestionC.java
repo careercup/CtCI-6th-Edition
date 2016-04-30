@@ -2,10 +2,11 @@ package Q16_24_Pairs_With_Sum;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-public class QuestionC {	
-	public static ArrayList<Pair> printPairSums(int[] array, int sum) {
-		ArrayList<Pair> result = new ArrayList<Pair>();
+public class QuestionC {
+	public static List<Pair> printPairSums(int[] array, int sum) {
+		List<Pair> result = new ArrayList<>();
 		Arrays.sort(array);
 		int first = 0;
 		int last = array.length - 1;
@@ -28,9 +29,9 @@ public class QuestionC {
 	
 	public static void main(String[] args) {
 		int[] test = {9, 3, 6, 5, 7, 7, -1, 13, 14, -2, 12, 0};
-		ArrayList<Pair> pairs = printPairSums(test, 12);
+		List<Pair> pairs = printPairSums(test, 12);
 		for (Pair p : pairs) {
-			System.out.println(p.toString());
+			System.out.println(p);
 		}
 	}
 }

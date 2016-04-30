@@ -1,14 +1,14 @@
 package Q17_22_Word_Transformer;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.LinkedList;
-
 import CtCILibrary.HashMapList;
 
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.List;
+
 public class QuestionC {
-	
-	public static LinkedList<String> transform(String startWord, String stopWord, String[] words) {
+
+	public static Deque<String> transform(String startWord, String stopWord, String[] words) {
 		HashMapList<String, String> wildcardToWordList = getWildcardToWordList(words);
 		
 		BFSData sourceData = new BFSData(startWord);
@@ -47,7 +47,7 @@ public class QuestionC {
 			}				
 			
 			/* Add friends to queue. */
-			ArrayList<String> words = getValidLinkedWords(word, wildcardToWordList);
+			List<String> words = getValidLinkedWords(word, wildcardToWordList);
 			for (String w : words) {
 				if (!primary.visited.containsKey(w)) {
 					PathNode next = new PathNode(w, pathNode);
@@ -58,19 +58,19 @@ public class QuestionC {
 		}
 		return null;
 	}
-	
-	public static LinkedList<String> mergePaths(BFSData bfs1, BFSData bfs2, String connection) {
+
+	public static Deque<String> mergePaths(BFSData bfs1, BFSData bfs2, String connection) {
 		PathNode end1 = bfs1.visited.get(connection); // end1 -> source
 		PathNode end2 = bfs2.visited.get(connection); // end2 -> dest
-		LinkedList<String> pathOne = end1.collapse(false); // forward: source -> connection
-		LinkedList<String> pathTwo = end2.collapse(true); // reverse: connection -> dest
+		Deque<String> pathOne = end1.collapse(false); // forward: source -> connection
+		Deque<String> pathTwo = end2.collapse(true); // reverse: connection -> dest
 		pathTwo.removeFirst(); // remove connection
 		pathOne.addAll(pathTwo); // add second path
 		return pathOne;
 	}
-	
-	public static ArrayList<String> getWildcardRoots(String word) {
-		ArrayList<String> words = new ArrayList<String>();
+
+	public static List<String> getWildcardRoots(String word) {
+		List<String> words = new ArrayList<>();
 		for (int i = 0; i < word.length(); i++) {
 			String w = word.substring(0, i) + "_" + word.substring(i + 1);
 			words.add(w);
@@ -79,21 +79,21 @@ public class QuestionC {
 	}	
 	
 	public static HashMapList<String, String> getWildcardToWordList(String[] words) {
-		HashMapList<String, String> wildcardToWords = new HashMapList<String, String>();
+		HashMapList<String, String> wildcardToWords = new HashMapList<>();
 		for (String word : words) {
-			ArrayList<String> linked = getWildcardRoots(word);
+			List<String> linked = getWildcardRoots(word);
 			for (String linkedWord : linked) {
 				wildcardToWords.put(linkedWord, word);
 			}
 		}
 		return wildcardToWords;
 	}
-	
-	public static ArrayList<String> getValidLinkedWords(String word, HashMapList<String, String> wildcardToWords) {
-		ArrayList<String> wildcards = getWildcardRoots(word);
-		ArrayList<String> linkedWords = new ArrayList<String>();
+
+	public static List<String> getValidLinkedWords(String word, HashMapList<String, String> wildcardToWords) {
+		List<String> wildcards = getWildcardRoots(word);
+		List<String> linkedWords = new ArrayList<>();
 		for (String wildcard : wildcards) {
-			ArrayList<String> words = wildcardToWords.get(wildcard);
+			Iterable<String> words = wildcardToWords.get(wildcard);
 			for (String linkedWord : words) {
 				if (!linkedWord.equals(word)) {
 					linkedWords.add(linkedWord);
@@ -104,13 +104,13 @@ public class QuestionC {
 	}	
 
 	public static void main(String[] args) {
-		String[] words = {"maps", "tan", "tree", "apple", "cans", "help", "aped", "pree", "pret", "apes", "flat", "trap", "fret", "trip", "trie", "frat", "fril"};		
-		LinkedList<String> list = transform("tree", "flat", words);
+		String[] words = {"maps", "tan", "tree", "apple", "cans", "help", "aped", "pree", "pret", "apes", "flat", "trap", "fret", "trip", "trie", "frat", "fril"};
+		Deque<String> list = transform("tree", "flat", words);
 		
 		if (list == null) {
 			System.out.println("No path.");
 		} else {
-			System.out.println(list.toString());
+			System.out.println(list);
 		}
 	}
 

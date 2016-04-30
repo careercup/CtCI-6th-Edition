@@ -2,9 +2,9 @@ package Big_O;
 
 public class Ex_07 {
 	public static void printPairs(int[] array) {
-		for (int i = 0; i < array.length; i++) {
-			for (int j = 0; j < array.length; j++) {
-				System.out.println(array[i] + "," + array[j]);
+		for (int value1 : array) {
+			for (int value2 : array) {
+				System.out.println(value1 + "," + value2);
 			}
 		}
 	}

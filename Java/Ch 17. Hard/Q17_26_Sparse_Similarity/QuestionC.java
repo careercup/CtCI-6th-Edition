@@ -1,12 +1,9 @@
 package Q17_26_Sparse_Similarity;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map.Entry;
-
 import CtCILibrary.AssortedMethods;
+
+import java.util.*;
+import java.util.Map.Entry;
 
 public class QuestionC {
 	public static class Element implements Comparable<Element> {
@@ -24,19 +21,19 @@ public class QuestionC {
 			return word - e.word;
 		}
 	}
-	
-	public static HashMap<DocPair, Double> computeSimilarities(HashMap<Integer, Document> documents) {
-		ArrayList<Element> elements = sortWords(documents);
-		HashMap<DocPair, Double> similarities = computeIntersections(elements);
+
+	public static Map<DocPair, Double> computeSimilarities(Map<Integer, Document> documents) {
+		List<Element> elements = sortWords(documents);
+		Map<DocPair, Double> similarities = computeIntersections(elements);
 		adjustToSimilarities(documents, similarities);
 		return similarities;
 	}	
 	
 	/* Throw all words into one list, sorting by the word then the document. */
-	public static ArrayList<Element> sortWords(HashMap<Integer, Document> docs) {
-		ArrayList<Element> elements = new ArrayList<Element>();
+	public static List<Element> sortWords(Map<Integer, Document> docs) {
+		List<Element> elements = new ArrayList<>();
 		for (Document doc : docs.values()) {
-			ArrayList<Integer> words = doc.getWords();
+			List<Integer> words = doc.getWords();
 			for (int word : words) {
 				elements.add(new Element(word, doc.getId()));
 			}
@@ -46,7 +43,7 @@ public class QuestionC {
 	}
 	
 	/* Increment the intersection size of each document pair. */
-	public static void increment(HashMap<DocPair, Double> similarities, int doc1, int doc2) {
+	public static void increment(Map<DocPair, Double> similarities, int doc1, int doc2) {
 		DocPair pair = new DocPair(doc1, doc2);
 		if (!similarities.containsKey(pair)) {
 			similarities.put(pair, 1.0);
@@ -56,8 +53,8 @@ public class QuestionC {
 	}
 	
 	/* Adjust the intersection value to become the similarity. */
-	public static HashMap<DocPair, Double> computeIntersections(ArrayList<Element> elements) {
-		HashMap<DocPair, Double> similarities = new HashMap<DocPair, Double>();
+	public static Map<DocPair, Double> computeIntersections(List<Element> elements) {
+		Map<DocPair, Double> similarities = new HashMap<>();
 		
 		for (int i = 0; i < elements.size(); i++) {
 			Element left = elements.get(i);
@@ -74,7 +71,7 @@ public class QuestionC {
 	}
 	
 	/* Adjust the intersection value to become the similarity. */
-	public static void adjustToSimilarities(HashMap<Integer, Document> documents, HashMap<DocPair, Double> similarities) {
+	public static void adjustToSimilarities(Map<Integer, Document> documents, Map<DocPair, Double> similarities) {
 		for (Entry<DocPair, Double> entry : similarities.entrySet()) {
 			DocPair pair = entry.getKey();
 			Double intersection = entry.getValue();
@@ -88,16 +85,16 @@ public class QuestionC {
 	public static void main(String[] args) {
 		int numDocuments = 10;
 		int docSize = 5;
-		HashMap<Integer, Document> documents = new HashMap<Integer, Document>();
+		Map<Integer, Document> documents = new HashMap<>();
 		for (int i = 0; i < numDocuments; i++) {
 			int[] words = AssortedMethods.randomArray(docSize, 0, 10);
-			ArrayList<Integer> w = Tester.removeDups(words);
-			System.out.println(i + ": " + w.toString());
+			List<Integer> w = Tester.removeDups(words);
+			System.out.println(i + ": " + w);
 			Document doc = new Document(i, w);
 			documents.put(i, doc);
 		}
-		
-		HashMap<DocPair, Double> similarities = computeSimilarities(documents);
+
+		Map<DocPair, Double> similarities = computeSimilarities(documents);
 		Tester.printSim(similarities);
 	}
 

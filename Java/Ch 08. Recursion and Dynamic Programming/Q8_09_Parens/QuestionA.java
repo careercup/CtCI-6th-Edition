@@ -11,7 +11,7 @@ public class QuestionA {
 	}
 	
 	public static Set<String> generateParens(int remaining) {
-		Set<String> set = new HashSet<String>();
+		Set<String> set = new HashSet<>();
 		if (remaining == 0) {
 			set.add("");
 		} else {

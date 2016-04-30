@@ -1,10 +1,12 @@
 package Q8_13_Stack_of_Boxes;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
-public class QuestionB {	
-	public static int createStack(ArrayList<Box> boxes) {
+public class QuestionB {
+	public static int createStack(List<Box> boxes) {
 		Collections.sort(boxes, new BoxComparator());
 		int maxHeight = 0;
 		int[] stackMap = new int[boxes.size()];
@@ -14,8 +16,8 @@ public class QuestionB {
 		}
 		return maxHeight;
 	}
-	
-	public static int createStack(ArrayList<Box> boxes, int bottomIndex, int[] stackMap) {
+
+	public static int createStack(List<Box> boxes, int bottomIndex, int[] stackMap) {
 		if (bottomIndex < boxes.size() && stackMap[bottomIndex] > 0) {
 			return stackMap[bottomIndex];
 		}
@@ -35,12 +37,14 @@ public class QuestionB {
 		
 	
 	public static void main(String[] args) {
-		Box[] boxList = { new Box(6, 4, 4), new Box(8, 6, 2), new Box(5, 3, 3), new Box(7, 8, 3), new Box(4, 2, 2), new Box(9, 7, 3)};
-		ArrayList<Box> boxes = new ArrayList<Box>();
-		for (Box b : boxList) {
-			boxes.add(b);
-		}
-		
+		List<Box> boxes = new ArrayList<>(Arrays.asList(
+			new Box(6, 4, 4),
+			new Box(8, 6, 2),
+			new Box(5, 3, 3),
+			new Box(7, 8, 3),
+			new Box(4, 2, 2),
+			new Box(9, 7, 3))
+		);
 		int height = createStack(boxes);
 		System.out.println(height);
 	}

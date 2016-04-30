@@ -1,8 +1,9 @@
 package Q4_08_First_Common_Ancestor;
 
-import java.util.ArrayList;
-
 import CtCILibrary.TreeNode;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Tester {
 	public static String resultToString(String s, TreeNode x, TreeNode y, TreeNode anc) {
@@ -18,8 +19,8 @@ public class Tester {
 	public static void main(String[] args) {
 		int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		TreeNode root = TreeNode.createMinimalBST(array);
-		
-		ArrayList<TreeNode> nodes = new ArrayList<TreeNode>();
+
+		List<TreeNode> nodes = new ArrayList<>();
 		for (int a : array) {
 			nodes.add(root.find(a));
 		}

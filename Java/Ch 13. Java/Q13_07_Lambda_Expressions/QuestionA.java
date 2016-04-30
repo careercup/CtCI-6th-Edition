@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuestionA {
-	
+
 	public static int getPopulation(List<Country> countries, String continent) {
  		int sum = 0;
  		for (Country c : countries) {
@@ -14,9 +14,9 @@ public class QuestionA {
  		}
  		return sum;
 	}
-	
- 	public static void main(String... args) {		
- 		ArrayList<Country> countries = new ArrayList<Country>();
+
+	public static void main(String... args) {
+		List<Country> countries = new ArrayList<>();
  		countries.add(new Country("United States", "North America", 1));
  		countries.add(new Country("Canada", "North America", 5));
  		countries.add(new Country("India", "Asia", 9));

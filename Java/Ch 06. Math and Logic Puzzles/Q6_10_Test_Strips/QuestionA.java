@@ -1,10 +1,11 @@
 package Q6_10_Test_Strips;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class QuestionA {
-	public static int findPoisonedBottle(ArrayList<Bottle> bottles, ArrayList<TestStrip> strips) {
+	public static int findPoisonedBottle(List<Bottle> bottles, List<TestStrip> strips) {
 		int today = 0;
 		
 		while (bottles.size() > 1 && strips.size() > 0) {
@@ -28,10 +29,10 @@ public class QuestionA {
 			System.out.println("Suspected bottle is " + bottles.get(0).getId() + " on day " + today);
 			return bottles.get(0).getId();
 		}
-		return -1;	
-	}	
-	
-	public static void runTestSet(ArrayList<Bottle> bottles, ArrayList<TestStrip> strips, int day) {
+		return -1;
+	}
+
+	public static void runTestSet(List<Bottle> bottles, List<TestStrip> strips, int day) {
 		int index = 0;
 		for (Bottle bottle : bottles) {
 			TestStrip strip = strips.get(index);
@@ -39,9 +40,9 @@ public class QuestionA {
 			index = (index + 1) % strips.size();
 		}
 	}
-	
-	public static ArrayList<Bottle> createBottles(int nBottles, int poisoned) {
-		ArrayList<Bottle> bottles = new ArrayList<Bottle>();
+
+	public static List<Bottle> createBottles(int nBottles, int poisoned) {
+		List<Bottle> bottles = new ArrayList<>();
 		for (int i = 0; i < nBottles; i++) {
 			bottles.add(new Bottle(i));
 		}
@@ -56,9 +57,9 @@ public class QuestionA {
 		
 		return bottles;
 	}
-	
-	public static ArrayList<TestStrip> createTestStrips(int nTestStrips) {
-		ArrayList<TestStrip> testStrips = new ArrayList<TestStrip>();
+
+	public static List<TestStrip> createTestStrips(int nTestStrips) {
+		List<TestStrip> testStrips = new ArrayList<>();
 		for (int i = 0; i < nTestStrips; i++) {
 			testStrips.add(new TestStrip(i));
 		}
@@ -69,8 +70,8 @@ public class QuestionA {
 		int nBottles = 1000;
 		int nTestStrips = 10;
 		for (int poisoned = 0; poisoned < nBottles; poisoned++) {
-			ArrayList<Bottle> bottles = createBottles(nBottles, poisoned);
-			ArrayList<TestStrip> testStrips = createTestStrips(nTestStrips);
+			List<Bottle> bottles = createBottles(nBottles, poisoned);
+			List<TestStrip> testStrips = createTestStrips(nTestStrips);
 			int poisonedId = findPoisonedBottle(bottles, testStrips);
 			System.out.println("Suspected Bottle: " + poisonedId);
 			if (poisonedId != poisoned) {

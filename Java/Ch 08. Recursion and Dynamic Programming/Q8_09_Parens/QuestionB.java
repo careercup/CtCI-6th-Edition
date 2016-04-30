@@ -1,10 +1,11 @@
 package Q8_09_Parens;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class QuestionB {
-	
-	public static void addParen(ArrayList<String> list, int leftRem, int rightRem, char[] str, int index) {
+
+	public static void addParen(List<String> list, int leftRem, int rightRem, char[] str, int index) {
 		if (leftRem < 0 || rightRem < leftRem) return; // invalid state
 		
 		if (leftRem == 0 && rightRem == 0) { /* all out of left and right parentheses */
@@ -17,16 +18,16 @@ public class QuestionB {
 			addParen(list, leftRem, rightRem - 1, str, index + 1);
 		}
 	}
-	
-	public static ArrayList<String> generateParens(int count) {
+
+	public static List<String> generateParens(int count) {
 		char[] str = new char[count*2];
-		ArrayList<String> list = new ArrayList<String>();
+		List<String> list = new ArrayList<>();
 		addParen(list, count, count, str, 0);
 		return list;
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<String> list = generateParens(6);
+		List<String> list = generateParens(6);
 		for (String s : list) {
 			System.out.println(s);
 		}

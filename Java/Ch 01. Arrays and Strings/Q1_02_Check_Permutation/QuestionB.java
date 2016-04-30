@@ -14,7 +14,7 @@ public class QuestionB {
 		}
 		  
 		for (int i = 0; i < t.length(); i++) {
-			int c = (int) t.charAt(i);
+			int c = t.charAt(i);
 			letters[c]--;
 		    if (letters[c] < 0) {
 		    	return false;

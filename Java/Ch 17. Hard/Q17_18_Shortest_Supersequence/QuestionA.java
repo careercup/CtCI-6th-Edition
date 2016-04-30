@@ -16,12 +16,12 @@ public class QuestionA {
 	 * next locations of each element in smallArray. */
 	public static int findClosure(int[] bigArray, int[] smallArray, int index) {
 		int max = -1;
-		for (int i = 0; i < smallArray.length; i++) {
-			int next = findNextInstance(bigArray, smallArray[i], index);
+		for (int value : smallArray) {
+			int next = findNextInstance(bigArray, value, index);
 			if (next == -1) {
 				return -1;
 			}
-			max = Math.max(next,  max);
+			max = Math.max(next, max);
 		}
 		return max;
 	}

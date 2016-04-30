@@ -1,8 +1,8 @@
 package Q17_14_Smallest_K;
 
-import java.util.Arrays;
-
 import CtCILibrary.AssortedMethods;
+
+import java.util.Arrays;
 
 public class QuestionA {
 	
@@ -16,9 +16,7 @@ public class QuestionA {
 		
 		/* Copy first k elements. */
 		int[] smallest = new int[k];
-		for (int i = 0; i < k; i++) {
-			smallest[i] = array[i];
-		}
+		System.arraycopy(array, 0, smallest, 0, k);
 		return smallest;
 	}
 

@@ -4,8 +4,8 @@ public class QuestionB {
 	
 	public static String formStringFromPattern(String pattern, String first, String second) {
 		if (pattern.length() == 0) return null;
-		
-		StringBuffer sb = new StringBuffer();
+
+		StringBuilder sb = new StringBuilder();
 		char firstChar = pattern.charAt(0);
 		for (char c : pattern.toCharArray()) {
 			if (c == firstChar) {
@@ -31,7 +31,7 @@ public class QuestionB {
 	
 	public static String canonical(String pattern) {
 		if (pattern.charAt(0) == 'a') return pattern;
-		StringBuffer sb = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		for (char c : pattern.toCharArray()) {
 			if (c == 'a') {
 				sb.append('b');

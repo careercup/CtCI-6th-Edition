@@ -2,10 +2,7 @@ package IntroductionLocks;
 
 public class NoLockATM {
 	private int balance = 100;
-	
-	public NoLockATM() {
-	}
-	
+
 	public int withdraw(int value) {
 		int temp = balance;
 		try {

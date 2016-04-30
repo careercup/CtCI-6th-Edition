@@ -1,9 +1,10 @@
 package Q7_04_Parking_Lot;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Vehicle {
-	protected ArrayList<ParkingSpot> parkingSpots = new ArrayList<ParkingSpot>();
+	protected List<ParkingSpot> parkingSpots = new ArrayList<>();
 	protected String licensePlate;
 	protected int spotsNeeded;
 	protected VehicleSize size;
@@ -23,8 +24,8 @@ public abstract class Vehicle {
 	
 	/* Remove car from spot, and notify spot that it's gone */
 	public void clearSpots() {
-		for (int i = 0; i < parkingSpots.size(); i++) {
-			parkingSpots.get(i).removeVehicle();
+		for (ParkingSpot parkingSpot : parkingSpots) {
+			parkingSpot.removeVehicle();
 		}
 		parkingSpots.clear();
 	}

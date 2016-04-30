@@ -38,9 +38,9 @@ public class Question {
 			return 0;
 		} 
 		if (maxHeap.size() == minHeap.size()) {
-			return ((double)minHeap.peek() + (double) maxHeap.peek()) / 2;
+			return ((double) minHeap.peek() + maxHeap.peek()) / 2;
 		} else {
-			/* If maxHeap and minHeap are of different sizes, then maxHeap must have one extra element. Return maxHeap�s top element.*/			
+			/* If maxHeap and minHeap are of different sizes, then maxHeap must have one extra element. Return maxHeap's top element.*/
 			return maxHeap.peek();
 		} 
 	}
@@ -65,8 +65,8 @@ public class Question {
 			System.out.print(" " + minHeapArray[i]);
 		}
 		System.out.print("\nMaxHeap =");
-		for (int i = 0; i < maxHeapArray.length; i++){
-			System.out.print(" " + maxHeapArray[i]);
+		for (int value : maxHeapArray) {
+			System.out.print(" " + value);
 		}
 	}
 
@@ -76,8 +76,8 @@ public class Question {
 
 		maxHeapComparator = new MaxHeapComparator();
 		minHeapComparator = new MinHeapComparator();
-		maxHeap = new PriorityQueue<Integer>(arraySize - arraySize/2, maxHeapComparator);
-		minHeap = new PriorityQueue<Integer>(arraySize/2, minHeapComparator);
+		maxHeap = new PriorityQueue<>(arraySize - arraySize / 2, maxHeapComparator);
+		minHeap = new PriorityQueue<>(arraySize / 2, minHeapComparator);
 		
 		for(int i = 0; i < arraySize; i++) {
 			int randomNumber = (int) (Math.random( ) * (range+1));

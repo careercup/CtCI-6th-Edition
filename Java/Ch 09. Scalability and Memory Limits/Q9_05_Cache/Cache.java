@@ -1,16 +1,17 @@
 package Q9_05_Cache;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Cache {
 	public static int MAX_SIZE = 10;
 	public Node head;
 	public Node tail;
-	public HashMap<String, Node> map;
+	public Map<String, Node> map;
 	public int size = 0;
 	
 	public Cache() {
-		map = new HashMap<String, Node>();
+		map = new HashMap<>();
 	}
 	
 	public void moveToFront(Node node) {
