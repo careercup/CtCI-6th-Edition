@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.careercup</groupId>
+    <artifactId>ctci</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>CtClLibrary</module>
+        <module>Ch 01. Arrays and Strings</module>
+        <module>Ch 02. Linked Lists</module>
+        <module>Ch 03. Stacks and Queues</module>
+        <module>Ch 04. Trees and Graphs</module>
+        <module>Ch 05. Bit Manipulation</module>
+        <module>Ch 06. Math and Logic Puzzles</module>
+        <module>Ch 07. Object-Oriented Design</module>
+        <module>Ch 08. Recursion and Dynamic Programming</module>
+        <module>Ch 09. Scalability and Memory Limits</module>
+        <module>Ch 10. Sorting and Searching</module>
+        <module>Ch 13. Java</module>
+        <module>Ch 15. Threads and Locks</module>
+        <module>Ch 16. Moderate</module>
+        <module>Ch 17. Hard</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>com.careercup</groupId>
+            <artifactId>CtClLibrary</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.5.1</version>
+            <configuration>
+                <source>1.8</source>
+                <target>1.8</target>
+            </configuration>
+        </plugin>
+    </plugins>
+    </build>
+
+</project>
