@@ -10,20 +10,21 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>CtClLibrary</module>
-        <module>Ch 01. Arrays and Strings</module>
-        <module>Ch 02. Linked Lists</module>
-        <module>Ch 03. Stacks and Queues</module>
-        <module>Ch 04. Trees and Graphs</module>
-        <module>Ch 05. Bit Manipulation</module>
-        <module>Ch 06. Math and Logic Puzzles</module>
-        <module>Ch 07. Object-Oriented Design</module>
-        <module>Ch 08. Recursion and Dynamic Programming</module>
-        <module>Ch 09. Scalability and Memory Limits</module>
-        <module>Ch 10. Sorting and Searching</module>
-        <module>Ch 13. Java</module>
-        <module>Ch 15. Threads and Locks</module>
-        <module>Ch 16. Moderate</module>
-        <module>Ch 17. Hard</module>
+        <module>Ch_01_Arrays_and_Strings</module>
+        <module>Ch_02_Linked_Lists</module>
+        <module>Ch_03_Stacks_and_Queues</module>
+        <module>Ch_04_Trees_and_Graphs</module>
+        <module>Ch_05_Bit_Manipulation</module>
+        <module>Ch_06_Math_and_Logic_Puzzles</module>
+        <module>Ch_07_Object-Oriented_Design</module>
+        <module>Ch_08_Recursion_and_Dynamic_Programming</module>
+        <module>Ch_09_Scalability_and_Memory_Limits</module>
+        <module>Ch_10_Sorting_and_Searching</module>
+        <module>Ch_13_Java</module>
+        <module>Ch_15_Threads_and_Locks</module>
+        <module>Ch_16_Moderate</module>
+        <module>Ch_17_Hard</module>
+        <module>Big_O</module>
     </modules>
     <dependencies>
         <dependency>
