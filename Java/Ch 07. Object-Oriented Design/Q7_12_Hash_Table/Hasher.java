@@ -34,11 +34,12 @@ public class Hasher<K, V> {
 	}
 	
 	/* Insert key and value into hash table. */
-	public void put(K key, V value) {
+	public V put(K key, V value) {
 		LinkedListNode<K, V> node = getNodeForKey(key);
 		if (node != null) {
+			V oldValue = node.value;
 			node.value = value; // just update the value.
-			return;
+			return oldValue;
 		}
 		
 		node = new LinkedListNode<K, V>(key, value);
@@ -48,11 +49,16 @@ public class Hasher<K, V> {
 			node.next.prev = node;
 		}
 		arr.set(index, node);
+		return null;
 	}
 	
 	/* Remove node for key. */
-	public void remove(K key) {
+	public V remove(K key) {
 		LinkedListNode<K, V> node = getNodeForKey(key);
+		if (node == null) {
+			return null;
+		}
+		
 		if (node.prev != null) {
 			node.prev.next = node.next;
 		} else {
@@ -64,6 +70,7 @@ public class Hasher<K, V> {
 		if (node.next != null) {
 			node.next.prev = node.prev;
 		}
+		return node.value;
 	}
 	
 	/* Get value for key. */

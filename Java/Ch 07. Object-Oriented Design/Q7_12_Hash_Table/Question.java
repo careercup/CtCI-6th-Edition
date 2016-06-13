@@ -21,7 +21,7 @@ public class Question {
 		/* Test: Insert Elements. */
 		Hasher<String, Dummy> hash = new Hasher<String, Dummy>(3);
 		for (Dummy d : dummies) {
-			hash.put(d.getName(), d);
+			System.out.println(hash.put(d.getName(), d));
 		}
 		
 		hash.printTable();
@@ -30,7 +30,17 @@ public class Question {
 		for (Dummy d : dummies) {
 			String name = d.getName();
 			Dummy dummy = hash.get(name);
-			System.out.println("Dummy named " + name + ": " + dummy.toString());
+			if (dummy == null) {
+				System.out.println("Dummy named " + name + ": null");
+			} else {
+				System.out.println("Dummy named " + name + ": " + dummy.toString());
+			}
+			Dummy d2 = hash.remove(name);
+			if (d2 == null) {
+				System.out.println("Dummy removed named " + name + ": " + "null");
+			} else {
+				System.out.println("Dummy removed named " + name + ": " + d2.toString());
+			}
 		}
 	}
 
