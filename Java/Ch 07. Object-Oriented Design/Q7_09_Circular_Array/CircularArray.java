@@ -33,16 +33,13 @@ public class CircularArray<T> implements Iterable<T> {
 	}
 	
 	public Iterator<T> iterator() {
-		return new CircularArrayIterator<T>(this);
+		return new CircularArrayIterator();
 	}
 	
-	private class CircularArrayIterator<TI> implements Iterator<TI> {
+	private class CircularArrayIterator implements Iterator<T> {
 		private int _current = -1;
-		private TI[] _items;
 		
-		public CircularArrayIterator(CircularArray<TI> circularArray) {
-			_items = circularArray.items;
-		}
+		public CircularArrayIterator() { }
 		
 		@Override
 		public boolean hasNext() {
@@ -50,10 +47,9 @@ public class CircularArray<T> implements Iterable<T> {
 		}
 		
 		@Override
-		public TI next() {
+		public T next() {
 			_current++;
-			TI item = (TI) _items[convert(_current)];
-			return item;
+			return (T) items[convert(_current)];
 		}
 		
 		@Override
