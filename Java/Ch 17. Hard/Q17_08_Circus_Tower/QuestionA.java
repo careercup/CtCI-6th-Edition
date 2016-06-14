@@ -43,12 +43,7 @@ public class QuestionA {
 		}
 		
 		ArrayList<HtWt> bestWithout = bestSeqAtIndex(array, sequence, index + 1);
-		
-		if (bestWith == null || bestWithout.size() > bestWith.size()) {
-			return bestWithout;
-		} else {
-			return bestWith;
-		}
+		return max(bestWith, bestWithout);
 	}
 	
 	public static ArrayList<HtWt> initialize() {
