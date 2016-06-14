@@ -75,6 +75,7 @@ public class Hasher<K, V> {
 	
 	/* Get value for key. */
 	public V get(K key) {
+		if (key == null) return null;
 		LinkedListNode<K, V> node = getNodeForKey(key);
 		return node == null ? null : node.value;
 	}
