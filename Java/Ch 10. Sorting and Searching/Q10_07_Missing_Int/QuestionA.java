@@ -15,7 +15,7 @@ public class QuestionA {
 			int n = in.nextInt ();
 			/* Finds the corresponding number in the bitfield by using
 			 * the OR operator to set the nth bit of a byte 
-			 * (e.g., 10 would correspond to the 2nd bit of index 2 in
+			 * (e.g., 10 would correspond to bit 2 of index 1 in
 			 * the byte array). */
 			bitfield [n / 8] |= 1 << (n % 8);
 		}
