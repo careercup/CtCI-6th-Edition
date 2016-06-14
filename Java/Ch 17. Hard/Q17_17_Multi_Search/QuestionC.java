@@ -6,7 +6,7 @@ import CtCILibrary.HashMapList;
 
 public class QuestionC {
 	public static Trie createTreeFromStrings(String[] smalls, int maxSize) {
-        Trie tree = new Trie("");
+        Trie tree = new Trie();
 		for (String s : smalls) {
 			if (s.length() <= maxSize) {
 				tree.insertString(s, 0);

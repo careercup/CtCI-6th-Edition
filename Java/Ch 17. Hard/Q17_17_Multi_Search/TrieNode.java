@@ -14,8 +14,9 @@ public class TrieNode {
 	
 	
 	public void insertString(String s, int index) {
+		if (s == null) return;
 		indexes.add(index);
-		if (s != null && s.length() > 0) {
+		if (s.length() > 0) {
 			char value = s.charAt(0);
 			TrieNode child = null;
 			if (children.containsKey(value)) {
