@@ -6,7 +6,6 @@ import java.util.HashMap;
 public class TrieNode {
 	private HashMap<Character, TrieNode> children;
 	private ArrayList<Integer> indexes;
-	private char value;
 	
 	public TrieNode() { 
 		children = new HashMap<Character, TrieNode>();
@@ -17,7 +16,7 @@ public class TrieNode {
 	public void insertString(String s, int index) {
 		indexes.add(index);
 		if (s != null && s.length() > 0) {
-			value = s.charAt(0);
+			char value = s.charAt(0);
 			TrieNode child = null;
 			if (children.containsKey(value)) {
 				child = children.get(value);
