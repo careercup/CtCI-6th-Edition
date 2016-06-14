@@ -19,7 +19,7 @@ public class QuestionA {
 		/* Compute half. If uneven, compute other half. If even,
 		 * double it. */
 		int s = smaller >> 1; // Divide by 2
-		int side1 = minProduct(s, bigger);
+		int side1 = minProductHelper(s, bigger);
 		int side2 = side1;
 		if (smaller % 2 == 1) {
 			counter++;
