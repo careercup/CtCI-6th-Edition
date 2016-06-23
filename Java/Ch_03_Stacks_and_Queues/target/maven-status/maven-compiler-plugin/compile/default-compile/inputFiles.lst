@@ -1,25 +1,25 @@
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Introduction/QueueTester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Introduction/MyStack.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_04_Queue_via_Stacks/MyQueue.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_03_Stack_of_Plates/Node.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_06_Animal_Shelter/Cat.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_06_Animal_Shelter/Dog.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_02_Stack_Min/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_03_Stack_of_Plates/SetOfStacks.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_05_Sort_Stack/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_06_Animal_Shelter/AnimalQueue.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_01_Three_in_One/FixedMultiStack.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_06_Animal_Shelter/Animal.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_03_Stack_of_Plates/Stack.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_01_Three_in_One/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_03_Stack_of_Plates/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_06_Animal_Shelter/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_01_Three_in_One/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_02_Stack_Min/NodeWithMin.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_04_Queue_via_Stacks/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_02_Stack_Min/StackWithMin.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Introduction/StackTester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_01_Three_in_One/FullStackException.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_02_Stack_Min/StackWithMin2.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Introduction/MyQueue.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 03. Stacks and Queues/src/main/java/Q3_01_Three_in_One/MultiStack.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_03_Stack_of_Plates/SetOfStacks.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_04_Queue_via_Stacks/MyQueue.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Introduction/StackTester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_03_Stack_of_Plates/Stack.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_01_Three_in_One/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_02_Stack_Min/NodeWithMin.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_04_Queue_via_Stacks/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_02_Stack_Min/StackWithMin.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_06_Animal_Shelter/AnimalQueue.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_03_Stack_of_Plates/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_06_Animal_Shelter/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_05_Sort_Stack/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Introduction/MyStack.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_03_Stack_of_Plates/Node.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Introduction/MyQueue.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_02_Stack_Min/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_06_Animal_Shelter/Dog.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_06_Animal_Shelter/Animal.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Introduction/QueueTester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_01_Three_in_One/FixedMultiStack.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_06_Animal_Shelter/Cat.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_01_Three_in_One/FullStackException.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_01_Three_in_One/MultiStack.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_01_Three_in_One/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_03_Stacks_and_Queues/src/main/java/Q3_02_Stack_Min/StackWithMin2.java

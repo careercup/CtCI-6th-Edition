@@ -1,84 +1,84 @@
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_25_LRU_Cache/Cache.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_10_Living_People/Person.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_11_Diving_Board/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_20_T9/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_21_Sum_Swap/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_13_Bisect_Squares/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_03_Intersection/Line.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_10_Living_People/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_15_Master_Mind/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_03_Intersection/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_11_Diving_Board/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_22_Langtons_Ant/Board.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_09_Operations/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_13_Bisect_Squares/Point.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_26_Calculator/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_18_Pattern_Matcher/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_26_Calculator/Operator.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_21_Sum_Swap/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_25_LRU_Cache/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_06_Smallest_Difference/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_21_Sum_Swap/QuestionD.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_10_Living_People/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_21_Sum_Swap/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_22_Langtons_Ant/Position.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_24_Pairs_With_Sum/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_24_Pairs_With_Sum/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_03_Intersection/Point.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionD.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_08_English_Int/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_22_Langtons_Ant/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_11_Diving_Board/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionG.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_07_Number_Max/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_12_XML_Encoding/Attribute.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_10_Living_People/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_19_Pond_Sizes/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_12_XML_Encoding/QuestionOO.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_18_Pattern_Matcher/QuestionC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_11_Diving_Board/QuestionC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_10_Living_People/QuestionC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_05_Factorial_Zeros/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_02_Word_Frequencies/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_24_Pairs_With_Sum/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_13_Bisect_Squares/Square.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionF.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_14_Best_Line/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_12_XML_Encoding/QuestionString.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_06_Smallest_Difference/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_20_T9/QuestionC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/Piece.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_18_Pattern_Matcher/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_10_Living_People/QuestionD.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_16_Sub_Sort/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_22_Langtons_Ant/Grid.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_23_Rand7_From_Rand5/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/PositionIterator.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_12_XML_Encoding/Element.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionE.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/Position.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_24_Pairs_With_Sum/Pair.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_22_Langtons_Ant/Ant.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionH.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_20_T9/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_18_Pattern_Matcher/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_01_Number_Swapper/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_18_Pattern_Matcher/QuestionD.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_19_Pond_Sizes/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_02_Word_Frequencies/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_06_Smallest_Difference/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_13_Bisect_Squares/Line.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_26_Calculator/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_21_Sum_Swap/QuestionC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_14_Best_Line/Line.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_23_Rand7_From_Rand5/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_05_Factorial_Zeros/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_22_Langtons_Ant/Orientation.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_14_Best_Line/GraphPoint.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_26_Calculator/Term.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_17_Contiguous_Sequence/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 16. Moderate/src/main/java/Q16_24_Pairs_With_Sum/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/Piece.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_10_Living_People/Person.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_21_Sum_Swap/QuestionD.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_18_Pattern_Matcher/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_20_T9/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_10_Living_People/QuestionD.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_26_Calculator/Operator.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_13_Bisect_Squares/Point.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_06_Smallest_Difference/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_03_Intersection/Point.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_19_Pond_Sizes/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_14_Best_Line/Line.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_02_Word_Frequencies/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_14_Best_Line/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_08_English_Int/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_22_Langtons_Ant/Orientation.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionH.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_07_Number_Max/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_10_Living_People/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_21_Sum_Swap/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_24_Pairs_With_Sum/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_11_Diving_Board/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_22_Langtons_Ant/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_13_Bisect_Squares/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_16_Sub_Sort/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionD.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_01_Number_Swapper/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_12_XML_Encoding/Element.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/Position.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_10_Living_People/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_26_Calculator/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_11_Diving_Board/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_22_Langtons_Ant/Position.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_10_Living_People/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_22_Langtons_Ant/Grid.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/PositionIterator.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionG.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_18_Pattern_Matcher/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_24_Pairs_With_Sum/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_09_Operations/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_23_Rand7_From_Rand5/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_10_Living_People/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_13_Bisect_Squares/Line.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_05_Factorial_Zeros/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_21_Sum_Swap/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_22_Langtons_Ant/Board.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionF.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_18_Pattern_Matcher/QuestionD.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_26_Calculator/Term.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_18_Pattern_Matcher/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_13_Bisect_Squares/Square.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_25_LRU_Cache/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_23_Rand7_From_Rand5/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_03_Intersection/Line.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_11_Diving_Board/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_20_T9/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_25_LRU_Cache/Cache.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_12_XML_Encoding/QuestionOO.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_04_Tic_Tac_Win/QuestionE.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_24_Pairs_With_Sum/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_12_XML_Encoding/Attribute.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_03_Intersection/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_18_Pattern_Matcher/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_02_Word_Frequencies/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_11_Diving_Board/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_17_Contiguous_Sequence/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_22_Langtons_Ant/Ant.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_06_Smallest_Difference/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_14_Best_Line/GraphPoint.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_20_T9/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_12_XML_Encoding/QuestionString.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_19_Pond_Sizes/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_21_Sum_Swap/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_24_Pairs_With_Sum/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_15_Master_Mind/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_21_Sum_Swap/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_06_Smallest_Difference/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_05_Factorial_Zeros/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_24_Pairs_With_Sum/Pair.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_16_Moderate/src/main/java/Q16_26_Calculator/QuestionB.java

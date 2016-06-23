@@ -2,6 +2,9 @@ package Q17_19_Missing_Two;
 
 import java.math.BigInteger;
 
+/**
+ * @see Q17_04_Missing_Number
+ */
 public class QuestionA {
 
 	public static BigInteger productToN(int n) {

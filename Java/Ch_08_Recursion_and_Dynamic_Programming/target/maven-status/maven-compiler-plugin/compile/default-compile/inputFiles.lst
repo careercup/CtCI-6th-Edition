@@ -1,44 +1,44 @@
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_06_Towers_of_Hanoi/Tower.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_05_Recursive_Multiply/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_04_Power_Set/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_07_Permutations_Without_Dups/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_13_Stack_of_Boxes/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_01_Triple_Step/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_02_Robot_in_a_Grid/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_11_Coins/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_13_Stack_of_Boxes/BoxComparator.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_12_Eight_Queens/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_14_Boolean_Evaluation/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_14_Boolean_Evaluation/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_05_Recursive_Multiply/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_11_Coins/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_05_Recursive_Multiply/QuestionD.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_13_Stack_of_Boxes/QuestionC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_13_Stack_of_Boxes/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_07_Permutations_Without_Dups/QuestionC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_11_Coins/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Introduction/FibonacciB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_14_Boolean_Evaluation/Others.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_04_Power_Set/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_14_Boolean_Evaluation/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_01_Triple_Step/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_02_Robot_in_a_Grid/Point.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_05_Recursive_Multiply/QuestionC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_09_Parens/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_02_Robot_in_a_Grid/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_05_Recursive_Multiply/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_08_Permutations_With_Dups/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_14_Boolean_Evaluation/QuestionC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_13_Stack_of_Boxes/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_10_Paint_Fill/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_07_Permutations_Without_Dups/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Introduction/FibonacciD.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Introduction/FibonacciA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_06_Towers_of_Hanoi/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_09_Parens/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_13_Stack_of_Boxes/Box.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_03_Magic_Index/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_03_Magic_Index/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_02_Robot_in_a_Grid/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Introduction/FibonacciC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 08. Recursion and Dynamic Programming/src/main/java/Q8_01_Triple_Step/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_14_Boolean_Evaluation/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Introduction/FibonacciB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_10_Paint_Fill/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_13_Stack_of_Boxes/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_13_Stack_of_Boxes/Box.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_14_Boolean_Evaluation/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_06_Towers_of_Hanoi/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_11_Coins/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_08_Permutations_With_Dups/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_01_Triple_Step/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_05_Recursive_Multiply/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_12_Eight_Queens/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_13_Stack_of_Boxes/BoxComparator.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_02_Robot_in_a_Grid/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_13_Stack_of_Boxes/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_03_Magic_Index/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_14_Boolean_Evaluation/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_04_Power_Set/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_07_Permutations_Without_Dups/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_01_Triple_Step/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_02_Robot_in_a_Grid/Point.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_07_Permutations_Without_Dups/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Introduction/FibonacciA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_13_Stack_of_Boxes/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_05_Recursive_Multiply/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_05_Recursive_Multiply/QuestionD.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_06_Towers_of_Hanoi/Tower.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_04_Power_Set/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_09_Parens/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Introduction/FibonacciC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_01_Triple_Step/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_14_Boolean_Evaluation/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_02_Robot_in_a_Grid/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_03_Magic_Index/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_02_Robot_in_a_Grid/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_07_Permutations_Without_Dups/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_09_Parens/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_11_Coins/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_05_Recursive_Multiply/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Introduction/FibonacciD.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_05_Recursive_Multiply/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_11_Coins/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_13_Stack_of_Boxes/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_08_Recursion_and_Dynamic_Programming/src/main/java/Q8_14_Boolean_Evaluation/Others.java

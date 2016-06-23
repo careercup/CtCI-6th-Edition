@@ -1,6 +1,9 @@
 package Q17_04_Missing_Number;
 
-public class BitInteger {
+/**
+ * @see Q17_19_Missing_Two
+ */
+public class 	BitInteger {
 	public static int INTEGER_SIZE;
 	private boolean[] bits;
 	public BitInteger() {

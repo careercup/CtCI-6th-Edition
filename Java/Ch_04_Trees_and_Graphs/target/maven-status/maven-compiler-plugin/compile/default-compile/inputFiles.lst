@@ -1,37 +1,37 @@
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_07_Build_Order/EdgeRemoval/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionC.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_07_Build_Order/DFS/Graph.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_07_Build_Order/DFS/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_03_List_of_Depths/QuestionBFS.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_10_Check_Subtree/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionEBad.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Introduction/Traversals.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_03_List_of_Depths/QuestionDFS.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_11_Random_Node/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_06_Successor/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_12_Paths_with_Sum/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_11_Random_Node/Tree.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_05_Validate_BST/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionD.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_09_BST_Sequences/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_10_Check_Subtree/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_01_Route_Between_Nodes/Graph.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionA.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_11_Random_Node/TreeNode.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_07_Build_Order/EdgeRemoval/Graph.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_08_First_Common_Ancestor/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_07_Build_Order/DFS/Project.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_01_Route_Between_Nodes/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_05_Validate_BST/IntWrapper.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_04_Check_Balanced/QuestionImproved.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_04_Check_Balanced/QuestionBrute.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_08_First_Common_Ancestor/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionB.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionE.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_02_Minimal_Tree/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_05_Validate_BST/Question.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_12_Paths_with_Sum/Tester.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_07_Build_Order/EdgeRemoval/Project.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_01_Route_Between_Nodes/Node.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionF.java
-/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch 04. Trees and Graphs/src/main/java/Q4_12_Paths_with_Sum/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_03_List_of_Depths/QuestionBFS.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_07_Build_Order/DFS/Graph.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_01_Route_Between_Nodes/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_07_Build_Order/EdgeRemoval/Project.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_10_Check_Subtree/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_07_Build_Order/DFS/Project.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionE.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_08_First_Common_Ancestor/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_11_Random_Node/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_06_Successor/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_05_Validate_BST/IntWrapper.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_07_Build_Order/EdgeRemoval/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionF.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_05_Validate_BST/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionC.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_09_BST_Sequences/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_04_Check_Balanced/QuestionImproved.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_10_Check_Subtree/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_04_Check_Balanced/QuestionBrute.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_07_Build_Order/EdgeRemoval/Graph.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_11_Random_Node/TreeNode.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Introduction/Traversals.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_12_Paths_with_Sum/QuestionB.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_08_First_Common_Ancestor/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionD.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_01_Route_Between_Nodes/Graph.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_07_Build_Order/DFS/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_11_Random_Node/Tree.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_08_First_Common_Ancestor/QuestionEBad.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_12_Paths_with_Sum/QuestionA.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_03_List_of_Depths/QuestionDFS.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_01_Route_Between_Nodes/Node.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_05_Validate_BST/Question.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_12_Paths_with_Sum/Tester.java
+/Users/mgobaco/Documents/git/github/CtCI-6th-Edition/Java/Ch_04_Trees_and_Graphs/src/main/java/Q4_02_Minimal_Tree/Question.java
