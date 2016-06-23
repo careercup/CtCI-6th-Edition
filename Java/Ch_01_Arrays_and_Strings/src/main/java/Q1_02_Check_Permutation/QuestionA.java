@@ -8,6 +8,7 @@ public class QuestionA {
 	}
 	
 	public static boolean permutation(String s, String t) {
+
 		return sort(s).equals(sort(t));
 	}	
 	
