@@ -14,7 +14,7 @@ public class QuestionB {
 				countConsecutive = 0;
 			}
 		}
-		return compressed.length() < str.length() ? compressed.toString() : str;
+		return compressed.length() <= str.length() ? compressed.toString() : str;
 	}
 	
 	public static void main(String[] args) {
