@@ -34,3 +34,6 @@
 [submodule "c"]
 	path = c
 	url = https://github.com/careercup/CtCI-6th-Edition-C.git
+[submodule "Objective-C"]
+	path = Objective-C
+	url = https://github.com/careercup/CtCI-6th-Edition-Objective-C.git
