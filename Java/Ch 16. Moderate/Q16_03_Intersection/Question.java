@@ -32,10 +32,8 @@ public class Question {
 		if (start1.x > end1.x) swap(start1, end1);
 		/* Need to check this so that vertical lines don't have negative Infinity slope */
 		else if (start1.x == end1.x && end1.y < start1.y) swap(start1, end1);
-		
 		if (start2.x > end2.x) swap(start2, end2);
 		else if (start2.x == end2.x && end2.y < start2.y) swap(start2, end2);
-		
 		if (start1.x > start2.x) {
 			swap(start1, start2);
 			swap(end1, end2);
@@ -47,12 +45,9 @@ public class Question {
 		
 		/* If the lines are parallel, they intercept only if they have the same y intercept and start 2 is on line 1. */
 		if (line1.slope == line2.slope) {
-			
-			/* If both lines are vertical, we cannot use slope or intercept info. */
-			if (start1.x == end1.x && start2.x == end2.x) {
 
-				if (end1.y < start1.y) swap(start1, end1);
-				if (end2.y < start2.y) swap(start2, end2);
+			/* If both lines are vertical, we cannot use intercept info. */
+			if (line1.slope == Double.POSITIVE_INFINITY) {
 
 				if (isBetween(start1.y, start2.y, end1.y))
 					return new Point(start2.x, start2.y);
@@ -67,39 +62,18 @@ public class Question {
 		}
 		/* Else if one of the lines is vertical and the other is not */
 		else if (line1.slope == Double.POSITIVE_INFINITY || line2.slope == Double.POSITIVE_INFINITY) {
-			Line nonvertical;
-			
-			Point startvert, endvert, startother, endother;
+			/* If the vertical line has x-coordinate less than the other line there can be no intersect 
+			 * unless the other line starts on the vertical line*/
 			if (line1.slope == Double.POSITIVE_INFINITY) {
-				startvert = start1;
-				endvert = end1;
-				startother = start2;
-				endother = end2;
-				nonvertical = line2;
-			} else {
-				startvert = start2;
-				endvert = end2;
-				startother = start1;
-				endother = end1;
-				nonvertical = line1;
+				return (isBetween(start1.y, start2.y, end2.y)) ? new Point(start2.x, start2.y): null;
 			}
-			if (endvert.y < startvert.y) {
-				swap(startvert, endvert);
-			}
-
-			if (isBetween(startother.x, startvert.x, endother.x)) {
-				double y =  nonvertical.slope * (startvert.x - startother.x) + startother.y;
-				if (isBetween(startvert.y, y, endvert.y)) {
-					return new Point(startvert.x, y);
-				} else {
-					return null;
-				}
+			if (isBetween(start1.x, start2.x, end1.x)) {
+				double y =  line1.slope * (start2.x - start1.x) + start1.y;
+				return (isBetween(start1.y, y, end2.y)) ? new Point(start2.x, y) : null;
 			} else {
 				return null;
 			}
-
 		}
-		
 		
 		/* Get intersection coordinate. */
 		double x =  (line2.yintercept - line1.yintercept) / (line1.slope - line2.slope);
@@ -116,7 +90,7 @@ public class Question {
 	public static void main(String[] args) {
 		int[][] coordinates = {
                 {1, 0}, {1, 2},
-                {0, 1}, {2, 1}};
+                {1, 1}, {2, 1}};
 		Point[] points = {createPoint(coordinates[0]), createPoint(coordinates[1]), createPoint(coordinates[2]), createPoint(coordinates[3])};
 		Point intersection = intersection(points[0], points[1], points[2], points[3]);
 		if (intersection == null) {
