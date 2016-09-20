@@ -12,16 +12,13 @@ public class Question {
 			}
 		}
 		index = trueLength + spaceCount * 2;
-		if (trueLength < str.length) str[trueLength] = '\0';
 		for (i = trueLength - 1; i >= 0; i--) {
 			if (str[i] == ' ') {
-				str[index - 1] = '0';
-				str[index - 2] = '2';
-				str[index - 3] = '%';
-				index = index - 3;
+				str[--index] = '0';
+				str[--index] = '2';
+				str[--index] = '%';
 			} else {
-				str[index - 1] = str[i];
-				index--;
+				str[--index] = str[i];
 			}
 		}
 	}
