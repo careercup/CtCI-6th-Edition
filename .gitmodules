@@ -40,3 +40,6 @@
 [submodule "Julia"]
 	path = Julia
 	url = https://github.com/careercup/CtCI-6th-Edition-Julia.git
+[submodule "Ruby"]
+	path = Ruby
+	url = https://github.com/careercup/CtCI-6th-Edition-Ruby.git

@@ -47,6 +47,7 @@ Pull requests pertaining to Java solutions should be submitted to the main [CtCI
 - [CtCI-6th-Edition-Objective-C](https://github.com/careercup/CtCI-6th-Edition-Objective-C)
 - [CtCI-6th-Edition-php](https://github.com/careercup/CtCI-6th-Edition-php)
 - [CtCI-6th-Edition-Python](https://github.com/careercup/CtCI-6th-Edition-Python)
+- [CtCI-6th-Edition-Ruby](https://github.com/careercup/CtCI-6th-Edition-Ruby)
 - [CtCI-6th-Edition-Swift](https://github.com/careercup/CtCI-6th-Edition-Swift)
 
 ###Adding a new Language
