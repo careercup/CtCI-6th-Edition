@@ -1,4 +1,4 @@
-package Q1_01_Is_Unique;
+// package Q1_01_Is_Unique;
 
 public class QuestionA {
 	public static boolean isUniqueChars(String str) {
