@@ -14,7 +14,7 @@ public class Range {
 	
 	public boolean shorterThan(Range other) {
 		if(other == null)
-			return -1;
+			return true;
 		return length() < other.length();
 	}
 	
