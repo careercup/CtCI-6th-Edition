@@ -13,6 +13,8 @@ public class Range {
 	}
 	
 	public boolean shorterThan(Range other) {
+		if(other == null)
+			return -1;
 		return length() < other.length();
 	}
 	
@@ -22,5 +24,18 @@ public class Range {
 	
 	public int getEnd() {
 		return end;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("[%d, %d]", start, end);
+	}
+	
+	@Override
+	protected IndicesPair clone() {
+		IndicesPair cloned = new IndicesPair();
+		cloned.index1 = index1;
+		cloned.index2 = index2;
+		return cloned;
 	}
 }
