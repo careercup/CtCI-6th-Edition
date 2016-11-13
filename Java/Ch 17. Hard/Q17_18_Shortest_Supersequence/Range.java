@@ -32,10 +32,8 @@ public class Range {
 	}
 	
 	@Override
-	protected IndicesPair clone() {
-		IndicesPair cloned = new IndicesPair();
-		cloned.index1 = index1;
-		cloned.index2 = index2;
+	protected Range clone() {
+		Range cloned = new Range(start, end);
 		return cloned;
 	}
 }
