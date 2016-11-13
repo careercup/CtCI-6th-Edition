@@ -30,10 +30,4 @@ public class Range {
 	public String toString() {
 		return String.format("[%d, %d]", start, end);
 	}
-	
-	@Override
-	protected Range clone() {
-		Range cloned = new Range(start, end);
-		return cloned;
-	}
 }
