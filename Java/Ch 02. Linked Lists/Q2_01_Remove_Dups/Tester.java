@@ -20,8 +20,8 @@ public class Tester {
 		LinkedListNode cloneB = head.clone();
 		LinkedListNode cloneC = head.clone();
 		QuestionA.deleteDups(cloneA);
-		QuestionA.deleteDups(cloneB);
-		QuestionA.deleteDups(cloneC);
+		QuestionB.deleteDups(cloneB);
+		QuestionC.deleteDups(cloneC);
 		
 		System.out.println(cloneA.printForward());
 		System.out.println(cloneB.printForward());
