@@ -2,6 +2,9 @@ package Q16_25_LRU_Cache;
 
 import java.util.HashMap;
 
+/**
+ *
+ */
 public class Cache {			
 	private int maxCacheSize;
 	private HashMap<Integer, LinkedListNode> map = new HashMap<Integer, LinkedListNode>();
