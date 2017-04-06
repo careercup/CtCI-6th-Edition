@@ -1,17 +1,13 @@
 package Q1_01_Is_Unique;
 
-public class QuestionB {
+import java.util.BitSet;
 
-	/* Assumes only letters a through z. */
+public class QuestionB {
 	public static boolean isUniqueChars(String str) {
-		if (str.length() > 26) { // Only 26 characters
-			return false;
-		}
-		int checker = 0;
-		for (int i = 0; i < str.length(); i++) {
-			int val = str.charAt(i) - 'a';
-			if ((checker & (1 << val)) > 0) return false;
-			checker |= (1 << val);
+		BitSet checker = new BitSet();
+		for (int c : str.toCharArray()) {
+			if (checker.get(c)) return false;
+			else checker.set(c);
 		}
 		return true;
 	}
