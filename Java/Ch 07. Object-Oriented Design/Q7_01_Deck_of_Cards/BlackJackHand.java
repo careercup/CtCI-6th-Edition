@@ -60,6 +60,6 @@ public class BlackJackHand extends Hand<BlackJackCard> {
 		}
 		BlackJackCard first = cards.get(0);
 		BlackJackCard second = cards.get(1);
-		return (first.isAce() && second.isFaceCard()) || (second.isAce() && first.isFaceCard());
+		return (first.isAce() && (second.value()==10)) || (second.isAce() && (first.value()==10));
 	}
 }
