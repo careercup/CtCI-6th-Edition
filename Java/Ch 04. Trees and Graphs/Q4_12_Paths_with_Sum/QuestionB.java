@@ -6,7 +6,9 @@ import CtCILibrary.TreeNode;
 public class QuestionB {
 	
 	public static int countPathsWithSum(TreeNode root, int targetSum) {
-		return countPathsWithSum(root, targetSum, 0, new HashMap<Integer, Integer>());
+		HashMap<Integer, Integer> initialPaths = new HashMap<Integer, Integer>();
+		initialPaths.put(0, 1);
+		return countPathsWithSum(root, targetSum, 0, initialPaths);
 	}
 	
 	public static int countPathsWithSum(TreeNode node, int targetSum, int runningSum, HashMap<Integer, Integer> pathCount) {
@@ -18,11 +20,6 @@ public class QuestionB {
 		int sum = runningSum - targetSum;
 		int totalPaths = pathCount.getOrDefault(sum, 0);
 		
-		/* If runningSum equals targetSum, then one additional path starts at root. Add in this path.*/
-		if (runningSum == targetSum) {
-			totalPaths++;
-		}
-
 		/* Add runningSum to pathCounts. */
 		incrementHashTable(pathCount, runningSum, 1);
 		
