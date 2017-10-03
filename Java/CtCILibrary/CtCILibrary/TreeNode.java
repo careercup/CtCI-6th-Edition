@@ -49,21 +49,15 @@ public class TreeNode {
 	public int size() {
 		return size;
 	}
-	
+
 	public boolean isBST() {
-		if (left != null) {
-			if (data < left.data || !left.isBST()) {
-				return false;
-			}
-		}
-		
-		if (right != null) {
-			if (data >= right.data || !right.isBST()) {
-				return false;
-			}
-		}		
-		
-		return true;
+		return isValidBST(this, Long.MIN_VALUE, Long.MAX_VALUE);
+	}
+
+	private boolean isValidBST(TreeNode root, long min, long max) {
+		if (root == null) return true;
+		if (root.data > max || root.data < min) return false;
+		return isValidBST(root.left, min, root.data) && isValidBST(root.right, root.data, max);
 	}
 	
 	public int height() {
