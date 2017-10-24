@@ -29,4 +29,14 @@ public enum Suit {
 				return null;
 		}
 	}
+
+	public String getSuitLetter(){
+		switch (value) {
+			case 0: return "c";
+			case 1: return "h";
+			case 2: return "d";
+			case 3: return "s";
+			default: return null;
+		}
+	}
 }

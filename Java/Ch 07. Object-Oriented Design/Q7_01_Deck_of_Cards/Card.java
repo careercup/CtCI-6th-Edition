@@ -35,21 +35,6 @@ public abstract class Card {
 	
 	public void print() {
 		String[] faceValues = {"A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"};
-		System.out.print(faceValues[faceValue - 1]);
-		switch (suit) {
-		case Club:
-			System.out.print("c");
-			break;
-		case Heart:
-			System.out.print("h");
-			break;
-		case Diamond:
-			System.out.print("d");
-			break;
-		case Spade:
-			System.out.print("s");
-			break;			
-		}
-		System.out.print(" ");
+		System.out.print(String.format("%s%s ", faceValues[faceValue - 1], suit.getSuitLetter()));
 	}
 }
