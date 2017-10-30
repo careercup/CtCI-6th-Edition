@@ -43,3 +43,6 @@
 [submodule "Ruby"]
 	path = Ruby
 	url = https://github.com/careercup/CtCI-6th-Edition-Ruby.git
+[submodule "Kotlin"]
+	path = Kotlin
+	url = https://github.com/careercup/CtCI-6th-Edition-Kotlin.git

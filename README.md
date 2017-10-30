@@ -43,6 +43,7 @@ Pull requests pertaining to Java solutions should be submitted to the main [CtCI
 - [CtCI-6th-Edition-JavaScript](https://github.com/careercup/CtCI-6th-Edition-JavaScript)
 - [CtCI-6th-Edition-JavaScript-ES2015](https://github.com/careercup/CtCI-6th-Edition-JavaScript-ES2015)
 - [CtCI-6th-Edition-Julia](https://github.com/careercup/CtCI-6th-Edition-Julia)
+- [CtCI-6th-Edition-Kotlin](https://github.com/careercup/CtCI-6th-Edition-Kotlin)
 - [CtCI-6th-Edition-Objective-C](https://github.com/careercup/CtCI-6th-Edition-Objective-C)
 - [CtCI-6th-Edition-php](https://github.com/careercup/CtCI-6th-Edition-php)
 - [CtCI-6th-Edition-Python](https://github.com/careercup/CtCI-6th-Edition-Python)
