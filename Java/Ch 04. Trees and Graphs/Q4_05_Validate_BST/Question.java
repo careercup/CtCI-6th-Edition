@@ -3,91 +3,67 @@ package Q4_05_Validate_BST;
 import CtCILibrary.TreeNode;
 
 public class Question {
-	public static Integer last_printed = null;
+    private static int prevNodeValue = 0;
+    private static int closestRightParent = 0;
 
-	public static boolean checkBST(TreeNode node) {
-		return checkBST(node, true);
-	}
+    public static boolean CompareCurrToPrev(int currVal)
+    {
+        if (currVal >= prevNodeValue && currVal > closestRightParent)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
-	// Allow "equal" value only for left child. This validates the BST property.
-	public static boolean checkBST(TreeNode n, boolean isLeft) {
-		if (n == null) {
-			return true;
-		}
-		
-		// Check / recurse left
-		if (!checkBST(n.left, true)) {
-			return false;
-		}
-		
-		// Check current
-		if (last_printed != null) {
-			if (isLeft) {
-				// left child "is allowed" be equal to parent.
-				if (n.data < last_printed) {
-					return false;
-				}
-			} else {
-				// Right child "is not allowed" be equal to parent.
-				if (n.data <= last_printed) {
-					return false;
-				}
-			}
-		}
-		last_printed = n.data;
-		
-		// Check / recurse right
-		if (!checkBST(n.right, false)) {
-			return false;
-		}
-		return true;
-	}
+    public static boolean isBST(TreeNode node)
+    {
+        if (node != null)
+        {
+            // Recurse Left
+            boolean leftBST = isBST(node.left);
+            if (!leftBST)
+            {
+                return false;
+            }
 
-	public static void main(String[] args) {
-		int[] array = {Integer.MIN_VALUE, Integer.MAX_VALUE - 2, Integer.MAX_VALUE - 1, Integer.MAX_VALUE};
-		TreeNode node = TreeNode.createMinimalBST(array);
-		//node.left.data = 5;
-		//node.left.right.data = 3;
-		System.out.println(checkBST(node));
+            // Visit node
+            boolean doBST = CompareCurrToPrev(node.data);
+            if (!doBST)
+            {
+                return false;
+            }
+            prevNodeValue = node.data;
 
-		test();
-	}
+            // Recurse right
+            closestRightParent = node.data;
+            boolean rightBST = isBST(node.right);
+            if (!rightBST)
+            {
+                return false;
+            }
+            closestRightParent = 0;
+        }
 
-	public static void test() {
-		TreeNode node;
-		boolean condition;
-		System.out.println("test cases for equals condition.");
+        return true;
+    }
 
-		/* Expect true: for left child: node.data <= last_printed.
-   2
-  / \
- /   \
- 2   3
-      \
-      4
-		*/
-		int[] array2 = {1, 2, 3, 4};
-		node = TreeNode.createMinimalBST(array2);
-		node.left.data = 2;
-		node.print();
-		last_printed = null;
-		condition = checkBST(node);
-		System.out.println("should be true: " + condition);
+    public static void main(String[] args)
+    {
+        TreeNode root = new TreeNode(8);
+        root.left = new TreeNode(4);
+        root.left.left = new TreeNode(2);
+        root.left.right = new TreeNode(6);
+        root.left.right.left = new TreeNode(5);
+        root.left.right.right = new TreeNode(7);
+        root.right = new TreeNode(10);
+        root.right.left = new TreeNode(9);
+        root.right.right = new TreeNode(14);
+        root.right.right.left = new TreeNode(11);
+        root.right.right.right = new TreeNode(16);
 
-		/* Expect false: for right child: node.data <= last_printed.
-   2
-  / \
- /   \
- 1   2
-      \
-      4
-		 */
-		int[] array3 = {1, 2, 3, 4};
-		node = TreeNode.createMinimalBST(array3);
-		node.right.data = 2;
-		node.print();
-		last_printed = null;
-		condition = checkBST(node);
-		System.out.println("should be false: " + condition);
-	}
+        System.out.println(isBST(root));
+    }
 }
