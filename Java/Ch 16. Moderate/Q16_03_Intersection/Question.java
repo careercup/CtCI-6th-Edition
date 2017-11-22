@@ -30,7 +30,10 @@ public class Question {
 		/* Rearranging these so that, in order of x values: start is before end and point 1 is before point 2. 
 		 * This will make some of the later logic simpler. */
 		if (start1.x > end1.x) swap(start1, end1);
+		/* Need to check this so that vertical lines don't have negative Infinity slope */
+		else if (start1.x == end1.x && end1.y < start1.y) swap(start1, end1);
 		if (start2.x > end2.x) swap(start2, end2);
+		else if (start2.x == end2.x && end2.y < start2.y) swap(start2, end2);
 		if (start1.x > start2.x) {
 			swap(start1, start2);
 			swap(end1, end2);
@@ -42,10 +45,34 @@ public class Question {
 		
 		/* If the lines are parallel, they intercept only if they have the same y intercept and start 2 is on line 1. */
 		if (line1.slope == line2.slope) {
-			if (line1.yintercept == line2.yintercept && isBetween(start1, start2, end1)) {
+
+			/* If both lines are vertical, we cannot use intercept info. */
+			if (line1.slope == Double.POSITIVE_INFINITY) {
+
+				if (isBetween(start1.y, start2.y, end1.y))
+					return new Point(start2.x, start2.y);
+				else if (isBetween(start2.y, start1.y, end2.y))
+					return new Point(start1.x, start1.y);
+				return null;
+			}
+			else if (line1.yintercept == line2.yintercept && isBetween(start1, start2, end1)) {
 				return start2;
 			}
 			return null;
+		}
+		/* Else if one of the lines is vertical and the other is not */
+		else if (line1.slope == Double.POSITIVE_INFINITY || line2.slope == Double.POSITIVE_INFINITY) {
+			/* If the vertical line has x-coordinate less than the other line there can be no intersect 
+			 * unless the other line starts on the vertical line*/
+			if (line1.slope == Double.POSITIVE_INFINITY) {
+				return (isBetween(start1.y, start2.y, end2.y)) ? new Point(start2.x, start2.y): null;
+			}
+			if (isBetween(start1.x, start2.x, end1.x)) {
+				double y =  line1.slope * (start2.x - start1.x) + start1.y;
+				return (isBetween(start1.y, y, end2.y)) ? new Point(start2.x, y) : null;
+			} else {
+				return null;
+			}
 		}
 		
 		/* Get intersection coordinate. */
@@ -62,8 +89,8 @@ public class Question {
 	
 	public static void main(String[] args) {
 		int[][] coordinates = {
-				{8, 8}, {8, 16},
-				{1, 1}, {1, 10}};
+                {1, 0}, {1, 2},
+                {1, 1}, {2, 1}};
 		Point[] points = {createPoint(coordinates[0]), createPoint(coordinates[1]), createPoint(coordinates[2]), createPoint(coordinates[3])};
 		Point intersection = intersection(points[0], points[1], points[2], points[3]);
 		if (intersection == null) {
