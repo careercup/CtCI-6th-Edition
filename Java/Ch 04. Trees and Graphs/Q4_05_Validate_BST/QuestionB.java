@@ -3,56 +3,55 @@ package Q4_05_Validate_BST;
 import CtCILibrary.AssortedMethods;
 import CtCILibrary.TreeNode;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 public class QuestionB {
-	public static boolean checkBST(TreeNode n, Integer min, Integer max) {
+	private static boolean checkBST(TreeNode n, Integer min, Integer max) {
 		if (n == null) {
 			return true;
-		}
-		if ((min != null && n.data <= min) || (max != null && n.data > max)) {
+		} else if ((min != null && n.data <= min) || (max != null && n.data > max)) {
 			return false;
+		} else {
+			return checkBST(n.left, min, n.data) &&
+				   checkBST(n.right, n.data, max);
 		}
-		if (!checkBST(n.left, min, n.data) ||
-			!checkBST(n.right, n.data, max)) {
-			return false;
-		}
-		return true;
 	}
-		
+
 	public static boolean checkBST(TreeNode n) {
 		return checkBST(n, null, null);
 	}
 	
 	public static boolean checkBSTAlternate(TreeNode n) {
-		return checkBSTAlternate(n, new IntWrapper(0), new IntWrapper(0));
-	}		
+		return checkBSTAlternate(n, new AtomicInteger(0), new AtomicInteger(0));
+	}
 
-	public static boolean checkBSTAlternate(TreeNode n, IntWrapper min, IntWrapper max) {
+	private static boolean checkBSTAlternate(TreeNode n, AtomicInteger min, AtomicInteger max) {
 		/* An alternate, less clean approach. This is not provided in the book, but is used to test the other method. */
 		if (n.left == null) {
-			min.data = n.data;
+			min.set(n.data);
 		} else {
-			IntWrapper leftMin = new IntWrapper(0);
-			IntWrapper leftMax = new IntWrapper(0);
+			AtomicInteger leftMin = new AtomicInteger(0);
+			AtomicInteger leftMax = new AtomicInteger(0);
 			if (!checkBSTAlternate(n.left, leftMin, leftMax)) {
 				return false;
 			}
-			if (leftMax.data > n.data) {
+			if (leftMax.get() > n.data) {
 				return false;
 			}
-			min.data = leftMin.data;
+			min.set(leftMin.get());
 		}
 		if (n.right == null) {
-			max.data = n.data;
+			max.set(n.data);
 		} else {
-			IntWrapper rightMin = new IntWrapper(0);
-			IntWrapper rightMax = new IntWrapper(0);
+			AtomicInteger rightMin = new AtomicInteger(0);
+			AtomicInteger rightMax = new AtomicInteger(0);
 			if (!checkBSTAlternate(n.right, rightMin, rightMax)) {
 				return false;
 			}
-			if (rightMin.data <= n.data) {
+			if (rightMin.get() <= n.data) {
 				return false;
 			}
-			max.data = rightMax.data;
+			max.set(rightMax.get());
 		}
 		return true;
 	}
