@@ -1,80 +1,49 @@
 package Q4_07_Build_Order.DFS;
 
-import java.util.ArrayList;
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.List;
+
+import static Q4_07_Build_Order.DFS.Project.State.*;
 
 public class Question {
-
-	/* Build the graph, adding the edge (a, b) if b is dependent on a. 
-	 * Assumes a pair is listed in “build order” (which is the reverse 
+	/* Build the graph, adding the edge (a, b) if b is dependent on a.
+	 * Assumes a pair is listed in “build order” (which is the reverse
 	 * of dependency order). The pair (a, b) in dependencies indicates
 	 * that b depends on a and a must be built before a. */
-	public static Graph buildGraph(String[] projects, String[][] dependencies) {
+	private static Graph buildGraph(String[] projects, String[][] dependencies) {
 		Graph graph = new Graph();
 		for (String project : projects) {
 			graph.getOrCreateNode(project);
 		}
-		
+
 		for (String[] dependency : dependencies) {
-			String first = dependency[0];
-			String second = dependency[1];
-			graph.addEdge(first, second);
+			graph.addEdge(dependency[0], dependency[1]);
 		}
-		
+
 		return graph;
 	}
-	
-	public static boolean doDFS(Project project, Stack<Project> stack) {
-		if (project.getState() == Project.State.PARTIAL) {
-			return false; // Cycle
-		}
-		
-		if (project.getState() == Project.State.BLANK) {
-			project.setState(Project.State.PARTIAL);
-			ArrayList<Project> children = project.getChildren();
-			for (Project child : children) {
-				if (!doDFS(child, stack)) {
-					return false;
-				}
+
+	private static void doDFS(Project project, LinkedList<Project> results) {
+		if (project.getState() == PARTIAL) {
+			throw new IllegalStateException("Circular Dependency.");
+		} else if (project.getState() == BLANK) {
+			project.setState(PARTIAL);
+			for (Project child : project.getChildren()) {
+				doDFS(child, results);
 			}
-			project.setState(Project.State.COMPLETE);
-			stack.push(project);
+			project.setState(COMPLETE);
+			results.addFirst(project);
 		}
-		return true;
 	}
-	
-	public static Stack<Project> orderProjects(ArrayList<Project> projects) {
-		Stack<Project> stack = new Stack<Project>();
+
+	private static Iterable<Project> orderProjects(List<Project> projects) {
+		LinkedList<Project> stack = new LinkedList<>();
 		for (Project project : projects) {
-			if (project.getState() == Project.State.BLANK) {
-				if (!doDFS(project, stack)) {
-					return null;
-				}
-			}
+			doDFS(project, stack);
 		}
 		return stack;
 	}
-	
-	public static String[] convertToStringList(Stack<Project> projects) {
-		String[] buildOrder = new String[projects.size()];
-		for (int i = 0; i < buildOrder.length; i++) {
-			buildOrder[i] = projects.pop().getName();
-		}
-		return buildOrder;
-	}
-	
-	public static Stack<Project> findBuildOrder(String[] projects, String[][] dependencies) {
-		Graph graph = buildGraph(projects, dependencies);
-		return orderProjects(graph.getNodes());
-	}
-	
-	public static String[] buildOrderWrapper(String[] projects, String[][] dependencies) {
-		Stack<Project> buildOrder = findBuildOrder(projects, dependencies);
-		if (buildOrder == null) return null;
-		String[] buildOrderString = convertToStringList(buildOrder);
-		return buildOrderString;
-	}
-	
+
 	public static void main(String[] args) {
 		String[] projects = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"};
 		String[][] dependencies = {
@@ -89,14 +58,14 @@ public class Question {
 				{"h", "j"},
 				{"i", "j"},
 				{"g", "j"}};
-		String[] buildOrder = buildOrderWrapper(projects, dependencies);
-		if (buildOrder == null) {
-			System.out.println("Circular Dependency.");
-		} else {
-			for (String s : buildOrder) {
-				System.out.println(s);
+		try {
+			Graph graph = buildGraph(projects, dependencies);
+			for (Project project : orderProjects(graph.getNodes())) {
+				System.out.println(project.getName());
 			}
 		}
+		catch (IllegalStateException e) {
+			System.out.println(e.getMessage());
+		}
 	}
-
 }
