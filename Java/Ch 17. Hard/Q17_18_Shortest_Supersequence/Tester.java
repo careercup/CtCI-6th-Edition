@@ -13,11 +13,13 @@ public class Tester {
 		Range shortestB = QuestionB.shortestSupersequence(array, set);
 		Range shortestC = QuestionC.shortestSupersequence(array, set);
 		Range shortestD = QuestionD.shortestSupersequence(array, set);
-		
+		Range shortestE = QuestionE.shortestSupersequence(array, set);
+
 		
 		if (shortestA.length() != shortestB.length() || 
 			shortestB.length() != shortestC.length() || 
-			shortestC.length() != shortestD.length()) {
+			shortestC.length() != shortestD.length() ||
+			shortestD.length() != shortestE.length()) {
 			System.out.println("Mismatching.");
 		} else {
 			System.out.println("Matching: " + shortestA.length());
