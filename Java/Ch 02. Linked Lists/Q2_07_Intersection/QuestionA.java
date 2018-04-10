@@ -8,7 +8,9 @@ import CtCILibrary.LinkedListNode;
 public class QuestionA {
 
   public static LinkedListNode findIntersection(LinkedListNode list1, LinkedListNode list2) {
-    if (list1 == null || list2 == null) return null;
+    if (list1 == null || list2 == null) {
+      return null;
+    }
 
     //let's join list1 tail to list2 head and see if there is circular ref
     //if there is then find node where the loop stats and
@@ -29,7 +31,7 @@ public class QuestionA {
   }
 
   public static void main(String[] args) {
-		/* Create linked list */
+        /* Create linked list */
     int[] vals = {-1, -2, 0, 1, 2, 3, 4, 5, 6, 7, 8};
     LinkedListNode list1 = AssortedMethods.createLinkedListFromArray(vals);
 
