@@ -13,7 +13,7 @@ public class QuestionA {
     }
 
     //let's join list1 tail to list2 head and see if there is circular ref
-    //if there is then find node where the loop stats and
+    //if there is then find node where the loop starts and
     // that's the intersection point
 
     //find list1 tail
