@@ -13,7 +13,7 @@ public class QuestionC {
 	}
 
 	public static Result isPalindromeRecurse(LinkedListNode slow, LinkedListNode fast) {
-		if (fast.next == null) { // Odd number of nodes: we are at the mid element
+		if (fast.next == null) { // Odd number of nodes: slow is at the mid element
 			return new Result(slow.next, true);
 		} else if (fast.next.next == null) { // Even number of nodes: the two mids need comparison
 			return new Result(slow.next.next, slow.data == slow.next.data);
