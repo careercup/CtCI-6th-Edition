@@ -12,15 +12,15 @@ public class QuestionC {
 		}
 	}
 
-	public static Result isPalindromeRecurse(LinkedListNode head, int length) {
-		if (head == null || length <= 0) { // Even number of nodes
-			return new Result(head, true);
-		} else if (length == 1) { // Odd number of nodes
-			return new Result(head.next, true);
+	public static Result isPalindromeRecurse(LinkedListNode slow, LinkedListNode fast) {
+		if (fast.next == null) { // Odd number of nodes: we are at the mid element
+			return new Result(slow.next, true);
+		} else if (fast.next.next == null) { // Even number of nodes: the two mids need comparison
+			return new Result(slow.next.next, slow.data == slow.next.data);
 		} 
 		
 		/* Recurse on sublist. */
-		Result res = isPalindromeRecurse(head.next, length - 2);
+		Result res = isPalindromeRecurse(slow.next, fast.next.next);
 		
 		/* If child calls are not a palindrome, pass back up 
 		 * a failure. */
@@ -29,7 +29,7 @@ public class QuestionC {
 		} 
 		
 		/* Check if matches corresponding node on other side. */
-		res.result = (head.data == res.node.data); 
+		res.result = (slow.data == res.node.data);
 		
 		/* Return corresponding node. */
 		res.node = res.node.next;
@@ -37,18 +37,11 @@ public class QuestionC {
 		return res;
 	}
 	
-	public static int lengthOfList(LinkedListNode n) {
-		int size = 0;
-		while (n != null) {
-			size++;
-			n = n.next;
-		}
-		return size;
-	}
-	
 	public static boolean isPalindrome(LinkedListNode head) {
-		int length = lengthOfList(head);
-		Result p = isPalindromeRecurse(head, length);
+		if (head == null) {
+			return true;
+		}
+		Result p = isPalindromeRecurse(head, head);
 		return p.result;
 	}
 	
