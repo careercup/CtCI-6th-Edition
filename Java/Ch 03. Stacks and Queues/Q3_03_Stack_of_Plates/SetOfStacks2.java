@@ -26,10 +26,12 @@ public class SetOfStacks2 {
 	}
 	
 	public void push(int data) {
+		//if list of stacks empty, Add stack
 		if(isEmpty()) {
 			stacks.add(new Stack<>());
 		}
 		Stack<Integer> current = stacks.get(stacks.size()-1);
+		//Check if stack is full per size constraint. Below line can be simplified to isFull method if required
 		if(!(current.size()<this.size)){
 			stacks.add(new Stack<>());
 			current = stacks.get(stacks.size()-1);
