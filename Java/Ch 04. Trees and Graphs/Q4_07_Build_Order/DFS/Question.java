@@ -8,7 +8,7 @@ public class Question {
 	/* Build the graph, adding the edge (a, b) if b is dependent on a. 
 	 * Assumes a pair is listed in “build order” (which is the reverse 
 	 * of dependency order). The pair (a, b) in dependencies indicates
-	 * that b depends on a and a must be built before a. */
+	 * that b depends on a and a must be built before b. */
 	public static Graph buildGraph(String[] projects, String[][] dependencies) {
 		Graph graph = new Graph();
 		for (String project : projects) {
