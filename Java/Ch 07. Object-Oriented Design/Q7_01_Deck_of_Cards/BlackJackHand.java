@@ -11,11 +11,11 @@ public class BlackJackHand extends Hand<BlackJackCard> {
 		ArrayList<Integer> scores = possibleScores();
 		int maxUnder = Integer.MIN_VALUE;
 		int minOver = Integer.MAX_VALUE;
-		for (int score : scores) {
-			if (score > 21 && score < minOver) {
-				minOver = score;
-			} else if (score <= 21 && score > maxUnder) {
-				maxUnder = score;
+		for (int value : scores) {
+			if (value > 21 && value < minOver) {
+				minOver = value;
+			} else if (value <= 21 && value > maxUnder) {
+				maxUnder = value;
 			}
 		}
 		return maxUnder == Integer.MIN_VALUE ? minOver : maxUnder;
