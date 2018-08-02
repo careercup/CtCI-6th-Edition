@@ -49,7 +49,7 @@ public class Question {
 	/* Multiply a by b by adding a to itself b times */
 	public static int multiply(int a, int b) {
 		if (a < b) {
-			return multiply(b, a); // algo is faster if b < a
+			return multiply(b, a); // algo is faster if b <= a
 		}
 		int sum = 0;
 		for (int i = abs(b); i > 0; i = minus(i, 1)) {
