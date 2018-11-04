@@ -13,7 +13,7 @@ public class Question {
 		} else { 
 			TreeNode q = n;
 			TreeNode x = q.parent;
-			// Go up until we�re on left instead of right
+			// Go up until we're on left instead of right
 			while (x != null && x.left != q) {
 				q = x;
 				x = x.parent;
