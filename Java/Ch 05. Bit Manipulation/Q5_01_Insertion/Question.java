@@ -16,7 +16,7 @@ public class Question {
 		 */
 		int allOnes = ~0; // allOnes = 11111111
 		
-		int left = j == 31 ? 0 : allOnes << (j + 1); // 1s until position j, then 0s. left = 11100000	
+		int left = j < 31 ? (allOnes << (j + 1)) : 0; // 1s until position j, then 0s. left = 11100000	
 	  	int right = ((1 << i) - 1); // 1s after position i.  right = 00000011
 		int mask = left | right; // All 1s, except for 0s between i and j. mask = 11100011
 
@@ -33,7 +33,7 @@ public class Question {
 		System.out.println(AssortedMethods.toFullBinaryString(a));
 		int b = 5;
 		System.out.println(AssortedMethods.toFullBinaryString(b));		
-		int c = updateBits(a, b, 29, 33);
+		int c = updateBits(a, b, 29, 31);
 		System.out.println(AssortedMethods.toFullBinaryString(c));
 	}
 }
