@@ -8,7 +8,7 @@ public class BlackJackCard extends Card {
 	public int value() {
 		if (isAce()) { // Ace
 			return 1; 
-		} else if (faceValue >= 11 && faceValue <= 13) { // Face card
+		} else if (isFaceCard()) { // Face card
 			return 10;
 		} else { // Number card
 			return faceValue;
