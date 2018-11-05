@@ -10,7 +10,7 @@ public class MergeSort {
 
 	public static void mergesort(int[] array, int[] helper, int low, int high) {
 		if (low < high) {
-			int middle = (low + high) / 2;
+			int middle = low + (high - low) / 2;
 			mergesort(array, helper, low, middle); // Sort left half
 			mergesort(array, helper, middle+1, high); // Sort right half
 			merge(array, helper, low, middle, high); // Merge them
