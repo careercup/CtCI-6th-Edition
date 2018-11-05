@@ -26,7 +26,7 @@ public class Question {
 			} else {
 				return search(a, mid + 1, right, x);
 			}
-		} else if (a[mid] < a[left]) { // Right is normally ordered.
+		} else if (a[mid] < a[right]) { // Right is normally ordered.
 			if (x > a[mid] && x <= a[right]) {
 				return search(a, mid + 1, right, x);
 			} else {
