@@ -3,7 +3,7 @@ package Q4_05_Validate_BST;
 import CtCILibrary.TreeNode;
 
 public class Question {
-	public static Integer last_printed = null;
+	public static Integer lastPrinted = null;
 
 	public static boolean checkBST(TreeNode node) {
 		return checkBST(node, true);
@@ -21,20 +21,20 @@ public class Question {
 		}
 		
 		// Check current
-		if (last_printed != null) {
+		if (lastPrinted != null) {
 			if (isLeft) {
 				// left child "is allowed" be equal to parent.
-				if (n.data < last_printed) {
+				if (n.data < lastPrinted) {
 					return false;
 				}
 			} else {
 				// Right child "is not allowed" be equal to parent.
-				if (n.data <= last_printed) {
+				if (n.data <= lastPrinted) {
 					return false;
 				}
 			}
 		}
-		last_printed = n.data;
+		lastPrinted = n.data;
 		
 		// Check / recurse right
 		if (!checkBST(n.right, false)) {
@@ -70,7 +70,7 @@ public class Question {
 		node = TreeNode.createMinimalBST(array2);
 		node.left.data = 2;
 		node.print();
-		last_printed = null;
+		lastPrinted = null;
 		condition = checkBST(node);
 		System.out.println("should be true: " + condition);
 
@@ -86,7 +86,7 @@ public class Question {
 		node = TreeNode.createMinimalBST(array3);
 		node.right.data = 2;
 		node.print();
-		last_printed = null;
+		lastPrinted = null;
 		condition = checkBST(node);
 		System.out.println("should be false: " + condition);
 	}
