@@ -1,7 +1,7 @@
 package Q16_22_Langtons_Ant;
 
 public class Grid {	
-	private boolean[][] grid;
+	private boolean[][] grid; // false is white, true is black
 	private Ant ant = new Ant();
 	
 	public Grid() {
@@ -62,17 +62,41 @@ public class Grid {
 	
 	/* Move ant. */
 	public void move() {
-		ant.turn(grid[ant.position.row][ant.position.column]); // Turn
+		ant.turn(!grid[ant.position.row][ant.position.column]); // Turn clockwise on white, counterclockwise on black
 		flip(ant.position); // flip
 		ant.move(); // move
 		ensureFit(ant.position); // grow
 	}
 	
-	/* Print board. */
+	/* Print board. The first loop of this is a "compression" which only prints the active parts of the board. The active
+	 * board is the smallest rectangle that contains all the black cells and the ant. This is fairly optional. Nice to do
+	 * but also not essential. 
+	 * FULL BOARD:    ACTIVE BOARD:
+	 *  _____          _X
+	 *  ___X_          XX
+	 *  __XX_           X
+	 *  ___X_
+	 *  _____
+	 *  _____*/
 	public String toString() {
-		StringBuilder sb = new StringBuilder();
+		int firstActiveRow = grid.length;
+		int firstActiveColumn = grid[0].length;
+		int lastActiveRow = 0;
+		int lastActiveColumn = 0;		
 		for (int r = 0; r < grid.length; r++) {
-			for (int c = 0; c < grid[0].length; c++) {
+			for (int c = 0; c < grid[r].length; c++) {
+				if (grid[r][c] || (ant.position.row == r && ant.position.column == c)) { // If there's something there
+					firstActiveRow = Math.min(firstActiveRow, r);
+					firstActiveColumn = Math.min(firstActiveColumn, c);
+					lastActiveRow = Math.max(lastActiveRow, r);
+					lastActiveColumn = Math.max(lastActiveColumn, c);
+				}
+			}
+		}		
+		
+		StringBuilder sb = new StringBuilder();
+		for (int r = firstActiveRow; r <= lastActiveRow; r++) {
+			for (int c = firstActiveColumn; c <= lastActiveColumn; c++) {
 				if (r == ant.position.row && c == ant.position.column) {
 					sb.append(ant.orientation);
 				} else if (grid[r][c]) {
