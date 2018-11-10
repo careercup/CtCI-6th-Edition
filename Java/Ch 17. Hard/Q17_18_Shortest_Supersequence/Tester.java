@@ -1,26 +1,47 @@
 package Q17_18_Shortest_Supersequence;
 
-public class Tester {
+import CtCILibrary.AssortedMethods;
 
-	/**
-	 * @param args
-	 */
+public class Tester {
+	public static boolean equivalent(Range[] ranges) {
+		if (ranges[0] == null) {
+			for (Range r : ranges) {
+				if (r != null) return false;
+			}
+			return true;
+		}
+		
+		int targetLength = ranges[0].length();
+		for (Range r : ranges) {
+			int length = r == null ? 0 : r.length();
+			if (targetLength != length) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	
 	public static void main(String[] args) {
-		int[] array = {9, 5, 1, 0, 2, 1, 3, 5, 7, 9, 1, 1, 5, 8, 9, 7};
-		int[] set = {1, 5, 9};
-		
-		Range shortestA = QuestionA.shortestSupersequence(array, set);
-		Range shortestB = QuestionB.shortestSupersequence(array, set);
-		Range shortestC = QuestionC.shortestSupersequence(array, set);
-		Range shortestD = QuestionD.shortestSupersequence(array, set);
-		
-		
-		if (shortestA.length() != shortestB.length() || 
-			shortestB.length() != shortestC.length() || 
-			shortestC.length() != shortestD.length()) {
-			System.out.println("Mismatching.");
-		} else {
-			System.out.println("Matching: " + shortestA.length());
+		for (int i = 0; i < 100; i++) {
+			int[] array = AssortedMethods.randomArray(i,  0,  15);
+			int[] set = {0, 5, 8, 10};
+			
+			Range[] ranges = new Range[5];
+			
+			ranges[0] = QuestionA.shortestSupersequence(array, set);
+			ranges[1] = QuestionB.shortestSupersequence(array, set);
+			ranges[2] = QuestionC.shortestSupersequence(array, set);
+			ranges[3] = QuestionD.shortestSupersequence(array, set);
+			ranges[4] = QuestionE.shortestSupersequence(array, set);
+			
+			if (!equivalent(ranges)) {
+				System.out.println("Mismatching.");
+			} else {
+				int length = ranges[0] == null ? 0 : ranges[0].length();
+				System.out.println("Matching: " + length);
+			}
 		}
 	}
 

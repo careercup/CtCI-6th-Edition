@@ -17,7 +17,11 @@ public class QuestionD {
 		
 		/* Insert min element from each list. */ 
 		for (int i = 0; i < lists.size(); i++) {
-			int head = lists.get(i).remove();
+			Queue<Integer> list = lists.get(i);
+			if (list == null || list.size() == 0) {
+				return null;
+			}
+			int head = list.remove();
 			minHeap.add(new HeapNode(head, i));
 			max = Math.max(max, head);
 		}
