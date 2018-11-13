@@ -6,7 +6,7 @@ import CtCILibrary.AssortedMethods;
 
 public class Question {	
 	public static int[] shuffleArrayRecursively(int[] cards, int i) {
-		if (i == 0) {
+		if (i == 1) {
 			return;
 		}
 		
