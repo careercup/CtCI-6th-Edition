@@ -4,7 +4,10 @@ package Q2_05_Sum_Lists;
 import CtCILibrary.LinkedListNode;
 
 public class QuestionA {
-
+	private static LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2) {
+		return addLists(l1, l2, 0);
+	}
+	
 	private static LinkedListNode addLists(LinkedListNode l1, LinkedListNode l2, int carry) {
 		if (l1 == null && l2 == null && carry == 0) {
              return null;
@@ -45,7 +48,7 @@ public class QuestionA {
 		LinkedListNode lB2 = new LinkedListNode(0, null, lB1);
 		LinkedListNode lB3 = new LinkedListNode(0, null, lB2);	
 		
-		LinkedListNode list3 = addLists(lA1, lB1, 0);
+		LinkedListNode list3 = addLists(lA1, lB1);
 		
 		System.out.println("  " + lA1.printForward());		
 		System.out.println("+ " + lB1.printForward());			

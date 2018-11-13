@@ -1,33 +1,31 @@
 package Q17_02_Shuffle;
 
+import java.util.Random;
+
 import CtCILibrary.AssortedMethods;
 
-public class Question {
-
-	/* Random number between lower and higher, inclusive */
-	public static int rand(int lower, int higher) { 
-		return lower + (int)(Math.random() * (higher - lower + 1));
-	}	
-	
-	public static void shuffleArrayRecursively(int[] cards, int i) {
-		if (i == 1) {
+public class Question {	
+	public static int[] shuffleArrayRecursively(int[] cards, int i) {
+		if (i == 0) {
 			return;
 		}
 		
 		/* shuffle element at index (i - 1) with a random element 0 through i - 1 */
-		int k = rand(0, --i);		
+		Random rand = new Random();
+		int k = rand.nextInt(i); // Generate random between 0 and i - 1 (inclusive)		
 		
 		/* Swap element k and index */
 		int temp = cards[k];
 		cards[k] = cards[i];
 		cards[i] = temp;
 		
-		shuffleArrayRecursively(cards, i);
+		shuffleArrayRecursively(cards, --i);
 	}
 
 	public static void shuffleArrayIteratively(int[] cards) { 
-		for (int i = cards.length - 1 ; i > 0; i--) {
-			int k = rand(0, i);
+		Random rand = new Random();
+		for (int i = cards.length - 1 ; i > 0; i--) { 
+			int k = rand.nextInt(i + 1); // Generate random between 0 and i (inclusive)
 			int temp = cards[k];
 			cards[k] = cards[i];
 			cards[i] = temp;

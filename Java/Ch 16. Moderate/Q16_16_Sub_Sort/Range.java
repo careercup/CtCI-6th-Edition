@@ -1,17 +1,17 @@
-package Q17_18_Shortest_Supersequence;
+package Q16_16_Sub_Sort;
 
 public class Range {
-	private int start;
-	private int end;
-	public Range(int s, int e) {
-		start = s;
-		end = e;
+	public int start, end;
+	public Range(int start, int end) {
+		this.start = start;
+		this.end = end;
 	}
 	
-	public int length() {
-		return end - start + 1;
+	@Override
+	public String toString() {
+		return "Range [start=" + start + ", end=" + end + "]";
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -35,22 +35,5 @@ public class Range {
 		if (start != other.start)
 			return false;
 		return true;
-	}
-
-	@Override
-	public String toString() {
-		return "Range [start=" + start + ", end=" + end + "]";
-	}
-
-	public boolean shorterThan(Range other) {
-		return length() < other.length();
-	}
-	
-	public int getStart() {
-		return start;
-	}
-	
-	public int getEnd() {
-		return end;
 	}
 }

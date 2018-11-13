@@ -94,7 +94,7 @@ public class TreeNode {
 		return n;
 	}
 	
-	public static TreeNode createMinimalBST(int array[]) {
+	public static TreeNode createMinimalBST(int[] array) {
 		return createMinimalBST(array, 0, array.length - 1);
 	}
 	

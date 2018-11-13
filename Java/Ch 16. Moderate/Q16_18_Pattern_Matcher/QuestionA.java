@@ -7,7 +7,7 @@ public class QuestionA {
 		if (pattern.length() == 0) return value.length() == 0;
 		int size = value.length();
 		
-		for (int mainSize = 0; mainSize < size; mainSize++) {
+		for (int mainSize = 0; mainSize <= size; mainSize++) {
 			String main = value.substring(0, mainSize);
 			for (int altStart = mainSize; altStart <= size; altStart++) {
 				for (int altEnd = altStart; altEnd <= size; altEnd++) {

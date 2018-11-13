@@ -11,9 +11,6 @@ public class Question {
 	 * that b depends on a and a must be built before a. */
 	public static Graph buildGraph(String[] projects, String[][] dependencies) {
 		Graph graph = new Graph();
-		for (String project : projects) {
-			graph.getOrCreateNode(project);
-		}
 		
 		for (String[] dependency : dependencies) {
 			String first = dependency[0];

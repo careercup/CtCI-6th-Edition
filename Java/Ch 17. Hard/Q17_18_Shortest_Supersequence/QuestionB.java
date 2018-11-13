@@ -60,6 +60,9 @@ public class QuestionB {
 				bestEnd = closures[i];
 			}
 		}
+		if (bestStart < 0 || bestEnd < 0) {
+			return null;
+		}
 		return new Range(bestStart, bestEnd);
 	}
 	

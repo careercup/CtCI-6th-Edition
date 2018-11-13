@@ -38,16 +38,16 @@ public class QuestionB {
 		
 		for (int i = 0; i < seq.size(); i += 2) {
 			int zerosSeq = seq.get(i);
-			int onesSeqRight = i - 1 >= 0 ? seq.get(i - 1) : 0;
-			int onesSeqLeft = i + 1 < seq.size() ? seq.get(i + 1) : 0;
+			int onesSeqPrev = i - 1 >= 0 ? seq.get(i - 1) : 0;
+			int onesSeqNext = i + 1 < seq.size() ? seq.get(i + 1) : 0;
 			
 			int thisSeq = 0;
 			if (zerosSeq == 1) { // Can merge
-				thisSeq = onesSeqLeft + 1 + onesSeqRight; 
-			} if (zerosSeq > 1) { // Just add a zero to either side
-				thisSeq = 1 + Math.max(onesSeqRight, onesSeqLeft);
+				thisSeq = onesSeqNext + 1 + onesSeqPrev; 
+			} else if (zerosSeq > 1) { // Just add a one to either side
+				thisSeq = 1 + Math.max(onesSeqPrev, onesSeqNext);
 			} else if (zerosSeq == 0) { // No zero, but take either side
-				thisSeq = Math.max(onesSeqRight, onesSeqLeft);
+				thisSeq = Math.max(onesSeqPrev, onesSeqNext);
 			}
 			maxSeq = Math.max(thisSeq, maxSeq);
 		}
@@ -60,7 +60,7 @@ public class QuestionB {
 		int new_number = longestSequence(original_number);
 			
 		System.out.println(Integer.toBinaryString(original_number));
-		System.out.println(new_number);				
+		System.out.println(new_number);
 	}
 
 }

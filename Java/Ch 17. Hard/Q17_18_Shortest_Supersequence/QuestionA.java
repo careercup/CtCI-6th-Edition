@@ -37,6 +37,9 @@ public class QuestionA {
 				bestEnd = end;
 			}
 		}
+		if (bestStart < 0 || bestEnd < 0) {
+			return null;
+		}
 		return new Range(bestStart, bestEnd);
 	}
 	

@@ -5,8 +5,16 @@ import CtCILibrary.AssortedMethods;
 public class QuestionB {
 	public static int bitSwapRequired(int a, int b){
 		int count = 0;
-		for (int c = a ^ b; c != 0; c = c & (c-1)) {
+		int c = a ^ b;
+
+		System.out.println("****");
+		System.out.println(c + ": " + AssortedMethods.toFullBinaryString(c));
+		while (c != 0) {
+			System.out.println("c - 1: " + c + ": " + AssortedMethods.toFullBinaryString(c - 1));
+			c = c & (c-1);
+			System.out.println("c: " + c + ": " + AssortedMethods.toFullBinaryString(c));
 			count++;
+			System.out.println("****");
 		}
 		return count;
 	}

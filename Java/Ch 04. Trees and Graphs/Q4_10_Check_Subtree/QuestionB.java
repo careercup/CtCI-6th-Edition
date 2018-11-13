@@ -31,7 +31,7 @@ public class QuestionB {
 		if (r1 == null && r2 == null) {
 			return true; // nothing left in the subtree
 		} else if (r1 == null || r2 == null) { 
-			return false; // exactly tree is empty, therefore trees don't match
+			return false; // exactly one tree is empty, therefore trees don't match
 		} else if (r1.data != r2.data) {  
 			return false;  // data doesn't match
 		} else {
