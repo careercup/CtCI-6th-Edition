@@ -4,8 +4,6 @@ import java.util.ArrayList;
 
 public class Tester {
 
-
-
 	public static boolean equalish(double a, double b) {
 		return Math.abs(a - b) < .001;
 	}

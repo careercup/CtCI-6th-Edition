@@ -1,11 +1,6 @@
 package Q16_03_Intersection;
 
-import java.util.ArrayList;
-
 public class Question {
-	public static Point createPoint(int[] coordinates) {
-		return new Point(coordinates[0],  coordinates[1]);
-	}	
 
 	/* Checks if middle is between start and end. */
 	public static boolean isBetween(double start, double middle, double end) {
@@ -26,33 +21,26 @@ public class Question {
 		Line line1 = new Line(start1, end1);
 		Line line2 = new Line(start2, end2);
 
-		/* If the lines are parallel, then their extended lines must be both vertical OR have same y-intercept.
+		/* If the lines are parallel, then their extended lines must have same y-intercept.
 		 * If so, check that the start or end of one point is on the other line. */
 		if (line1.slope == line2.slope) {
-			/* Parallel lines can't intersect (unless they're the same line. */
-			if (line1.yintercept != line2.yintercept && !line1.isVertical()) {
+			if (line1.yintercept != line2.yintercept) {
 				return null;
 			}
 
-			/* These are the same line. Check if the start or end of one lines up in the other.*/
-			if (isBetween(start1, start2, end1)) {
-				return start2;
-			} else if (isBetween(start1, end2, end1)) {
-				return end2;
-			} else if (isBetween(start2, start1, end2)) {
-				return start1;
-			} else if (isBetween(start2, end1, end2)) {
-				return end1; 					
-			} else {
-				return null;
-			}			
+			/* Check if the start or end of one line is in the other. If so, return that point*/
+			if (isBetween(start1, start2, end1)) return start2;
+			else if (isBetween(start1, end2, end1)) return end2;
+			else if (isBetween(start2, start1, end2)) return start1;
+			else if (isBetween(start2, end1, end2)) return end1; 					
+			else return null;			
 		}
 
 		/* Compute the intersection of the infinite lines, and then check if this falls within the
 		 * boundary of the line segments. Note that at most one line is vertical. */
 
 		/* Get intersection's x coordinate. If one is vertical, always use its x coordinate. 
-		 * Otherwise, compute the x coordinate based on setting each line's y = mx + b equation
+		 * Otherwise, compute the intersection's x coordinate based on setting each line's y = mx + b equation
 		 * equal and solving for x. */
 		double x;
 		if (line1.isVertical() || line2.isVertical()) { /* If a line is vertical, use its x coordinate. */
@@ -61,12 +49,12 @@ public class Question {
 			x =  (line2.yintercept - line1.yintercept) / (line1.slope - line2.slope);
 		}
 
-		/* Get insection's y coordinate using the non-vertical line. Note that if line1 is vertical
-		 * then line 2 is not vertical. */
+		/* Get insection's y coordinate using a non-vertical line. Note that if line1 is vertical
+		 * then line 2 is not vertical (else it would have been caught earlier). */
 		double y = line1.isVertical() ? line2.getYFromX(x) : line1.getYFromX(x);
 
 		/* We now have the intersection of the infinite lines. Check if it's within the boundaries
-		 * of each line. */
+		 * of each line segment. */
 		Point intersection = new Point(x, y);
 		if (isBetween(start1, intersection, end1) && isBetween(start2, intersection, end2)) {
 			return intersection;
@@ -77,10 +65,10 @@ public class Question {
 
 	public static void main(String[] args) {
 
-		Point s1 = new Point(5, 3);
-		Point e1 = new Point(5, 5);
-		Point s2 = new Point(5, 0);
-		Point e2 = new Point(5, 4);
+		Point s1 = new Point(2147000000, 1);
+		Point e1 = new Point(-2147000000, -1);
+		Point s2 = new Point(-10, 0);
+		Point e2 = new Point(0, 0);
 		Point intersection = intersection(s1, e1, s2, e2);
 		System.out.println("Line Segment 1: " + s1 + " to " + e1);
 		System.out.println("Line Segment 2: " + s2 + " to " + e2);
