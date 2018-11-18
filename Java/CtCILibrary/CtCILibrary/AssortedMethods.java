@@ -9,7 +9,10 @@ public class AssortedMethods {
 	}
 
 	public static int randomIntInRange(int min, int max) {
-		return randomInt(max + 1 - min) + min;
+		int range = max + 1 - min;
+		if (!(range > 0))
+			throw new IllegalArgumentException("range must be > 0, it is " + range);
+		return randomInt(range) + min;
 	}
 
 	public static boolean randomBoolean() {

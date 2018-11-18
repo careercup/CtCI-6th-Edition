@@ -17,7 +17,7 @@ public class Deck <T extends Card> {
 	
 	public void shuffle() {
 		for (int i = 0; i < cards.size(); i++) {
-			int j = AssortedMethods.randomIntInRange(i, cards.size() - i - 1);
+			int j = AssortedMethods.randomIntInRange(i, cards.size() - 1);
 			T card1 = cards.get(i);
 			T card2 = cards.get(j);
 			cards.set(i, card2);
