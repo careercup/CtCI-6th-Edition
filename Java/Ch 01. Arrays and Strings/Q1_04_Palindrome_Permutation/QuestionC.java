@@ -1,26 +1,14 @@
 package Q1_04_Palindrome_Permutation;
 
 public class QuestionC {
-	/* Toggle the ith bit in the integer. */
-	public static int toggle(int bitVector, int index) {
-		if (index < 0) return bitVector;
-		
-		int mask = 1 << index;
-		if ((bitVector & mask) == 0) {
-			bitVector |= mask;
-		} else {
-			bitVector &= ~mask;
-		}
-		return bitVector;
-	}
-	
 	/* Create bit vector for string. For each letter with value i,
 	 * toggle the ith bit. */
 	public static int createBitVector(String phrase) {
 		int bitVector = 0;
+		int num = 0;
 		for (char c : phrase.toCharArray()) {
-			int x = Common.getCharNumber(c);
-			bitVector = toggle(bitVector, x);
+			num = Common.getCharNumber(c);
+			bitVector ^= num < 0 ? 0 : (1 << num);
 		}
 		return bitVector;
 	}
