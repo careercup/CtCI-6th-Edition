@@ -27,8 +27,12 @@ public class Tester {
 			int volumeA = QuestionA.computeHistogramVolume(histogram);
 			int volumeB = QuestionB.computeHistogramVolume(histogram);
 			int volumeC = QuestionC.computeHistogramVolume(histogram);
-			if (volumeA != targetVolume || volumeB != targetVolume || volumeC != targetVolume) {
-				System.out.println("FAILURE: " + input + " -> wanted " + output + " but got (" + volumeA + ", " + volumeB + ", " + volumeC + ")");
+			int volumeD = QuestionD.computeHistogramVolume(histogram);
+
+			if (volumeA != targetVolume || volumeB != targetVolume || volumeC != targetVolume
+					|| volumeD != targetVolume) {
+				System.out.println("FAILURE: " + input + " -> wanted " + output + " but got (" + volumeA + ", "
+						+ volumeB + ", " + volumeC + ", " + volumeD + ")");
 			} else {
 				System.out.println("SUCCESS: " + input + " -> " + targetVolume);
 			}		
