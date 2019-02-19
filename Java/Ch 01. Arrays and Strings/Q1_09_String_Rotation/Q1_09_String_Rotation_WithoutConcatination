@@ -1,0 +1,67 @@
+package com.practice.strings;
+
+import java.util.Scanner;
+
+/**
+ * 
+ * @author SANTOSH KAPARTHI
+ * 
+ * This program will check whether given strings are rotations of each other without using concatination
+ *
+ */
+
+public class StringRotation {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter String1 : ");
+		String s1 = in.nextLine();
+		System.out.println("Enter String2 : ");
+		String s2 = in.nextLine();
+		StringRotation obj = new StringRotation();
+		if(obj.checkForRotation(s1,s2)) {
+			System.out.println("String2 is a rotation of String1");
+		} else {
+			System.out.println("String2 is not a rotation of String1");
+		}
+		in.close();
+	}
+
+	private boolean checkForRotation(String s1, String s2) {
+		int length = s1.length();
+		if(s2.length() != length) {
+			//One string to be a rotation of other should have the same length.
+			return false;
+		}
+		int index2 = 0;
+		while(index2 < length) {
+			while(index2 < length) {
+				if(s1.charAt(0) == s2.charAt(index2)) {
+					int indexDiff = index2;
+					if(checkForNthRotation(s1,s2,indexDiff)) {
+						return true;
+					}else {
+						break;
+					}
+					
+				}
+				index2++;
+			}
+			index2++;
+		}
+		return false;
+	}
+
+	private boolean checkForNthRotation(String s1, String s2, int indexDiff) {
+		int length = s1.length();
+		int index = 0;
+		while(index < length) {
+			if(s1.charAt(index) != s2.charAt((index+indexDiff)%length)) {
+				return false;
+			}
+			index++;
+		}
+		return true;
+	}
+
+}
