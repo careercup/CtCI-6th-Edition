@@ -43,6 +43,8 @@ public class Range {
 	}
 
 	public boolean shorterThan(Range other) {
+		if(other == null)
+			return true;
 		return length() < other.length();
 	}
 	
@@ -52,5 +54,10 @@ public class Range {
 	
 	public int getEnd() {
 		return end;
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("[%d, %d]", start, end);
 	}
 }

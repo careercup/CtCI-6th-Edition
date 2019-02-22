@@ -1,0 +1,90 @@
+package Q17_18_Shortest_Supersequence;
+
+import java.util.*;
+
+// solution in O(size of arr)
+
+public class QuestionE {
+	public static void main(String args[]) {
+		Integer[] set = {1,5,9};
+		Integer[] arr = {7,5,9,0,2,1,3,5,7,9,1,1,5,8,8,9,7};
+        // shortestSubsequence finds the solution
+        Range rslt = shortestSubsequence(arr, set);
+        if(rslt != null)
+            System.out.println(rslt);
+        else
+            System.out.println("No such sequence.");
+	}
+	
+	public static <T> Range shortestSubsequence(T arr[], T set[]) {
+        // the hashmap for checking if an element is in the set
+		HashMap<T, Integer> map = new HashMap<T, Integer>();
+		
+		// suppose arr is bigger, if not return null
+		if(arr.length < set.length)
+			return null;
+		
+        // fill the hashmap, the value of any key is the index of that element in the set
+		for(int i = 0 ; i < set.length ; i++)
+			map.put(set[i], i);
+		
+        // set counter to the number of elements in the set
+		int counter = set.length;
+        
+        // mostRightIndex for any element in the set returns the most right one found so far in the array
+        // the default value is not important in the algorithm
+		int mostRightIndex[] = new int[set.length];
+		
+        // the queue giving the next index in the array such that the correspondant element is in the set
+		LinkedList<Integer> indexQ = new LinkedList<Integer>();
+		
+        // optimal solution so far is null
+		Range opt = null;
+        // the start index of the current sequence going to be found, -1 indicates it is unset
+		int start = -1;
+        // flags checking if the element found was found before in the current sequence
+		boolean flags[] = new boolean[set.length];
+		
+        // for any element in the array
+		for(int i = 0 ; i < arr.length ; i++) {
+            // if it is in the set too
+			if(map.containsKey(arr[i])) {
+				
+                // if not found before in the current sequence
+				if(!flags[map.get(arr[i])]){
+                    // decrement counter
+					counter --;
+                    // set its flag to true, indicating it is found now
+					flags[map.get(arr[i])] = true;
+				}
+				
+                // if start is not set yet
+				if(start == -1)
+					start = i;      // set start
+				else
+					indexQ.add(i);  // add the index to the indexQ
+				
+                // set most right array index of the element to i
+				mostRightIndex[map.get(arr[i])] = i;
+                
+                // if start can move right let's move it, seems little tricky, think about it
+				while(start != mostRightIndex[map.get(arr[start])])
+					start = indexQ.poll();
+				
+                // if a new sequence found
+				if(counter == 0){
+                    // update opt if we should
+					Range newRange = new Range(start, i);
+					if(newRange.shorterThan(opt))
+						opt = newRange;
+                    // remove the first one from the sequence and check for the next sequence in the loop
+					counter++;
+					flags[map.get(arr[start])] = false;
+					start = indexQ.poll();
+				}
+			}
+		}
+        // return the optimal solution
+		return opt;
+	}
+}
