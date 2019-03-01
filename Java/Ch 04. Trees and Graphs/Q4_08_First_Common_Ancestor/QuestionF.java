@@ -3,8 +3,7 @@ package Q4_08_First_Common_Ancestor;
 import CtCILibrary.TreeNode;
 
 public class QuestionF {
-	
-	public static TreeNode commonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+	public static TreeNode commonAncestor(TreeNode p, TreeNode q) {
 		if ((p == null) || (q == null)) {
 			return null;
 		}
@@ -31,7 +30,7 @@ public class QuestionF {
 		}
 		TreeNode n1 = root.find(1);
 		TreeNode n9 = root.find(9);
-		TreeNode ancestor = commonAncestor(root, n1, n9);
+		TreeNode ancestor = commonAncestor(n1, n9);
 		System.out.println(ancestor.data);
 	}
 

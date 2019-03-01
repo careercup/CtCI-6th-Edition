@@ -1,27 +1,27 @@
 package Q4_08_First_Common_Ancestor;
 
-import java.util.ArrayList;
-
 import CtCILibrary.TreeNode;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Tester {
-	public static String resultToString(String s, TreeNode x, TreeNode y, TreeNode anc) {
-		s += ": ";
-		s += (x == null ? "null" : x.data);
-		s += " & ";
-		s += (y == null ? "null" : y.data);
-		s += " -> ";
-		s += (anc == null ? "null" : anc.data);
-		return s;
+	private static String resultToString(String s, TreeNode x, TreeNode y, TreeNode anc) {
+		return s + ": "
+			   + (x == null ? "null" : x.data)
+			   + " & "
+			   + (y == null ? "null" : y.data)
+			   + " -> "
+			   + (anc == null ? "null" : anc.data);
 	}
 	
 	public static void main(String[] args) {
 		int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		TreeNode root = TreeNode.createMinimalBST(array);
-		
-		ArrayList<TreeNode> nodes = new ArrayList<TreeNode>();
-		for (int a : array) {
-			nodes.add(root.find(a));
+
+		List<TreeNode> nodes = new ArrayList<>();
+		for (int node : array) {
+			nodes.add(root.find(node));
 		}
 		nodes.add(new TreeNode(11));
 		
@@ -37,12 +37,12 @@ public class Tester {
 				String s2 = resultToString("B", x, y, r2);
 				String s3 = resultToString("C", x, y, r3);
 				String s4 = resultToString("D", x, y, r4);
-				String s5 = resultToString("D", x, y, r5);
+				String s5 = resultToString("E", x, y, r5);
 				
 				if (r1 == r2 && r2 == r3 && r3 == r4 && r4 == r5) {
 					System.out.println("SUCCESS: " + s1);
 				} else {
-					System.out.println("ERROR");
+					System.out.println("ERROR:");
 					System.out.println(s1);
 					System.out.println(s2);
 					System.out.println(s3);

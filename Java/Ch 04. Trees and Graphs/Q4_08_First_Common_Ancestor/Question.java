@@ -8,7 +8,7 @@ public class Question {
 	static int NO_NODES_FOUND = 0;
 		
 	// Checks how many 'special' nodes are located under this root
-	public static int covers(TreeNode root, TreeNode p, TreeNode q) {
+	private static int covers(TreeNode root, TreeNode p, TreeNode q) {
 		int ret = NO_NODES_FOUND;
 		if (root == null) return ret;
 		if (root == p || root == q) ret += 1;

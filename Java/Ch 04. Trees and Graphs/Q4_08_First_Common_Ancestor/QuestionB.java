@@ -4,18 +4,19 @@ import CtCILibrary.TreeNode;
 
 public class QuestionB {
 	public static TreeNode commonAncestor(TreeNode p, TreeNode q) {
-		int delta = depth(p) - depth(q); // get difference in depths
-		TreeNode first = delta > 0 ? q : p; // get shallower node
-		TreeNode second = delta > 0 ? p : q; // get deeper node
-		second = goUpBy(second, Math.abs(delta)); // move shallower node to depth of deeper
-		while (first != second && first != null && second != null) {
-			first = first.parent;
-			second = second.parent;
+		int depthDiff = depth(p) - depth(q);
+		TreeNode shallowNode = depthDiff > 0 ? q : p;
+		TreeNode deepNode = depthDiff > 0 ? p : q;
+
+		deepNode = goUpBy(deepNode, Math.abs(depthDiff)); // move shallower node to depth of deeper
+		while (shallowNode != deepNode) {
+			shallowNode = shallowNode.parent;
+			deepNode = deepNode.parent;
 		}
-		return first == null || second == null ? null : first;
+		return shallowNode;
 	}
-	
-	public static TreeNode goUpBy(TreeNode node, int delta) {
+
+	private static TreeNode goUpBy(TreeNode node, int delta) {
 		while (delta > 0 && node != null) {
 			node = node.parent;
 			delta--;
