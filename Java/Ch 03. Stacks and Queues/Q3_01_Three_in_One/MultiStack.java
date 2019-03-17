@@ -69,7 +69,7 @@ public class MultiStack {
 		return size;
 	}
 	
-	/* Returns true is all the stacks are full. */
+	/* Returns true if all stacks are full. */
 	public boolean allStacksAreFull() {
 		return numberOfElements() == values.length;
 	}
