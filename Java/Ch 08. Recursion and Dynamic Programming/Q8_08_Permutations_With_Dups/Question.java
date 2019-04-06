@@ -4,47 +4,40 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Question {	
-	public static HashMap<Character, Integer> buildFreqTable(String s) {
-		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
-		for (char c : s.toCharArray()) {
-			if (!map.containsKey(c)) {
-				map.put(c, 0);
-			}
-			map.put(c, map.get(c) + 1);
-		}
-		return map;
-	}
-	
-	public static void printPerms(HashMap<Character, Integer> map, String prefix, int remaining, ArrayList<String> result) {
-		if (remaining == 0) {
+		public static void getPerms(String prefix, String remainder, ArrayList<String> result) {
+		if (remainder.length() == 0) {
 			result.add(prefix);
-			return;
 		}
+		int len = remainder.length();
 		
-		for (Character c : map.keySet()) {
-			int count = map.get(c);
-			if (count > 0) {
-				map.put(c,  count - 1);
-				printPerms(map, prefix + c, remaining - 1, result);
-				map.put(c,  count);
-			}
+		for (int i = 0; i < len; i++) {
+			String before = remainder.substring(0, i);
+			String after = remainder.substring(i + 1, len);
+			char c = remainder.charAt(i);
+
+			// Since the intention for avoiding duplicates is that the same
+			// character should not come at the same position more than once, we
+			// can just check if we have already visited it before and ignore
+			// all later combinations.
+
+			if (before.indexOf(c) == -1)
+				getPerms(prefix + c, before + after, result);
 		}
 	}
 	
-	public static ArrayList<String> printPerms(String s) {
+	public static ArrayList<String> getPerms(String str) {
 		ArrayList<String> result = new ArrayList<String>();
-		HashMap<Character, Integer> map = buildFreqTable(s);
-		printPerms(map, "", s.length(), result);
+		getPerms("", str, result);
 		return result;
 	}
 	
 	public static void main(String[] args) {
-		String s = "aabbccc";
-		ArrayList<String> result = printPerms(s);
-		System.out.println("Count: " + result.size());
-		for (String r : result) {
-			System.out.println(r);
+		ArrayList<String> list = getPerms("aabbccc");
+		System.out.println("There are " + list.size() + " permutations.");
+		for (String s : list) {
+			System.out.println(s);
 		}
 	}
+
 
 }
