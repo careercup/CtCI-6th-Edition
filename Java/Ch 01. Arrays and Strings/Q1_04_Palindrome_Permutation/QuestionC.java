@@ -12,7 +12,7 @@ public class QuestionC {
 
 		/* Check that at most one bit is set by subtracting one from the
 		 * integer and ANDing it with the original integer. */
-		return (bitVector & (bitVector - 1)) == 0;
+		return (bitVector == 0) || (bitVector & (bitVector - 1)) == 0;
 	}
 
 	public static void main(String[] args) {
