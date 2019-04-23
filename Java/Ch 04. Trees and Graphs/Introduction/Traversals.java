@@ -20,15 +20,15 @@ public class Traversals {
 	public static void preOrderTraversal(TreeNode node) {
 		if (node != null) {
 			visit(node);
-			inOrderTraversal(node.left);
-			inOrderTraversal(node.right);
+			preOrderTraversal(node.left);
+			preOrderTraversal(node.right);
 		}
 	}
 	
 	public static void postOrderTraversal(TreeNode node) {
 		if (node != null) {
-			inOrderTraversal(node.left);
-			inOrderTraversal(node.right);
+			postOrderTraversal(node.left);
+			postOrderTraversal(node.right);
 			visit(node);
 		}
 	}	
