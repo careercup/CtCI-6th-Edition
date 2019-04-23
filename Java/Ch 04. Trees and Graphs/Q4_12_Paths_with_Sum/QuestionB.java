@@ -23,14 +23,14 @@ public class QuestionB {
 			totalPaths++;
 		}
 
-		/* Add runningSum to pathCounts. */
+		/* HashTable pathCount has runningSum as key. Increment its value by 1.*/
 		incrementHashTable(pathCount, runningSum, 1);
 		
 		/* Count paths with sum on the left and right. */
 		totalPaths += countPathsWithSum(node.left, targetSum, runningSum, pathCount);
 		totalPaths += countPathsWithSum(node.right, targetSum, runningSum, pathCount);
 		
-		incrementHashTable(pathCount, runningSum, -1); // Remove runningSum
+		incrementHashTable(pathCount, runningSum, -1); // Decrement runningSum's value by 1. 
 		return totalPaths;
 	}
 	
