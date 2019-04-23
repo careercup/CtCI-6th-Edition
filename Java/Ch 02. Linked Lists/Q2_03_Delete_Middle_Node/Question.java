@@ -14,11 +14,33 @@ public class Question {
 		n.next = next.next; 
 		return true;
 	}
+
+	public static LinkedListNode getMiddleNode(LinkedListNode head) {
+
+		if(head == null) {
+			return null;
+		}
+
+		if(head.next == null) {
+			return head;
+		} else {
+			LinkedListNode slow = head;
+			LinkedListNode fast = head;
+
+			while(fast != null && fast.next != null) {
+				slow = slow.next;
+				fast = fast.next.next;
+			}
+
+			return slow;
+		}
+
+	}
 	
 	public static void main(String[] args) {
 		LinkedListNode head = AssortedMethods.randomLinkedList(10, 0, 10);
 		System.out.println(head.printForward());
-		deleteNode(head.next.next.next.next); // delete node 4
+		deleteNode(getMiddleNode(head)); // delete node 4
 		System.out.println(head.printForward());
 	}
 
