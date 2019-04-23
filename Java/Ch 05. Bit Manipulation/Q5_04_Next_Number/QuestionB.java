@@ -1,7 +1,7 @@
 package Q5_04_Next_Number;
 
 public class QuestionB {
-	
+
 	public static int getNext(int n) {
 		int c = n;
 		int c0 = 0;
@@ -10,7 +10,7 @@ public class QuestionB {
 			c0++;
 			c >>= 1;
 		}
-		
+
 		while ((c & 1) == 1) {
 			c1++;
 			c >>= 1;
@@ -22,7 +22,7 @@ public class QuestionB {
 		if (c0 + c1 == 31 || c0 + c1 == 0) {
 			return -1;
 		}
-		
+
 		int pos = c0 + c1; // position of right-most non-trailing zero (where the right most bit is bit 0)
 		
 		/* Flip the right-most non-trailing zero (which will be at position pos) */
@@ -43,10 +43,10 @@ public class QuestionB {
 		 * (3) OR with n
 		 */
 		n |= (1 << (c1 - 1)) - 1;
-		
+
 		return n;
 	}
-	
+
 	public static int getPrev(int n) {
 		int temp = n;
 		int c0 = 0;
@@ -59,10 +59,10 @@ public class QuestionB {
 		/* If temp is 0, then the number is a sequence of 0s followed by a sequence of 1s. This is already
 		 * the smallest number with c1 ones. Return -1 for an error.
 		 */
-		if (temp == 0) { 
+		if (temp == 0) {
 			return -1;
 		}
-		
+
 		while (((temp & 1) == 0) && (temp != 0)) {
 			c0++;
 			temp >>= 1;
@@ -97,15 +97,11 @@ public class QuestionB {
 		 * 
 		 * Then, finally, we OR this with n.
 		 */
-		n |= mask << (c0 - 1);  
-		
-		return n;		
-	}	
-	
-	public static void binPrint(int i) {
-		System.out.println(i + ": " + Integer.toBinaryString(i));		
+		n |= mask << (c0 - 1);
+
+		return n;
 	}
-	
+
 	public static void main(String[] args) {
 		int i = 13948;
 		int p1 = getPrev(i);
@@ -113,5 +109,4 @@ public class QuestionB {
 		Tester.binPrint(p1);
 		Tester.binPrint(n1);
 	}
-
 }
