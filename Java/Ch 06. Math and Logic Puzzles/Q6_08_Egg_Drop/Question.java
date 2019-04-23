@@ -1,4 +1,4 @@
-package Q6_05_Egg_Drop;
+package Q6_08_Egg_Drop;
 
 public class Question {
 	public static int breakingPoint = 89;
