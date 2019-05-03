@@ -61,6 +61,29 @@ public class Question {
 			s.push(r.pop());
 		}
 	}
+	
+	public static void sort_2(Stack<Integer> stack){
+		Stack<Integer> helper = new Stack<>();
+
+		while(!stack.isEmpty()){
+    			addElement(stack, helper, stack.pop());
+		}
+
+		while(!helper.isEmpty()){
+    			stack.push(helper.pop());
+		}
+	}
+
+	private static void addElement (Stack<Integer> s_origin, Stack<Integer> s_new, Integer e){
+		if (s_new.isEmpty() || e >= s_new.peek()){
+			s_new.add(e);
+			return;
+		}
+
+		s_origin.add(s_new.pop()); // Move smaller element from new to origin.
+		addElement(s_origin, s_new, e);
+		s_new.add(s_origin.pop()); // Move smaller element back to new.
+	}
 		
 	public static void main(String [] args) {
 		Stack<Integer> s = new Stack<Integer>();
