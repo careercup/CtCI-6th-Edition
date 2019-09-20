@@ -39,7 +39,10 @@ public class Question {
 		return g;
 	}
 
-    public static boolean search(Graph g,Node start,Node end) {  
+    public static boolean search(Graph g,Node start,Node end) {
+    	 if (start == end ) {
+            return true;
+        }
         LinkedList<Node> q = new LinkedList<Node>();
         for (Node u : g.getNodes()) {
             u.state = State.Unvisited;
