@@ -75,7 +75,7 @@ public class Question {
 		System.out.println("Intersection: " + (intersection == null ? "None" : intersection));
 		if (intersection != null) {
 			System.out.println("Intersection is on segment1: " + Tester.checkIfPointOnLineSegments(s1, intersection, e1));
-			System.out.println("Intersection is on segment1: " + Tester.checkIfPointOnLineSegments(s2, intersection, e2));
+			System.out.println("Intersection is on segment2: " + Tester.checkIfPointOnLineSegments(s2, intersection, e2));
 		}
 	}
 
