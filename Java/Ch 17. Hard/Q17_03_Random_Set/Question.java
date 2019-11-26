@@ -1,22 +1,24 @@
 package Q17_03_Random_Set;
 
 import java.util.Random;
+import java.util.Arrays;
 
 import CtCILibrary.AssortedMethods;
 
 public class Question {
-
-	/* pick M elements from original array.  Clone original array so that
-	 * we don�t destroy the input. */
+        /* Pick M elements from original array.  Clone original array so that
+	 * we don't destroy the input. */
 	public static int[] pickMRandomly(int[] original, int m) {
-		Random rand = new Random();
-		for (int i = 0; i < original.length; i++) { 
+		int[] clone = original;
+                Random rand = new Random();
+		for (int i = 0; i < clone.length; i++) { 
 			int k = rand.nextInt(i + 1); // Generate random between 0 and i (inclusive)
-			int temp = original[k];
-			original[k] = original[i];
-			original[i] = temp;
+			int temp = clone[k];
+			clone[k] = clone[i];
+			clone[i] = temp;
 		} 
-		return original;
+                int[] subClone = Arrays.copyOfRange(clone, 0, m + 1);
+		return subClone; 
 	}
 	
 	public static void main(String[] args) {
