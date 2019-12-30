@@ -25,7 +25,7 @@ public class QuestionB {
 	}
 	
 	/* Given an index and the table of next elements, find the closure
-	 * for this index (which will be the min of this column. */
+	 * for this index (which will be the max of this column). */
 	public static int getClosureForIndex(int[][] nextElements, int index) {
 		int max = -1;
 		for (int i = 0; i < nextElements.length; i++) {
