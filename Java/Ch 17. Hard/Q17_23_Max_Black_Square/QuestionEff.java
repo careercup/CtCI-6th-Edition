@@ -40,7 +40,7 @@ public class QuestionEff {
 	private static boolean isSquare(SquareCell[][] matrix, int row, int col, int size) {
 		SquareCell topLeft = matrix[row][col];
 		SquareCell topRight = matrix[row][col + size - 1];
-		SquareCell bottomRight = matrix[row + size - 1][col];
+		SquareCell bottomLeft = matrix[row + size - 1][col];
 		if (topLeft.zerosRight < size) { // Check top edge
 			return false;
 		}
@@ -50,7 +50,7 @@ public class QuestionEff {
 		if (topRight.zerosBelow < size) { // Check right edge
 			return false;
 		}
-		if (bottomRight.zerosRight < size) { // Check bottom edge
+		if (bottomLeft.zerosRight < size) { // Check bottom edge
 			return false;
 		}
 		return true;
