@@ -44,7 +44,7 @@ public class WordGroup {
 		}
 
 		/* Group the words in the dictionary into lists of words of 
-		 * same length.groupList[i] will contain a list of words, each 
+		 * same length.  groupList[i] will contain a list of words, each 
 		 * of length (i+1). */
 		groupList = new WordGroup[maxWordLength];
 		for (int i = 0; i < list.length; i++) {
