@@ -58,7 +58,7 @@ public class Question {
 		Integer[] maxHeapArray = maxHeap.toArray(
 				new Integer[maxHeap.size()]);
 
-		Arrays.sort(minHeapArray, maxHeapComparator);
+		Arrays.sort(minHeapArray, minHeapComparator);
 		Arrays.sort(maxHeapArray, maxHeapComparator);
 		System.out.print("MinHeap =");
 		for (int i = minHeapArray.length - 1; i >= 0 ; i--){
