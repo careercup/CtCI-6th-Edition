@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 /* A container for a group of words of the same length. */
 public class WordGroup {
-	private HashMap<String, Boolean> lookup = new HashMap<String, Boolean>();
+	private HashSet<String> lookup = new HashSet<String>();
     private ArrayList<String> group = new ArrayList<String>();
     
     public WordGroup() {
@@ -18,7 +18,7 @@ public class WordGroup {
     
     public void addWord (String s) {
         group.add(s);
-        lookup.put(s, true);
+        lookup.put(s);
     }
     
     public int length() {
