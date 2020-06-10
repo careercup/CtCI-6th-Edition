@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Big_O/Big_0.iml" filepath="$PROJECT_DIR$/Big_O/Big_0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CtClLibrary/CtClLibrary.iml" filepath="$PROJECT_DIR$/CtClLibrary/CtClLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_01_Arrays_and_Strings/ch01.iml" filepath="$PROJECT_DIR$/Ch_01_Arrays_and_Strings/ch01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_02_Linked_Lists/ch02.iml" filepath="$PROJECT_DIR$/Ch_02_Linked_Lists/ch02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_03_Stacks_and_Queues/ch03.iml" filepath="$PROJECT_DIR$/Ch_03_Stacks_and_Queues/ch03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_04_Trees_and_Graphs/ch04.iml" filepath="$PROJECT_DIR$/Ch_04_Trees_and_Graphs/ch04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_05_Bit_Manipulation/ch05.iml" filepath="$PROJECT_DIR$/Ch_05_Bit_Manipulation/ch05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_06_Math_and_Logic_Puzzles/ch06.iml" filepath="$PROJECT_DIR$/Ch_06_Math_and_Logic_Puzzles/ch06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_07_Object-Oriented_Design/ch07.iml" filepath="$PROJECT_DIR$/Ch_07_Object-Oriented_Design/ch07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_08_Recursion_and_Dynamic_Programming/ch08.iml" filepath="$PROJECT_DIR$/Ch_08_Recursion_and_Dynamic_Programming/ch08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_09_Scalability_and_Memory_Limits/ch09.iml" filepath="$PROJECT_DIR$/Ch_09_Scalability_and_Memory_Limits/ch09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_10_Sorting_and_Searching/ch10.iml" filepath="$PROJECT_DIR$/Ch_10_Sorting_and_Searching/ch10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_13_Java/ch13.iml" filepath="$PROJECT_DIR$/Ch_13_Java/ch13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_15_Threads_and_Locks/ch15.iml" filepath="$PROJECT_DIR$/Ch_15_Threads_and_Locks/ch15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_16_Moderate/ch16.iml" filepath="$PROJECT_DIR$/Ch_16_Moderate/ch16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Ch_17_Hard/ch17.iml" filepath="$PROJECT_DIR$/Ch_17_Hard/ch17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ctci.iml" filepath="$PROJECT_DIR$/ctci.iml" />
+    </modules>
+  </component>
+</project>

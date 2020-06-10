@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ch08" />
+        <module name="ch07" />
+        <module name="ch06" />
+        <module name="ch05" />
+        <module name="ch04" />
+        <module name="CtClLibrary" />
+        <module name="ch02" />
+        <module name="ch17" />
+        <module name="ch16" />
+        <module name="ch15" />
+        <module name="ch13" />
+        <module name="ch10" />
+        <module name="Big_0" />
+        <module name="ch01" />
+        <module name="ch03" />
+        <module name="ch09" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Big_0" target="1.8" />
+      <module name="ch01" target="1.8" />
+      <module name="ch02" target="1.8" />
+      <module name="ch03" target="1.8" />
+      <module name="ch04" target="1.8" />
+      <module name="ch05" target="1.8" />
+      <module name="ch06" target="1.8" />
+      <module name="ch07" target="1.8" />
+      <module name="ch08" target="1.8" />
+      <module name="ch09" target="1.8" />
+      <module name="ch10" target="1.8" />
+      <module name="ch13" target="1.8" />
+      <module name="ch15" target="1.8" />
+      <module name="ch16" target="1.8" />
+      <module name="ch17" target="1.8" />
+      <module name="ctci" target="1.8" />
+      <module name="CtClLibrary" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
