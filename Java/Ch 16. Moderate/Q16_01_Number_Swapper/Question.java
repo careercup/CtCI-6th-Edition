@@ -21,6 +21,13 @@ public class Question {
 		System.out.println("b: " + b);
 	}
 	
+	public static void swap_opt2(int a, int b) {
+		b = a+b-(a=b);
+		
+		System.out.println("a: " + a);
+		System.out.println("b: " + b);
+	}
+	
 	public static void main(String[] args) {
 		int a = 1672;
 		int b = 9332;
@@ -30,6 +37,7 @@ public class Question {
 		
 		swap(a, b);
 		swap_opt(a, b);
+		swap_opt2(a, b);
 	}
 
 }
