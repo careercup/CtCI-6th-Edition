@@ -1,16 +1,19 @@
 package Q1_02_Check_Permutation;
 
-public class QuestionA {	
+public class QuestionA {
 	public static String sort(String s) {
 		char[] content = s.toCharArray();
 		java.util.Arrays.sort(content);
 		return new String(content);
 	}
-	
+
 	public static boolean permutation(String s, String t) {
+        if (s.equals(t) || s.length() != t.length()) { // Permutations must have the same characters, but in different orders and must be same length
+            return false;
+        }
 		return sort(s).equals(sort(t));
-	}	
-	
+	}
+
 	public static void main(String[] args) {
 		String[][] pairs = {{"apple", "papel"}, {"carrot", "tarroc"}, {"hello", "llloh"}};
 		for (String[] pair : pairs) {
