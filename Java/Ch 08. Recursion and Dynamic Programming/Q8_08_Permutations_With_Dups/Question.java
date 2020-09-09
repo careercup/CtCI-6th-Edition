@@ -8,7 +8,7 @@ public class Question {
 		HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 		for (char c : s.toCharArray()) {
 			if (!map.containsKey(c)) {
-				map.put(c, 0);
+				map.put(c, 1);
 			}
 			map.put(c, map.get(c) + 1);
 		}
