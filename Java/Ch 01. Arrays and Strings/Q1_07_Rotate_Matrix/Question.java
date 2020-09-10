@@ -54,7 +54,7 @@ public class Question {
 
 	
 	public static void main(String[] args) {
-		int[][] matrix = AssortedMethods.randomMatrix(3, 3, 0, 9);
+		int[][] matrix = AssortedMethods.randomMatrix(4, 4, 0, 9);
 		AssortedMethods.printMatrix(matrix);
 		rotate(matrix);
 		System.out.println();

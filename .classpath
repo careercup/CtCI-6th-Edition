@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="Java/Introduction"/>
+	<classpathentry kind="src" path="Java/practice"/>
 	<classpathentry kind="src" path="Java/Big O"/>
 	<classpathentry kind="src" path="Java/Ch 01. Arrays and Strings"/>
 	<classpathentry kind="src" path="Java/Ch 02. Linked Lists"/>
