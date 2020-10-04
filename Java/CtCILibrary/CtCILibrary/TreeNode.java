@@ -1,5 +1,8 @@
 package CtCILibrary;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /* One node of a binary tree. The data element stored is a single 
  * character.
  */
@@ -96,6 +99,69 @@ public class TreeNode {
 	
 	public static TreeNode createMinimalBST(int array[]) {
 		return createMinimalBST(array, 0, array.length - 1);
+	}
+	
+	public static TreeNode createMinimalBSTIterative(int array[]) {
+		return createMinimalBST(array, 0, array.length - 1);
+	}
+	
+	public static TreeNode createMinimalBSTIterative( int[] array, int start, int end){
+		if (end < start) {
+			return null;
+		}
+		
+		int mid = (start + end)/2;
+		// Root for return
+		TreeNode root = new TreeNode(array[mid]);
+
+		Queue<TreeNode> nodes = new LinkedList<TreeNode>();
+		Queue<Integer> indexes = new LinkedList<Integer>();
+		// Node, Indexes queuing for processing
+		nodes.add(root);
+		indexes.add(start);
+		indexes.add(end);
+		
+		while (nodes.peek()!=null) {
+
+			TreeNode node = nodes.poll();
+		
+			start = indexes.poll();
+			end = indexes.poll();
+			mid = (start + end ) /2;
+		
+			// does it have left child?		
+			if(mid>start){
+				// find and Assign left if available
+				int left = (start + mid -1 )/2;
+				TreeNode leftNode = new TreeNode (array[left]);
+				node.setLeftChild (leftNode);
+		
+				// Node, Indexes queuing for processing
+				nodes.add(leftNode);
+				// Left side , Start is constant
+				indexes.add (start);
+				// Left side, end is variable
+				indexes.add (mid-1);
+			}
+			//does it have right child?
+			if (mid<end) {
+				// find and Assign right if available
+				int right = (mid+1 + end) / 2;
+				TreeNode rightNode = new TreeNode (array[right]);
+				node.setRightChild (rightNode);
+		
+				// Node, Indexes queuing for processing
+				nodes.add(rightNode);
+				// right side, start is variable
+				indexes.add(mid+1);
+				// right side, end is constant
+				indexes.add (end);
+			}
+
+		}
+
+		return root;
+
 	}
 	
 	public void print() {
