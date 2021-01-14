@@ -105,7 +105,7 @@ public class MultiStack {
 		/* If this stack is at its full capacity, then you need
 		 * to move the next stack over by one element. This stack
 		 * can now claim the freed index. */
-		if (stack.size >= stack.capacity) {
+		if (stack.isFull()) {
 			int nextStack = (stackNum + 1) % info.length;
 			shift(nextStack); 
 			stack.capacity++; // claim index that next stack lost
