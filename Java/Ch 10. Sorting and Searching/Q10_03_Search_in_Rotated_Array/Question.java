@@ -32,7 +32,7 @@ public class Question {
 			} else {
 				return search(a, left, mid - 1, x);
 			}				
-		} else if (a[left] == a[mid]) { // Left is either all repeats OR loops around (with the right half being all dups)
+		} else { // Left is either all repeats OR loops around (with the right half being all dups)
 			if (a[mid] != a[right]) { // If right half is different, search there
 				return search(a, mid + 1, right, x);
 			} else { // Else, we have to search both halves
