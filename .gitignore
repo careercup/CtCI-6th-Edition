@@ -1,1 +1,6 @@
 bin/
+.DS_Store
+.gradle/
+gradle/
+Java/gradlew
+Java/gradlew.bat
