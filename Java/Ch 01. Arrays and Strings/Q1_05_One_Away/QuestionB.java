@@ -27,7 +27,7 @@ public static boolean oneEditAway(String first, String second) {
 			}
 			index2++; // Always move pointer for longer string 
 		}
-		return true;
+		return foundDifference || (index1 < s1.length() || index2 < s2.length());
 	}
 	
 	
