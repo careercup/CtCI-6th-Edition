@@ -13,7 +13,7 @@ public class QuestionA {
 				foundDifference = true;
 			}
 		}
-		return true;
+		return foundDifference;
 	}
 	
 	/* Check if you can insert a character into s1 to make s2. */
