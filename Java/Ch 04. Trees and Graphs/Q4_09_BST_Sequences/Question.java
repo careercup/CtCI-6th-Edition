@@ -55,7 +55,7 @@ public class Question {
 		for (LinkedList<Integer> left : leftSeq) {
 			for (LinkedList<Integer> right : rightSeq) {
 				ArrayList<LinkedList<Integer>> weaved = new ArrayList<LinkedList<Integer>>();
-				weaveLists(left, right, weaved, prefix);				
+				weaveLists(left, right, weaved, prefix);
 				result.addAll(weaved);
 			}
 		}
