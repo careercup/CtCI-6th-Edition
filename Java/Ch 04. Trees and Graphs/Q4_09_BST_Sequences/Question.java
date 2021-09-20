@@ -59,15 +59,18 @@ public class Question {
 				result.addAll(weaved);
 			}
 		}
+		
 		return result;
 	}
 
 	public static void main(String[] args) {
-		TreeNode node = new TreeNode(100);
 		int[] array = {100, 50, 20, 75, 150, 120, 170};
-		for (int a : array) {
-			node.insertInOrder(a);
+		TreeNode node = new TreeNode(array[0]);
+		
+		for (int i = 1; i < array.length; i++) {
+			node.insertInOrder(array[i]);
 		}
+		
 		ArrayList<LinkedList<Integer>> allSeq = allSequences(node);
 		for (LinkedList<Integer> list : allSeq) {
 			System.out.println(list);
