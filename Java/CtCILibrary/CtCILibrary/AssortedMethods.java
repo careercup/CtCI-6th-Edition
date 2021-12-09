@@ -89,10 +89,11 @@ public class AssortedMethods {
 	
 	public static String arrayToString(int[] array, int start, int end) {
 		StringBuilder sb = new StringBuilder();
-		for (int i = start; i <= end; i++) {
+		for (int i = start; i < end; i++) {
 			int v = array[i];
 			sb.append(v + ", ");
 		}
+		sb.append(array[end]);
 		return sb.toString();
 	}	
 
