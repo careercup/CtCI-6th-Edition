@@ -46,3 +46,6 @@
 [submodule "Kotlin"]
 	path = Kotlin
 	url = https://github.com/careercup/CtCI-6th-Edition-Kotlin.git
+[submodule "Rust"]
+	path = Rust
+	url = https://github.com/dan-fritchman/CtCI-6th-Edition-Rust.git
