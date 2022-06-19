@@ -1,7 +1,7 @@
 package Q1_05_One_Away;
 
 public class QuestionB {	
-public static boolean oneEditAway(String first, String second) {
+	public static boolean oneEditAway(String first, String second) {
 		/* Length checks. */
 		if (Math.abs(first.length() - second.length()) > 1) {
 			return false;
@@ -33,15 +33,13 @@ public static boolean oneEditAway(String first, String second) {
 	
 	
 	public static void main(String[] args) {
-		String a = "palee";
-		String b = "pale";
-		boolean isOneEdit1 = oneEditAway(a, b);
-		System.out.println(a + ", " + b + ": " + isOneEdit1);
-
-		String c = "pale";
-		String d = "pkle";
-		boolean isOneEdit2 = oneEditAway(c, d);
-		System.out.println(c + ", " + d + ": " + isOneEdit2);
+		String[][] pairs = {{"pale", "ple"}, {"pales", "pale"}, {"pale", "bale"},{"pale","bae"}};
+		for (String[] pair: pairs) {
+			String a = pair[0];
+			String b = pair[1];
+			boolean isOneEdit = oneEditAway(a, b);
+			System.out.println(a + ", " + b + ": " + isOneEdit);
+		}
 	}
 
 }
