@@ -46,10 +46,13 @@ public class QuestionA {
 	}
 	
 	public static void main(String[] args) {
-		String a = "pse";
-		String b = "pale";
-		boolean isOneEdit = oneEditAway(a, b);
-		System.out.println(a + ", " + b + ": " + isOneEdit);
+		String[][] pairs = {{"pale", "ple"}, {"pales", "pale"}, {"pale", "bale"},{"pale","bae"}};
+		for (String[] pair: pairs) {
+			String a = pair[0];
+			String b = pair[1];
+			boolean isOneEdit = oneEditAway(a, b);
+			System.out.println(a + ", " + b + ": " + isOneEdit);
+		}
 	}
 
 }
