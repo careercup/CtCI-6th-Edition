@@ -37,10 +37,8 @@ public class QuestionA {
 	public static boolean oneEditAway(String first, String second) {
 		if (first.length() == second.length()) {
 			return oneEditReplace(first, second);
-		} else if (first.length() + 1 == second.length()) {
+		} else if (first.length() + 1 == second.length() || first.length() - 1 == second.length()) {
 			return oneEditInsert(first, second);
-		} else if (first.length() - 1 == second.length()) {
-			return oneEditInsert(second, first);
 		} 
 		return false;
 	}
