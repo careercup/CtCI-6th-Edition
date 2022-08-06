@@ -112,7 +112,7 @@ public class MultiStack {
 		}
 		
 		/* Shift all elements in stack over by one. */
-		int index = stack.lastCapacityIndex();
+		int index = nextIndex(stack.lastElementIndex());
 		while (stack.isWithinStackCapacity(index)) {
 			values[index] = values[previousIndex(index)];
 			index = previousIndex(index);
