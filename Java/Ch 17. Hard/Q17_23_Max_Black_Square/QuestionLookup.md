@@ -113,7 +113,7 @@ Intervals:
 x x x     (1) - {start=0, end=2, length=3}
 x x x x x (2) - {start=0, end=4, length=5}
 ```
-Despite that some indexes will contain a list of `right` intervals starting there, the total quantity of `right` intervals is N anyway, so the time and space remain linear.
+Despite that some indexes will contain a list of `right` intervals starting there, the total quantity of `right` intervals is N anyway, so the number of insertions and additional space remain linear.
 
 ---
 
@@ -180,6 +180,7 @@ private static Interval findLongestIntersection(Interval[] a, Interval[] b) {
     return longest;
 }
 ```
+Note that since `openedRightIntervals` set is a TreeSet now, insertion and removal will take O(log N) time. Total time of tracking `openedRightIntervals` becomes O(N * log N). Space remains O(N).
 
 ---
 
@@ -209,7 +210,7 @@ private static Interval findLongestIntersection(Interval[] a, Interval[] b) {
   - remove the interval of B ending at this index from the set of opened intervals
 - find the longest intersection among all found intersections
 
-Preparation steps take O(N<sup>2</sup>). Looping through diagonals is O(N) per se. For each diagonal, extraction and array preparations take O(N). The longest intersection subtask is O(N * log N) totally: looping is O(N), tracking of opened intervals is O(N) in sum, last interval querying takes O(log N) per each iteration. **Total time:** O(N<sup>2</sup> * log N). **Total space:** O(N<sup>2</sup>) - we count zeros using copies of the matrix. Extra memory is spent on each iteration of diagonals loop and is allocated temporarily for that iteration only. It takes O(N), so it can be neglected.
+Preparation steps take O(N<sup>2</sup>). Looping through diagonals is O(N) per se. For each diagonal, extraction and array preparations take O(N). The longest intersection subtask is O(N * log N) totally: looping is O(N), tracking of opened intervals is O(N * log N) in sum, last interval querying takes O(log N) per each iteration. **Total time:** O(N<sup>2</sup> * log N). **Total space:** O(N<sup>2</sup>) - we count zeros using copies of the matrix. Extra memory is spent on each iteration of diagonals loop and is allocated temporarily for that iteration only. It takes O(N), so it can be neglected.
 
 Comparing to previous solutions, we managed to achieve an improvement:
 - [Simple solution](https://github.com/careercup/CtCI-6th-Edition/blob/master/Java/Ch%2017.%20Hard/Q17_23_Max_Black_Square/Question.java): O(N<sup>4</sup>), space: O(1)
