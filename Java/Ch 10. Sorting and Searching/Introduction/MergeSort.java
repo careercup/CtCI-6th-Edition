@@ -50,7 +50,7 @@ public class MergeSort {
 	}
 	
 	public static void main(String[] args) {
-		int size = 20;
+		int size = 6;
 		int[] array = AssortedMethods.randomArray(size, 0, size - 1);
 		int[] validate = new int[size];
 		AssortedMethods.printIntArray(array);
