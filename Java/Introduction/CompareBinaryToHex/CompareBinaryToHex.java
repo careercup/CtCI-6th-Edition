@@ -14,8 +14,8 @@ public class CompareBinaryToHex {
 	}
 	
 	public static int convertFromBase(String number, int base) {
-		if (base < 2 || (base > 10 && base != 16)) return -1;
-		int value = 0;
+		if (base == 2 || base == 16) {
+			int value = 0;
 		for (int i = number.length() - 1; i >= 0; i--) {
 			int digit = digitToValue(number.charAt(i));
 			if (digit < 0 || digit >= base) {
@@ -25,6 +25,9 @@ public class CompareBinaryToHex {
 			value += digit * Math.pow(base, exp);
 		}
 		return value;
+		}
+	return -1;
+
 	}
 	
 	public static boolean compareBinToHex(String binary, String hex) {
